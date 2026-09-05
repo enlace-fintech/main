@@ -1,0 +1,168 @@
+{
+  "theme": "dark",
+  "typography": {
+    "strategy": "Old Money Tech - Authority meets modern utility.",
+    "headings": {
+      "fontFamily": "Cabinet Grotesk, sans-serif",
+      "weights": ["font-light", "font-bold", "font-black"],
+      "styles": "Tight letter spacing (tracking-tight to tracking-tighter), leading-none.",
+      "usage": "Use for all H1, H2, H3 to create a high-impact, trustworthy, and authoritative feel."
+    },
+    "body": {
+      "fontFamily": "Manrope, sans-serif",
+      "weights": ["font-normal", "font-medium"],
+      "styles": "leading-relaxed, tracking-normal.",
+      "usage": "Use for paragraphs, descriptions, and data tables to ensure maximum legibility."
+    },
+    "labels": {
+      "styles": "uppercase, tracking-[0.2em], text-xs font-bold",
+      "usage": "Use for overlines above headings (e.g., 'WALLET NEGOCIOS')."
+    }
+  },
+  "colors": {
+    "archetype": "Luxury / Swiss High-Contrast (Trust, Premium, Finance)",
+    "palette": {
+      "primary": {
+        "hex": "#0B132B",
+        "tailwind": "bg-[#0B132B]",
+        "description": "Midnight Blue / Obsidian (Base background, conveys deep trust and institutional weight)."
+      },
+      "secondary": {
+        "hex": "#D4AF37",
+        "tailwind": "bg-[#D4AF37]",
+        "description": "Warm Gold / Sand (Accent color for primary CTAs and active states, conveys premium service)."
+      },
+      "accent_hover": {
+        "hex": "#F3C94F",
+        "tailwind": "bg-[#F3C94F]",
+        "description": "Lighter gold for hover states."
+      },
+      "surface_glass": {
+        "tailwind": "bg-slate-900/60 backdrop-blur-2xl border-white/10",
+        "description": "Used for sticky header, floating navigation, and elevated cards."
+      },
+      "surface_solid": {
+        "tailwind": "bg-[#141E3C]",
+        "description": "Used for solid cards and section alternations."
+      },
+      "text_primary": {
+        "tailwind": "text-white",
+        "description": "For maximum contrast on dark backgrounds."
+      },
+      "text_secondary": {
+        "tailwind": "text-slate-300",
+        "description": "For body copy and subtitles."
+      }
+    },
+    "rules": [
+      "Avoid pure black (#000000). Always use tinted darks like Midnight Blue.",
+      "No generic purple-on-white AI slop.",
+      "Always ensure text meets APCA/WCAG AA minimum 4.5:1 contrast ratio."
+    ]
+  },
+  "visual enhancers": {
+    "borders": "1px delicate inner stroke on glass surfaces (border-white/10).",
+    "shadows": "Diffuse ambient shadows for raised elements (shadow-[0_8px_32px_rgba(0,0,0,0.5)]).",
+    "textures": "Subtle noise overlay on dark sections to create a premium velvet/matte feel.",
+    "gradients": "Avoid full-screen gradients. Use subtle radial glows behind key UI components or hero text (e.g., bg-radial from-slate-800 to-transparent)."
+  },
+  "component name": {
+    "Button": "Sharp or slightly rounded corners (rounded-md), premium feel. Primary CTA uses the Gold accent with black text. Hover state translates Y (-translate-y-1) and increases brightness.",
+    "Card": "Cardless or subtle solid surfaces. For feature grids, use 1px border-white/10, bg-slate-900/40, backdrop-blur-md, with inner padding p-8.",
+    "Navigation": "Glassmorphism header (backdrop-blur-xl bg-[#0B132B]/80). Navigation links must be visible on desktop. Fixed to top (z-50).",
+    "Icons": "lucide-react. Use thin stroke widths (1.5) to match the premium 'Old Money Tech' aesthetic. No emojis."
+  },
+  "grids": {
+    "bento": "Use Mode A 'Tetris' Grid for features (Wallet Negocios, Soluciones). Mix span-2 and span-1 sizes with gap-6 or gap-8.",
+    "data_density": "Use Mode B for dashboard preview graphics in the hero section."
+  },
+  "layouts": {
+    "hero": "Split layout or centered authoritative text. 'Plain-money headline copy'. Hero image should be a product UI preview or dashboard interface. Strong trust badges near the CTA.",
+    "sections": "Generous spacing (py-24 to py-32). Alternate between pure dark base (#0B132B) and elevated surface (#141E3C) to define sections.",
+    "bento_features": "For 'Restaurantes y bares' and 'Casinos', use overlapping elements and asymmetrical bento grids.",
+    "blog_grid": "3-column grid for articles with edge-to-edge images and bold typography for titles."
+  },
+  "motion": {
+    "interactions": "Hover states must exist on all interactive elements. Buttons lift slightly. Links show subtle underline or color shift.",
+    "scroll": "Smooth scrolling using 'lenis'. Staggered fade-up (translate-y-4, opacity-0 to opacity-100) for grid items.",
+    "micro": "Subtle scale-up on image hover in blog cards."
+  },
+  "accessibility": {
+    "contrast": "Strict adherence to WCAG AA for text. Dark theme requires high luminance text.",
+    "focus": "focus:ring-2 focus:ring-[#D4AF37] focus:outline-none on all interactive elements.",
+    "aria": "Add aria-hidden to decorative icons.",
+    "testing": "All interactive elements MUST include data-testid attribute (e.g., data-testid='cta-hero-button')."
+  },
+  "media": {
+    "images": "Use high-quality imagery of modern business, luxury casinos, and restaurant payments. Darken images using bg-black/40 overlays if placing text directly over them.",
+    "icons": "lucide-react (mandatory for SVG vectors)."
+  },
+  "3d libraries": {
+    "usage": "If needed for abstract tech background, use TSParticles for subtle floating constellations, or Framer Motion for 3D card spins. Keep it extremely performant."
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1669393760504-60cb7e955628?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxtZXhpY28lMjBidXNpbmVzcyUyMG1lZXRpbmclMjBtb2Rlcm58ZW58MHx8fHwxNzg4NTgyMTk0fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Mexico Business Meeting (People reviewing data)",
+      "category": "Hero Section / About Us"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlJTIwbW9kZXJufGVufDB8fHx8MTc4ODU4MjIxM3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Fintech Dashboard Interface Modern",
+      "category": "Hero Section Product Preview"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1556742521-9713bf272865?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcGF5bWVudCUyMHRlcm1pbmFsfGVufDB8fHx8MTc4ODU4MjE5NHww&ixlib=rb-4.1.0&q=85",
+      "description": "Restaurant payment terminal contactless",
+      "category": "Restaurantes y bares Section"
+    },
+    {
+      "url": "https://images.pexels.com/photos/7594128/pexels-photo-7594128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Luxury modern casino interior",
+      "category": "Casinos Section"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1571867424488-4565932edb41?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBiYW5raW5nJTIwcGF5bWVudCUyMGNvbnRhY3RsZXNzfGVufDB8fHx8MTc4ODU4MjE5NHww&ixlib=rb-4.1.0&q=85",
+      "description": "Mobile banking contactless payment",
+      "category": "Wallet Negocios Section"
+    },
+    {
+      "url": "https://images.pexels.com/photos/13336520/pexels-photo-13336520.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Abstract geometric gold shape",
+      "category": "Logo representation / Abstract brand imagery"
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Build a premium dark-themed marketing landing page for 'Enlace Fintech'.",
+    "Content sections to build: Header (Nav), Hero (Value prop + UI preview), Restaurantes y bares, Wallet Negocios (AQPay, SPEI, Terminales), Persona física/crédito, Casinos, Blog, Footer.",
+    "Use Cabinet Grotesk for headings and Manrope for body text. Install these via Google Fonts.",
+    "Implement a deep Midnight Blue (#0B132B) background with Warm Gold (#D4AF37) accents. NO purple AI slop.",
+    "In the Hero section, use plain-money language and place the 'Fintech Dashboard Interface' image (or a clean UI mockup) as the focal point alongside the main copy.",
+    "For the 'Wallet Negocios' section, build a Bento grid layout detailing features like SPEI, AQPay, and point-of-sale terminals.",
+    "Create a clean, text-based logo in the header using Cabinet Grotesk (e.g., ENLACE in bold, FINTECH in light) accompanied by the abstract geometric gold shape image as the logo mark.",
+    "Ensure all sections have generous spacing (py-24 or py-32).",
+    "Integrate lucide-react for all iconography. Do NOT use emojis.",
+    "Implement a contact form using standard HTML/Tailwind styling with Shadcn logic if necessary, styled to match the dark luxury theme."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for sticky navs and floating elements.",
+    "You MUST NOT apply universal transition (e.g., transition: all). This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, i.e. do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use lucide-react.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ],
+  "GENERAL UI UX DESIGN GUIDELINES": [
+    "Prioritize optical alignment over strict geometric alignment.",
+    "Containers with borders must have internal padding (p-6 or p-8) to prevent text collision.",
+    "Never use purely transparent backgrounds over content that scrolls behind it. Always use a blur and opacity.",
+    "Avoid standard Bootstrap-style 12-column layouts; embrace asymmetry and negative space."
+  ]
+}

@@ -1,0 +1,92 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0B132B;
+    color: #ffffff;
+}
+
+.font-display {
+    font-family: 'Cabinet Grotesk', 'Manrope', sans-serif;
+}
+
+@layer base {
+    :root {
+        --background: 222 55% 10%;
+        --foreground: 0 0% 100%;
+        --card: 224 46% 16%;
+        --card-foreground: 0 0% 100%;
+        --popover: 224 46% 12%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 45 63% 52%;
+        --primary-foreground: 222 55% 10%;
+        --secondary: 224 40% 20%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 224 30% 22%;
+        --muted-foreground: 215 20% 72%;
+        --accent: 45 63% 52%;
+        --accent-foreground: 222 55% 10%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 224 30% 26%;
+        --input: 224 30% 24%;
+        --ring: 45 63% 52%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Selection */
+::selection {
+    background: #D4AF37;
+    color: #0B132B;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0B132B; }
+::-webkit-scrollbar-thumb { background: #26304f; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+/* Grain / noise overlay helper */
+.noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.gold-text {
+    background: linear-gradient(92deg, #F3C94F 0%, #D4AF37 55%, #b6902a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+}
