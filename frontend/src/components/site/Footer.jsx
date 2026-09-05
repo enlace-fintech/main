@@ -18,12 +18,12 @@ export const Footer = () => (
       </div>
 
       <div>
-        <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Soluciones</h4>
+        <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Sectores</h4>
         <ul className="mt-5 space-y-3">
-          {NAV.slice(1, 5).map((n) => (
-            <li key={n.href}>
-              <a href={n.href} className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">
-                {n.label}
+          {NAV[0].children.map((c) => (
+            <li key={c.href}>
+              <a href={c.href} className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">
+                {c.label}
               </a>
             </li>
           ))}
@@ -33,9 +33,11 @@ export const Footer = () => (
       <div>
         <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Empresa</h4>
         <ul className="mt-5 space-y-3">
+          <li><a href="#persona" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</a></li>
+          <li><a href="#aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</a></li>
+          <li><a href="#sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</a></li>
           <li><a href="#blog" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Blog</a></li>
           <li><a href="#contacto" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Contacto</a></li>
-          <li><a href="#inicio" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Inicio</a></li>
         </ul>
       </div>
 

@@ -13,11 +13,19 @@ export const BRAND = {
 };
 
 export const NAV = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Empresas", href: "#empresas" },
-  { label: "Restaurantes", href: "#restaurantes" },
-  { label: "Wallet Negocios", href: "#wallet" },
-  { label: "Casinos", href: "#casinos" },
+  {
+    label: "Empresas",
+    children: [
+      { label: "Restaurantes y bares", href: "#restaurantes" },
+      { label: "Médicos", href: "#medicos" },
+      { label: "Casinos", href: "#casinos" },
+      { label: "Cripto", href: "#cripto" },
+      { label: "Membresías", href: "#membresias" },
+    ],
+  },
+  { label: "Personas", href: "#persona" },
+  { label: "Aliados", href: "#aliados" },
+  { label: "Sucursales", href: "#sucursales" },
   { label: "Blog", href: "#blog" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -125,14 +133,14 @@ export const EMPRESAS = {
   image:
     "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxtZXhpY2FuJTIwYnVzaW5lc3MlMjB0ZWFtJTIwb2ZmaWNlfGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
   sectors: [
-    { icon: "UtensilsCrossed", name: "Restaurantes y bares" },
-    { icon: "Hotel", name: "Hoteles y hospedaje" },
-    { icon: "Dice5", name: "Casinos y entretenimiento" },
-    { icon: "ShoppingBag", name: "Comercio y retail" },
-    { icon: "Briefcase", name: "Servicios profesionales" },
-    { icon: "Building2", name: "Franquicias y cadenas" },
-    { icon: "Truck", name: "Logística y transporte" },
-    { icon: "Users", name: "Persona física" },
+    { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "#restaurantes" },
+    { icon: "Stethoscope", name: "Médicos", href: "#medicos" },
+    { icon: "Dice5", name: "Casinos", href: "#casinos" },
+    { icon: "Bitcoin", name: "Cripto", href: "#cripto" },
+    { icon: "BadgeCheck", name: "Membresías", href: "#membresias" },
+    { icon: "Wallet", name: "Wallet Negocios", href: "#wallet" },
+    { icon: "Users", name: "Personas", href: "#persona" },
+    { icon: "Store", name: "Caja & TPV", href: "#caja" },
   ],
 };
 
@@ -180,12 +188,94 @@ export const CAJA = {
   ],
 };
 
+export const MEDICOS = {
+  overline: "Sectores · Médicos",
+  title: "Expande tu consultorio con soluciones financieras inteligentes",
+  subtitle: "Aumenta tus pacientes y optimiza la gestión de tu consultorio",
+  description:
+    "Con soluciones financieras diseñadas específicamente para médicos, llegas a más pacientes y administras mejor tu práctica.",
+  image:
+    "https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtZWRpY2FsJTIwb2ZmaWNlJTIwcGF5bWVudCUyMGNhcmR8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+  tpv: [
+    "Recibe pagos con todas las tarjetas de chip y banda.",
+    "Ofrece a tus pacientes pagos desde 3 hasta 24 meses sin intereses.",
+    "Cuando pagan con tarjeta, tú tienes el pago garantizado.",
+  ],
+  features: [
+    { icon: "MapPin", title: "Cobra desde cualquier lugar", desc: "Acepta efectivo, transferencias, tarjetas de crédito o débito, sin importar dónde estén tus pacientes." },
+    { icon: "TrendingUp", title: "Incrementa tu alcance", desc: "Amplía tu base de pacientes y atiende a más personas desde tu consultorio." },
+    { icon: "ShieldCheck", title: "Control total de tus finanzas", desc: "Gestiona tus recursos con eficiencia y transparencia." },
+    { icon: "QrCode", title: "Pagos con código QR", desc: "Consolida cada transacción mediante procesos 100% digitales." },
+  ],
+};
+
+export const CRIPTO = {
+  overline: "Sectores · Cripto",
+  title: "Más que un crypto exchange",
+  description:
+    "Recibe tus fondos en pesos directamente en tu cuenta bancaria con liquidaciones instantáneas, comisiones competitivas y sin contracargos. Altos límites transaccionales, conversiones en tiempo real y soporte 24/7 con la máxima seguridad.",
+  image:
+    "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHBheW1lbnQlMjBkaWdpdGFsJTIwZmluYW5jZXxlbnwwfHx8fDE3ODg1ODQ1Nzh8MA&ixlib=rb-4.1.0&q=85",
+  cards: [
+    { icon: "Banknote", title: "Liquidación en pesos en tiempo real", desc: "Recibe tus pagos directamente en tu cuenta bancaria en pesos, con liquidaciones instantáneas." },
+    { icon: "Percent", title: "Mismas comisiones que tarjetas", desc: "Simplicidad y transparencia en la gestión de tus pagos." },
+    { icon: "ShieldOff", title: "0% contracargos", desc: "Protege tu negocio contra contracargos con nuestra política de cero contracargos." },
+  ],
+  why: [
+    { title: "Altos límites transaccionales", desc: "Maneja grandes volúmenes de transacciones con total libertad." },
+    { title: "Conversión en tiempo real", desc: "Realiza conversiones al instante, disponible las 24 horas del día." },
+    { title: "Confianza y seguridad", desc: "La protección de tus datos y transacciones es nuestra prioridad." },
+    { title: "Soporte 24/7", desc: "Nuestro equipo experto está listo para asistirte en todo momento." },
+  ],
+};
+
+export const MEMBRESIAS = {
+  overline: "Sectores · Membresías",
+  title: "Integrando bienestar, potenciando tu empresa",
+  description:
+    "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app.",
+  image:
+    "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHdlbGxuZXNzJTIwYmVuZWZpdHMlMjBtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+  offers: [
+    { icon: "ShieldCheck", title: "Seguros", desc: "Protege lo que más importa con seguros personalizados." },
+    { icon: "Stethoscope", title: "Asistencias médicas", desc: "Accede a una red de profesionales de la salud para ti y tu familia." },
+    { icon: "Tags", title: "Redes de descuentos", desc: "Ahorra en tus compras con ofertas y descuentos exclusivos." },
+    { icon: "Dumbbell", title: "Gimnasios", desc: "Mantente en forma con acceso a los mejores gimnasios." },
+    { icon: "Home", title: "Asistencias mascota, hogar y vial", desc: "Tranquilidad total para tu mascota, hogar y en carretera." },
+    { icon: "Wallet", title: "Crédito y adelanto de nómina", desc: "Soluciones financieras a tu medida, justo cuando las necesitas." },
+    { icon: "PiggyBank", title: "Caja y fondo de ahorro", desc: "Facilita el ahorro y la gestión financiera de tus empleados." },
+  ],
+};
+
 export const ALIADOS = {
   overline: "Aliados",
-  title: "Respaldados por la mejor tecnología financiera",
+  title: "El broker fintech con los mejores aliados estratégicos",
   description:
-    "Trabajamos con redes de pago y plataformas líderes para ofrecerte soluciones seguras, confiables y de alcance nacional e internacional.",
-  logos: ["VISA", "Mastercard", "SPEI", "AQPay", "Contactless", "QR"],
+    "Trabajamos con un ecosistema de aliados para empresarios y personas físicas que buscan una gestión financiera moderna y eficiente. Nuestra experiencia nos permite ofrecer orientación personalizada y herramientas adaptadas a cada cliente.",
+  categories: [
+    "Banca & Wallet",
+    "Créditos",
+    "Terminales de pago",
+    "Beneficios & bienestar",
+    "Pagos cripto",
+    "Facturación",
+    "Adelanto de nómina",
+    "Seguros",
+  ],
+};
+
+export const SUCURSALES = {
+  overline: "Sucursales",
+  title: "Estamos cerca de ti",
+  description:
+    "Atendemos a empresas y personas físicas en todo México. Visítanos o agenda una asesoría en la sucursal más cercana.",
+  image:
+    "https://images.unsplash.com/photo-1674681512510-e06db64f53fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZXhpY28lMjBjaXR5JTIwb2ZmaWNlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+  branches: [
+    { city: "Ciudad de México", address: "Av. Reforma 000, Col. Centro, CDMX", phone: "+52 55 0000 0000" },
+    { city: "Guadalajara", address: "Av. Chapultepec 000, Col. Americana, Jalisco", phone: "+52 33 0000 0000" },
+    { city: "Monterrey", address: "Av. Constitución 000, Centro, Nuevo León", phone: "+52 81 0000 0000" },
+  ],
 };
 
 export const INTERESES = [

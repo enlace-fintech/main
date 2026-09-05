@@ -25,8 +25,9 @@ export const Empresas = () => (
           {EMPRESAS.sectors.map((s, i) => {
             const Icon = Icons[s.icon] || Icons.Building2;
             return (
-              <div
+              <a
                 key={s.name}
+                href={s.href}
                 data-testid={`empresa-sector-${i}`}
                 className="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3.5 hover:border-[#D4AF37]/40 transition-colors duration-300"
               >
@@ -34,7 +35,7 @@ export const Empresas = () => (
                   <Icon size={18} strokeWidth={1.5} />
                 </span>
                 <span className="text-sm font-medium text-slate-200">{s.name}</span>
-              </div>
+              </a>
             );
           })}
         </div>

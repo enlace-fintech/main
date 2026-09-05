@@ -1,26 +1,30 @@
+import { Handshake } from "lucide-react";
 import { ALIADOS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const Aliados = () => (
-  <section id="aliados" data-testid="aliados-section" className="relative py-20 lg:py-24 bg-[#0e1836] border-y border-white/5">
-    <div className="max-w-7xl mx-auto px-5 lg:px-8 text-center">
+  <section id="aliados" data-testid="aliados-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5 noise-overlay">
+    <div className="relative max-w-7xl mx-auto px-5 lg:px-8 text-center">
       <Reveal>
         <Overline>{ALIADOS.overline}</Overline>
-        <h2 className="font-display mt-4 text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight max-w-2xl mx-auto">
+        <h2 className="font-display mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight max-w-3xl mx-auto">
           {ALIADOS.title}
         </h2>
-        <p className="mt-4 text-slate-400 leading-relaxed max-w-xl mx-auto">{ALIADOS.description}</p>
+        <p className="mt-5 text-slate-300 leading-relaxed max-w-2xl mx-auto">{ALIADOS.description}</p>
       </Reveal>
 
       <Reveal delay={0.1}>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          {ALIADOS.logos.map((l, i) => (
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+          {ALIADOS.categories.map((c, i) => (
             <div
-              key={l}
+              key={c}
               data-testid={`aliado-${i}`}
-              className="flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-8 py-5 min-w-[130px] hover:border-[#D4AF37]/40 transition-colors duration-300"
+              className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-8 hover:border-[#D4AF37]/40 transition-colors duration-300"
             >
-              <span className="font-display text-lg font-bold tracking-wide text-slate-200">{l}</span>
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B132B] transition-colors duration-300">
+                <Handshake size={20} strokeWidth={1.5} />
+              </span>
+              <span className="font-display text-sm font-bold tracking-wide text-slate-200 text-center">{c}</span>
             </div>
           ))}
         </div>
