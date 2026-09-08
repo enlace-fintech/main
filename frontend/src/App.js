@@ -18,6 +18,7 @@ import { Sucursales } from "@/components/site/Sucursales";
 import { Blog } from "@/components/site/Blog";
 import { Contacto } from "@/components/site/Contacto";
 import { Footer } from "@/components/site/Footer";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Contacto />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   );
 }

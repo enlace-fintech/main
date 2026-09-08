@@ -35,8 +35,8 @@ export const Hero = () => (
           transition={{ duration: 0.6, delay: 0.08 }}
           className="font-display mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter leading-[1.02] text-white"
         >
-          Descubre el futuro financiero con{" "}
-          <span className="gold-text">Enlace Fintech</span>
+          Te asesoramos para elegir los mejores{" "}
+          <span className="gold-text">productos financieros</span> para tu empresa
         </motion.h1>
 
         <motion.p
@@ -45,9 +45,9 @@ export const Hero = () => (
           transition={{ duration: 0.6, delay: 0.16 }}
           className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl"
         >
-          Tu socio de confianza en el viaje hacia el éxito empresarial. Diseñadas
-          para pymes y grandes empresas, nuestra estrategia financiera es la clave
-          para desbloquear beneficios económicos inigualables.
+          <span className="font-semibold text-white">Cuentas fintech</span>, herramientas para
+          cobrar a terceros, herramientas para enviar recursos, seguros de accidentes personales,
+          vida, gastos médicos mayores, beneficios para tus colaboradores y más.
         </motion.p>
 
         <motion.div
@@ -98,8 +98,8 @@ export const Hero = () => (
       >
         <div className="absolute -inset-4 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
         <img
-          src={BRAND.heroDashboard}
-          alt="Plataforma Wallet Negocios de Enlace Fintech"
+          src={BRAND.heroPerson}
+          alt="Asesoría financiera Enlace Fintech"
           data-testid="hero-dashboard-image"
           className="relative rounded-2xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.55)] w-full object-cover"
         />
