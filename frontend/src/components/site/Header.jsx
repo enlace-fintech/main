@@ -47,7 +47,7 @@ export const Header = () => {
                   <ChevronDown size={15} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
                 <div className="invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-[opacity,transform] duration-200 absolute left-0 top-full pt-3">
-                  <div className="w-64 rounded-2xl border border-white/10 bg-[#0e1836]/95 backdrop-blur-xl p-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                  <div className="w-64 max-h-[70vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e1836]/95 backdrop-blur-xl p-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                     <div className="px-3 py-2 text-[0.62rem] uppercase tracking-[0.24em] text-[#D4AF37]">Sectores</div>
                     {n.children.map((c) => (
                       <a
