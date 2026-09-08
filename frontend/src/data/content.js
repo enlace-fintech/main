@@ -325,6 +325,20 @@ export const EVENTOS = {
   title: "Impulsa tus eventos y conciertos con pagos sin fricción",
   description:
     "Optimiza la operación de tus eventos con soluciones de cobro ágiles, seguras y sin efectivo. Vende más, agiliza filas y controla cada peso en tiempo real.",
+  partners: [
+    {
+      name: "Mastiket",
+      url: "https://mastiket.com",
+      tag: "Boletera",
+      desc: "Venta y gestión de boletos y accesos para tus eventos y conciertos, con control de aforo y validación en puerta.",
+    },
+    {
+      name: "Masaldo",
+      url: "https://masaldo.com",
+      tag: "Recargas de saldo RFID",
+      desc: "Sistema cashless RFID: recarga saldo en brazaletes o monederos digitales para pagos sin efectivo dentro del recinto.",
+    },
+  ],
   image:
     "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwY3Jvd2QlMjBzdGFnZSUyMGxpZ2h0cyUyMGV2ZW50fGVufDB8fHx8MTc4ODg0NDgzNnww&ixlib=rb-4.1.0&q=85",
   features: [
