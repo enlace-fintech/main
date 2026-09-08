@@ -230,18 +230,57 @@ export const CRIPTO = {
   overline: "Sectores · Cripto",
   title: "Más que un crypto exchange",
   description:
-    "Recibe tus fondos en pesos directamente en tu cuenta bancaria con liquidaciones instantáneas, comisiones competitivas y sin contracargos. Altos límites transaccionales, conversiones en tiempo real y soporte 24/7 con la máxima seguridad.",
+    "Acepta pagos en criptomonedas en tu e-commerce y recibe el dinero en pesos directamente en tu cuenta bancaria. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, de forma rápida y segura.",
   image:
     "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHBheW1lbnQlMjBkaWdpdGFsJTIwZmluYW5jZXxlbnwwfHx8fDE3ODg1ODQ1Nzh8MA&ixlib=rb-4.1.0&q=85",
-  cards: [
-    { icon: "Banknote", title: "Liquidación en pesos en tiempo real", desc: "Recibe tus pagos directamente en tu cuenta bancaria en pesos, con liquidaciones instantáneas." },
-    { icon: "Percent", title: "Mismas comisiones que tarjetas", desc: "Simplicidad y transparencia en la gestión de tus pagos." },
-    { icon: "ShieldOff", title: "0% contracargos", desc: "Protege tu negocio contra contracargos con nuestra política de cero contracargos." },
+  partners: [
+    {
+      name: "FlexPei",
+      url: "https://flexpei.com",
+      tag: "Exchange & activos digitales",
+      desc: "Gestiona todos tus pagos empresariales desde una sola plataforma: intercambio de activos digitales, transferencias SPEI 24/7 y pagos internacionales.",
+      bullets: [
+        "Intercambio de activos digitales",
+        "Transferencias SPEI instantáneas 24/7",
+        "Pagos internacionales Wire y SWIFT",
+        "Tarjetas corporativas y cumplimiento KYC/AML",
+      ],
+    },
+    {
+      name: "FluxiPay",
+      url: "https://fluxipay.com",
+      tag: "Cobros cripto para e-commerce",
+      desc: "Pasarela para aceptar USDT, BTC y ETH en tu e-commerce y recibir el pago en tu moneda local, con liquidación a tu banco.",
+      bullets: [
+        "Acepta USDT, BTC y ETH en tu tienda en línea",
+        "Liquidación en fiat (MXN, USD, EUR) a tu banco",
+        "Wallets temporales por pago y detección on-chain",
+        "Auto-forwarding sin custodia + webhooks y API",
+      ],
+    },
   ],
+  flowReceive: {
+    title: "Recibe cripto",
+    steps: [
+      { title: "Crea la orden", desc: "Tu sistema llama a la API con el monto y la moneda; se genera una wallet temporal única." },
+      { title: "El cliente envía cripto", desc: "Se muestra un QR + dirección y el cliente paga con USDT, BTC o ETH desde cualquier wallet." },
+      { title: "Detección automática", desc: "Monitoreo de la blockchain 24/7; el pago se detecta en segundos y se verifica el monto." },
+      { title: "Reenvío instantáneo", desc: "Los fondos se envían a tu wallet concentradora y recibes un webhook de confirmación." },
+    ],
+  },
+  flowSettle: {
+    title: "Liquida a fiat",
+    steps: [
+      { title: "Validación KYC y país", desc: "Verificamos identidad y país del receptor con cumplimiento regulatorio automatizado." },
+      { title: "Registra tu cuenta bancaria", desc: "Das de alta tu cuenta y la validamos con verificación en tiempo real." },
+      { title: "Conversión cripto → fiat", desc: "Convertimos USDT, BTC o ETH a tu moneda local con tipos de cambio competitivos." },
+      { title: "Depósito en tu banco", desc: "Transferimos el importe a tu cuenta (instantáneo o 24-48 h según país y plan)." },
+    ],
+  },
   why: [
     { title: "Altos límites transaccionales", desc: "Maneja grandes volúmenes de transacciones con total libertad." },
     { title: "Conversión en tiempo real", desc: "Realiza conversiones al instante, disponible las 24 horas del día." },
-    { title: "Confianza y seguridad", desc: "La protección de tus datos y transacciones es nuestra prioridad." },
+    { title: "Confianza y seguridad", desc: "Sin custodia de fondos ni riesgo de contraparte; monitoreo continuo." },
     { title: "Soporte 24/7", desc: "Nuestro equipo experto está listo para asistirte en todo momento." },
   ],
 };

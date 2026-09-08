@@ -1,7 +1,30 @@
-import * as Icons from "lucide-react";
-import { Check } from "lucide-react";
+import { Check, ArrowUpRight, ArrowDownToLine, Wallet } from "lucide-react";
 import { CRIPTO } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+
+const FlowColumn = ({ icon: Icon, flow, testid }) => (
+  <div data-testid={testid} className="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+    <div className="flex items-center gap-3">
+      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37]">
+        <Icon size={20} strokeWidth={1.5} />
+      </span>
+      <h4 className="font-display text-lg font-bold text-white">{flow.title}</h4>
+    </div>
+    <ol className="mt-5 space-y-4">
+      {flow.steps.map((s, i) => (
+        <li key={i} className="flex items-start gap-3">
+          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#D4AF37] text-[0.7rem] font-bold text-[#0B132B]">
+            {i + 1}
+          </span>
+          <div>
+            <p className="font-medium text-white text-sm">{s.title}</p>
+            <p className="mt-0.5 text-sm text-slate-400 leading-relaxed">{s.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+);
 
 export const Cripto = () => (
   <section id="cripto" data-testid="cripto-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5 noise-overlay">
@@ -22,22 +45,54 @@ export const Cripto = () => (
             {CRIPTO.title}
           </h2>
           <p className="mt-5 text-slate-300 leading-relaxed">{CRIPTO.description}</p>
-
-          <div className="mt-8 grid sm:grid-cols-3 gap-4">
-            {CRIPTO.cards.map((c, i) => {
-              const Icon = Icons[c.icon] || Icons.Coins;
-              return (
-                <div key={c.title} data-testid={`cripto-card-${i}`} className="rounded-xl border border-white/10 bg-white/[0.03] p-5">
-                  <Icon size={22} className="text-[#D4AF37]" strokeWidth={1.5} />
-                  <h3 className="font-display mt-3 text-sm font-bold text-white leading-snug">{c.title}</h3>
-                  <p className="mt-1.5 text-xs text-slate-400 leading-relaxed">{c.desc}</p>
-                </div>
-              );
-            })}
-          </div>
         </Reveal>
       </div>
 
+      {/* Aliados */}
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
+        {CRIPTO.partners.map((p, i) => (
+          <Reveal key={p.name} delay={i * 0.08}>
+            <div data-testid={`cripto-partner-${i}`} className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-8 hover:border-[#D4AF37]/40 transition-colors duration-300">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
+                  <span className="text-xs uppercase tracking-[0.18em] text-[#D4AF37]">{p.tag}</span>
+                </div>
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`cripto-partner-link-${i}`}
+                  aria-label={`Visitar ${p.name}`}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/40 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B132B] transition-colors duration-200"
+                >
+                  <ArrowUpRight size={18} />
+                </a>
+              </div>
+              <p className="mt-4 text-slate-300 leading-relaxed">{p.desc}</p>
+              <ul className="mt-5 space-y-2.5">
+                {p.bullets.map((b, j) => (
+                  <li key={j} className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                    <Check size={16} className="mt-0.5 shrink-0 text-[#D4AF37]" strokeWidth={2} />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+
+      {/* Cómo funciona */}
+      <Reveal delay={0.05}>
+        <h3 className="font-display mt-16 text-2xl font-bold tracking-tight text-white">¿Cómo funciona?</h3>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <FlowColumn icon={Wallet} flow={CRIPTO.flowReceive} testid="cripto-flow-receive" />
+          <FlowColumn icon={ArrowDownToLine} flow={CRIPTO.flowSettle} testid="cripto-flow-settle" />
+        </div>
+      </Reveal>
+
+      {/* ¿Por qué elegirnos? */}
       <Reveal delay={0.1}>
         <h3 className="font-display mt-16 text-2xl font-bold tracking-tight text-white">¿Por qué elegirnos?</h3>
         <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
