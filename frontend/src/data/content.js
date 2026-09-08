@@ -17,25 +17,25 @@ export const NAV = [
   {
     label: "Empresas",
     children: [
-      { label: "Restaurantes y bares", href: "#restaurantes" },
-      { label: "Médicos", href: "#medicos" },
-      { label: "Casinos", href: "#casinos" },
-      { label: "Cripto", href: "#cripto" },
-      { label: "Eventos & Conciertos", href: "#eventos" },
-      { label: "Membresías", href: "#membresias" },
-      { label: "Call center", href: "#contacto" },
-      { label: "Farmacias", href: "#contacto" },
-      { label: "Tiendas", href: "#contacto" },
-      { label: "Ferreterías", href: "#contacto" },
-      { label: "Hoteles", href: "#contacto" },
-      { label: "Agencias de viajes", href: "#contacto" },
+      { label: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
+      { label: "Médicos", href: "/empresas/medicos" },
+      { label: "Casinos", href: "/empresas/casinos" },
+      { label: "Cripto", href: "/empresas/cripto" },
+      { label: "Eventos & Conciertos", href: "/empresas/eventos" },
+      { label: "Membresías", href: "/empresas/membresias" },
+      { label: "Call center", href: "/empresas/call-center" },
+      { label: "Farmacias", href: "/empresas/farmacias" },
+      { label: "Tiendas", href: "/empresas/tiendas" },
+      { label: "Ferreterías", href: "/empresas/ferreterias" },
+      { label: "Hoteles", href: "/empresas/hoteles" },
+      { label: "Agencias de viajes", href: "/empresas/agencias-de-viajes" },
     ],
   },
-  { label: "Personas", href: "#persona" },
-  { label: "Aliados", href: "#aliados" },
-  { label: "Sucursales", href: "#sucursales" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Personas", href: "/personas" },
+  { label: "Aliados", href: "/aliados" },
+  { label: "Sucursales", href: "/sucursales" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export const HERO_STATS = [
@@ -141,21 +141,21 @@ export const EMPRESAS = {
   image:
     "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxtZXhpY2FuJTIwYnVzaW5lc3MlMjB0ZWFtJTIwb2ZmaWNlfGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
   sectors: [
-    { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "#restaurantes" },
-    { icon: "Stethoscope", name: "Médicos", href: "#medicos" },
-    { icon: "Dice5", name: "Casinos", href: "#casinos" },
-    { icon: "Bitcoin", name: "Cripto", href: "#cripto" },
-    { icon: "Ticket", name: "Eventos & Conciertos", href: "#eventos" },
-    { icon: "BadgeCheck", name: "Membresías", href: "#membresias" },
-    { icon: "Wallet", name: "Wallet Negocios", href: "#wallet" },
-    { icon: "Users", name: "Personas", href: "#persona" },
-    { icon: "Store", name: "Caja & TPV", href: "#caja" },
-    { icon: "Headset", name: "Call center", href: "#contacto" },
-    { icon: "Pill", name: "Farmacias", href: "#contacto" },
-    { icon: "ShoppingBag", name: "Tiendas", href: "#contacto" },
-    { icon: "Hammer", name: "Ferreterías", href: "#contacto" },
-    { icon: "Hotel", name: "Hoteles", href: "#contacto" },
-    { icon: "Plane", name: "Agencias de viajes", href: "#contacto" },
+    { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
+    { icon: "Stethoscope", name: "Médicos", href: "/empresas/medicos" },
+    { icon: "Dice5", name: "Casinos", href: "/empresas/casinos" },
+    { icon: "Bitcoin", name: "Cripto", href: "/empresas/cripto" },
+    { icon: "Ticket", name: "Eventos & Conciertos", href: "/empresas/eventos" },
+    { icon: "BadgeCheck", name: "Membresías", href: "/empresas/membresias" },
+    { icon: "Wallet", name: "Wallet Negocios", href: "/wallet" },
+    { icon: "Users", name: "Personas", href: "/personas" },
+    { icon: "Store", name: "Caja & TPV", href: "/caja" },
+    { icon: "Headset", name: "Call center", href: "/empresas/call-center" },
+    { icon: "Pill", name: "Farmacias", href: "/empresas/farmacias" },
+    { icon: "ShoppingBag", name: "Tiendas", href: "/empresas/tiendas" },
+    { icon: "Hammer", name: "Ferreterías", href: "/empresas/ferreterias" },
+    { icon: "Hotel", name: "Hoteles", href: "/empresas/hoteles" },
+    { icon: "Plane", name: "Agencias de viajes", href: "/empresas/agencias-de-viajes" },
   ],
 };
 
@@ -294,6 +294,93 @@ export const EVENTOS = {
     { icon: "Users", title: "Gestión de proveedores", desc: "Dispersa pagos a personal y proveedores de forma rápida y trazable." },
     { icon: "ShieldCheck", title: "Seguridad y trazabilidad", desc: "Protege cada transacción con alertas automáticas y conciliación al instante." },
   ],
+};
+
+export const GENERIC_SECTORS = {
+  "call-center": {
+    icon: "Headset",
+    overline: "Sectores · Call center",
+    title: "Cobros y dispersión para tu call center",
+    description:
+      "Gestiona pagos telefónicos, links de pago y dispersión de comisiones a tus agentes desde una sola plataforma, con control total en tiempo real.",
+    image: "https://images.unsplash.com/photo-1553775282-20af80779df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxjYWxsJTIwY2VudGVyJTIwY3VzdG9tZXIlMjBzZXJ2aWNlJTIwaGVhZHNldCUyMGFnZW50c3xlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "Link", title: "Links de pago", desc: "Cierra ventas por teléfono enviando un link de cobro seguro al instante." },
+      { icon: "Users", title: "Dispersión a agentes", desc: "Paga comisiones y nómina de forma rápida y trazable." },
+      { icon: "LineChart", title: "Control en tiempo real", desc: "Monitorea cobros y conversiones por campaña y agente." },
+      { icon: "ShieldCheck", title: "Seguridad antifraude", desc: "Alertas automáticas y protección en cada transacción." },
+    ],
+  },
+  farmacias: {
+    icon: "Pill",
+    overline: "Sectores · Farmacias",
+    title: "Soluciones de pago para farmacias",
+    description:
+      "Agiliza el mostrador con terminales, pagos contactless y control de inventario, mejorando la experiencia de tus clientes.",
+    image: "https://images.unsplash.com/photo-1777494395822-be72bef7262b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxwaGFybWFjeSUyMGNvdW50ZXIlMjBwYXltZW50fGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "CreditCard", title: "Terminales punto de venta", desc: "Acepta tarjetas de crédito, débito, contactless y QR." },
+      { icon: "Boxes", title: "Módulo de inventario", desc: "Controla entradas y salidas para evitar desabastos." },
+      { icon: "QrCode", title: "Facturas QR", desc: "Facturación rápida y sin errores para tus clientes." },
+      { icon: "LineChart", title: "Reportes de ventas", desc: "Visualiza tus ingresos por sucursal en tiempo real." },
+    ],
+  },
+  tiendas: {
+    icon: "ShoppingBag",
+    overline: "Sectores · Tiendas",
+    title: "Impulsa las ventas de tu tienda",
+    description:
+      "Cobra como quieras: presencial, a distancia o en línea. Acelera filas y fideliza a tus clientes con múltiples formas de pago.",
+    image: "https://images.unsplash.com/photo-1556740772-1a741367b93e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBzdG9yZSUyMGNoZWNrb3V0JTIwY291bnRlcnxlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "CreditCard", title: "TPV y contactless", desc: "Acepta todas las tarjetas de chip, banda y sin contacto." },
+      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Ofrece de 3 a 24 meses sin intereses y vende más." },
+      { icon: "Link", title: "Links de pago", desc: "Cobra a distancia por WhatsApp o redes sociales." },
+      { icon: "Boxes", title: "Inventario y caja", desc: "Administra productos, ventas y arqueo desde la app." },
+    ],
+  },
+  ferreterias: {
+    icon: "Hammer",
+    overline: "Sectores · Ferreterías",
+    title: "Pagos y crédito para ferreterías",
+    description:
+      "Da facilidades de pago a tus clientes, controla tu inventario y gestiona el flujo de tu negocio con herramientas fintech.",
+    image: "https://images.unsplash.com/photo-1519520104014-df63821cb6f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxoYXJkd2FyZSUyMHN0b3JlJTIwdG9vbHMlMjBzaG9wfGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
+      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita compras grandes de material y herramienta." },
+      { icon: "Boxes", title: "Control de inventario", desc: "Supervisa existencias y evita pérdidas." },
+      { icon: "Wallet", title: "Wallet Negocios", desc: "Administra todos los fondos de tu negocio en un lugar." },
+    ],
+  },
+  hoteles: {
+    icon: "Hotel",
+    overline: "Sectores · Hoteles",
+    title: "Soluciones financieras para hoteles",
+    description:
+      "Cobra reservaciones, consumos y servicios con múltiples métodos de pago, y administra los ingresos de todo tu hotel en tiempo real.",
+    image: "https://images.unsplash.com/photo-1621293954908-907159247fc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxob3RlbCUyMHJlY2VwdGlvbiUyMGxvYmJ5JTIwbW9kZXJufGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "Link", title: "Cobro de reservaciones", desc: "Recibe anticipos y pagos en línea con links seguros." },
+      { icon: "CreditCard", title: "TPV en recepción y consumo", desc: "Cobra habitaciones, restaurante y servicios en un solo sistema." },
+      { icon: "Globe", title: "Pagos internacionales", desc: "Acepta a huéspedes nacionales y extranjeros." },
+      { icon: "LineChart", title: "Ingresos consolidados", desc: "Visualiza todos los ingresos de tu hotel al instante." },
+    ],
+  },
+  "agencias-de-viajes": {
+    icon: "Plane",
+    overline: "Sectores · Agencias de viajes",
+    title: "Cobros y pagos para agencias de viajes",
+    description:
+      "Vende paquetes y boletos con pagos a meses, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhZ2VuY3klMjBhaXJwbGFuZSUyMGJvb2tpbmd8ZW58MHx8fHwxNzg4ODQ1ODI0fDA&ixlib=rb-4.1.0&q=85",
+    features: [
+      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita la compra de viajes y paquetes turísticos." },
+      { icon: "Link", title: "Cobro a distancia", desc: "Envía links de pago a tus clientes donde estén." },
+      { icon: "Globe", title: "Pagos internacionales", desc: "Paga a proveedores y hoteles en el extranjero." },
+      { icon: "ShieldCheck", title: "Seguridad y trazabilidad", desc: "Protege cada operación con alertas automáticas." },
+    ],
+  },
 };
 
 export const SUCURSALES = {

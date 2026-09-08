@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { BRAND, NAV } from "../../data/content";
 
@@ -23,7 +24,7 @@ export const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-        <a href="#inicio" data-testid="logo-link" className="flex items-center gap-3">
+        <Link to="/" data-testid="logo-link" className="flex items-center gap-3">
           <img
             src={BRAND.logo}
             alt="Enlace Fintech"
@@ -33,7 +34,7 @@ export const Header = () => {
             <span className="block text-lg font-extrabold tracking-tight text-white">ENLACE</span>
             <span className="block text-[0.62rem] tracking-[0.42em] font-medium text-[#D4AF37]">FINTECH</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-7">
           {NAV.map((n) =>
@@ -50,38 +51,38 @@ export const Header = () => {
                   <div className="w-64 max-h-[70vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e1836]/95 backdrop-blur-xl p-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                     <div className="px-3 py-2 text-[0.62rem] uppercase tracking-[0.24em] text-[#D4AF37]">Sectores</div>
                     {n.children.map((c) => (
-                      <a
+                      <Link
                         key={c.href}
-                        href={c.href}
-                        data-testid={`nav-sub-${c.href.replace("#", "")}`}
+                        to={c.href}
+                        data-testid={`nav-sub-${c.href.split("/").pop()}`}
                         className="block rounded-lg px-3 py-2.5 text-sm text-slate-200 hover:bg-white/5 hover:text-[#D4AF37] transition-colors duration-200"
                       >
                         {c.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
             ) : (
-              <a
+              <Link
                 key={n.href}
-                href={n.href}
-                data-testid={`nav-${n.href.replace("#", "")}`}
+                to={n.href}
+                data-testid={`nav-${n.href.replace("/", "")}`}
                 className="text-sm text-slate-300 hover:text-[#D4AF37] transition-colors duration-200"
               >
                 {n.label}
-              </a>
+              </Link>
             )
           )}
         </nav>
 
-        <a
-          href="#contacto"
+        <Link
+          to="/contacto"
           data-testid="header-cta"
           className="hidden lg:inline-flex items-center rounded-full bg-[#D4AF37] px-6 py-2.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200"
         >
           Contáctanos
-        </a>
+        </Link>
 
         <button
           data-testid="mobile-menu-toggle"
@@ -111,27 +112,27 @@ export const Header = () => {
                 {mobileSub && (
                   <div className="pl-4">
                     {n.children.map((c) => (
-                      <a
+                      <Link
                         key={c.href}
-                        href={c.href}
+                        to={c.href}
                         onClick={() => setOpen(false)}
                         className="block py-2.5 text-sm text-slate-300 hover:text-[#D4AF37]"
                       >
                         {c.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ) : (
-              <a
+              <Link
                 key={n.href}
-                href={n.href}
+                to={n.href}
                 onClick={() => setOpen(false)}
                 className="block py-3 text-slate-200 hover:text-[#D4AF37] border-b border-white/5"
               >
                 {n.label}
-              </a>
+              </Link>
             )
           )}
         </div>

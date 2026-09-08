@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 import { BRAND, HERO_STATS } from "../../data/content";
 
@@ -56,16 +57,16 @@ export const Hero = () => (
           transition={{ duration: 0.6, delay: 0.24 }}
           className="mt-9 flex flex-wrap items-center gap-4"
         >
-          <a
-            href="#contacto"
+          <Link
+            to="/contacto"
             data-testid="hero-cta-primary"
             className="group inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200"
           >
             Solicitar asesoría
             <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-          </a>
+          </Link>
           <a
-            href="#wallet"
+            href="#empresas"
             data-testid="hero-cta-secondary"
             className="inline-flex items-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors duration-200"
           >

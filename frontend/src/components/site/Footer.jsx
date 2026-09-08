@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { BRAND, NAV } from "../../data/content";
 
@@ -5,13 +6,13 @@ export const Footer = () => (
   <footer data-testid="site-footer" className="relative bg-[#070d1e] border-t border-white/10">
     <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div className="lg:col-span-1">
-        <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <img src={BRAND.logo} alt="Enlace Fintech" className="h-11 w-11 rounded-xl object-cover ring-1 ring-white/10" />
           <span className="font-display leading-none">
             <span className="block text-lg font-extrabold tracking-tight text-white">ENLACE</span>
             <span className="block text-[0.62rem] tracking-[0.42em] font-medium text-[#D4AF37]">FINTECH</span>
           </span>
-        </div>
+        </Link>
         <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-xs">
           Tu broker fintech de confianza en el viaje hacia el éxito empresarial.
         </p>
@@ -20,11 +21,11 @@ export const Footer = () => (
       <div>
         <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Sectores</h4>
         <ul className="mt-5 space-y-3">
-          {NAV[0].children.map((c) => (
+          {NAV[0].children.slice(0, 6).map((c) => (
             <li key={c.href}>
-              <a href={c.href} className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">
+              <Link to={c.href} className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">
                 {c.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -33,11 +34,11 @@ export const Footer = () => (
       <div>
         <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Empresa</h4>
         <ul className="mt-5 space-y-3">
-          <li><a href="#persona" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</a></li>
-          <li><a href="#aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</a></li>
-          <li><a href="#sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</a></li>
-          <li><a href="#blog" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Blog</a></li>
-          <li><a href="#contacto" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Contacto</a></li>
+          <li><Link to="/personas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</Link></li>
+          <li><Link to="/aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</Link></li>
+          <li><Link to="/sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</Link></li>
+          <li><Link to="/blog" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Blog</Link></li>
+          <li><Link to="/contacto" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Contacto</Link></li>
         </ul>
       </div>
 
