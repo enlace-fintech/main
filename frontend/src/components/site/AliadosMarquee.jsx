@@ -6,6 +6,8 @@ const ALIADOS_MARCA = [
   "InfoCaja",
   "Mastiket",
   "MisTrámites",
+  "Mercado Libre",
+  "Clip",
   "VISA",
   "Mastercard",
   "SPEI",
