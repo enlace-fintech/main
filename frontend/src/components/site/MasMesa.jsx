@@ -1,4 +1,4 @@
-import { CalendarCheck, Check } from "lucide-react";
+import { CalendarCheck, Check, ArrowUpRight } from "lucide-react";
 import { MASMESA } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
@@ -28,6 +28,17 @@ export const MasMesa = () => (
             </div>
           ))}
         </div>
+
+        <a
+          href={MASMESA.partner.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="masmesa-partner-link"
+          className="group mt-8 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 px-6 py-3 text-sm font-semibold text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B132B] transition-colors duration-200"
+        >
+          Reserva con {MASMESA.partner.name}
+          <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+        </a>
       </Reveal>
 
       <Reveal delay={0.12} className="relative">

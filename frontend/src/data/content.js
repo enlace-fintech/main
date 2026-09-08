@@ -178,6 +178,7 @@ export const MASMESA = {
   title: "Gestión eficiente de reservaciones",
   description:
     "Acepta reservaciones de manera virtual y facilita a tus clientes reservar mesas en línea, priorizando su comodidad y mejorando la gestión del flujo de personas.",
+  partner: { name: "Más Mesa", url: "https://masmesa.com" },
   image:
     "https://images.unsplash.com/photo-1728044849280-10a1a75cff83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcmVzZXJ2YXRpb24lMjBob3N0JTIwdGFibGV0fGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
   points: [
@@ -192,7 +193,8 @@ export const CAJA = {
   overline: "Caja",
   title: "Una solución integral",
   description:
-    "Digitaliza tu punto de venta y automatiza la operación diaria de tu negocio con una caja pensada para la hostelería y el comercio.",
+    "Digitaliza tu punto de venta y automatiza la operación diaria de tu negocio con una caja pensada para la hostelería y el comercio, de la mano de nuestro aliado InfoCaja.",
+  partner: { name: "InfoCaja", url: "https://infocaja.mx/" },
   image:
     "https://images.unsplash.com/photo-1778795317873-10b4d6973e05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcG9pbnQlMjBvZiUyMHNhbGUlMjBjYXNoaWVyJTIwdGVybWluYWx8ZW58MHx8fHwxNzg4NTgzMjEyfDA&ixlib=rb-4.1.0&q=85",
   features: [

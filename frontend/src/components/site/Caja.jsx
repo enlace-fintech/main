@@ -1,4 +1,5 @@
 import * as Icons from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { CAJA } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
@@ -21,6 +22,16 @@ export const Caja = () => (
             {CAJA.title}
           </h2>
           <p className="mt-5 text-slate-300 leading-relaxed">{CAJA.description}</p>
+          <a
+            href={CAJA.partner.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="caja-partner-link"
+            className="group mt-6 inline-flex items-center gap-2 rounded-full border border-[#D4AF37]/40 px-6 py-3 text-sm font-semibold text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B132B] transition-colors duration-200"
+          >
+            Accede a la comanda con {CAJA.partner.name}
+            <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+          </a>
         </Reveal>
       </div>
 
