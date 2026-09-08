@@ -3,7 +3,7 @@
 export const BRAND = {
   name: "Enlace Fintech",
   domain: "enlacefintech.com",
-  logo: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/daf6a9f15e305879c5614451c634e71aec4e1405384388a348a0209d024febac.jpeg",
+  logo: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/1ea1d960844b7f00d1a57231eaa1ae463eb4c7dd2c8a3f1e933228b6d74bbd6c.jpeg",
   heroDashboard: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/c0ac1b3c30a83e57504f71798d31da8a22152c935c6a41ab5875736fdea65feb.jpeg",
   heroPerson: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/9c987f5737fe95ef3b10c59483debca893627796096c34548ea35effeba1ee01.jpeg",
   tagline: "Tu broker fintech de confianza",
