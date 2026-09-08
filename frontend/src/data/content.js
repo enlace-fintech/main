@@ -437,6 +437,14 @@ export const GENERIC_SECTORS = {
     description:
       "Vende paquetes y boletos con pagos a meses, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhZ2VuY3klMjBhaXJwbGFuZSUyMGJvb2tpbmd8ZW58MHx8fHwxNzg4ODQ1ODI0fDA&ixlib=rb-4.1.0&q=85",
+    partners: [
+      {
+        name: "Callmarket",
+        url: "https://callmarket.cc",
+        tag: "Terminales, procesadores de pago & call center",
+        desc: "Aliado en terminales, procesadores de pago y sistemas de call center para gestionar reservas y cobros de tu agencia.",
+      },
+    ],
     features: [
       { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita la compra de viajes y paquetes turísticos." },
       { icon: "Link", title: "Cobro a distancia", desc: "Envía links de pago a tus clientes donde estén." },
