@@ -359,6 +359,14 @@ export const GENERIC_SECTORS = {
     description:
       "Gestiona pagos telefónicos, links de pago y dispersión de comisiones a tus agentes desde una sola plataforma, con control total en tiempo real.",
     image: "https://images.unsplash.com/photo-1553775282-20af80779df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxjYWxsJTIwY2VudGVyJTIwY3VzdG9tZXIlMjBzZXJ2aWNlJTIwaGVhZHNldCUyMGFnZW50c3xlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
+    partners: [
+      {
+        name: "Callmarket",
+        url: "https://callmarket.cc",
+        tag: "Procesadores de pago & sistemas de call center",
+        desc: "Aliado en sistemas de call center e integración con procesadores de pago para tus operaciones de cobro telefónico.",
+      },
+    ],
     features: [
       { icon: "Link", title: "Links de pago", desc: "Cierra ventas por teléfono enviando un link de cobro seguro al instante." },
       { icon: "Users", title: "Dispersión a agentes", desc: "Paga comisiones y nómina de forma rápida y trazable." },

@@ -1,6 +1,6 @@
 import * as Icons from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal, Overline } from "./Primitives";
 
 export const GenericSector = ({ data }) => (
@@ -32,6 +32,34 @@ export const GenericSector = ({ data }) => (
           />
         </Reveal>
       </div>
+
+      {data.partners && (
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
+          {data.partners.map((p, i) => (
+            <Reveal key={p.name} delay={i * 0.08}>
+              <div data-testid={`generic-partner-${i}`} className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-8 hover:border-[#D4AF37]/40 transition-colors duration-300">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
+                    <span className="text-xs uppercase tracking-[0.18em] text-[#D4AF37]">{p.tag}</span>
+                  </div>
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`generic-partner-link-${i}`}
+                    aria-label={`Visitar ${p.name}`}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/40 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0B132B] transition-colors duration-200"
+                  >
+                    <ArrowUpRight size={18} />
+                  </a>
+                </div>
+                <p className="mt-4 text-slate-300 leading-relaxed">{p.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      )}
 
       <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4 auto-rows-fr">
         {data.features.map((f, i) => {
