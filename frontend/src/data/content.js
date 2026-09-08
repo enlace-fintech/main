@@ -31,6 +31,15 @@ export const NAV = [
       { label: "Agencias de viajes", href: "/empresas/agencias-de-viajes" },
     ],
   },
+  {
+    label: "Servicios",
+    subtitle: "Soluciones integrales",
+    children: [
+      { label: "Todos los servicios", href: "/servicios" },
+      { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
+      { label: "Terminales punto de venta", href: "/servicios/terminales-punto-de-venta" },
+    ],
+  },
   { label: "Personas", href: "/personas" },
   { label: "Aliados", href: "/aliados" },
   { label: "Sucursales", href: "/sucursales" },
@@ -525,5 +534,159 @@ export const INTERESES = [
   "Wallet Negocios",
   "Crédito personal / grupal",
   "Casinos",
+  "Consultoría empresarial",
+  "Terminales punto de venta",
   "Otro",
 ];
+
+export const SERVICIOS_HUB = {
+  overline: "Servicios",
+  title: "Soluciones integrales para su empresa",
+  description:
+    "Brindamos soluciones integrales para las empresas por medio de herramientas innovadoras que ofrecen beneficios financieros, reducción de costos y optimización del control administrativo. Solicite más información y conozca todo lo que podemos hacer por las finanzas de su empresa.",
+  image:
+    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b74f2bcf6984fdc46effb5e99391ab66bd8bc5543c5dd572bc2f00a14c4913cf.jpeg",
+  pillars: [
+    {
+      icon: "TrendingUp",
+      title: "Soluciones financieras",
+      desc: "Por medio de herramientas innovadoras generamos beneficios financieros, reducción de costos y optimización del control administrativo.",
+      href: "/servicios/terminales-punto-de-venta",
+      cta: "Ver terminales punto de venta",
+    },
+    {
+      icon: "Users",
+      title: "Administración de capital humano",
+      desc: "Desde la contratación temporal o de planta, altas y bajas del IMSS, cálculo de incidencias y dispersión de pagos, hasta negociación con sindicatos, finiquitos y liquidaciones.",
+      href: "/servicios/consultoria-empresarial",
+      cta: "Ver capital humano",
+    },
+    {
+      icon: "Scale",
+      title: "Asesoría y consultoría",
+      desc: "Expertos en temas legales, administrativos, fiscales y contables que acompañan a su empresa para analizar sus cuentas, evaluar el rendimiento del negocio y definir pautas de solución.",
+      href: "/servicios/consultoria-empresarial",
+      cta: "Ver consultoría",
+    },
+  ],
+};
+
+export const CONSULTORIA = {
+  overline: "Consultoría empresarial",
+  title: "Asesoría y soluciones corporativas en México",
+  description:
+    "Somos una firma de consultoría de negocios enfocada en brindar asesoría y soluciones corporativas en México. La necesidad de cada cliente es diferente; por eso, antes de presentar nuestra propuesta de servicio realizamos un análisis que nos da una visión completa y clara de cada solicitud, para implementar una estrategia integral que optimice los recursos de su empresa.",
+  image:
+    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/fb301f7f8a4e3e9f6ea47e2ecc962ed91c4363919704d77f6457f3106da6cdc2.jpeg",
+  areas: [
+    {
+      id: "capital-humano",
+      icon: "Users",
+      title: "Administración de capital humano",
+      desc: "Nómina, personal y recursos humanos operados con control, cumplimiento y ahorro.",
+      items: [
+        "Administración de nómina",
+        "Servicios especializados de personal (REPSE)",
+        "Soluciones en recursos humanos",
+        "Manejo de contratos laborales",
+        "Auditorías en nómina",
+        "Desarrollo de perfiles de puesto",
+        "Programas de capacitación",
+        "Estudios socioeconómicos",
+        "Altas y bajas ante el IMSS y cálculo de incidencias",
+        "Dispersión de pagos, finiquitos y liquidaciones",
+      ],
+    },
+    {
+      id: "corporativa",
+      icon: "Building2",
+      title: "Asesoría corporativa",
+      desc: "Estructura societaria y decisiones financieras con respaldo legal.",
+      items: [
+        "Estudios de precios de transferencia",
+        "Constitución de sociedades y modelos corporativos",
+        "Asesoría financiera a socios y accionistas",
+        "Asesoría y elaboración de contratos",
+        "Arrendamiento de bienes inmuebles",
+        "Gestión de honorarios del Consejo de Administración",
+        "Gestión de regalías (royalties) y franquicias",
+      ],
+    },
+    {
+      id: "fiscal",
+      icon: "Receipt",
+      title: "Asesoría fiscal",
+      desc: "Cumplimiento y defensa frente a las obligaciones fiscales de su empresa.",
+      items: [
+        "Planificación integral de obligaciones fiscales",
+        "Defensa administrativa fiscal",
+        "Gestión de gastos no deducibles",
+      ],
+    },
+    {
+      id: "laboral",
+      icon: "Scale",
+      title: "Asesoría laboral",
+      desc: "Relaciones laborales sanas y protegidas ante cualquier contingencia.",
+      items: [
+        "Auditorías laborales",
+        "Elaboración y celebración de contratos individuales de trabajo",
+        "Elaboración y trámite del reglamento interior de trabajo",
+        "Asesoría en negociación y registro de contratos colectivos",
+        "Representación en trámites ante la STPS y Centros de Conciliación Laboral",
+        "Asesoramiento en procesos de conciliación",
+        "Representación del empleador en juicios laborales",
+        "Asesoría y elaboración de convenios de confidencialidad",
+        "Asesoría en finiquitos y liquidaciones",
+        "Asesoría en seguridad e higiene en el trabajo (NOM-STPS)",
+      ],
+    },
+    {
+      id: "mercantil",
+      icon: "Handshake",
+      title: "Asesoría mercantil",
+      desc: "Acompañamiento en operaciones de compra y venta con certeza jurídica.",
+      items: ["Asesoría en compraventa de activos", "Revisión y negociación de contratos mercantiles", "Due diligence de operaciones"],
+    },
+  ],
+};
+
+export const TPV = {
+  overline: "Terminales punto de venta",
+  title: "Cobra con terminal, sin tramitología bancaria",
+  description:
+    "Su empresa procesa cobros con nuestras terminales y el importe ingresado lo retornamos a través de una gran variedad de opciones seguras de retorno de capital. La asignación de las terminales se formaliza mediante un contrato de administración de tesorería que protege jurídicamente las operaciones entre ambas empresas.",
+  image:
+    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/921cd02d61f74010f9808d4bd8f633a0b1e0712cef43cbc0336c8a8e2f022ebc.jpeg",
+  benefitsTitle: "Beneficios de nuestro servicio integral de terminales",
+  benefits: [
+    "Reportes de los cobros por terminal, en tiempo real, desde plataformas virtuales.",
+    "Evita la tramitología bancaria y los requisitos complejos para obtener terminales.",
+    "Sin mínimos de operación para otorgar la terminal.",
+    "No pierdas ventas por fallas en una sola terminal.",
+    "Blindamos su operación.",
+    "Asignamos la cantidad de terminales según la necesidad de cada empresa.",
+    "Certeza legal y tranquilidad financiera con un contrato de administración de tesorería.",
+    "Opciones variadas de retorno de capital.",
+    "Fechas de corte personalizadas para cada cliente.",
+    "Usa las terminales como únicas o alternas en tu negocio.",
+  ],
+  premium: {
+    title: "Plataforma premium de pago con tarjeta",
+    subtitle: "Acepta todas las marcas de tarjetas.",
+    bullets: [
+      { icon: "Zap", text: "Pagos con tarjeta en segundos." },
+      { icon: "Bluetooth", text: "Se conecta a tu smartphone o tableta vía Bluetooth." },
+      { icon: "KeyRound", text: "Acepta tarjetas que solicitan PIN." },
+      { icon: "ShieldCheck", text: "Aprobada por EMV (Europay, MasterCard y Visa) y cumple la norma PCI DSS de seguridad de datos." },
+      { icon: "Lock", text: "Garantiza tu protección y la de tus clientes." },
+    ],
+  },
+  stepsTitle: "En 3 sencillos pasos puedes contar con tu terminal punto de venta",
+  steps: [
+    { icon: "FileSignature", title: "Firma del contrato", desc: "Al aceptar las condiciones de servicio y comisión, se firma el contrato de administración de tesorería entre su empresa y la empresa concentradora de cobros." },
+    { icon: "CalendarClock", title: "Elige cortes y retorno", desc: "Define tus fechas de corte y la opción de retorno de cobros que mejor cubra tus necesidades." },
+    { icon: "PackageCheck", title: "Recibe tu KIT TPV", desc: "En un lapso de 48 horas recibirás tu KIT de TPV; configura la terminal y comienza a generar cargos." },
+  ],
+  requisitos: "Requisitos básicos: WiFi o plan de datos en una tablet o smartphone.",
+};
