@@ -47,6 +47,23 @@ export const Membresias = () => (
           );
         })}
       </div>
+
+      <div className="mt-16">
+        <h3 className="font-display text-2xl font-bold tracking-tight text-white">Nuestros aliados</h3>
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+          {MEMBRESIAS.aliados.map((a, i) => (
+            <div
+              key={a.name}
+              data-testid={`membresia-aliado-${i}`}
+              className="group rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-6 hover:border-[#D4AF37]/40 transition-colors duration-300"
+            >
+              <div className="font-display text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-200">{a.name}</div>
+              <div className="mt-1 text-xs uppercase tracking-[0.18em] text-[#D4AF37]">{a.cat}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-xs text-slate-500">* Logotipos de aliados sujetos a convenio vigente.</p>
+      </div>
     </div>
   </section>
 );

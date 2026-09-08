@@ -301,6 +301,17 @@ export const MEMBRESIAS = {
     { icon: "Wallet", title: "Crédito y adelanto de nómina", desc: "Soluciones financieras a tu medida, justo cuando las necesitas." },
     { icon: "PiggyBank", title: "Caja y fondo de ahorro", desc: "Facilita el ahorro y la gestión financiera de tus empleados." },
   ],
+  aliados: [
+    { name: "MAPFRE", cat: "Seguros" },
+    { name: "CHUBB", cat: "Seguros" },
+    { name: "SURA", cat: "Seguros" },
+    { name: "AsisMed", cat: "Asistencias médicas" },
+    { name: "Hermes Assist", cat: "Asistencias vial y hogar" },
+    { name: "TotalPass", cat: "Gimnasios" },
+    { name: "Smart Fit", cat: "Gimnasios" },
+    { name: "Gayosso", cat: "Servicios funerarios" },
+    { name: "CREA", cat: "Crédito ágil" },
+  ],
 };
 
 export const ALIADOS = {
