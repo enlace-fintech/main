@@ -64,7 +64,7 @@ export const WALLET = {
   description:
     "Todas las funcionalidades que tu empresa necesita para mover, cobrar y administrar su dinero, integradas en una sola plataforma.",
   features: [
-    { icon: "ArrowLeftRight", title: "Transferencias AQPay", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
+    { icon: "ArrowLeftRight", title: "Transferencias FlexPei", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
     { icon: "Landmark", title: "Transferencias SPEI", desc: "Dispersa y recibe pagos interbancarios en segundos, 24/7." },
     { icon: "Store", title: "Pagos en tiendas de autoservicio", desc: "Deposita y paga en miles de puntos a nivel nacional." },
     { icon: "CreditCard", title: "Terminales punto de venta y Links de Pago", desc: "Cobra presencial o a distancia con TPV y links de pago." },
