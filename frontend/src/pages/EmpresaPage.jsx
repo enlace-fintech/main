@@ -9,6 +9,7 @@ import { Cripto } from "@/components/site/Cripto";
 import { Eventos } from "@/components/site/Eventos";
 import { Membresias } from "@/components/site/Membresias";
 import { Casinos } from "@/components/site/Casinos";
+import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { Contacto } from "@/components/site/Contacto";
 import { GENERIC_SECTORS } from "@/data/content";
 
@@ -54,6 +55,7 @@ export default function EmpresaPage() {
     <>
       <Breadcrumbs trail={[{ label: "Empresas" }, { label }]} />
       {dedicated ? dedicated() : generic ? <GenericSector data={generic} /> : null}
+      <EcosistemaEnlace />
       <Contacto />
     </>
   );

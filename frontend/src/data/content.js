@@ -454,6 +454,22 @@ export const GENERIC_SECTORS = {
   },
 };
 
+export const COMMON_SERVICES = {
+  overline: "Ecosistema Enlace",
+  title: "Todo lo que tu negocio necesita, en un solo aliado",
+  description:
+    "Sin importar tu sector, en Enlace Fintech integramos las herramientas clave para cobrar, pagar y crecer, junto a nuestros aliados estratégicos.",
+  items: [
+    { icon: "CreditCard", title: "Terminales TPV", desc: "Cobra con tarjeta, contactless y QR en cualquier punto de venta." },
+    { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas físicas y virtuales respaldadas para tu equipo y control de gastos." },
+    { icon: "Network", title: "Procesadores de pago", desc: "Integración con los mejores procesadores para maximizar la aprobación." },
+    { icon: "Landmark", title: "Pagos de nómina", desc: "Dispersa nómina y adelantos a tus colaboradores en segundos." },
+    { icon: "Building2", title: "Banca · FlexPei", desc: "SPEI 24/7, pagos internacionales y activos digitales.", url: "https://flexpei.com" },
+    { icon: "Bitcoin", title: "Procesadores crypto · FluxiPay", desc: "Cobra USDT, BTC y ETH con liquidación en fiat a tu banco.", url: "https://fluxipay.com" },
+    { icon: "FileCheck", title: "Gestoría de trámites · MisTrámites", desc: "Constitución de empresas, RFC, firma electrónica, IMSS y más.", url: "https://mistramites.mx" },
+  ],
+};
+
 export const SUCURSALES = {
   overline: "Sucursales",
   title: "Estamos cerca de ti",
