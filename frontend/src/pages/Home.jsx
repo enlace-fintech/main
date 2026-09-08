@@ -1,4 +1,5 @@
 import { Hero } from "@/components/site/Hero";
+import { AliadosMarquee } from "@/components/site/AliadosMarquee";
 import { Empresas } from "@/components/site/Empresas";
 import { Restaurantes } from "@/components/site/Restaurantes";
 import { MasMesa } from "@/components/site/MasMesa";
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AliadosMarquee />
       <Empresas />
       <Restaurantes />
       <MasMesa />
