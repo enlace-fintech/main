@@ -15,6 +15,8 @@ import { Casinos } from "@/components/site/Casinos";
 import { Aliados } from "@/components/site/Aliados";
 import { Sucursales } from "@/components/site/Sucursales";
 import { Blog } from "@/components/site/Blog";
+import { ComoEmpezar } from "@/components/site/ComoEmpezar";
+import { Faq } from "@/components/site/Faq";
 import { Contacto } from "@/components/site/Contacto";
 
 export default function Home() {
@@ -37,6 +39,8 @@ export default function Home() {
       <Aliados />
       <Sucursales />
       <Blog />
+      <ComoEmpezar />
+      <Faq />
       <Contacto />
     </>
   );

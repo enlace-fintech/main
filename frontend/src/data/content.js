@@ -380,7 +380,8 @@ export const GENERIC_SECTORS = {
     title: "Soluciones de pago para farmacias",
     description:
       "Agiliza el mostrador con terminales, pagos contactless y control de inventario, mejorando la experiencia de tus clientes.",
-    image: "https://images.unsplash.com/photo-1777494395822-be72bef7262b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxwaGFybWFjeSUyMGNvdW50ZXIlMjBwYXltZW50fGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/90162db7c4608eeef7e21df13168f2962965d0e0dd9059bfb2c05f0fb1093cc8.jpeg",
+    partners: undefined,
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Acepta tarjetas de crédito, débito, contactless y QR." },
       { icon: "Boxes", title: "Módulo de inventario", desc: "Controla entradas y salidas para evitar desabastos." },
@@ -408,7 +409,7 @@ export const GENERIC_SECTORS = {
     title: "Pagos y crédito para ferreterías",
     description:
       "Da facilidades de pago a tus clientes, controla tu inventario y gestiona el flujo de tu negocio con herramientas fintech.",
-    image: "https://images.unsplash.com/photo-1519520104014-df63821cb6f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxoYXJkd2FyZSUyMHN0b3JlJTIwdG9vbHMlMjBzaG9wfGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/d4ebd5bf68f564aab15cd3ac2150c3ab49fcf7c63a53a3f5448928d78f207923.jpeg",
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
       { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita compras grandes de material y herramienta." },
@@ -467,6 +468,30 @@ export const COMMON_SERVICES = {
     { icon: "Building2", title: "Banca · FlexPei", desc: "SPEI 24/7, pagos internacionales y activos digitales.", url: "https://flexpei.com" },
     { icon: "Bitcoin", title: "Procesadores crypto · FluxiPay", desc: "Cobra USDT, BTC y ETH con liquidación en fiat a tu banco.", url: "https://fluxipay.com" },
     { icon: "FileCheck", title: "Gestoría de trámites · MisTrámites", desc: "Constitución de empresas, RFC, firma electrónica, IMSS y más.", url: "https://mistramites.mx" },
+  ],
+};
+
+export const ONBOARDING = {
+  overline: "Cómo empezar",
+  title: "Tu cuenta lista en 4 pasos",
+  steps: [
+    { icon: "MessageSquare", title: "Cuéntanos tu negocio", desc: "Agenda una asesoría gratuita y define tus necesidades." },
+    { icon: "FileText", title: "Sube tu documentación", desc: "Carga tus documentos de forma segura y encriptada." },
+    { icon: "BadgeCheck", title: "Validación exprés", desc: "Nuestro equipo revisa y aprueba tu solicitud." },
+    { icon: "Rocket", title: "Empieza a operar", desc: "Activa tus servicios y comienza a cobrar en minutos." },
+  ],
+};
+
+export const FAQ = {
+  overline: "Preguntas frecuentes",
+  title: "Resolvemos tus dudas",
+  items: [
+    { q: "¿Qué es un broker fintech?", a: "Somos el aliado que te conecta con las mejores soluciones financieras del mercado (cuentas, terminales, créditos, pagos cripto y más), negociando condiciones a tu favor y acompañándote en la operación diaria." },
+    { q: "¿Cuánto tarda el onboarding?", a: "El alta puede completarse en tan solo 5 minutos y la activación de servicios se realiza tras una validación exprés de tu documentación." },
+    { q: "¿Para qué tipo de empresas es?", a: "Trabajamos con pymes y grandes empresas de múltiples sectores: restaurantes, médicos, casinos, cripto, eventos, hoteles, comercios y más, así como con personas físicas." },
+    { q: "¿Qué métodos de cobro puedo aceptar?", a: "Terminales punto de venta, links de pago, contactless y QR, transferencias SPEI, pagos internacionales y cobros en cripto con liquidación en pesos." },
+    { q: "¿Cómo recibo mi dinero?", a: "Tus fondos se liquidan directamente en tu cuenta bancaria en pesos, con trazabilidad completa y conciliación automática." },
+    { q: "¿Tienen cobertura en todo México?", a: "Sí, operamos a nivel nacional e internacional, con sucursales de atención en las principales ciudades del país." },
   ],
 };
 
