@@ -9,6 +9,7 @@ import { Caja } from "@/components/site/Caja";
 import { Medicos } from "@/components/site/Medicos";
 import { Cripto } from "@/components/site/Cripto";
 import { Membresias } from "@/components/site/Membresias";
+import { Eventos } from "@/components/site/Eventos";
 import { WalletNegocios } from "@/components/site/WalletNegocios";
 import { Beneficios } from "@/components/site/Beneficios";
 import { PersonaFisica } from "@/components/site/PersonaFisica";
@@ -33,6 +34,7 @@ function App() {
         <Caja />
         <Medicos />
         <Cripto />
+        <Eventos />
         <Membresias />
         <WalletNegocios />
         <Beneficios />

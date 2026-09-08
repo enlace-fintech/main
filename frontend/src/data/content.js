@@ -21,6 +21,7 @@ export const NAV = [
       { label: "Médicos", href: "#medicos" },
       { label: "Casinos", href: "#casinos" },
       { label: "Cripto", href: "#cripto" },
+      { label: "Eventos & Conciertos", href: "#eventos" },
       { label: "Membresías", href: "#membresias" },
     ],
   },
@@ -138,6 +139,7 @@ export const EMPRESAS = {
     { icon: "Stethoscope", name: "Médicos", href: "#medicos" },
     { icon: "Dice5", name: "Casinos", href: "#casinos" },
     { icon: "Bitcoin", name: "Cripto", href: "#cripto" },
+    { icon: "Ticket", name: "Eventos & Conciertos", href: "#eventos" },
     { icon: "BadgeCheck", name: "Membresías", href: "#membresias" },
     { icon: "Wallet", name: "Wallet Negocios", href: "#wallet" },
     { icon: "Users", name: "Personas", href: "#persona" },
@@ -262,6 +264,23 @@ export const ALIADOS = {
     "Facturación",
     "Adelanto de nómina",
     "Seguros",
+  ],
+};
+
+export const EVENTOS = {
+  overline: "Sectores · Eventos & Conciertos",
+  title: "Impulsa tus eventos y conciertos con pagos sin fricción",
+  description:
+    "Optimiza la operación de tus eventos con soluciones de cobro ágiles, seguras y sin efectivo. Vende más, agiliza filas y controla cada peso en tiempo real.",
+  image:
+    "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwY3Jvd2QlMjBzdGFnZSUyMGxpZ2h0cyUyMGV2ZW50fGVufDB8fHx8MTc4ODg0NDgzNnww&ixlib=rb-4.1.0&q=85",
+  features: [
+    { icon: "Ticket", title: "Venta de boletos y accesos", desc: "Cobra entradas en línea y en taquilla con links de pago y terminales." },
+    { icon: "Wallet", title: "Recarga cashless", desc: "Brazaletes y monederos digitales para pagos sin efectivo dentro del recinto." },
+    { icon: "CreditCard", title: "TPV para barras y stands", desc: "Acelera las filas aceptando tarjetas, contactless y QR en cada punto de venta." },
+    { icon: "LineChart", title: "Control en tiempo real", desc: "Visualiza ventas por punto, artículo y horario durante todo el evento." },
+    { icon: "Users", title: "Gestión de proveedores", desc: "Dispersa pagos a personal y proveedores de forma rápida y trazable." },
+    { icon: "ShieldCheck", title: "Seguridad y trazabilidad", desc: "Protege cada transacción con alertas automáticas y conciliación al instante." },
   ],
 };
 
