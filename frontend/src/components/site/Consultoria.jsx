@@ -1,9 +1,8 @@
 import { useState } from "react";
 import * as Icons from "lucide-react";
-import { Link } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import { CONSULTORIA } from "../../data/content";
-import { Reveal, Overline } from "./Primitives";
+import { Reveal, Overline, ContactLink } from "./Primitives";
 
 export const Consultoria = () => {
   const [active, setActive] = useState(CONSULTORIA.areas[0].id);
@@ -21,14 +20,14 @@ export const Consultoria = () => {
             </h1>
             <p className="mt-5 text-slate-300 leading-relaxed">{CONSULTORIA.description}</p>
             <p className="mt-4 text-sm text-slate-500">{CONSULTORIA.operator}</p>
-            <Link
-              to="/contacto"
+            <ContactLink
+              
               data-testid="consultoria-cta"
               className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200"
             >
               Agenda un diagnóstico gratuito
               <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-            </Link>
+            </ContactLink>
           </Reveal>
           <Reveal delay={0.12} className="relative">
             <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />

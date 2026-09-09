@@ -1,9 +1,12 @@
 import * as Icons from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Primitives";
+import { contactHref } from "../../data/leads";
 
-export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid }) => (
+export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid }) => {
+  const { pathname } = useLocation();
+  return (
   <div className="max-w-7xl mx-auto px-5 lg:px-8">
     {timeline && (
       <div className="mt-16 grid gap-6 md:grid-cols-3">
@@ -78,7 +81,7 @@ export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid
         <Reveal className="rounded-2xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 p-7">
           <p className="text-xs uppercase tracking-[0.24em] text-[#D4AF37]">Siguiente paso</p>
           <p className="font-display mt-2 text-lg font-bold text-white leading-snug">Diagnóstico gratuito, respuesta en menos de 24 h</p>
-          <Link to={cta.href} data-testid={`${testid}-cta`} className="group mt-5 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-6 py-3 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] transition-colors duration-200">
+          <Link to={contactHref(pathname)} data-testid={`${testid}-cta`} className="group mt-5 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-6 py-3 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] transition-colors duration-200">
             {cta.text}
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
@@ -86,4 +89,5 @@ export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid
       )}
     </div>
   </div>
-);
+  );
+};

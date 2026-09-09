@@ -1,7 +1,7 @@
 import * as Icons from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { Reveal, Overline } from "./Primitives";
+import { Reveal, Overline, ContactLink } from "./Primitives";
 
 export const ServicioDetalle = ({ data }) => (
   <section data-testid="servicio-detalle" className="relative py-16 lg:py-24">
@@ -11,14 +11,14 @@ export const ServicioDetalle = ({ data }) => (
           <Overline>{data.overline}</Overline>
           <h1 className="font-display mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">{data.title}</h1>
           <p className="mt-5 text-slate-300 leading-relaxed">{data.description}</p>
-          <Link
-            to="/contacto"
+          <ContactLink
+            
             data-testid="servicio-cta"
             className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200"
           >
             {data.cta}
             <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-          </Link>
+          </ContactLink>
         </Reveal>
         <Reveal delay={0.12} className="relative">
           <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />

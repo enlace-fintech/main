@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
+import { contactHref } from "../../data/leads";
+
+export const ContactLink = (props) => {
+  const { pathname } = useLocation();
+  return <Link {...props} to={contactHref(pathname)} />;
+};
 
 export const Reveal = ({ children, delay = 0, className = "", y = 24 }) => (
   <motion.div

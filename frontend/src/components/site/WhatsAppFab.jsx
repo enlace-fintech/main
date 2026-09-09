@@ -1,10 +1,14 @@
+import { useLocation } from "react-router-dom";
 import { BRAND } from "../../data/content";
+import { getLeadContext } from "../../data/leads";
 
 export const WhatsAppFab = () => {
+  const { pathname } = useLocation();
   const number = BRAND.whatsapp.replace(/[^0-9]/g, "");
+  const text = getLeadContext(pathname).whatsapp;
   return (
     <a
-      href={`https://wa.me/${number}`}
+      href={`https://wa.me/${number}?text=${encodeURIComponent(text)}`}
       target="_blank"
       rel="noopener noreferrer"
       data-testid="whatsapp-fab"

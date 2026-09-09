@@ -2,7 +2,7 @@ import * as Icons from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SISTEMAS } from "../../data/content";
-import { Reveal, Overline } from "./Primitives";
+import { Reveal, Overline, ContactLink } from "./Primitives";
 
 const Card = ({ s, i, compact }) => {
   const Icon = Icons[s.icon] || Icons.Boxes;
@@ -52,10 +52,10 @@ export const SistemasAliados = ({ compact = false, asHero = false }) => {
               <Overline>{SISTEMAS.overline}</Overline>
               <Title className="font-display mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">{SISTEMAS.title}</Title>
               <p className="mt-5 text-slate-300 leading-relaxed">{SISTEMAS.description}</p>
-              <Link to="/contacto" data-testid="sistemas-cta" className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200">
+              <ContactLink  data-testid="sistemas-cta" className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200">
                 Quiero integrar un sistema
                 <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-              </Link>
+              </ContactLink>
             </Reveal>
             <Reveal delay={0.12} className="relative">
               <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />

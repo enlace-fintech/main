@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { Send, Phone, Mail, MessageCircle, MapPin, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { BRAND, INTERESES } from "../../data/content";
+import { getLeadContext } from "../../data/leads";
 import { Reveal, Overline } from "./Primitives";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -10,8 +12,25 @@ const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const initial = { nombre: "", email: "", telefono: "", empresa: "", interes: "", mensaje: "" };
 
 export const Contacto = () => {
-  const [form, setForm] = useState(initial);
+  const { pathname, search } = useLocation();
+  const ref = new URLSearchParams(search).get("ref") || pathname;
+  const [form, setForm] = useState(() => {
+    const ctx = getLeadContext(ref);
+    return { ...initial, interes: ctx.interes, mensaje: ctx.mensaje };
+  });
   const [loading, setLoading] = useState(false);
+  const prevCtx = useRef(getLeadContext(ref));
+
+  useEffect(() => {
+    const ctx = getLeadContext(ref);
+    const prev = prevCtx.current;
+    prevCtx.current = ctx;
+    setForm((f) => ({
+      ...f,
+      interes: !f.interes || f.interes === prev.interes ? ctx.interes : f.interes,
+      mensaje: !f.mensaje || f.mensaje === prev.mensaje ? ctx.mensaje : f.mensaje,
+    }));
+  }, [ref]);
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 

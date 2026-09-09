@@ -1,8 +1,7 @@
 import * as Icons from "lucide-react";
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { TPV } from "../../data/content";
-import { Reveal, Overline } from "./Primitives";
+import { Reveal, Overline, ContactLink } from "./Primitives";
 
 export const Tpv = () => (
   <section data-testid="tpv-section" className="relative py-16 lg:py-24">
@@ -15,14 +14,14 @@ export const Tpv = () => (
           </h1>
           <p className="mt-5 text-slate-300 leading-relaxed">{TPV.description}</p>
           <p className="mt-4 text-slate-300 leading-relaxed">{TPV.description2}</p>
-          <Link
-            to="/contacto"
+          <ContactLink
+            
             data-testid="tpv-cta"
             className="group mt-8 inline-flex items-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] hover:-translate-y-0.5 transition-[transform,background-color] duration-200"
           >
             Quiero mi terminal
             <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-          </Link>
+          </ContactLink>
         </Reveal>
         <Reveal delay={0.12} className="relative">
           <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />

@@ -1,0 +1,32 @@
+{
+  "summary": "Frontend-only verification of ref-based form prefill and WhatsApp FAB context. 8 of 9 requested scenarios PASSED. One BUG found: SPA navigation between sector pages does not refresh Contacto form context (stale values persist from previous sector).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Contacto.jsx (used inside sector pages)",
+        "issue": "On client-side navigation from one sector page to another (e.g., /empresas/casinos -> /empresas/hoteles via header dropdown 'Empresas'), the URL and page content update, but the contact form at the bottom keeps the PREVIOUS sector's prefilled interes and mensaje. Expected each page to show its own context per requirement. Direct load and CTA click flows work correctly; only intra-sector SPA nav is broken.",
+        "selector": "[data-testid=input-interes] / [data-testid=input-mensaje]",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Fix stale form context on SPA nav in Contacto.jsx: change the useEffect to always overwrite interes/mensaje with getLeadContext(ref) values on ref change (drop the `f.interes || ctx.interes` fallback), OR ensure Contacto is remounted per route (key={pathname}). Recommended patch: `useEffect(() => { const ctx = getLeadContext(ref); setForm(f => ({ ...f, interes: ctx.interes, mensaje: ctx.mensaje })); }, [ref]);`"
+  ],
+  "critical_code_review_comments": [
+    "Contacto.jsx useEffect uses `f.interes || ctx.interes` which prevents overwriting when navigating between contexts. This is the root cause of the stale-prefill bug on SPA sector-to-sector navigation.",
+    "getLeadContext for /blog root returns DEFAULT (empty interes+mensaje, generic whatsapp) as required. Verified /blog/repse-2026-que-cambia keeps generic WA text since only /empresas and /servicios roots are matched — this matches the spec."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "89% (8/9)"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "Submitted one contact via UI (nombre='QA Test', email=delivered@resend.dev). Doc was deleted from Mongo collection 'contactos' after test (1 doc removed).",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "All prefill via ?ref= URL param, all CTAs (sector-cta / servicio-cta / consultoria-cta), all WhatsApp FAB texts (including SPA update), form submit (POST /api/contacto -> 200 with correct payload, success toast, form reset), edit of prefilled fields, INTERESES option 'Beneficios para colaboradores', and regression on /, /servicios, /empresas/eventos, /contacto all PASS. Only failing scenario: client-side navigation between sector pages via header dropdown does NOT refresh the embedded Contacto form context — the previously prefilled interes/mensaje values persist. Reproduce: load /empresas/casinos (form shows 'Casinos'), hover 'Empresas' in header, click 'Hoteles' — URL becomes /empresas/hoteles and page renders hoteles content, but form still shows interes='Casinos' & 'Tengo un casino...'. Direct URL loads and /contacto?ref=... flows are unaffected.",
+  "rca of the issue": "Contacto.jsx useEffect on [ref] guards with `f.interes || ctx.interes`, so when Contacto stays mounted (or React reuses state) across route changes, existing non-empty values block overwrite. Either drop the fallback or force remount via `<Contacto key={pathname} />` in the sector page wrapper."
+}

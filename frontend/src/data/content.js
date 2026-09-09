@@ -787,6 +787,7 @@ export const INTERESES = [
   "Nómina y dispersión",
   "Pagos internacionales",
   "Consultoría empresarial",
+  "Beneficios para colaboradores",
   "Tarjeta para personas",
   "Casinos",
   "Otro",
