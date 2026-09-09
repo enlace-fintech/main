@@ -36,7 +36,7 @@ export const ServiciosHub = ({ asHero = false }) => {
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {SERVICIOS_HUB.pillars.map((p, i) => {
+          {(SERVICIOS_HUB.pillars ?? []).map((p, i) => {
             const Icon = Icons[p.icon] || Icons.Briefcase;
             return (
               <Reveal key={p.title} delay={i * 0.08}>
@@ -62,7 +62,7 @@ export const ServiciosHub = ({ asHero = false }) => {
 
         <Reveal delay={0.2} className="mt-8 flex flex-wrap items-center gap-3">
           <span className="text-xs uppercase tracking-[0.24em] text-slate-500">También</span>
-          {SERVICIOS_HUB.more.map((m) => (
+          {(SERVICIOS_HUB.more ?? []).map((m) => (
             <Link
               key={m.href}
               to={m.href}
