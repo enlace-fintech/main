@@ -1,4 +1,4 @@
-from fastapi import FastAPI, APIRouter, HTTPException, Request, Query
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Query, BackgroundTasks
 from fastapi.responses import HTMLResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -6,7 +6,9 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import re
 import html
+import asyncio
 import logging
+import resend
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List, Optional
@@ -21,6 +23,10 @@ load_dotenv(ROOT_DIR / '.env')
 mongo_url = os.environ['MONGO_URL']
 client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
+
+resend.api_key = os.environ.get('RESEND_API_KEY')
+SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
+NOTIFY_EMAILS = [e.strip() for e in os.environ.get('NOTIFY_EMAILS', '').split(',') if e.strip()]
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -123,13 +129,56 @@ async def get_status_checks():
     return status_checks
 
 
+def contact_email_html(c: "Contact") -> str:
+    e = html.escape
+    rows = [
+        ("Nombre", c.nombre), ("Correo", c.email), ("Teléfono", c.telefono or "—"),
+        ("Empresa", c.empresa or "—"), ("Interés", c.interes or "—"),
+        ("Fecha", c.created_at.strftime("%d/%m/%Y %H:%M UTC")),
+    ]
+    trs = "".join(
+        f'<tr><td style="padding:8px 12px;color:#94a3b8;font-size:13px;white-space:nowrap">{e(k)}</td>'
+        f'<td style="padding:8px 12px;color:#ffffff;font-size:14px">{e(v)}</td></tr>' for k, v in rows
+    )
+    return f"""<table width="100%" cellpadding="0" cellspacing="0" style="background:#0B132B;padding:32px 0;font-family:Arial,sans-serif">
+<tr><td align="center"><table width="560" cellpadding="0" cellspacing="0" style="background:#0e1836;border:1px solid rgba(255,255,255,0.1);border-radius:16px">
+<tr><td style="padding:28px 32px 8px"><span style="color:#D4AF37;font-size:11px;letter-spacing:3px;text-transform:uppercase">Enlace Fintech</span>
+<h1 style="margin:8px 0 0;color:#fff;font-size:22px">Nueva solicitud de contacto</h1></td></tr>
+<tr><td style="padding:16px 20px"><table width="100%" cellpadding="0" cellspacing="0" style="background:rgba(255,255,255,0.03);border-radius:12px">{trs}</table></td></tr>
+<tr><td style="padding:0 32px 8px"><p style="margin:0;color:#94a3b8;font-size:13px">Mensaje</p>
+<p style="margin:8px 0 0;color:#e2e8f0;font-size:15px;line-height:1.6;white-space:pre-wrap">{e(c.mensaje)}</p></td></tr>
+<tr><td style="padding:24px 32px 28px"><a href="mailto:{e(c.email)}" style="display:inline-block;background:#D4AF37;color:#0B132B;font-weight:bold;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none">Responder a {e(c.nombre)}</a></td></tr>
+</table></td></tr></table>"""
+
+
+async def notify_team(contact: "Contact") -> None:
+    if not (resend.api_key and SENDER_EMAIL and NOTIFY_EMAILS):
+        logger.warning("Notificación por correo omitida: falta RESEND_API_KEY, SENDER_EMAIL o NOTIFY_EMAILS")
+        return
+    params = {
+        "from": f"Enlace Fintech <{SENDER_EMAIL}>",
+        "to": NOTIFY_EMAILS,
+        "reply_to": contact.email,
+        "subject": f"Nueva solicitud: {contact.nombre} · {contact.interes or 'Contacto'}",
+        "html": contact_email_html(contact),
+    }
+    try:
+        result = await asyncio.to_thread(resend.Emails.send, params)
+        await db.contactos.update_one({"id": contact.id}, {"$set": {"notificado": True, "email_id": result.get("id")}})
+        logger.info("Aviso de contacto enviado (%s)", result.get("id"))
+    except Exception as exc:
+        await db.contactos.update_one({"id": contact.id}, {"$set": {"notificado": False, "email_error": str(exc)[:300]}})
+        logger.error("Error enviando aviso de contacto: %s", exc)
+
+
 @api_router.post("/contacto", response_model=Contact)
-async def create_contacto(input: ContactCreate):
+async def create_contacto(input: ContactCreate, background: BackgroundTasks):
     contact = Contact(**input.model_dump())
     doc = contact.model_dump()
     doc['created_at'] = doc['created_at'].isoformat()
     await db.contactos.insert_one(doc)
     logger.info("Nuevo contacto recibido de %s <%s>", contact.nombre, contact.email)
+    background.add_task(notify_team, contact)
     return contact
 
 

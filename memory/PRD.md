@@ -71,6 +71,10 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Páginas /aviso-de-privacidad y /terminos-y-condiciones (data/legal.js, LegalPages.jsx) enlazadas desde footer. Campos [RAZÓN SOCIAL], [DOMICILIO], [CORREO] pendientes de datos reales.
 - JSON-LD por ruta (script#route-jsonld): Organization+WebSite, FAQPage (home), Service+Breadcrumb (servicios/empresas), BlogPosting+Breadcrumb (blog). Sitemap 34 URLs. Testing iteration_7.json.
 
+## Aviso por correo (2026-06-09)
+- Resend integrado en backend: POST /api/contacto dispara BackgroundTask notify_team → correo HTML al equipo (NOTIFY_EMAILS, remitente SENDER_EMAIL, reply_to cliente). Resultado en Mongo: notificado/email_id o email_error.
+- Env: RESEND_API_KEY, SENDER_EMAIL=notificaciones@enlacefintech.com, NOTIFY_EMAILS=contacto@enlacefintech.com. Requiere dominio enlacefintech.com verificado en Resend para entregar. Testing iteration_8.json.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
@@ -80,7 +84,6 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - P1: Reemplazar datos de contacto placeholder (tel, email, WhatsApp, dirección, redes).
 - P2: Páginas de artículos de blog completos (rutas propias).
 - P2: Sustituir [RAZÓN SOCIAL]/[DOMICILIO]/[CORREO] en textos legales.
-- P2: Envío de correo real de notificación al recibir contacto (Resend).
 - P2: Versión en inglés.
 
 ## Próximos pasos
