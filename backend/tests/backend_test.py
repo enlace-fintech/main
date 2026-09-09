@@ -103,7 +103,7 @@ def test_list_contactos_desc(api):
 
 
 # --- POST /api/contacto with new interes values (Servicios) ---
-@pytest.mark.parametrize("interes", ["Consultoría empresarial", "Terminales punto de venta"])
+@pytest.mark.parametrize("interes", ["Consultoría empresarial", "Terminales punto de venta", "Plataforma de pagos", "Tarjetas empresariales", "Nómina y dispersión", "Pagos internacionales"])
 def test_create_contacto_new_interes(api, interes):
     payload = {
         "nombre": "TEST Servicios",

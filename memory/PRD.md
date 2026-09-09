@@ -46,6 +46,12 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Padding de secciones reducido (py-16 lg:py-24) y margen de Reveal -40px para evitar huecos.
 - Testing: iteration_2.json 100% (backend 8/8, frontend OK).
 
+## Implementado (2026-06-09, 2ª parte)
+- "Wallet Negocios" renombrado a **Plataforma de pagos** (/servicios/plataforma-de-pagos; /wallet redirige). Feature nueva: Tarjetas empresariales.
+- Hub de Servicios con 6 pilares: Plataforma de pagos, Terminales, Tarjetas empresariales, Nómina y dispersión, Pagos internacionales, Consultoría.
+- Nuevas páginas vía componente genérico ServicioDetalle (data en SERVICIOS_DETALLE): /servicios/tarjetas (nominativas colaboradores, nómina, corporativa directivos), /servicios/nomina-y-dispersion, /servicios/pagos-internacionales (FlexPei + FluxiPay).
+- NAV/Footer/INTERESES actualizados. Testing: iteration_4.json 100%.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

@@ -1,12 +1,11 @@
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "sonner";
 import { Layout } from "@/components/site/Layout";
 import Home from "@/pages/Home";
 import EmpresaPage from "@/pages/EmpresaPage";
 import ServiciosPage from "@/pages/ServiciosPage";
 import {
-  WalletPage,
   CajaPage,
   PersonasPage,
   AliadosPage,
@@ -26,7 +25,7 @@ function App() {
             <Route path="/empresas/:slug" element={<EmpresaPage />} />
             <Route path="/servicios" element={<ServiciosPage />} />
             <Route path="/servicios/:slug" element={<ServiciosPage />} />
-            <Route path="/wallet" element={<WalletPage />} />
+            <Route path="/wallet" element={<Navigate to="/servicios/plataforma-de-pagos" replace />} />
             <Route path="/caja" element={<CajaPage />} />
             <Route path="/personas" element={<PersonasPage />} />
             <Route path="/aliados" element={<AliadosPage />} />

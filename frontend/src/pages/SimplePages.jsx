@@ -1,23 +1,10 @@
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { WalletNegocios } from "@/components/site/WalletNegocios";
-import { Beneficios } from "@/components/site/Beneficios";
 import { Caja } from "@/components/site/Caja";
 import { PersonaFisica } from "@/components/site/PersonaFisica";
 import { Aliados } from "@/components/site/Aliados";
 import { Sucursales } from "@/components/site/Sucursales";
 import { Blog } from "@/components/site/Blog";
 import { Contacto } from "@/components/site/Contacto";
-
-export function WalletPage() {
-  return (
-    <>
-      <Breadcrumbs trail={[{ label: "Wallet Negocios" }]} />
-      <WalletNegocios />
-      <Beneficios />
-      <Contacto />
-    </>
-  );
-}
 
 export function CajaPage() {
   return (

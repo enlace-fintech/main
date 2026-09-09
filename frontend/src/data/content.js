@@ -36,10 +36,13 @@ export const NAV = [
     subtitle: "Soluciones integrales",
     children: [
       { label: "Todos los servicios", href: "/servicios" },
-      { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
+      { label: "Plataforma de pagos", href: "/servicios/plataforma-de-pagos" },
       { label: "Terminales punto de venta", href: "/servicios/terminales-punto-de-venta" },
-      { label: "Wallet Negocios", href: "/wallet" },
-      { label: "Caja & TPV (InfoCaja)", href: "/caja" },
+      { label: "Tarjetas empresariales", href: "/servicios/tarjetas" },
+      { label: "Nómina y dispersión", href: "/servicios/nomina-y-dispersion" },
+      { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
+      { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
+      { label: "Caja & comanda (InfoCaja)", href: "/caja" },
     ],
   },
   { label: "Personas", href: "/personas" },
@@ -70,16 +73,17 @@ export const RESTAURANTES = {
 };
 
 export const WALLET = {
-  overline: "Wallet Negocios",
-  title: "Agiliza tus procedimientos con Wallet Negocios",
+  overline: "Plataforma de pagos",
+  title: "Mueve, cobra y administra el dinero de tu empresa desde una sola plataforma",
   description:
-    "Todas las funcionalidades que tu empresa necesita para mover, cobrar y administrar su dinero, integradas en una sola plataforma.",
+    "La Plataforma de pagos de Enlace Fintech concentra cuentas, transferencias, cobros y tarjetas de tu negocio en un solo lugar, con visibilidad en tiempo real y control por usuario.",
   features: [
     { icon: "ArrowLeftRight", title: "Transferencias FlexPei", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
     { icon: "Landmark", title: "Transferencias SPEI", desc: "Dispersa y recibe pagos interbancarios en segundos, 24/7." },
     { icon: "Store", title: "Pagos en tiendas de autoservicio", desc: "Deposita y paga en miles de puntos a nivel nacional." },
     { icon: "CreditCard", title: "Terminales punto de venta y Links de Pago", desc: "Cobra presencial o a distancia con TPV y links de pago." },
-    { icon: "Globe", title: "Transmisión internacional", desc: "Mueve capital más allá de las fronteras con seguridad y trazabilidad." },
+    { icon: "WalletCards", title: "Tarjetas empresariales", desc: "Tarjetas nominativas físicas y virtuales para tu equipo, con límites y control de gastos." },
+    { icon: "Globe", title: "Pagos internacionales", desc: "Mueve capital más allá de las fronteras con seguridad y trazabilidad." },
   ],
 };
 
@@ -171,7 +175,7 @@ export const BENEFICIOS = {
   overline: "Beneficios",
   title: "Todo el control de tu dinero, en una sola app",
   description:
-    "Wallet Negocios pone a tu alcance herramientas inteligentes para operar con eficiencia y tomar mejores decisiones.",
+    "La Plataforma de pagos pone a tu alcance herramientas inteligentes para operar con eficiencia y tomar mejores decisiones.",
   items: [
     { icon: "LineChart", title: "Visualiza tus ingresos al instante", desc: "Mantente al día con tus ganancias en tiempo real y toma decisiones informadas sobre la marcha." },
     { icon: "Banknote", title: "Retira efectivo fácilmente", desc: "Accede a tus fondos de forma rápida y segura, sin complicaciones." },
@@ -328,7 +332,7 @@ export const ALIADOS = {
   description:
     "Trabajamos con un ecosistema de aliados para empresarios y personas físicas que buscan una gestión financiera moderna y eficiente. Nuestra experiencia nos permite ofrecer orientación personalizada y herramientas adaptadas a cada cliente.",
   categories: [
-    "Banca & Wallet",
+    "Banca & plataforma de pagos",
     "Créditos",
     "Terminales de pago",
     "Beneficios & bienestar",
@@ -433,7 +437,7 @@ export const GENERIC_SECTORS = {
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
       { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita compras grandes de material y herramienta." },
       { icon: "Boxes", title: "Control de inventario", desc: "Supervisa existencias y evita pérdidas." },
-      { icon: "Wallet", title: "Wallet Negocios", desc: "Administra todos los fondos de tu negocio en un lugar." },
+      { icon: "Wallet", title: "Plataforma de pagos", desc: "Administra todos los fondos de tu negocio en un lugar." },
     ],
   },
   hoteles: {
@@ -530,11 +534,14 @@ export const SUCURSALES = {
 
 export const INTERESES = [
   "Restaurantes y bares",
-  "Wallet Negocios",
+  "Plataforma de pagos",
+  "Terminales punto de venta",
+  "Tarjetas empresariales",
+  "Nómina y dispersión",
+  "Pagos internacionales",
+  "Consultoría empresarial",
   "Crédito personal / grupal",
   "Casinos",
-  "Consultoría empresarial",
-  "Terminales punto de venta",
   "Otro",
 ];
 
@@ -550,33 +557,168 @@ export const SERVICIOS_HUB = {
     "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b74f2bcf6984fdc46effb5e99391ab66bd8bc5543c5dd572bc2f00a14c4913cf.jpeg",
   pillars: [
     {
-      icon: "TrendingUp",
-      title: "Soluciones financieras",
-      desc: "Terminales punto de venta sin trámites bancarios, cuentas y wallet para tu negocio, cobros cripto y pagos internacionales.",
-      href: "/servicios/terminales-punto-de-venta",
-      cta: "Ver terminales punto de venta",
+      icon: "LayoutDashboard",
+      title: "Plataforma de pagos",
+      desc: "Cuentas, SPEI 24/7, cobros, tarjetas y pagos internacionales de tu empresa en una sola plataforma con control en tiempo real.",
+      href: "/servicios/plataforma-de-pagos",
+      cta: "Ver plataforma de pagos",
     },
     {
-      icon: "Users",
-      title: "Administración de capital humano",
-      desc: "Desde la contratación temporal o de planta, altas y bajas ante el IMSS, cálculo de incidencias y dispersión de nómina, hasta negociación con sindicatos, finiquitos y liquidaciones.",
-      href: "/servicios/consultoria-empresarial",
-      cta: "Ver capital humano",
+      icon: "CreditCard",
+      title: "Terminales punto de venta",
+      desc: "Terminales sin trámites bancarios ni mínimos de operación, con reportes en tiempo real y contrato de administración de tesorería.",
+      href: "/servicios/terminales-punto-de-venta",
+      cta: "Ver terminales",
+    },
+    {
+      icon: "WalletCards",
+      title: "Tarjetas empresariales",
+      desc: "Tarjetas nominativas físicas y virtuales para colaboradores, tarjeta de nómina y tarjeta corporativa para directivos.",
+      href: "/servicios/tarjetas",
+      cta: "Ver tarjetas",
+    },
+    {
+      icon: "Landmark",
+      title: "Nómina y dispersión",
+      desc: "Dispersa nómina, comisiones y viáticos en segundos, ofrece adelanto de nómina y automatiza la conciliación.",
+      href: "/servicios/nomina-y-dispersion",
+      cta: "Ver nómina y dispersión",
+    },
+    {
+      icon: "Globe",
+      title: "Pagos internacionales",
+      desc: "Wire, SWIFT, cuentas en USD y cobros cripto liquidados en pesos para vender y comprar fuera de México.",
+      href: "/servicios/pagos-internacionales",
+      cta: "Ver pagos internacionales",
     },
     {
       icon: "Scale",
-      title: "Asesoría y consultoría",
-      desc: "Expertos legales, administrativos, fiscales y contables que analizan tus cuentas, evalúan el rendimiento de tu negocio y definen cómo resolver cada necesidad.",
+      title: "Consultoría empresarial",
+      desc: "Capital humano, asesoría corporativa, fiscal, laboral y mercantil con especialistas que analizan y optimizan tu operación.",
       href: "/servicios/consultoria-empresarial",
       cta: "Ver consultoría",
     },
   ],
   more: [
-    { title: "Wallet Negocios", href: "/wallet" },
     { title: "Caja & comanda para restaurantes", href: "/caja" },
-    { title: "Cobros en cripto", href: "/empresas/cripto" },
+    { title: "Gestoría de trámites", href: "/servicios/consultoria-empresarial" },
     { title: "Beneficios para colaboradores", href: "/empresas/membresias" },
+    { title: "Cobros en cripto", href: "/empresas/cripto" },
   ],
+};
+
+export const SERVICIOS_DETALLE = {
+  tarjetas: {
+    overline: "Tarjetas empresariales",
+    title: "Tarjetas para tu empresa y tus colaboradores",
+    description:
+      "Tarjetas nominativas físicas y virtuales con aceptación nacional e internacional para pagar nómina, controlar gastos operativos y darle a tus directivos una tarjeta corporativa. Todo administrado desde la Plataforma de pagos de Enlace Fintech.",
+    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/48964a43321b6c2a1dd2487b81b0b27453e33a0aff43c84c549044ff0db8997e.jpeg",
+    cta: "Quiero tarjetas para mi empresa",
+    features: [
+      { icon: "Eye", title: "Control en tiempo real", desc: "Cada cargo se refleja al instante con comercio, monto y responsable." },
+      { icon: "Smartphone", title: "Físicas y virtuales", desc: "Emite tarjetas virtuales en segundos y físicas en días, sin sucursal." },
+      { icon: "Globe", title: "Aceptación global", desc: "Chip, banda y contactless en México y el extranjero." },
+      { icon: "SlidersHorizontal", title: "Límites y bloqueo", desc: "Define topes por tarjeta o categoría y bloquea desde la app." },
+    ],
+    blocks: [
+      {
+        icon: "Users",
+        title: "Tarjetas nominativas para colaboradores",
+        desc: "Para viáticos, gasolina, compras operativas y gastos de campo.",
+        bullets: ["Límites por tarjeta, comercio o categoría", "Comprobación de gastos con foto del ticket", "Sin exponer la cuenta principal de la empresa", "Reportes por área o centro de costo"],
+      },
+      {
+        icon: "Landmark",
+        title: "Tarjeta de nómina y dispersión",
+        desc: "Paga a tu equipo en segundos y dales una tarjeta sin costo.",
+        bullets: ["Dispersión masiva de nómina 24/7", "Adelanto de nómina para el colaborador", "Retiros en cajeros y compras en comercios", "Acceso a beneficios y membresías"],
+      },
+      {
+        icon: "Crown",
+        title: "Tarjeta corporativa para dueños y directivos",
+        desc: "Una tarjeta con límites altos para la operación estratégica.",
+        bullets: ["Pagos a proveedores nacionales e internacionales", "Suscripciones, software y publicidad digital", "Estados de cuenta por centro de costo", "Seguros y asistencias en viajes"],
+      },
+    ],
+    note: "Tarjetas emitidas por aliados regulados con respaldo de redes internacionales de pago. Sujetas a aprobación y a los términos del emisor.",
+  },
+  "nomina-y-dispersion": {
+    overline: "Nómina y dispersión",
+    title: "Paga a tu equipo en segundos, con control total",
+    description:
+      "Dispersa nómina, comisiones, viáticos y pagos a proveedores desde una sola plataforma, ofrece adelanto de nómina a tus colaboradores y, si lo necesitas, delega el cálculo y cumplimiento de nómina a nuestro equipo de capital humano.",
+    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/666a60391eea9a32868e5111c68cdc10de55abc74affd04b4d703f551d71a0f4.jpeg",
+    cta: "Quiero dispersar mi nómina",
+    features: [
+      { icon: "Zap", title: "Dispersión masiva SPEI 24/7", desc: "Carga tu layout y paga a cualquier banco en segundos, incluso fines de semana." },
+      { icon: "HandCoins", title: "Adelanto de nómina", desc: "Tus colaboradores disponen de lo ya trabajado, sin costo para la empresa." },
+      { icon: "Users", title: "Comisiones y proveedores", desc: "Paga vendedores, repartidores y proveedores con la misma herramienta." },
+      { icon: "FileCheck", title: "Conciliación automática", desc: "Comprobantes y reportes listos para contabilidad." },
+    ],
+    blocks: [
+      {
+        icon: "Landmark",
+        title: "Dispersión de nómina",
+        desc: "Olvídate de capturar cuenta por cuenta en el banco.",
+        bullets: ["Carga de layout desde Excel o tu sistema de nómina", "Pagos a cualquier banco o a la tarjeta de nómina Enlace", "Programación de pagos y aprobaciones por niveles", "Comprobantes de pago automáticos para cada colaborador"],
+      },
+      {
+        icon: "HandCoins",
+        title: "Adelanto de nómina",
+        desc: "Un beneficio que retiene talento sin afectar tu flujo.",
+        bullets: ["El colaborador solicita desde la app", "Se descuenta en la siguiente nómina", "Sin costo ni riesgo para la empresa", "Reduce rotación y ausentismo"],
+      },
+      {
+        icon: "ClipboardList",
+        title: "Administración integral de nómina",
+        desc: "Con nuestro equipo de capital humano.",
+        bullets: ["Cálculo de IMSS, ISR e incidencias", "Timbrado de CFDI de nómina", "Altas, bajas y modificaciones ante el IMSS", "Finiquitos y liquidaciones"],
+        href: "/servicios/consultoria-empresarial",
+        linkLabel: "Ver consultoría en capital humano",
+      },
+    ],
+    note: "La dispersión se realiza a través de la Plataforma de pagos; el cálculo y cumplimiento de nómina lo presta el despacho aliado del grupo Enlace Fintech.",
+  },
+  "pagos-internacionales": {
+    overline: "Pagos internacionales",
+    title: "Cobra y paga en el extranjero sin fricción",
+    description:
+      "Transferencias Wire y SWIFT, cuentas en dólares y cobros en cripto liquidados en pesos, para que tu empresa compre a proveedores y venda a clientes fuera de México con tipo de cambio competitivo y cumplimiento total.",
+    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b39bf14407fb60f04ffd14b3d89d9aa2c86dc64bdaa03fcb138b7cf8607e920c.jpeg",
+    cta: "Quiero operar internacionalmente",
+    features: [
+      { icon: "Globe", title: "Wire y SWIFT", desc: "Envía y recibe pagos internacionales con trazabilidad completa." },
+      { icon: "Bitcoin", title: "Cobros cripto en pesos", desc: "Acepta USDT, BTC y ETH y recibe MXN en tu banco." },
+      { icon: "TrendingUp", title: "Tipo de cambio competitivo", desc: "Conversión en tiempo real, sin sorpresas en la comisión." },
+      { icon: "ShieldCheck", title: "Cumplimiento KYC/AML", desc: "Operaciones validadas bajo normativa nacional e internacional." },
+    ],
+    blocks: [
+      {
+        icon: "Truck",
+        title: "Paga a proveedores internacionales",
+        desc: "Importa insumos, software o servicios sin trabas.",
+        bullets: ["Transferencias Wire y SWIFT a más de 100 países", "Cuenta en USD para concentrar pagos", "Aprobaciones por niveles y comprobantes", "Conversión al momento del pago"],
+      },
+      {
+        icon: "Store",
+        title: "Cobra a clientes en el extranjero",
+        desc: "Vende fuera de México y recibe en pesos.",
+        bullets: ["Links de pago en USD para tus clientes", "Cobros en cripto con liquidación en MXN", "Liquidación a tu cuenta bancaria en 24-48 h", "Sin custodia de fondos ni riesgo de contraparte"],
+      },
+      {
+        icon: "Coins",
+        title: "Tesorería multimoneda",
+        desc: "Administra pesos, dólares y activos digitales en un lugar.",
+        bullets: ["Saldos en MXN y USD", "Intercambio de activos digitales", "Reportes consolidados para contabilidad", "Alertas de movimientos inusuales"],
+      },
+    ],
+    partners: [
+      { name: "FlexPei", url: "https://flexpei.com", tag: "Banca internacional & activos digitales" },
+      { name: "FluxiPay", url: "https://fluxipay.com", tag: "Cobros cripto con liquidación en fiat" },
+    ],
+    note: "Servicios prestados por FlexPei y FluxiPay, aliados de Enlace Fintech. Los tiempos de liquidación dependen del país y el plan contratado.",
+  },
 };
 
 export const CONSULTORIA = {
