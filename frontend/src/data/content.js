@@ -88,17 +88,17 @@ export const WALLET = {
 };
 
 export const PERSONA = {
-  overline: "Persona física · Crédito grupal y personal",
-  title: "Soluciones financieras diseñadas para las personas",
+  overline: "Personas · Tarjeta nominativa y pagos",
+  title: "Tu tarjeta y tus pagos, sin filas ni banco tradicional",
   description:
-    "Con Enlace Fintech como tu broker fintech accedes a una amplia gama de soluciones financieras diseñadas específicamente para la persona física.",
+    "Con Enlace Fintech, como persona física tienes una tarjeta nominativa a tu nombre y una cuenta para recibir tu nómina, pagar servicios y mover tu dinero con SPEI 24/7 a través de FlexPei. Sin anualidad, sin trámites en sucursal y con control total desde tu celular.",
   points: [
-    "Administra tu fondo personal de manera inteligente.",
-    "Disfruta de un adelanto de nómina o un préstamo.",
-    "Solicita un préstamo grupal o personal.",
-    "Respaldo de VISA.",
-    "Banda magnética, chip electrónico y tecnología contactless.",
-    "Aceptación a nivel nacional e internacional.",
+    "Tarjeta nominativa física y virtual, sin anualidad.",
+    "Recibe tu nómina y transferencias SPEI 24/7 con FlexPei.",
+    "Paga servicios, suscripciones y compras en línea.",
+    "Retira en cajeros y deposita en tiendas de autoservicio.",
+    "Chip, banda magnética y contactless con aceptación nacional e internacional.",
+    "Accede a beneficios: seguros, gimnasios, asistencias y descuentos.",
   ],
 };
 
@@ -122,28 +122,102 @@ export const BLOG = {
   title: "Todo sobre el mundo empresarial y financiero en un solo lugar",
   posts: [
     {
-      title: "¿Cómo elegir la mejor protección para mi negocio y mis colaboradores?",
-      date: "24 junio, 2024",
-      image:
-        "https://images.unsplash.com/photo-1669393760504-60cb7e955628?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxtZXhpY28lMjBidXNpbmVzcyUyMG1lZXRpbmclMjBtb2Rlcm58ZW58MHx8fHwxNzg4NTgyMTk0fDA&ixlib=rb-4.1.0&q=85",
-      excerpt:
-        "Proteger una empresa con distintos seguros puede pasar desapercibido y el presupuesto es un factor clave. Un programa de beneficios atractivo ayuda a atraer y retener al mejor talento y mejora la imagen de tu empresa.",
+      slug: "terminal-punto-de-venta-sin-banco",
+      category: "Terminales",
+      title: "Terminal punto de venta sin banco: cómo funciona y qué necesitas en 2026",
+      date: "3 junio, 2026",
+      readTime: "6 min",
+      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/921cd02d61f74010f9808d4bd8f633a0b1e0712cef43cbc0336c8a8e2f022ebc.jpeg",
+      excerpt: "Cada vez más negocios en México cobran con terminal sin abrir una cuenta en un banco tradicional. Te explicamos cómo funciona el modelo, qué es un contrato de administración de tesorería y qué requisitos reales necesitas.",
+      sections: [
+        { h: "¿Por qué tantos negocios ya no piden su terminal al banco?", p: ["Obtener una terminal bancaria en México sigue implicando antigüedad de cuenta, estados de cuenta, montos mínimos de facturación y semanas de espera. Para un restaurante, una farmacia o un consultorio que necesita cobrar hoy, ese proceso es un freno.", "Desde la Ley Fintech y la figura de los agregadores de pago, existen alternativas que permiten a cualquier negocio aceptar tarjetas sin depender de un banco tradicional, con requisitos mucho más simples y activación en días."] },
+        { h: "Cómo funciona el modelo de Enlace Fintech", p: ["Tu negocio recibe una o varias terminales y cobra con ellas todas las marcas de tarjetas. Los cobros se concentran en una empresa aliada del grupo y se te liquidan en las fechas de corte que tú eliges, a la cuenta que definas.", "La relación se formaliza con un contrato de administración de tesorería, que da certeza jurídica a ambas partes: define comisiones, fechas de corte, forma de liquidación y responsabilidades."], bullets: ["Sin mínimos de operación mensual", "Reportes de cada cobro en tiempo real", "Terminales adicionales según crezca tu negocio", "Fechas de corte personalizadas"] },
+        { h: "Requisitos reales para empezar", p: ["A diferencia del banco, no necesitas antigüedad ni historial. Lo básico es:"], bullets: ["Identificación oficial del representante y acta constitutiva (o RFC si eres persona física con actividad empresarial)", "Comprobante de domicilio del negocio", "Cuenta bancaria o cuenta FlexPei donde recibir tus liquidaciones", "WiFi o plan de datos en una tablet o smartphone para conectar la terminal vía Bluetooth"] },
+        { h: "¿Qué comisión es razonable?", p: ["En México, las comisiones por cobro con tarjeta suelen ubicarse entre 2.5% y 3.6% más IVA dependiendo del giro, el volumen y el tipo de tarjeta. Lo importante no es solo el porcentaje: revisa si hay renta mensual, costo por terminal, penalizaciones por bajo volumen o plazos de liquidación largos.", "En Enlace Fintech negociamos estas condiciones con nuestros aliados según tu sector y volumen, y te las presentamos en una sola propuesta transparente."] },
+        { h: "En 3 pasos tienes tu terminal", p: ["Aceptas condiciones y firmas el contrato de administración de tesorería; eliges tus fechas de corte y forma de liquidación; recibes tu KIT TPV en 48 horas, lo configuras y empiezas a cobrar."] },
+      ],
+      cta: { text: "Quiero mi terminal sin trámites bancarios", href: "/servicios/terminales-punto-de-venta" },
     },
     {
-      title: "¿Cómo elegir la mejor cuenta fintech para mi empresa?",
-      date: "9 febrero, 2024",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlJTIwbW9kZXJufGVufDB8fHx8MTc4ODU4MjIxM3ww&ixlib=rb-4.1.0&q=85",
-      excerpt:
-        "Antes de elegir una cuenta fintech identifica las necesidades de tu empresa: pagos internacionales, contabilidad, facturación o comisiones bajas. La seguridad y las funcionalidades marcan la diferencia.",
+      slug: "repse-2026-que-cambia",
+      category: "Capital humano",
+      title: "REPSE 2026: qué cambia para tu empresa y cómo cumplir sin riesgos",
+      date: "20 mayo, 2026",
+      readTime: "7 min",
+      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/fb301f7f8a4e3e9f6ea47e2ecc962ed91c4363919704d77f6457f3106da6cdc2.jpeg",
+      excerpt: "Desde la reforma de 2021, subcontratar personal solo es legal bajo el esquema de servicios especializados registrados en el REPSE. Te explicamos qué debes revisar en 2026, las renovaciones y los reportes que no puedes olvidar.",
+      sections: [
+        { h: "Qué es el REPSE y por qué te afecta", p: ["El Registro de Prestadoras de Servicios Especializados u Obras Especializadas (REPSE) es el padrón de la Secretaría del Trabajo y Previsión Social (STPS) en el que deben inscribirse las empresas que ponen personal a disposición de otra para servicios que no forman parte de su objeto social ni de su actividad económica preponderante.", "Si contratas limpieza, seguridad, mantenimiento, sistemas o cualquier servicio con personal externo dentro de tu empresa, tu proveedor debe estar en el REPSE. Si no lo está, tú pierdes la deducción del gasto y el acreditamiento del IVA, además de asumir responsabilidad solidaria."] },
+        { h: "Lo que debes revisar en 2026", bullets: ["Vigencia del registro: el REPSE se renueva cada tres años; muchas empresas registradas en 2023 renuevan este año", "Que la actividad registrada coincida exactamente con el servicio que te facturan", "Informes cuatrimestrales ICSOE (IMSS) y SISUB (Infonavit) presentados por tu proveedor", "Copia de CFDI de nómina, pagos de cuotas IMSS e Infonavit y declaraciones de ISR e IVA del personal asignado", "Contrato de prestación de servicios especializados con objeto y número aproximado de trabajadores"] },
+        { h: "Errores frecuentes que detectamos en auditorías", p: ["Los más comunes: proveedores con REPSE vencido, servicios que en realidad son parte del objeto social del cliente (lo que se considera subcontratación prohibida), facturas sin los datos del registro, y ausencia de expediente de cumplimiento por cada proveedor."] },
+        { h: "Cómo te ayuda Enlace Fintech", p: ["Nuestro equipo de consultoría en capital humano audita a tus proveedores, arma el expediente de cumplimiento, gestiona tu propio registro REPSE si prestas servicios especializados y administra la nómina y las altas y bajas ante el IMSS de tu personal."] },
+      ],
+      cta: { text: "Solicita una auditoría REPSE", href: "/servicios/consultoria-empresarial" },
     },
     {
-      title: "¿Cómo elegir las herramientas y funcionalidades financieras para mi negocio?",
-      date: "2 febrero, 2024",
-      image:
-        "https://images.unsplash.com/photo-1571867424488-4565932edb41?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBiYW5raW5nJTIwcGF5bWVudCUyMGNvbnRhY3RsZXNzfGVufDB8fHx8MTc4ODU4MjE5NHww&ixlib=rb-4.1.0&q=85",
-      excerpt:
-        "Elegir las herramientas financieras adecuadas aumenta la eficiencia y la rentabilidad de tu empresa. Primero identifica tus necesidades: flujo de efectivo, seguimiento de ingresos y funcionalidades clave.",
+      slug: "cobrar-en-cripto-en-mexico",
+      category: "Cripto",
+      title: "Cómo cobrar en cripto en México y recibir pesos en tu banco",
+      date: "8 mayo, 2026",
+      readTime: "6 min",
+      image: "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHBheW1lbnQlMjBkaWdpdGFsJTIwZmluYW5jZXxlbnwwfHx8fDE3ODg1ODQ1Nzh8MA&ixlib=rb-4.1.0&q=85",
+      excerpt: "Aceptar USDT, BTC o ETH en tu e-commerce no significa quedarte con cripto. Con una pasarela con liquidación en fiat recibes pesos en tu cuenta. Te contamos el marco legal, fiscal y operativo en México.",
+      sections: [
+        { h: "¿Es legal aceptar cripto en México?", p: ["Sí. Las criptomonedas no son moneda de curso legal, pero nada impide que una empresa acepte activos virtuales como medio de pago en una operación privada. La Ley Fintech (2018) regula a las plataformas que operan con ellos y Banxico limita su uso dentro del sistema financiero, pero el comercio entre particulares es libre.", "Lo que sí debes cuidar es el cumplimiento en prevención de lavado de dinero: el intercambio de activos virtuales es una actividad vulnerable bajo la LFPIORPI, por eso conviene operar con una pasarela que ya cumpla KYC/AML por ti."] },
+        { h: "Cómo funciona la liquidación en pesos", bullets: ["Tu sistema genera una orden de cobro con monto en MXN o USD", "El cliente paga con USDT, BTC o ETH desde cualquier wallet", "La pasarela detecta el pago en la blockchain en segundos", "Se convierte a pesos al tipo de cambio del momento y se deposita en tu cuenta en 24–48 horas"], p: ["Tú nunca custodias cripto ni asumes el riesgo de volatilidad: cobras en tu moneda y recibes pesos."] },
+        { h: "Aspectos fiscales que debes considerar", p: ["Para efectos fiscales, la venta de un bien o servicio pagado con cripto se factura igual que cualquier venta: emites CFDI por el importe en pesos. Si conservas activos virtuales y los vendes después, la utilidad se considera ingreso acumulable. Recomendamos siempre revisar con tu contador el tratamiento específico de tu régimen."] },
+        { h: "¿Para quién tiene sentido?", bullets: ["E-commerce con clientes en Estados Unidos, Latinoamérica o Europa", "Freelancers y agencias que cobran a clientes extranjeros", "Empresas que pagan a proveedores fuera de México y quieren evitar comisiones de SWIFT", "Negocios que quieren diferenciarse ofreciendo más medios de pago"] },
+        { h: "Con quién lo hacemos", p: ["En Enlace Fintech integramos FluxiPay para cobros cripto con liquidación en fiat y FlexPei para intercambio de activos digitales, cuentas en USD y pagos internacionales, con cumplimiento regulatorio en cada paso."] },
+      ],
+      cta: { text: "Quiero aceptar cripto en mi negocio", href: "/empresas/cripto" },
+    },
+    {
+      slug: "tarjetas-nominativas-colaboradores",
+      category: "Tarjetas",
+      title: "Tarjetas nominativas para colaboradores: controla gastos sin exponer tu cuenta",
+      date: "22 abril, 2026",
+      readTime: "5 min",
+      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/48964a43321b6c2a1dd2487b81b0b27453e33a0aff43c84c549044ff0db8997e.jpeg",
+      excerpt: "Prestar la tarjeta del dueño, repartir efectivo para viáticos o pedir reembolsos con tickets arrugados cuesta tiempo y dinero. Así resuelven las empresas modernas los gastos de su equipo.",
+      sections: [
+        { h: "El problema del efectivo y la tarjeta compartida", p: ["En muchas pymes mexicanas los gastos operativos se manejan con efectivo o con la tarjeta personal del dueño. El resultado: falta de comprobantes, gastos no deducibles, riesgo de fraude y horas de conciliación cada cierre de mes."] },
+        { h: "Qué es una tarjeta nominativa empresarial", p: ["Es una tarjeta a nombre de cada colaborador, ligada a la cuenta de la empresa pero con saldo y límites propios. El colaborador paga gasolina, viáticos, compras de campo o herramientas, y tú ves cada movimiento al instante."], bullets: ["Límites por tarjeta, por día o por categoría de comercio", "Bloqueo y reposición desde la app en segundos", "Foto del ticket adjunta a cada cargo", "Reportes por área o centro de costo listos para contabilidad"] },
+        { h: "Física o virtual: cuál conviene", p: ["Las virtuales se emiten al momento y son ideales para suscripciones, publicidad digital y compras en línea de cada área. Las físicas sirven para el equipo en campo: choferes, vendedores, técnicos. La mayoría de las empresas combina ambas."] },
+        { h: "Beneficios fiscales y de control", p: ["Todo gasto pagado con tarjeta queda con trazabilidad bancaria, lo que facilita su deducción y elimina el manejo de efectivo. Además, al no exponer la cuenta principal, reduces el riesgo de fraude y clonación."] },
+      ],
+      cta: { text: "Quiero tarjetas para mi equipo", href: "/servicios/tarjetas" },
+    },
+    {
+      slug: "spei-24-7-para-empresas",
+      category: "Pagos",
+      title: "SPEI 24/7 para empresas: dispersa nómina y paga proveedores en segundos",
+      date: "9 abril, 2026",
+      readTime: "5 min",
+      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/666a60391eea9a32868e5111c68cdc10de55abc74affd04b4d703f551d71a0f4.jpeg",
+      excerpt: "Pagar la nómina el viernes por la noche o a un proveedor en domingo ya no depende del horario del banco. Así aprovechan las empresas la Plataforma de pagos con SPEI 24/7.",
+      sections: [
+        { h: "Qué cambió con SPEI 24/7", p: ["Desde que Banxico habilitó la operación continua del SPEI, las transferencias interbancarias se liquidan en segundos cualquier día y hora. Sin embargo, muchas bancas empresariales siguen limitando horarios, montos o número de operaciones por lote."] },
+        { h: "Dispersión de nómina sin capturar cuenta por cuenta", bullets: ["Carga un layout desde Excel o tu sistema de nómina", "Aprobaciones por niveles antes de dispersar", "Pago a cualquier banco o a la tarjeta de nómina Enlace", "Comprobante automático para cada colaborador"] },
+        { h: "Pagos a proveedores con control", p: ["Programa pagos, define quién autoriza y concilia automáticamente contra tus facturas. Con la Plataforma de pagos de Enlace Fintech, operada con FlexPei, tienes SPEI 24/7, pagos internacionales y tarjetas en un mismo lugar."] },
+        { h: "Seguridad", p: ["Autenticación de dos factores, límites por usuario, alertas de movimientos inusuales y cumplimiento KYC/AML por parte del aliado regulado que opera las cuentas."] },
+      ],
+      cta: { text: "Conoce la Plataforma de pagos", href: "/servicios/plataforma-de-pagos" },
+    },
+    {
+      slug: "como-elegir-cuenta-fintech-empresa",
+      category: "Plataforma de pagos",
+      title: "Cómo elegir la mejor cuenta fintech para tu empresa en México",
+      date: "18 marzo, 2026",
+      readTime: "6 min",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlJTIwbW9kZXJufGVufDB8fHx8MTc4ODU4MjIxM3ww&ixlib=rb-4.1.0&q=85",
+      excerpt: "Comisiones, límites, integraciones, tarjetas y soporte: la lista de cosas a revisar antes de mover la operación de tu empresa a una cuenta fintech, y las preguntas que debes hacer a cualquier proveedor.",
+      sections: [
+        { h: "Empieza por tus necesidades reales", bullets: ["¿Cuántas transferencias haces al mes y de qué montos?", "¿Pagas a proveedores en el extranjero?", "¿Necesitas tarjetas para tu equipo?", "¿Cobras con terminal, link de pago o en línea?", "¿Tu contador necesita integración con tu sistema contable?"] },
+        { h: "Qué revisar en el proveedor", p: ["Que la entidad que custodia los fondos esté regulada (IFPE, banco o SOFIPO) y que tu proveedor lo diga con claridad. Revisa comisiones por transferencia, límites diarios, tiempos de liquidación, costo de tarjetas y si hay renta mensual."] },
+        { h: "Señales de alerta", bullets: ["No te dicen quién custodia el dinero", "Comisiones 'a consultar' que nunca llegan por escrito", "Sin soporte humano ni ejecutivo asignado", "Promesas de rendimientos garantizados"] },
+        { h: "El valor de un broker", p: ["En Enlace Fintech comparamos las opciones del mercado según tu sector y volumen, negociamos condiciones y te acompañamos en el alta. Tú tienes un solo interlocutor para cuentas, terminales, tarjetas y pagos internacionales."] },
+      ],
+      cta: { text: "Agenda un diagnóstico gratuito", href: "/contacto" },
     },
   ],
 };
@@ -539,7 +613,7 @@ export const INTERESES = [
   "Nómina y dispersión",
   "Pagos internacionales",
   "Consultoría empresarial",
-  "Crédito personal / grupal",
+  "Tarjeta para personas",
   "Casinos",
   "Otro",
 ];

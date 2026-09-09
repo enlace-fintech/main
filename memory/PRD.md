@@ -55,12 +55,15 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 ## Regla de negocio (2026-06-09)
 - Enlace NO otorga ni promociona créditos en Empresas/Servicios. Oferta: tarjetas nominativas, terminales, pagos con FlexPei y marcas aliadas existentes.
 - Eliminado de sectores: "créditos rápidos" (casinos), "meses sin intereses" (médicos, tiendas, ferreterías, agencias), "Crédito y adelanto de nómina" + aliado CREA (membresías), categorías Créditos/Adelanto en Aliados, "adelanto de nómina" en Servicios Nómina/Tarjetas, FAQ.
-- PENDIENTE decisión usuario: sección Personas aún menciona crédito personal/grupal y préstamo.
+- Personas reescrita (2026-06-09): tarjeta nominativa + pagos FlexPei, sin crédito. INTERESES: 'Tarjeta para personas'.
+
+## Blog (2026-06-09)
+- 6 artículos SEO México con páginas propias /blog/:slug (BlogPost.jsx, data BLOG.posts con sections/cta): TPV sin banco, REPSE 2026, cobrar en cripto, tarjetas nominativas, SPEI 24/7, elegir cuenta fintech.
+- document.title y meta description dinámicos por artículo; relacionados; redirect de slug inválido a /blog. Testing iteration_5.json.
 
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
-- P1: Blog con páginas individuales y temas SEO México.
 - P1: Meta title/description por ruta, sitemap/robots.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.

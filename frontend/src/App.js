@@ -5,6 +5,7 @@ import { Layout } from "@/components/site/Layout";
 import Home from "@/pages/Home";
 import EmpresaPage from "@/pages/EmpresaPage";
 import ServiciosPage from "@/pages/ServiciosPage";
+import BlogPost from "@/pages/BlogPost";
 import {
   CajaPage,
   PersonasPage,
@@ -31,6 +32,7 @@ function App() {
             <Route path="/aliados" element={<AliadosPage />} />
             <Route path="/sucursales" element={<SucursalesPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contacto" element={<ContactoPage />} />
           </Route>
         </Routes>
