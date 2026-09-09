@@ -52,6 +52,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Nuevas páginas vía componente genérico ServicioDetalle (data en SERVICIOS_DETALLE): /servicios/tarjetas (nominativas colaboradores, nómina, corporativa directivos), /servicios/nomina-y-dispersion, /servicios/pagos-internacionales (FlexPei + FluxiPay).
 - NAV/Footer/INTERESES actualizados. Testing: iteration_4.json 100%.
 
+## Regla de negocio (2026-06-09)
+- Enlace NO otorga ni promociona créditos en Empresas/Servicios. Oferta: tarjetas nominativas, terminales, pagos con FlexPei y marcas aliadas existentes.
+- Eliminado de sectores: "créditos rápidos" (casinos), "meses sin intereses" (médicos, tiendas, ferreterías, agencias), "Crédito y adelanto de nómina" + aliado CREA (membresías), categorías Créditos/Adelanto en Aliados, "adelanto de nómina" en Servicios Nómina/Tarjetas, FAQ.
+- PENDIENTE decisión usuario: sección Personas aún menciona crédito personal/grupal y préstamo.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

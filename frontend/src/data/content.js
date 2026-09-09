@@ -108,7 +108,7 @@ export const CASINOS = {
   description:
     "En Enlace Fintech potenciamos tu casino con medios de pago y soluciones personalizadas. Garantizamos seguridad y transparencia mediante contratos de origen de recursos, protegiendo contra actividades inusuales con alertas automáticas.",
   bullets: [
-    "Ofrece a tus clientes créditos rápidos y planes de lealtad.",
+    "Ofrece a tus clientes tarjetas nominativas y planes de lealtad sin efectivo.",
     "Amplía tu alcance al aceptar más tarjetas de crédito y débito.",
     "Coordina los fondos de toda tu actividad comercial desde un solo lugar.",
     "Redención y bonificación de premios 24/7/365, apertura de cuenta para persona física y onboarding en 5 minutos.",
@@ -227,7 +227,7 @@ export const MEDICOS = {
     "https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtZWRpY2FsJTIwb2ZmaWNlJTIwcGF5bWVudCUyMGNhcmR8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
   tpv: [
     "Recibe pagos con todas las tarjetas de chip y banda.",
-    "Ofrece a tus pacientes pagos desde 3 hasta 24 meses sin intereses.",
+    "Recibe tus ventas en tu cuenta FlexPei con SPEI 24/7.",
     "Cuando pagan con tarjeta, tú tienes el pago garantizado.",
   ],
   features: [
@@ -310,7 +310,7 @@ export const MEMBRESIAS = {
     { icon: "Tags", title: "Redes de descuentos", desc: "Ahorra en tus compras con ofertas y descuentos exclusivos." },
     { icon: "Dumbbell", title: "Gimnasios", desc: "Mantente en forma con acceso a los mejores gimnasios." },
     { icon: "Home", title: "Asistencias mascota, hogar y vial", desc: "Tranquilidad total para tu mascota, hogar y en carretera." },
-    { icon: "Wallet", title: "Crédito y adelanto de nómina", desc: "Soluciones financieras a tu medida, justo cuando las necesitas." },
+    { icon: "WalletCards", title: "Tarjeta nominativa de beneficios", desc: "Una tarjeta para recibir nómina, beneficios y descuentos, con aceptación nacional." },
     { icon: "PiggyBank", title: "Caja y fondo de ahorro", desc: "Facilita el ahorro y la gestión financiera de tus empleados." },
   ],
   aliados: [
@@ -322,7 +322,6 @@ export const MEMBRESIAS = {
     { name: "TotalPass", cat: "Gimnasios" },
     { name: "Smart Fit", cat: "Gimnasios" },
     { name: "Gayosso", cat: "Servicios funerarios" },
-    { name: "CREA", cat: "Crédito ágil" },
   ],
 };
 
@@ -333,12 +332,12 @@ export const ALIADOS = {
     "Trabajamos con un ecosistema de aliados para empresarios y personas físicas que buscan una gestión financiera moderna y eficiente. Nuestra experiencia nos permite ofrecer orientación personalizada y herramientas adaptadas a cada cliente.",
   categories: [
     "Banca & plataforma de pagos",
-    "Créditos",
+    "Tarjetas nominativas",
     "Terminales de pago",
     "Beneficios & bienestar",
     "Pagos cripto",
     "Facturación",
-    "Adelanto de nómina",
+    "Nómina y dispersión",
     "Seguros",
   ],
 };
@@ -421,7 +420,7 @@ export const GENERIC_SECTORS = {
     image: "https://images.unsplash.com/photo-1556740772-1a741367b93e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBzdG9yZSUyMGNoZWNrb3V0JTIwY291bnRlcnxlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
     features: [
       { icon: "CreditCard", title: "TPV y contactless", desc: "Acepta todas las tarjetas de chip, banda y sin contacto." },
-      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Ofrece de 3 a 24 meses sin intereses y vende más." },
+      { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas para tu equipo con límites y control de gastos." },
       { icon: "Link", title: "Links de pago", desc: "Cobra a distancia por WhatsApp o redes sociales." },
       { icon: "Boxes", title: "Inventario y caja", desc: "Administra productos, ventas y arqueo desde la app." },
     ],
@@ -429,13 +428,13 @@ export const GENERIC_SECTORS = {
   ferreterias: {
     icon: "Hammer",
     overline: "Sectores · Ferreterías",
-    title: "Pagos y crédito para ferreterías",
+    title: "Pagos y control para ferreterías",
     description:
-      "Da facilidades de pago a tus clientes, controla tu inventario y gestiona el flujo de tu negocio con herramientas fintech.",
+      "Cobra con terminal, paga a proveedores con FlexPei y controla los gastos de tu equipo con tarjetas nominativas, todo desde una sola plataforma.",
     image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/d4ebd5bf68f564aab15cd3ac2150c3ab49fcf7c63a53a3f5448928d78f207923.jpeg",
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
-      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita compras grandes de material y herramienta." },
+      { icon: "Landmark", title: "Pagos con FlexPei", desc: "SPEI 24/7 y pagos a proveedores desde una sola plataforma." },
       { icon: "Boxes", title: "Control de inventario", desc: "Supervisa existencias y evita pérdidas." },
       { icon: "Wallet", title: "Plataforma de pagos", desc: "Administra todos los fondos de tu negocio en un lugar." },
     ],
@@ -459,7 +458,7 @@ export const GENERIC_SECTORS = {
     overline: "Sectores · Agencias de viajes",
     title: "Cobros y pagos para agencias de viajes",
     description:
-      "Vende paquetes y boletos con pagos a meses, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
+      "Vende paquetes y boletos, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhZ2VuY3klMjBhaXJwbGFuZSUyMGJvb2tpbmd8ZW58MHx8fHwxNzg4ODQ1ODI0fDA&ixlib=rb-4.1.0&q=85",
     partners: [
       {
@@ -470,7 +469,7 @@ export const GENERIC_SECTORS = {
       },
     ],
     features: [
-      { icon: "CalendarClock", title: "Meses sin intereses", desc: "Facilita la compra de viajes y paquetes turísticos." },
+      { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas para agentes y viáticos con control de gastos." },
       { icon: "Link", title: "Cobro a distancia", desc: "Envía links de pago a tus clientes donde estén." },
       { icon: "Globe", title: "Pagos internacionales", desc: "Paga a proveedores y hoteles en el extranjero." },
       { icon: "ShieldCheck", title: "Seguridad y trazabilidad", desc: "Protege cada operación con alertas automáticas." },
@@ -487,7 +486,7 @@ export const COMMON_SERVICES = {
     { icon: "CreditCard", title: "Terminales TPV", desc: "Cobra con tarjeta, contactless y QR en cualquier punto de venta." },
     { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas físicas y virtuales respaldadas para tu equipo y control de gastos." },
     { icon: "Network", title: "Procesadores de pago", desc: "Integración con los mejores procesadores para maximizar la aprobación." },
-    { icon: "Landmark", title: "Pagos de nómina", desc: "Dispersa nómina y adelantos a tus colaboradores en segundos." },
+    { icon: "Landmark", title: "Pagos de nómina", desc: "Dispersa nómina a tus colaboradores en segundos." },
     { icon: "Building2", title: "Banca · FlexPei", desc: "SPEI 24/7, pagos internacionales y activos digitales.", url: "https://flexpei.com" },
     { icon: "Bitcoin", title: "Procesadores crypto · FluxiPay", desc: "Cobra USDT, BTC y ETH con liquidación en fiat a tu banco.", url: "https://fluxipay.com" },
     { icon: "FileCheck", title: "Gestoría de trámites · MisTrámites", desc: "Constitución de empresas, RFC, firma electrónica, IMSS y más.", url: "https://mistramites.mx" },
@@ -509,7 +508,7 @@ export const FAQ = {
   overline: "Preguntas frecuentes",
   title: "Resolvemos tus dudas",
   items: [
-    { q: "¿Qué es un broker fintech?", a: "Somos el aliado que te conecta con las mejores soluciones financieras del mercado (cuentas, terminales, créditos, pagos cripto y más), negociando condiciones a tu favor y acompañándote en la operación diaria." },
+    { q: "¿Qué es un broker fintech?", a: "Somos el aliado que te conecta con las mejores soluciones financieras del mercado (cuentas, terminales, tarjetas nominativas, pagos cripto y más), negociando condiciones a tu favor y acompañándote en la operación diaria." },
     { q: "¿Cuánto tarda el onboarding?", a: "El alta puede completarse en tan solo 5 minutos y la activación de servicios se realiza tras una validación exprés de tu documentación." },
     { q: "¿Para qué tipo de empresas es?", a: "Trabajamos con pymes y grandes empresas de múltiples sectores: restaurantes, médicos, casinos, cripto, eventos, hoteles, comercios y más, así como con personas físicas." },
     { q: "¿Qué métodos de cobro puedo aceptar?", a: "Terminales punto de venta, links de pago, contactless y QR, transferencias SPEI, pagos internacionales y cobros en cripto con liquidación en pesos." },
@@ -580,7 +579,7 @@ export const SERVICIOS_HUB = {
     {
       icon: "Landmark",
       title: "Nómina y dispersión",
-      desc: "Dispersa nómina, comisiones y viáticos en segundos, ofrece adelanto de nómina y automatiza la conciliación.",
+      desc: "Dispersa nómina, comisiones y viáticos en segundos con tarjeta de nómina para tu equipo y conciliación automática.",
       href: "/servicios/nomina-y-dispersion",
       cta: "Ver nómina y dispersión",
     },
@@ -632,7 +631,7 @@ export const SERVICIOS_DETALLE = {
         icon: "Landmark",
         title: "Tarjeta de nómina y dispersión",
         desc: "Paga a tu equipo en segundos y dales una tarjeta sin costo.",
-        bullets: ["Dispersión masiva de nómina 24/7", "Adelanto de nómina para el colaborador", "Retiros en cajeros y compras en comercios", "Acceso a beneficios y membresías"],
+        bullets: ["Dispersión masiva de nómina 24/7", "Tarjeta nominativa sin costo para el colaborador", "Retiros en cajeros y compras en comercios", "Acceso a beneficios y membresías"],
       },
       {
         icon: "Crown",
@@ -647,12 +646,12 @@ export const SERVICIOS_DETALLE = {
     overline: "Nómina y dispersión",
     title: "Paga a tu equipo en segundos, con control total",
     description:
-      "Dispersa nómina, comisiones, viáticos y pagos a proveedores desde una sola plataforma, ofrece adelanto de nómina a tus colaboradores y, si lo necesitas, delega el cálculo y cumplimiento de nómina a nuestro equipo de capital humano.",
+      "Dispersa nómina, comisiones, viáticos y pagos a proveedores desde una sola plataforma, entrega a tus colaboradores una tarjeta de nómina sin costo y, si lo necesitas, delega el cálculo y cumplimiento de nómina a nuestro equipo de capital humano.",
     image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/666a60391eea9a32868e5111c68cdc10de55abc74affd04b4d703f551d71a0f4.jpeg",
     cta: "Quiero dispersar mi nómina",
     features: [
       { icon: "Zap", title: "Dispersión masiva SPEI 24/7", desc: "Carga tu layout y paga a cualquier banco en segundos, incluso fines de semana." },
-      { icon: "HandCoins", title: "Adelanto de nómina", desc: "Tus colaboradores disponen de lo ya trabajado, sin costo para la empresa." },
+      { icon: "WalletCards", title: "Tarjeta de nómina", desc: "Tarjeta nominativa sin costo para cada colaborador, con aceptación nacional." },
       { icon: "Users", title: "Comisiones y proveedores", desc: "Paga vendedores, repartidores y proveedores con la misma herramienta." },
       { icon: "FileCheck", title: "Conciliación automática", desc: "Comprobantes y reportes listos para contabilidad." },
     ],
@@ -664,10 +663,10 @@ export const SERVICIOS_DETALLE = {
         bullets: ["Carga de layout desde Excel o tu sistema de nómina", "Pagos a cualquier banco o a la tarjeta de nómina Enlace", "Programación de pagos y aprobaciones por niveles", "Comprobantes de pago automáticos para cada colaborador"],
       },
       {
-        icon: "HandCoins",
-        title: "Adelanto de nómina",
-        desc: "Un beneficio que retiene talento sin afectar tu flujo.",
-        bullets: ["El colaborador solicita desde la app", "Se descuenta en la siguiente nómina", "Sin costo ni riesgo para la empresa", "Reduce rotación y ausentismo"],
+        icon: "WalletCards",
+        title: "Tarjeta de nómina Enlace",
+        desc: "Un beneficio que retiene talento sin costo para la empresa.",
+        bullets: ["Tarjeta nominativa sin costo de apertura ni anualidad", "Retiros en cajeros y compras en comercios", "Acceso a descuentos, seguros y membresías", "Control de saldos y movimientos desde la app"],
       },
       {
         icon: "ClipboardList",
