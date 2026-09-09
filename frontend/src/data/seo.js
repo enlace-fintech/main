@@ -26,9 +26,9 @@ const STATIC = {
 const SECTORES = {
   "restaurantes-y-bares": { title: "Soluciones financieras para restaurantes y bares", description: RESTAURANTES.description, image: RESTAURANTES.image, faq: RESTAURANTES.faq },
   medicos: { title: "Soluciones financieras para médicos y consultorios", description: MEDICOS.description, image: MEDICOS.image, faq: MEDICOS.faq },
-  casinos: { title: "Medios de pago y cumplimiento para casinos", description: CASINOS.description, image: CASINOS.image },
-  cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image },
-  eventos: { title: "Pagos sin fricción para eventos y conciertos", description: EVENTOS.description, image: EVENTOS.image },
+  casinos: { title: "Medios de pago y cumplimiento para casinos", description: CASINOS.description, image: CASINOS.image, faq: CASINOS.faq },
+  cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image, faq: CRIPTO.faq },
+  eventos: { title: "Pagos sin fricción para eventos y conciertos", description: EVENTOS.description, image: EVENTOS.image, faq: EVENTOS.faq },
   membresias: { title: "Beneficios y membresías para colaboradores", description: MEMBRESIAS.description, image: MEMBRESIAS.image, faq: MEMBRESIAS.faq },
 };
 

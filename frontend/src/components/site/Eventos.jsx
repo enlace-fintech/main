@@ -2,6 +2,7 @@ import * as Icons from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 import { EVENTOS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 export const Eventos = () => (
   <section id="eventos" data-testid="eventos-section" className="relative py-16 lg:py-24">
@@ -68,5 +69,6 @@ export const Eventos = () => (
         })}
       </div>
     </div>
+    <SectorExtras timeline={EVENTOS.timeline} pains={EVENTOS.pains} faq={EVENTOS.faq} cta={EVENTOS.cta} testid="eventos" />
   </section>
 );

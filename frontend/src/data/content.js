@@ -117,15 +117,29 @@ export const PERSONA = {
 
 export const CASINOS = {
   overline: "Casinos",
-  title: "Lleva tu experiencia de juego a otro nivel",
+  title: "Menos efectivo en piso, más control y cumplimiento PLD sin fricción",
   description:
-    "En Enlace Fintech potenciamos tu casino con medios de pago y soluciones personalizadas. Garantizamos seguridad y transparencia mediante contratos de origen de recursos, protegiendo contra actividades inusuales con alertas automáticas.",
+    "En Enlace Fintech potenciamos tu casino con medios de pago y soluciones personalizadas: terminales en cada caja, banca empresarial con SPEI 24/7 y tarjetas nominativas para jugadores y colaboradores. Garantizamos seguridad y transparencia mediante contratos de origen de recursos, protegiendo contra actividades inusuales con alertas automáticas y cuidando tu licencia.",
   bullets: [
-    "Ofrece a tus clientes tarjetas nominativas y planes de lealtad sin efectivo.",
-    "Amplía tu alcance al aceptar más tarjetas de crédito y débito.",
-    "Coordina los fondos de toda tu actividad comercial desde un solo lugar.",
-    "Redención y bonificación de premios 24/7/365, apertura de cuenta para persona física y onboarding en 5 minutos.",
+    "Ofrece a tus clientes tarjetas nominativas y planes de lealtad sin efectivo; redención de premios directo a tarjeta.",
+    "Amplía tu alcance al aceptar más tarjetas de crédito y débito con terminales sin trámites bancarios ni mínimos, negociadas para el sector de juegos y sorteos.",
+    "Coordina los fondos de toda tu actividad comercial y de todas tus salas desde una sola plataforma de pagos, con cortes por sala y reportes en tiempo real.",
+    "Redención y bonificación de premios 24/7/365, apertura de cuenta para persona física y onboarding en 5 minutos con KYC.",
+    "Tarjeta de nómina sin costo para tu personal y dispersión de nómina y proveedores vía SPEI 24/7.",
   ],
+  pains: [
+    { icon: "Banknote", q: "“El efectivo en piso es un riesgo de seguridad y de PLD”", a: "Tarjetas nominativas para jugadores y redención de premios directo a tarjeta: menos efectivo y cada movimiento trazable." },
+    { icon: "FileCheck", q: "“Cada reporte a la UIF me consume días”", a: "Onboarding de persona física en 5 minutos con KYC y contrato de origen de recursos; expediente listo para tus avisos." },
+    { icon: "CreditCard", q: "“El banco me rechaza o me cobra de más por el giro”", a: "Terminales sin trámites bancarios ni mínimos y cuenta empresarial con SPEI 24/7, con condiciones negociadas para el sector." },
+    { icon: "LayoutDashboard", q: "“Tengo varias salas y no veo la caja consolidada”", a: "Plataforma de pagos: fondos de todas las salas en un solo lugar, cortes por sala, nómina y proveedores desde la misma cuenta." },
+  ],
+  note: "Enlace Fintech no otorga crédito a jugadores ni participa en la operación del juego; provee medios de pago, banca empresarial y herramientas de cumplimiento.",
+  faq: [
+    { q: "¿Trabajan con casinos con permiso de SEGOB?", a: "Sí. Operamos con salas que cuentan con permiso vigente; el alta incluye validación de la licencia y del representante legal." },
+    { q: "¿Cómo manejan el origen de recursos y los avisos PLD?", a: "Cada jugador se registra con KYC y firma un contrato de origen de recursos; los reportes de operaciones quedan disponibles para tus avisos ante la UIF." },
+    { q: "¿El jugador puede cobrar su premio en tarjeta el mismo día?", a: "Sí. La redención se abona a su tarjeta nominativa 24/7/365 y puede usarla o retirar en cajero de inmediato." },
+  ],
+  cta: { text: "Quiero medios de pago para mi casino", href: "/contacto" },
   image:
     "/img/casinos.webp",
 };
@@ -341,9 +355,23 @@ export const MEDICOS = {
 
 export const CRIPTO = {
   overline: "Sectores · Cripto",
-  title: "Más que un crypto exchange",
+  title: "Cobra en cripto y recibe pesos en tu banco, sin custodiar ni especular",
   description:
-    "Acepta pagos en criptomonedas en tu e-commerce y recibe el dinero en pesos directamente en tu cuenta bancaria. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, de forma rápida y segura.",
+    "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
+  audience: ["E-commerce con clientes fuera de México", "Freelancers y agencias que cobran en el extranjero", "Empresas que pagan proveedores internacionales", "Negocios que quieren más medios de pago"],
+  pains: [
+    { icon: "Globe", q: "“Clientes en EE. UU. o Europa quieren pagarme y SWIFT tarda y cuesta”", a: "Cobro en USDT con liquidación en pesos a tu cuenta FlexPei o bancaria, sin intermediarios bancarios." },
+    { icon: "TrendingDown", q: "“No quiero quedarme con cripto ni asumir volatilidad”", a: "Conversión al momento del pago y depósito en fiat; nunca custodias activos." },
+    { icon: "ShieldCheck", q: "“Me preocupa el tema fiscal y de lavado de dinero”", a: "KYC/AML automatizado por el aliado; tú facturas en pesos como cualquier venta con CFDI normal." },
+    { icon: "Code2", q: "“Mi desarrollador no quiere integrar otra pasarela”", a: "API + webhooks, wallet temporal por pago y sin custodia; integración en días. También puedes cobrar cripto y tarjeta en la misma terminal." },
+  ],
+  note: "Los activos virtuales no son moneda de curso legal ni están garantizados. Enlace Fintech no ofrece rendimientos ni asesoría de inversión; provee medios de cobro con liquidación en pesos.",
+  faq: [
+    { q: "¿Es legal aceptar cripto en México?", a: "Sí. Las criptomonedas no son moneda de curso legal, pero aceptarlas como medio de pago en una operación privada es legal; el cumplimiento PLD lo resuelve la pasarela aliada." },
+    { q: "¿En cuánto tiempo recibo los pesos?", a: "Instantáneo o en 24–48 horas según país y plan, a tu cuenta bancaria o a tu cuenta FlexPei con SPEI 24/7." },
+    { q: "¿Qué comisión tiene frente a una transferencia internacional?", a: "Generalmente menor que un SWIFT (que suma comisiones de bancos intermediarios y tipo de cambio); te cotizamos según volumen y monedas." },
+  ],
+  cta: { text: "Quiero aceptar cripto en mi negocio", href: "/contacto" },
   image:
     "/img/cripto.webp",
   partners: [
@@ -458,9 +486,26 @@ export const ALIADOS = {
 
 export const EVENTOS = {
   overline: "Sectores · Eventos & Conciertos",
-  title: "Impulsa tus eventos y conciertos con pagos sin fricción",
+  title: "Filas cortas, barras sin efectivo y el dinero del evento conciliado al día siguiente",
   description:
-    "Optimiza la operación de tus eventos con soluciones de cobro ágiles, seguras y sin efectivo. Vende más, agiliza filas y controla cada peso en tiempo real.",
+    "Optimiza la operación de tus eventos con soluciones de cobro ágiles, seguras y sin efectivo: boletos con Mastiket, cashless RFID con Masaldo y terminales en cada barra y stand, con ventas por punto en tiempo real. El dinero llega a tu cuenta empresarial con SPEI 24/7 y desde ahí pagas a staff y proveedores, incluso con tarjeta de nómina. Vende más, agiliza filas y controla cada peso.",
+  timeline: [
+    { icon: "Ticket", title: "Preventa", desc: "Boletera Mastiket, links de pago y terminales en taquilla; el anticipo llega a tu cuenta empresarial." },
+    { icon: "Zap", title: "Día del evento", desc: "Terminales contactless/QR en cada barra y stand, brazaletes cashless Masaldo y ventas por punto en vivo." },
+    { icon: "Landmark", title: "Post-evento", desc: "Liquidación con tus fechas de corte y dispersión SPEI 24/7 a staff, concesionarios y proveedores, con conciliación automática." },
+  ],
+  pains: [
+    { icon: "Timer", q: "“Las filas en barra me matan las ventas en el momento pico”", a: "Terminales contactless/QR por barra y brazaletes cashless: cobro en segundos y sin cambio." },
+    { icon: "Calculator", q: "“Cuadrar el efectivo de 30 puntos de venta al final es un caos”", a: "Ventas por punto, artículo y hora en tiempo real; corte por stand y conciliación automática en tu plataforma de pagos." },
+    { icon: "Users", q: "“Mis concesionarios y staff quieren su pago al día siguiente”", a: "Liquidación con fechas de corte que tú eliges y dispersión SPEI 24/7 a proveedores y personal; tarjeta de nómina sin costo para tu staff." },
+    { icon: "ScanLine", q: "“Necesito controlar el aforo y evitar boletos falsos”", a: "Boletera Mastiket con validación en puerta y control de aforo en vivo." },
+  ],
+  faq: [
+    { q: "¿Cuántas terminales pueden asignar para un evento de un día?", a: "Las que necesites, sin mínimos ni renta por terminal; las asignamos según tus puntos de venta y las recoges al terminar." },
+    { q: "¿Qué pasa si no hay buena señal en el recinto?", a: "Las terminales funcionan con WiFi o datos; recomendamos un router propio o SIM dedicada por zona. Te asesoramos en la instalación." },
+    { q: "¿Cuándo recibo el dinero de las ventas?", a: "En las fechas de corte que elijas, directo a tu cuenta empresarial, con el reporte por punto de venta." },
+  ],
+  cta: { text: "Quiero cobrar en mi próximo evento", href: "/contacto" },
   partners: [
     {
       name: "Mastiket",
@@ -470,7 +515,7 @@ export const EVENTOS = {
     },
     {
       name: "Masaldo",
-      url: "https://masaldo.com",
+      url: "https://masaldo.com.mx",
       tag: "Recargas de saldo RFID",
       desc: "Sistema cashless RFID: recarga saldo en brazaletes o monederos digitales para pagos sin efectivo dentro del recinto.",
     },

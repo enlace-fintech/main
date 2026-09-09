@@ -1,6 +1,7 @@
 import { Check, ArrowUpRight, ArrowDownToLine, Wallet } from "lucide-react";
 import { CRIPTO } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 const FlowColumn = ({ icon: Icon, flow, testid }) => (
   <div data-testid={testid} className="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
@@ -106,5 +107,6 @@ export const Cripto = () => (
         </div>
       </Reveal>
     </div>
+    <SectorExtras audience={CRIPTO.audience} pains={CRIPTO.pains} faq={CRIPTO.faq} cta={CRIPTO.cta} note={CRIPTO.note} testid="cripto" />
   </section>
 );

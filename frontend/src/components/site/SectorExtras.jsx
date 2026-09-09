@@ -3,10 +3,39 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./Primitives";
 
-export const SectorExtras = ({ pains, faq, cta, note, testid }) => (
+export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid }) => (
   <div className="max-w-7xl mx-auto px-5 lg:px-8">
+    {timeline && (
+      <div className="mt-16 grid gap-6 md:grid-cols-3">
+        {timeline.map((t, i) => {
+          const Icon = Icons[t.icon] || Icons.Circle;
+          return (
+            <Reveal key={t.title} delay={i * 0.08}>
+              <div data-testid={`${testid}-timeline-${i}`} className="relative h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+                <span className="font-display absolute right-6 top-5 text-4xl font-black text-white/5">0{i + 1}</span>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37]">
+                  <Icon size={20} strokeWidth={1.5} />
+                </span>
+                <h3 className="font-display mt-4 text-lg font-bold text-white">{t.title}</h3>
+                <p className="mt-2 text-sm text-slate-400 leading-relaxed">{t.desc}</p>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
+    )}
+
+    {audience && (
+      <Reveal className="mt-14 flex flex-wrap items-center gap-3">
+        <span className="text-xs uppercase tracking-[0.24em] text-slate-500">¿Para quién?</span>
+        {audience.map((a) => (
+          <span key={a} data-testid={`${testid}-audience`} className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-200">{a}</span>
+        ))}
+      </Reveal>
+    )}
+
     {pains && (
-      <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div className={`${audience || timeline ? "mt-10" : "mt-16"} grid gap-5 md:grid-cols-2 lg:grid-cols-4`}>
         {pains.map((p, i) => {
           const Icon = Icons[p.icon] || Icons.Sparkles;
           return (

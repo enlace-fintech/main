@@ -95,8 +95,12 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 ## Copy por sector (2026-06-09)
 - Restaurantes, Médicos y Membresías reescritos SIN quitar información: títulos orientados a dolor, bullets/features ampliados, + `pains` (dolor→solución), `faq` (3), `cta`, `note` (médicos), `steps` (membresías: qué recibe / quién paga / cómo se implementa), `desc` por aliado. Componente compartido SectorExtras.jsx. FAQPage JSON-LD en esos sectores.
 
+## Copy Casinos/Cripto/Eventos (2026-06-09)
+- Mismo formato SectorExtras (pains, faq, cta, note) + `audience` chips (Cripto) y `timeline` Preventa/Día/Post (Eventos). Énfasis en terminales, banca empresarial (Plataforma de pagos/FlexPei SPEI 24/7) y tarjetas de nómina. FAQPage JSON-LD en los 3.
+- Masaldo URL corregida a https://masaldo.com.mx (app real). mastiket.com sigue siendo placeholder GoDaddy (decisión del usuario mantenerlo).
+
 ## Backlog / pendientes
-- P1: Copy pendiente: Casinos, Cripto, Eventos, sectores genéricos; FAQ global con precio/regulación; página Aliados con descripción por aliado.
+- P1: Copy pendiente: sectores genéricos (call center, farmacias, tiendas, ferreterías, hoteles, agencias); FAQ global con precio/regulación; página Aliados con descripción por aliado.
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.
