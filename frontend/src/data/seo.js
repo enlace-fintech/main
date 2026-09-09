@@ -27,7 +27,6 @@ const SECTORES = {
   "restaurantes-y-bares": { title: "Soluciones financieras para restaurantes y bares", description: RESTAURANTES.description, image: RESTAURANTES.image, faq: RESTAURANTES.faq },
   medicos: { title: "Soluciones financieras para médicos y consultorios", description: MEDICOS.description, image: MEDICOS.image, faq: MEDICOS.faq },
   casinos: { title: "Medios de pago y cumplimiento para casinos", description: CASINOS.description, image: CASINOS.image, faq: CASINOS.faq },
-  cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image, faq: CRIPTO.faq },
   eventos: { title: "Pagos sin fricción para eventos y conciertos", description: EVENTOS.description, image: EVENTOS.image, faq: EVENTOS.faq },
   membresias: { title: "Beneficios y membresías para colaboradores", description: MEMBRESIAS.description, image: MEMBRESIAS.image, faq: MEMBRESIAS.faq },
 };
@@ -38,6 +37,7 @@ const SERVICIOS = {
   "consultoria-empresarial": { title: "Consultoría empresarial: capital humano, fiscal y laboral", description: CONSULTORIA.description, image: CONSULTORIA.image },
   sistemas: { title: "Sistemas y tecnología para tu negocio: reservaciones, boletos, caja, call center y software", description: SISTEMAS.description, image: SISTEMAS.image },
   "caja-y-comanda": { title: "Caja y comanda para restaurantes con InfoCaja", description: CAJA.description, image: CAJA.image },
+  cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image, faq: CRIPTO.faq },
 };
 
 export const getSeo = (pathname) => {
@@ -85,6 +85,7 @@ const SERVICE_NAMES = {
   "consultoria-empresarial": CONSULTORIA.overline,
   sistemas: SISTEMAS.overline,
   "caja-y-comanda": CAJA.overline,
+  cripto: "Cobros en cripto",
 };
 
 const breadcrumb = (items) => ({
@@ -110,6 +111,7 @@ export const getJsonLd = (pathname, seo) => {
       provider: { "@id": `${SITE_URL}/#organization` },
       areaServed: "MX",
     });
+    if (seo.faq) graph.push({ "@type": "FAQPage", mainEntity: seo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
     graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Servicios", path: "/servicios" }, { name: SERVICE_NAMES[slug] || SERVICIOS_DETALLE[slug]?.overline || seo.title, path }]));
   } else if (root === "empresas" && slug) {
     graph.push({ "@type": "Service", name: seo.title.replace(suffix, ""), description: seo.description, url, image: seo.image, provider: { "@id": `${SITE_URL}/#organization` }, areaServed: "MX" });

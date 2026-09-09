@@ -20,7 +20,6 @@ export const NAV = [
       { label: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
       { label: "Médicos", href: "/empresas/medicos" },
       { label: "Casinos", href: "/empresas/casinos" },
-      { label: "Cripto", href: "/empresas/cripto" },
       { label: "Eventos & Conciertos", href: "/empresas/eventos" },
       { label: "Membresías", href: "/empresas/membresias" },
       { label: "Call center", href: "/empresas/call-center" },
@@ -41,6 +40,7 @@ export const NAV = [
       { label: "Tarjetas empresariales", href: "/servicios/tarjetas" },
       { label: "Nómina y dispersión", href: "/servicios/nomina-y-dispersion" },
       { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
+      { label: "Cobros en cripto", href: "/servicios/cripto" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
       { label: "Sistemas y tecnología", href: "/servicios/sistemas" },
     ],
@@ -196,7 +196,7 @@ export const BLOG = {
         { h: "¿Para quién tiene sentido?", bullets: ["E-commerce con clientes en Estados Unidos, Latinoamérica o Europa", "Freelancers y agencias que cobran a clientes extranjeros", "Empresas que pagan a proveedores fuera de México y quieren evitar comisiones de SWIFT", "Negocios que quieren diferenciarse ofreciendo más medios de pago"] },
         { h: "Con quién lo hacemos", p: ["En Enlace Fintech integramos FluxiPay para cobros cripto con liquidación en fiat y FlexPei para intercambio de activos digitales, cuentas en USD y pagos internacionales, con cumplimiento regulatorio en cada paso."] },
       ],
-      cta: { text: "Quiero aceptar cripto en mi negocio", href: "/empresas/cripto" },
+      cta: { text: "Quiero aceptar cripto en mi negocio", href: "/servicios/cripto" },
     },
     {
       slug: "tarjetas-nominativas-colaboradores",
@@ -260,7 +260,6 @@ export const EMPRESAS = {
     { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
     { icon: "Stethoscope", name: "Médicos", href: "/empresas/medicos" },
     { icon: "Dice5", name: "Casinos", href: "/empresas/casinos" },
-    { icon: "Bitcoin", name: "Cripto", href: "/empresas/cripto" },
     { icon: "Ticket", name: "Eventos & Conciertos", href: "/empresas/eventos" },
     { icon: "BadgeCheck", name: "Membresías", href: "/empresas/membresias" },
     { icon: "Headset", name: "Call center", href: "/empresas/call-center" },
@@ -354,7 +353,7 @@ export const MEDICOS = {
 };
 
 export const CRIPTO = {
-  overline: "Sectores · Cripto",
+  overline: "Servicios · Cripto",
   title: "Cobra en cripto y recibe pesos en tu banco, sin custodiar ni especular",
   description:
     "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
@@ -849,7 +848,7 @@ export const SERVICIOS_HUB = {
   ],
   more: [
     { title: "Beneficios para colaboradores", href: "/empresas/membresias" },
-    { title: "Cobros en cripto", href: "/empresas/cripto" },
+    { title: "Cobros en cripto", href: "/servicios/cripto" },
   ],
 };
 

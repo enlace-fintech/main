@@ -5,7 +5,6 @@ import { Restaurantes } from "@/components/site/Restaurantes";
 import { MasMesa } from "@/components/site/MasMesa";
 import { Caja } from "@/components/site/Caja";
 import { Medicos } from "@/components/site/Medicos";
-import { Cripto } from "@/components/site/Cripto";
 import { Eventos } from "@/components/site/Eventos";
 import { Membresias } from "@/components/site/Membresias";
 import { Casinos } from "@/components/site/Casinos";
@@ -17,7 +16,6 @@ const LABELS = {
   "restaurantes-y-bares": "Restaurantes y bares",
   medicos: "Médicos",
   casinos: "Casinos",
-  cripto: "Cripto",
   eventos: "Eventos & Conciertos",
   membresias: "Membresías",
   "call-center": "Call center",
@@ -38,7 +36,6 @@ const DEDICATED = {
   ),
   medicos: () => <Medicos />,
   casinos: () => <Casinos />,
-  cripto: () => <Cripto />,
   eventos: () => <Eventos />,
   membresias: () => <Membresias />,
 };

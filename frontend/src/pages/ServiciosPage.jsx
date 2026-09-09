@@ -11,6 +11,7 @@ import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { ComoEmpezar } from "@/components/site/ComoEmpezar";
 import { SistemasAliados } from "@/components/site/SistemasAliados";
 import { Caja } from "@/components/site/Caja";
+import { Cripto } from "@/components/site/Cripto";
 import { Contacto } from "@/components/site/Contacto";
 import { SERVICIOS_DETALLE } from "@/data/content";
 
@@ -25,6 +26,7 @@ const LABELS = {
   "consultoria-empresarial": "Consultoría empresarial",
   sistemas: "Sistemas y tecnología",
   "caja-y-comanda": "Caja & comanda",
+  cripto: "Cobros en cripto",
 };
 
 const PARENTS = { "caja-y-comanda": { label: "Sistemas y tecnología", href: "/servicios/sistemas" } };
@@ -51,6 +53,7 @@ const DEDICATED = {
   ),
   sistemas: () => <SistemasAliados asHero />,
   "caja-y-comanda": () => <Caja />,
+  cripto: () => <Cripto />,
 };
 
 export default function ServiciosPage() {

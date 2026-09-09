@@ -107,6 +107,9 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - data/leads.js: getLeadContext(path) → {interes, mensaje, whatsapp} por sector/servicio/personas; contactHref(path) = /contacto?ref=<path>.
 - Contacto.jsx prellena interés y mensaje desde ?ref o pathname (sin sobrescribir lo que el usuario escriba). ContactLink (Primitives) usado en CTAs de sectores/servicios. WhatsAppFab con texto contextual. INTERESES + "Beneficios para colaboradores". Testing iteration_10.json.
 
+## Cripto movido a Servicios (2026-06-09)
+- /servicios/cripto (componente Cripto, overline "Servicios · Cripto"); /empresas/cripto redirige. Quitado del grid/menú Empresas; añadido a menú/footer Servicios, chip "Cobros en cripto" del hub, CTA del blog, sitemap, leads (interés "Pagos internacionales"), seo (Service + FAQPage). Empresas ahora tiene 11 sectores.
+
 ## Backlog / pendientes
 - P1: FAQ global con precio/regulación; página Aliados con descripción por aliado.
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
