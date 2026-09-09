@@ -1,8 +1,11 @@
-from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Query
+from fastapi.responses import HTMLResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
+import re
+import html
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
@@ -64,6 +67,42 @@ class Contact(BaseModel):
 @api_router.get("/")
 async def root():
     return {"message": "Enlace Fintech API"}
+
+
+SLUG_RE = re.compile(r"^[a-z0-9-]{1,120}$")
+
+
+@api_router.get("/share/blog/{slug}", response_class=HTMLResponse)
+async def share_blog(
+    request: Request,
+    slug: str,
+    title: str = Query(..., max_length=200),
+    desc: str = Query("", max_length=400),
+    image: str = Query("", max_length=600),
+):
+    if not SLUG_RE.match(slug):
+        raise HTTPException(status_code=404, detail="Artículo no encontrado")
+    if image and not image.startswith("https://"):
+        image = ""
+    proto = request.headers.get("x-forwarded-proto", request.url.scheme)
+    host = request.headers.get("x-forwarded-host", request.headers.get("host", request.url.netloc))
+    target = f"{proto}://{host}/blog/{slug}"
+    t, d, i, u = html.escape(title), html.escape(desc), html.escape(image), html.escape(target)
+    page = f"""<!doctype html><html lang="es-MX"><head><meta charset="utf-8">
+<title>{t} · Enlace Fintech</title>
+<meta name="description" content="{d}">
+<meta property="og:type" content="article"><meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Enlace Fintech">
+<meta property="og:title" content="{t}"><meta property="og:description" content="{d}">
+<meta property="og:image" content="{i}"><meta property="og:url" content="{u}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{t}">
+<meta name="twitter:description" content="{d}"><meta name="twitter:image" content="{i}">
+<link rel="canonical" href="{u}">
+<meta http-equiv="refresh" content="0;url={u}">
+<script>location.replace({target!r});</script>
+</head><body style="background:#0B132B;color:#fff;font-family:sans-serif;padding:2rem">
+<p>Redirigiendo a <a href="{u}" style="color:#D4AF37">{t}</a>…</p></body></html>"""
+    return HTMLResponse(page)
 
 
 @api_router.post("/status", response_model=StatusCheck)

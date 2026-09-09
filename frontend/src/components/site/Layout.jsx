@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { WhatsAppFab } from "./WhatsAppFab";
 import { ScrollProgress } from "./ScrollProgress";
+import { RouteSeo } from "./Seo";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -16,6 +17,7 @@ const ScrollToTop = () => {
 export const Layout = () => (
   <div className="App" data-testid="app-root">
     <ScrollToTop />
+    <RouteSeo />
     <ScrollProgress />
     <Header />
     <main>

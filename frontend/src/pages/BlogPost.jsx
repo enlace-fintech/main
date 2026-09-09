@@ -1,31 +1,22 @@
-import { useEffect } from "react";
 import { useParams, Navigate, Link } from "react-router-dom";
 import { ArrowRight, Clock, Check } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { Blog } from "@/components/site/Blog";
 import { Contacto } from "@/components/site/Contacto";
+import { ShareButtons } from "@/components/site/ShareButtons";
 import { Reveal } from "@/components/site/Primitives";
-import { BLOG, BRAND } from "@/data/content";
+import { BLOG } from "@/data/content";
+
+const API = process.env.REACT_APP_BACKEND_URL;
 
 export default function BlogPost() {
   const { slug } = useParams();
   const post = BLOG.posts.find((p) => p.slug === slug);
 
-  useEffect(() => {
-    if (!post) return;
-    const prev = document.title;
-    document.title = `${post.title} · ${BRAND.name}`;
-    const meta = document.querySelector('meta[name="description"]');
-    const prevDesc = meta?.getAttribute("content");
-    meta?.setAttribute("content", post.excerpt);
-    return () => {
-      document.title = prev;
-      if (meta && prevDesc) meta.setAttribute("content", prevDesc);
-    };
-  }, [post]);
-
   if (!post) return <Navigate to="/blog" replace />;
   const related = BLOG.posts.filter((p) => p.slug !== slug).slice(0, 3);
+  const q = new URLSearchParams({ title: post.title, desc: post.excerpt, image: post.image }).toString();
+  const shareUrl = `${API}/api/share/blog/${post.slug}?${q}`;
 
   return (
     <>
@@ -41,6 +32,9 @@ export default function BlogPost() {
             </div>
             <h1 data-testid="blog-article-title" className="font-display mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">{post.title}</h1>
             <p className="mt-5 text-lg text-slate-300 leading-relaxed">{post.excerpt}</p>
+            <div className="mt-6">
+              <ShareButtons url={shareUrl} title={post.title} />
+            </div>
           </Reveal>
           <Reveal delay={0.1} className="relative mt-10">
             <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
@@ -80,6 +74,9 @@ export default function BlogPost() {
               <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
             </Link>
           </Reveal>
+          <div className="mt-8">
+            <ShareButtons url={shareUrl} title={post.title} />
+          </div>
         </div>
       </article>
 

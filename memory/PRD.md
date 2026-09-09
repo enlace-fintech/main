@@ -61,10 +61,14 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - 6 artículos SEO México con páginas propias /blog/:slug (BlogPost.jsx, data BLOG.posts con sections/cta): TPV sin banco, REPSE 2026, cobrar en cripto, tarjetas nominativas, SPEI 24/7, elegir cuenta fintech.
 - document.title y meta description dinámicos por artículo; relacionados; redirect de slug inválido a /blog. Testing iteration_5.json.
 
+## SEO y compartir (2026-06-09)
+- RouteSeo (Layout) + data/seo.js: title, description, canonical, og:*, twitter:* por ruta (estáticas, /empresas/:slug, /servicios/:slug, /blog/:slug). Dominio canónico https://enlacefintech.com.
+- public/robots.txt y public/sitemap.xml (32 URLs). index.html lang es-MX, og:description sin "créditos".
+- ShareButtons en artículos (WhatsApp, LinkedIn, copiar) usando GET /api/share/blog/{slug}?title&desc&image → HTML con OG server-side + redirect al artículo (vista previa real en redes). Testing iteration_6.json.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
-- P1: Meta title/description por ruta, sitemap/robots.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.
 - P2: Logo horizontal final (PNG del usuario).
