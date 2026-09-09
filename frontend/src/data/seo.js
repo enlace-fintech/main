@@ -1,5 +1,5 @@
 import {
-  BRAND, BLOG, WALLET, TPV, CONSULTORIA, SERVICIOS_HUB, SERVICIOS_DETALLE, GENERIC_SECTORS,
+  BRAND, BLOG, FAQ, WALLET, TPV, CONSULTORIA, SERVICIOS_HUB, SERVICIOS_DETALLE, GENERIC_SECTORS,
   RESTAURANTES, MEDICOS, CASINOS, CRIPTO, EVENTOS, MEMBRESIAS, CAJA, PERSONA, ALIADOS, SUCURSALES,
 } from "./content";
 
@@ -19,6 +19,8 @@ const STATIC = {
   "/sucursales": { title: `Sucursales y cobertura${suffix}`, description: SUCURSALES.description, image: SUCURSALES.image },
   "/blog": { title: `Blog · Finanzas y operación para empresas en México${suffix}`, description: "Guías prácticas sobre terminales sin banco, REPSE, pagos cripto, tarjetas nominativas y SPEI 24/7 para empresas mexicanas.", image: BLOG.posts[0].image },
   "/contacto": { title: `Contacto · Agenda un diagnóstico gratuito${suffix}`, description: "Cuéntanos tu negocio y te proponemos la combinación de soluciones financieras y aliados que más te conviene. Respuesta en menos de 24 horas.", image: BRAND.logo },
+  "/aviso-de-privacidad": { title: `Aviso de privacidad${suffix}`, description: "Conoce cómo Enlace Fintech trata y protege tus datos personales conforme a la LFPDPPP, y cómo ejercer tus derechos ARCO.", image: BRAND.logo },
+  "/terminos-y-condiciones": { title: `Términos y condiciones${suffix}`, description: "Condiciones de uso del sitio enlacefintech.com, naturaleza de intermediario de Enlace Fintech y responsabilidad sobre los servicios de aliados.", image: BRAND.logo },
 };
 
 const SECTORES = {
@@ -52,7 +54,84 @@ export const getSeo = (pathname) => {
   }
   if (root === "blog" && slug) {
     const p = BLOG.posts.find((x) => x.slug === slug);
-    if (p) return { title: p.title + suffix, description: p.excerpt, image: p.image, path, type: "article" };
+    if (p) return { title: p.title + suffix, description: p.excerpt, image: p.image, path, type: "article", post: p };
   }
   return { ...STATIC["/"], path };
+};
+
+const ORG = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: BRAND.name,
+  url: SITE_URL,
+  logo: BRAND.logo,
+  email: BRAND.email,
+  telephone: BRAND.phone,
+  address: { "@type": "PostalAddress", addressLocality: "Ciudad de México", addressCountry: "MX" },
+  areaServed: "MX",
+  description: STATIC["/"].description,
+};
+
+const SERVICE_NAMES = {
+  "plataforma-de-pagos": WALLET.overline,
+  "terminales-punto-de-venta": TPV.overline,
+  "consultoria-empresarial": CONSULTORIA.overline,
+};
+
+const breadcrumb = (items) => ({
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: `${SITE_URL}${it.path}` })),
+});
+
+export const getJsonLd = (pathname, seo) => {
+  const path = seo.path;
+  const [, root, slug] = path.split("/");
+  const url = `${SITE_URL}${path === "/" ? "" : path}`;
+  const graph = [ORG, { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: SITE_URL, name: BRAND.name, publisher: { "@id": `${SITE_URL}/#organization` }, inLanguage: "es-MX" }];
+
+  if (path === "/") {
+    graph.push({ "@type": "FAQPage", mainEntity: FAQ.items.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
+  } else if (root === "servicios" && slug) {
+    graph.push({
+      "@type": "Service",
+      name: SERVICE_NAMES[slug] || SERVICIOS_DETALLE[slug]?.overline || seo.title,
+      description: seo.description,
+      url,
+      image: seo.image,
+      provider: { "@id": `${SITE_URL}/#organization` },
+      areaServed: "MX",
+    });
+    graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Servicios", path: "/servicios" }, { name: SERVICE_NAMES[slug] || SERVICIOS_DETALLE[slug]?.overline || seo.title, path }]));
+  } else if (root === "empresas" && slug) {
+    graph.push({ "@type": "Service", name: seo.title.replace(suffix, ""), description: seo.description, url, image: seo.image, provider: { "@id": `${SITE_URL}/#organization` }, areaServed: "MX" });
+    graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Empresas", path: "/empresas/restaurantes-y-bares" }, { name: seo.title.replace(suffix, ""), path }]));
+  } else if (root === "blog" && seo.post) {
+    const p = seo.post;
+    graph.push({
+      "@type": "BlogPosting",
+      "@id": `${url}#article`,
+      headline: p.title,
+      description: p.excerpt,
+      image: p.image,
+      url,
+      mainEntityOfPage: url,
+      articleSection: p.category,
+      inLanguage: "es-MX",
+      author: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      datePublished: toIso(p.date),
+      dateModified: toIso(p.date),
+    });
+    graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Blog", path: "/blog" }, { name: p.title, path }]));
+  } else if (path !== "/") {
+    graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: seo.title.replace(suffix, ""), path }]));
+  }
+
+  return { "@context": "https://schema.org", "@graph": graph };
+};
+
+const MESES = { enero: "01", febrero: "02", marzo: "03", abril: "04", mayo: "05", junio: "06", julio: "07", agosto: "08", septiembre: "09", octubre: "10", noviembre: "11", diciembre: "12" };
+const toIso = (d) => {
+  const m = d.match(/^(\d{1,2}) (\w+), (\d{4})$/);
+  return m ? `${m[3]}-${MESES[m[2]] || "01"}-${m[1].padStart(2, "0")}` : d;
 };

@@ -65,7 +65,11 @@ export const Footer = () => (
       </div>
       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-xs text-slate-500">© {new Date().getFullYear()} Enlace Fintech · {BRAND.domain}. Todos los derechos reservados.</p>
-        <p className="text-xs text-slate-500">Aviso de privacidad · Términos y condiciones</p>
+        <p className="text-xs text-slate-500">
+          <Link to="/aviso-de-privacidad" data-testid="footer-privacidad" className="hover:text-[#D4AF37] transition-colors duration-200">Aviso de privacidad</Link>
+          {" · "}
+          <Link to="/terminos-y-condiciones" data-testid="footer-terminos" className="hover:text-[#D4AF37] transition-colors duration-200">Términos y condiciones</Link>
+        </p>
       </div>
     </div>
   </footer>

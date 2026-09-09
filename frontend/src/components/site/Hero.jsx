@@ -46,9 +46,10 @@ export const Hero = () => (
           transition={{ duration: 0.6, delay: 0.16 }}
           className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl"
         >
-          <span className="font-semibold text-white">Cuentas fintech</span>, herramientas para
-          cobrar a terceros, herramientas para enviar recursos, seguros de accidentes personales,
-          vida, gastos médicos mayores, beneficios para tus colaboradores y más.
+          <span className="font-semibold text-white">Un solo aliado</span> para cobrar, pagar y operar:
+          plataforma de pagos, terminales punto de venta sin trámites bancarios, tarjetas nominativas,
+          pagos con FlexPei, seguros y beneficios para tus colaboradores y consultoría empresarial,
+          con condiciones negociadas a tu favor.
         </motion.p>
 
         <motion.div
@@ -70,7 +71,7 @@ export const Hero = () => (
             data-testid="hero-cta-secondary"
             className="inline-flex items-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-white hover:border-[#D4AF37] hover:text-[#D4AF37] transition-colors duration-200"
           >
-            Ver soluciones
+            Ver soluciones por sector
           </a>
         </motion.div>
 

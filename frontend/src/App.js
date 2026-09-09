@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import EmpresaPage from "@/pages/EmpresaPage";
 import ServiciosPage from "@/pages/ServiciosPage";
 import BlogPost from "@/pages/BlogPost";
+import { PrivacidadPage, TerminosPage } from "@/pages/LegalPages";
 import {
   CajaPage,
   PersonasPage,
@@ -34,6 +35,8 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="/aviso-de-privacidad" element={<PrivacidadPage />} />
+            <Route path="/terminos-y-condiciones" element={<TerminosPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

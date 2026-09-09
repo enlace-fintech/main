@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { getSeo, SITE_URL } from "../../data/seo";
+import { getSeo, getJsonLd, SITE_URL } from "../../data/seo";
 
 const setMeta = (attr, key, value) => {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`);
@@ -22,6 +22,17 @@ const setCanonical = (href) => {
   el.setAttribute("href", href);
 };
 
+const setJsonLd = (data) => {
+  let el = document.head.querySelector('script[type="application/ld+json"]#route-jsonld');
+  if (!el) {
+    el = document.createElement("script");
+    el.type = "application/ld+json";
+    el.id = "route-jsonld";
+    document.head.appendChild(el);
+  }
+  el.textContent = JSON.stringify(data);
+};
+
 export const RouteSeo = () => {
   const { pathname } = useLocation();
 
@@ -41,6 +52,7 @@ export const RouteSeo = () => {
     setMeta("name", "twitter:title", seo.title);
     setMeta("name", "twitter:description", seo.description);
     setMeta("name", "twitter:image", seo.image);
+    setJsonLd(getJsonLd(pathname, seo));
   }, [pathname]);
 
   return null;

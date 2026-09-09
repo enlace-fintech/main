@@ -66,6 +66,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - public/robots.txt y public/sitemap.xml (32 URLs). index.html lang es-MX, og:description sin "créditos".
 - ShareButtons en artículos (WhatsApp, LinkedIn, copiar) usando GET /api/share/blog/{slug}?title&desc&image → HTML con OG server-side + redirect al artículo (vista previa real en redes). Testing iteration_6.json.
 
+## Legal + JSON-LD + hero (2026-06-09)
+- Hero subtitle reescrito ("Un solo aliado para cobrar, pagar y operar…"); CTA "Ver soluciones por sector".
+- Páginas /aviso-de-privacidad y /terminos-y-condiciones (data/legal.js, LegalPages.jsx) enlazadas desde footer. Campos [RAZÓN SOCIAL], [DOMICILIO], [CORREO] pendientes de datos reales.
+- JSON-LD por ruta (script#route-jsonld): Organization+WebSite, FAQPage (home), Service+Breadcrumb (servicios/empresas), BlogPosting+Breadcrumb (blog). Sitemap 34 URLs. Testing iteration_7.json.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
@@ -74,7 +79,7 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - P2: Logo horizontal final (PNG del usuario).
 - P1: Reemplazar datos de contacto placeholder (tel, email, WhatsApp, dirección, redes).
 - P2: Páginas de artículos de blog completos (rutas propias).
-- P2: Aviso de privacidad y Términos reales.
+- P2: Sustituir [RAZÓN SOCIAL]/[DOMICILIO]/[CORREO] en textos legales.
 - P2: Envío de correo real de notificación al recibir contacto (Resend).
 - P2: Versión en inglés.
 
