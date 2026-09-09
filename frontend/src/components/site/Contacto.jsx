@@ -33,7 +33,7 @@ export const Contacto = () => {
     "w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white placeholder:text-slate-500 focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/30 focus:outline-none transition-colors duration-200";
 
   return (
-    <section id="contacto" data-testid="contacto-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-t border-white/5 noise-overlay">
+    <section id="contacto" data-testid="contacto-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-t border-white/5 noise-overlay">
       <div className="relative max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14">
         <Reveal>
           <Overline>Contacto</Overline>

@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 import { Layout } from "@/components/site/Layout";
 import Home from "@/pages/Home";
 import EmpresaPage from "@/pages/EmpresaPage";
+import ServiciosPage from "@/pages/ServiciosPage";
 import {
   WalletPage,
   CajaPage,
@@ -23,6 +24,8 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/empresas/:slug" element={<EmpresaPage />} />
+            <Route path="/servicios" element={<ServiciosPage />} />
+            <Route path="/servicios/:slug" element={<ServiciosPage />} />
             <Route path="/wallet" element={<WalletPage />} />
             <Route path="/caja" element={<CajaPage />} />
             <Route path="/personas" element={<PersonasPage />} />

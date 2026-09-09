@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { BRAND, NAV } from "../../data/content";
+import { BRAND, NAV, LEGAL } from "../../data/content";
 
 export const Footer = () => (
   <footer data-testid="site-footer" className="relative bg-[#070d1e] border-t border-white/10">
@@ -32,8 +32,12 @@ export const Footer = () => (
       </div>
 
       <div>
-        <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Empresa</h4>
+        <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">Servicios</h4>
         <ul className="mt-5 space-y-3">
+          <li><Link to="/servicios/consultoria-empresarial" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Consultoría empresarial</Link></li>
+          <li><Link to="/servicios/terminales-punto-de-venta" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Terminales punto de venta</Link></li>
+          <li><Link to="/wallet" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Wallet Negocios</Link></li>
+          <li><Link to="/caja" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Caja & TPV</Link></li>
           <li><Link to="/personas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</Link></li>
           <li><Link to="/aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</Link></li>
           <li><Link to="/sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</Link></li>
@@ -53,6 +57,9 @@ export const Footer = () => (
     </div>
 
     <div className="border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 pt-6">
+        <p data-testid="legal-disclaimer" className="text-xs leading-relaxed text-slate-500">{LEGAL}</p>
+      </div>
       <div className="max-w-7xl mx-auto px-5 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-xs text-slate-500">© {new Date().getFullYear()} Enlace Fintech · {BRAND.domain}. Todos los derechos reservados.</p>
         <p className="text-xs text-slate-500">Aviso de privacidad · Términos y condiciones</p>

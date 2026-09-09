@@ -3,7 +3,7 @@ import { MEMBRESIAS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const Membresias = () => (
-  <section id="membresias" data-testid="membresias-section" className="relative py-24 lg:py-32">
+  <section id="membresias" data-testid="membresias-section" className="relative py-16 lg:py-24">
     <div className="max-w-7xl mx-auto px-5 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal>

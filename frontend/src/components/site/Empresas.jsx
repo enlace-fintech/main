@@ -4,7 +4,7 @@ import { EMPRESAS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const Empresas = () => (
-  <section id="empresas" data-testid="empresas-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5 noise-overlay">
+  <section id="empresas" data-testid="empresas-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-y border-white/5 noise-overlay">
     <div className="relative max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
       <Reveal delay={0.1} className="relative order-2 lg:order-1">
         <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />

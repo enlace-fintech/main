@@ -38,6 +38,8 @@ export const NAV = [
       { label: "Todos los servicios", href: "/servicios" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
       { label: "Terminales punto de venta", href: "/servicios/terminales-punto-de-venta" },
+      { label: "Wallet Negocios", href: "/wallet" },
+      { label: "Caja & TPV (InfoCaja)", href: "/caja" },
     ],
   },
   { label: "Personas", href: "/personas" },
@@ -156,9 +158,6 @@ export const EMPRESAS = {
     { icon: "Bitcoin", name: "Cripto", href: "/empresas/cripto" },
     { icon: "Ticket", name: "Eventos & Conciertos", href: "/empresas/eventos" },
     { icon: "BadgeCheck", name: "Membresías", href: "/empresas/membresias" },
-    { icon: "Wallet", name: "Wallet Negocios", href: "/wallet" },
-    { icon: "Users", name: "Personas", href: "/personas" },
-    { icon: "Store", name: "Caja & TPV", href: "/caja" },
     { icon: "Headset", name: "Call center", href: "/empresas/call-center" },
     { icon: "Pill", name: "Farmacias", href: "/empresas/farmacias" },
     { icon: "ShoppingBag", name: "Tiendas", href: "/empresas/tiendas" },
@@ -492,13 +491,13 @@ export const COMMON_SERVICES = {
 };
 
 export const ONBOARDING = {
-  overline: "Cómo empezar",
-  title: "Tu cuenta lista en 4 pasos",
+  overline: "Así trabajamos",
+  title: "De la primera llamada a operar, en 4 pasos",
   steps: [
-    { icon: "MessageSquare", title: "Cuéntanos tu negocio", desc: "Agenda una asesoría gratuita y define tus necesidades." },
-    { icon: "FileText", title: "Sube tu documentación", desc: "Carga tus documentos de forma segura y encriptada." },
-    { icon: "BadgeCheck", title: "Validación exprés", desc: "Nuestro equipo revisa y aprueba tu solicitud." },
-    { icon: "Rocket", title: "Empieza a operar", desc: "Activa tus servicios y comienza a cobrar en minutos." },
+    { icon: "MessageSquare", title: "Diagnóstico gratuito", desc: "Nos cuentas tu negocio y analizamos cómo cobras, pagas y administras hoy." },
+    { icon: "FileText", title: "Propuesta con aliados", desc: "Te presentamos la combinación de soluciones y aliados que más te conviene, con costos claros." },
+    { icon: "BadgeCheck", title: "Alta y contratos", desc: "Gestionamos la documentación y validación con cada aliado por ti." },
+    { icon: "Rocket", title: "Acompañamiento", desc: "Activas tus servicios y seguimos contigo: un solo ejecutivo para todo tu ecosistema." },
   ],
 };
 
@@ -539,43 +538,54 @@ export const INTERESES = [
   "Otro",
 ];
 
+export const LEGAL =
+  "Enlace Fintech es un intermediario (broker) de soluciones financieras y corporativas; no es una institución financiera ni una entidad regulada por la CNBV. Los productos y servicios financieros, de consultoría y de terminales punto de venta son prestados por aliados y empresas del grupo debidamente constituidos, bajo sus propios contratos, términos y condiciones. La información de este sitio es informativa y no constituye una oferta vinculante.";
+
 export const SERVICIOS_HUB = {
   overline: "Servicios",
-  title: "Soluciones integrales para su empresa",
+  title: "Soluciones integrales para tu empresa",
   description:
-    "Brindamos soluciones integrales para las empresas por medio de herramientas innovadoras que ofrecen beneficios financieros, reducción de costos y optimización del control administrativo. Solicite más información y conozca todo lo que podemos hacer por las finanzas de su empresa.",
+    "Además de conectarte con los mejores productos financieros, en Enlace Fintech resolvemos la operación de tu empresa con herramientas que generan beneficios financieros, reducen costos y mejoran tu control administrativo. Cuéntanos qué necesitas y te decimos todo lo que podemos hacer por las finanzas de tu negocio.",
   image:
     "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b74f2bcf6984fdc46effb5e99391ab66bd8bc5543c5dd572bc2f00a14c4913cf.jpeg",
   pillars: [
     {
       icon: "TrendingUp",
       title: "Soluciones financieras",
-      desc: "Por medio de herramientas innovadoras generamos beneficios financieros, reducción de costos y optimización del control administrativo.",
+      desc: "Terminales punto de venta sin trámites bancarios, cuentas y wallet para tu negocio, cobros cripto y pagos internacionales.",
       href: "/servicios/terminales-punto-de-venta",
       cta: "Ver terminales punto de venta",
     },
     {
       icon: "Users",
       title: "Administración de capital humano",
-      desc: "Desde la contratación temporal o de planta, altas y bajas del IMSS, cálculo de incidencias y dispersión de pagos, hasta negociación con sindicatos, finiquitos y liquidaciones.",
+      desc: "Desde la contratación temporal o de planta, altas y bajas ante el IMSS, cálculo de incidencias y dispersión de nómina, hasta negociación con sindicatos, finiquitos y liquidaciones.",
       href: "/servicios/consultoria-empresarial",
       cta: "Ver capital humano",
     },
     {
       icon: "Scale",
       title: "Asesoría y consultoría",
-      desc: "Expertos en temas legales, administrativos, fiscales y contables que acompañan a su empresa para analizar sus cuentas, evaluar el rendimiento del negocio y definir pautas de solución.",
+      desc: "Expertos legales, administrativos, fiscales y contables que analizan tus cuentas, evalúan el rendimiento de tu negocio y definen cómo resolver cada necesidad.",
       href: "/servicios/consultoria-empresarial",
       cta: "Ver consultoría",
     },
+  ],
+  more: [
+    { title: "Wallet Negocios", href: "/wallet" },
+    { title: "Caja & comanda para restaurantes", href: "/caja" },
+    { title: "Cobros en cripto", href: "/empresas/cripto" },
+    { title: "Beneficios para colaboradores", href: "/empresas/membresias" },
   ],
 };
 
 export const CONSULTORIA = {
   overline: "Consultoría empresarial",
-  title: "Asesoría y soluciones corporativas en México",
+  title: "Asesoría y soluciones corporativas para tu empresa en México",
   description:
-    "Somos una firma de consultoría de negocios enfocada en brindar asesoría y soluciones corporativas en México. La necesidad de cada cliente es diferente; por eso, antes de presentar nuestra propuesta de servicio realizamos un análisis que nos da una visión completa y clara de cada solicitud, para implementar una estrategia integral que optimice los recursos de su empresa.",
+    "Cada empresa tiene necesidades distintas. Por eso, antes de presentarte una propuesta, analizamos tu operación para tener una visión completa y clara de lo que necesitas, y diseñamos una estrategia integral que optimice tus recursos: nómina, personal, fiscal, laboral y corporativo, con un solo interlocutor.",
+  operator:
+    "Servicio prestado por el despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral y corporativa.",
   image:
     "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/fb301f7f8a4e3e9f6ea47e2ecc962ed91c4363919704d77f6457f3106da6cdc2.jpeg",
   areas: [
@@ -653,23 +663,25 @@ export const CONSULTORIA = {
 
 export const TPV = {
   overline: "Terminales punto de venta",
-  title: "Cobra con terminal, sin tramitología bancaria",
+  title: "Cobra con terminal, sin trámites bancarios",
   description:
-    "Su empresa procesa cobros con nuestras terminales y el importe ingresado lo retornamos a través de una gran variedad de opciones seguras de retorno de capital. La asignación de las terminales se formaliza mediante un contrato de administración de tesorería que protege jurídicamente las operaciones entre ambas empresas.",
+    "Tu negocio cobra con nuestras terminales y el importe de cada venta te lo entregamos a través de distintas opciones seguras de liquidación, con fechas de corte que tú eliges.",
+  description2:
+    "La asignación de las terminales se formaliza con un contrato de administración de tesorería que protege jurídicamente la operación entre tu empresa y la empresa concentradora de cobros, aliada del grupo Enlace Fintech.",
   image:
     "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/921cd02d61f74010f9808d4bd8f633a0b1e0712cef43cbc0336c8a8e2f022ebc.jpeg",
   benefitsTitle: "Beneficios de nuestro servicio integral de terminales",
   benefits: [
-    "Reportes de los cobros por terminal, en tiempo real, desde plataformas virtuales.",
-    "Evita la tramitología bancaria y los requisitos complejos para obtener terminales.",
-    "Sin mínimos de operación para otorgar la terminal.",
-    "No pierdas ventas por fallas en una sola terminal.",
-    "Blindamos su operación.",
-    "Asignamos la cantidad de terminales según la necesidad de cada empresa.",
+    "Reportes de cobros por terminal, en tiempo real, desde una plataforma en línea.",
+    "Sin trámites bancarios ni requisitos complejos para obtener tus terminales.",
+    "Sin mínimos de operación para otorgarte la terminal.",
+    "No pierdes ventas por fallas de una sola terminal.",
+    "Blindamos tu operación.",
+    "Asignamos la cantidad de terminales que tu negocio necesita.",
     "Certeza legal y tranquilidad financiera con un contrato de administración de tesorería.",
-    "Opciones variadas de retorno de capital.",
-    "Fechas de corte personalizadas para cada cliente.",
-    "Usa las terminales como únicas o alternas en tu negocio.",
+    "Opciones variadas de liquidación de tus cobros.",
+    "Fechas de corte personalizadas para tu negocio.",
+    "Úsalas como terminales únicas o alternas en tu negocio.",
   ],
   premium: {
     title: "Plataforma premium de pago con tarjeta",
@@ -682,11 +694,11 @@ export const TPV = {
       { icon: "Lock", text: "Garantiza tu protección y la de tus clientes." },
     ],
   },
-  stepsTitle: "En 3 sencillos pasos puedes contar con tu terminal punto de venta",
+  stepsTitle: "En 3 sencillos pasos tienes tu terminal punto de venta",
   steps: [
-    { icon: "FileSignature", title: "Firma del contrato", desc: "Al aceptar las condiciones de servicio y comisión, se firma el contrato de administración de tesorería entre su empresa y la empresa concentradora de cobros." },
-    { icon: "CalendarClock", title: "Elige cortes y retorno", desc: "Define tus fechas de corte y la opción de retorno de cobros que mejor cubra tus necesidades." },
-    { icon: "PackageCheck", title: "Recibe tu KIT TPV", desc: "En un lapso de 48 horas recibirás tu KIT de TPV; configura la terminal y comienza a generar cargos." },
+    { icon: "FileSignature", title: "Firma del contrato", desc: "Aceptas las condiciones de servicio y comisión, y firmamos el contrato de administración de tesorería entre tu empresa y la empresa concentradora de cobros." },
+    { icon: "CalendarClock", title: "Elige cortes y liquidación", desc: "Defines tus fechas de corte y la opción de liquidación de cobros que mejor cubra tus necesidades." },
+    { icon: "PackageCheck", title: "Recibe tu KIT TPV", desc: "En 48 horas recibes tu KIT de TPV; configuras la terminal y empiezas a cobrar." },
   ],
   requisitos: "Requisitos básicos: WiFi o plan de datos en una tablet o smartphone.",
 };

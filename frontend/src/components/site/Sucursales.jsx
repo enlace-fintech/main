@@ -3,7 +3,7 @@ import { SUCURSALES } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const Sucursales = () => (
-  <section id="sucursales" data-testid="sucursales-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5">
+  <section id="sucursales" data-testid="sucursales-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-y border-white/5">
     <div className="max-w-7xl mx-auto px-5 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal>

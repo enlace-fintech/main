@@ -3,7 +3,7 @@ import { MASMESA } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const MasMesa = () => (
-  <section id="masmesa" data-testid="masmesa-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5">
+  <section id="masmesa" data-testid="masmesa-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-y border-white/5">
     <div className="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
       <Reveal>
         <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-slate-200">

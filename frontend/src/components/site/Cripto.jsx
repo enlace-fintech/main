@@ -27,7 +27,7 @@ const FlowColumn = ({ icon: Icon, flow, testid }) => (
 );
 
 export const Cripto = () => (
-  <section id="cripto" data-testid="cripto-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5 noise-overlay">
+  <section id="cripto" data-testid="cripto-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-y border-white/5 noise-overlay">
     <div className="relative max-w-7xl mx-auto px-5 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal className="relative order-2 lg:order-1">

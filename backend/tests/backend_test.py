@@ -99,3 +99,21 @@ def test_list_contactos_desc(api):
     # no _id field leaked
     for d in data[:5]:
         assert "_id" not in d
+
+
+
+# --- POST /api/contacto with new interes values (Servicios) ---
+@pytest.mark.parametrize("interes", ["Consultoría empresarial", "Terminales punto de venta"])
+def test_create_contacto_new_interes(api, interes):
+    payload = {
+        "nombre": "TEST Servicios",
+        "email": "test_servicios@example.com",
+        "telefono": "+52 55 9876 5432",
+        "empresa": "TEST Empresa Servicios",
+        "interes": interes,
+        "mensaje": f"Solicito información sobre {interes}.",
+    }
+    r = api.post(f"{BASE_URL}/api/contacto", json=payload)
+    assert r.status_code == 200, r.text
+    data = r.json()
+    assert data["interes"] == interes

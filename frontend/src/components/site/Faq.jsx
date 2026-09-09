@@ -3,7 +3,7 @@ import { FAQ } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
 export const Faq = () => (
-  <section data-testid="faq-section" className="relative py-24 lg:py-32 bg-[#0e1836] border-y border-white/5">
+  <section data-testid="faq-section" className="relative py-16 lg:py-24 bg-[#0e1836] border-y border-white/5">
     <div className="max-w-4xl mx-auto px-5 lg:px-8">
       <Reveal className="text-center">
         <Overline>{FAQ.overline}</Overline>

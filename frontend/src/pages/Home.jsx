@@ -1,20 +1,10 @@
 import { Hero } from "@/components/site/Hero";
 import { AliadosMarquee } from "@/components/site/AliadosMarquee";
 import { Empresas } from "@/components/site/Empresas";
-import { Restaurantes } from "@/components/site/Restaurantes";
-import { MasMesa } from "@/components/site/MasMesa";
-import { Caja } from "@/components/site/Caja";
-import { Medicos } from "@/components/site/Medicos";
-import { Cripto } from "@/components/site/Cripto";
-import { Eventos } from "@/components/site/Eventos";
-import { Membresias } from "@/components/site/Membresias";
+import { ServiciosHub } from "@/components/site/ServiciosHub";
 import { WalletNegocios } from "@/components/site/WalletNegocios";
-import { Beneficios } from "@/components/site/Beneficios";
 import { PersonaFisica } from "@/components/site/PersonaFisica";
-import { Casinos } from "@/components/site/Casinos";
-import { Aliados } from "@/components/site/Aliados";
-import { Sucursales } from "@/components/site/Sucursales";
-import { Blog } from "@/components/site/Blog";
+import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { ComoEmpezar } from "@/components/site/ComoEmpezar";
 import { Faq } from "@/components/site/Faq";
 import { Contacto } from "@/components/site/Contacto";
@@ -25,20 +15,10 @@ export default function Home() {
       <Hero />
       <AliadosMarquee />
       <Empresas />
-      <Restaurantes />
-      <MasMesa />
-      <Caja />
-      <Medicos />
-      <Cripto />
-      <Eventos />
-      <Membresias />
+      <ServiciosHub />
       <WalletNegocios />
-      <Beneficios />
       <PersonaFisica />
-      <Casinos />
-      <Aliados />
-      <Sucursales />
-      <Blog />
+      <EcosistemaEnlace />
       <ComoEmpezar />
       <Faq />
       <Contacto />
