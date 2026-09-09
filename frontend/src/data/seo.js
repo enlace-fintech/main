@@ -4,7 +4,7 @@ import {
 } from "./content";
 
 export const SITE_URL = `https://${BRAND.domain}`;
-export const absUrl = (u) => (u && u.startsWith("/") ? `${SITE_URL}${u}` : u);
+export const absUrl = (u) => (u && u.startsWith("/") ? `${SITE_URL}${u.replace(/\.webp$/, ".jpg")}` : u);
 const suffix = ` · ${BRAND.name}`;
 
 const STATIC = {
@@ -14,7 +14,6 @@ const STATIC = {
     image: BRAND.heroDashboard,
   },
   "/servicios": { title: `Servicios para empresas${suffix}`, description: SERVICIOS_HUB.description, image: SERVICIOS_HUB.image },
-  "/caja": { title: `Caja y comanda para restaurantes con InfoCaja${suffix}`, description: CAJA.description, image: CAJA.image },
   "/personas": { title: `Tarjeta nominativa y pagos para personas${suffix}`, description: PERSONA.description, image: BRAND.heroPerson },
   "/aliados": { title: `Aliados estratégicos${suffix}`, description: ALIADOS.description, image: BRAND.logo },
   "/sucursales": { title: `Sucursales y cobertura${suffix}`, description: SUCURSALES.description, image: SUCURSALES.image },
@@ -38,6 +37,7 @@ const SERVICIOS = {
   "terminales-punto-de-venta": { title: "Terminales punto de venta sin trámites bancarios", description: TPV.description, image: TPV.image },
   "consultoria-empresarial": { title: "Consultoría empresarial: capital humano, fiscal y laboral", description: CONSULTORIA.description, image: CONSULTORIA.image },
   sistemas: { title: "Sistemas y tecnología para tu negocio: reservaciones, boletos, caja, call center y software", description: SISTEMAS.description, image: SISTEMAS.image },
+  "caja-y-comanda": { title: "Caja y comanda para restaurantes con InfoCaja", description: CAJA.description, image: CAJA.image },
 };
 
 export const getSeo = (pathname) => {
@@ -84,6 +84,7 @@ const SERVICE_NAMES = {
   "terminales-punto-de-venta": TPV.overline,
   "consultoria-empresarial": CONSULTORIA.overline,
   sistemas: SISTEMAS.overline,
+  "caja-y-comanda": CAJA.overline,
 };
 
 const breadcrumb = (items) => ({

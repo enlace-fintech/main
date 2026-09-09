@@ -9,7 +9,7 @@ export const Eventos = () => (
       <div className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal className="relative order-2 lg:order-1">
           <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
-          <img
+          <img loading="lazy" decoding="async"
             src={EVENTOS.image}
             alt="Eventos y conciertos"
             className="relative rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] w-full h-[460px] object-cover"

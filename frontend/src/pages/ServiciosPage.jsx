@@ -10,6 +10,7 @@ import { TpvPasos } from "@/components/site/TpvPasos";
 import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { ComoEmpezar } from "@/components/site/ComoEmpezar";
 import { SistemasAliados } from "@/components/site/SistemasAliados";
+import { Caja } from "@/components/site/Caja";
 import { Contacto } from "@/components/site/Contacto";
 import { SERVICIOS_DETALLE } from "@/data/content";
 
@@ -23,7 +24,10 @@ const LABELS = {
   "pagos-internacionales": "Pagos internacionales",
   "consultoria-empresarial": "Consultoría empresarial",
   sistemas: "Sistemas y tecnología",
+  "caja-y-comanda": "Caja & comanda",
 };
+
+const PARENTS = { "caja-y-comanda": { label: "Sistemas y tecnología", href: "/servicios/sistemas" } };
 
 const DEDICATED = {
   "plataforma-de-pagos": () => (
@@ -46,6 +50,7 @@ const DEDICATED = {
     </>
   ),
   sistemas: () => <SistemasAliados asHero />,
+  "caja-y-comanda": () => <Caja />,
 };
 
 export default function ServiciosPage() {
@@ -71,7 +76,7 @@ export default function ServiciosPage() {
 
   return (
     <>
-      <Breadcrumbs trail={[ROOT, { label }]} />
+      <Breadcrumbs trail={[ROOT, ...(PARENTS[slug] ? [PARENTS[slug]] : []), { label }]} />
       {dedicated ? dedicated() : <ServicioDetalle data={detalle} />}
       <Contacto />
     </>

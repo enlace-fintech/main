@@ -39,7 +39,7 @@ export default function BlogPost() {
           </Reveal>
           <Reveal delay={0.1} className="relative mt-10">
             <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
-            <img src={post.image} alt={post.title} className="relative w-full h-[320px] sm:h-[420px] object-cover rounded-2xl border border-white/10" />
+            <img loading="lazy" decoding="async" src={post.image} alt={post.title} className="relative w-full h-[320px] sm:h-[420px] object-cover rounded-2xl border border-white/10" />
           </Reveal>
 
           <div className="mt-12 space-y-12">

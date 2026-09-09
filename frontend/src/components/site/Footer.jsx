@@ -7,7 +7,7 @@ export const Footer = () => (
     <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div className="lg:col-span-1">
         <Link to="/" className="flex items-center gap-3">
-          <img src={BRAND.logo} alt="Enlace Fintech" className="h-11 w-11 rounded-xl object-cover ring-1 ring-white/10" />
+          <img loading="lazy" decoding="async" src={BRAND.logo} alt="Enlace Fintech" className="h-11 w-11 rounded-xl object-cover ring-1 ring-white/10" />
           <span className="font-display leading-none">
             <span className="block text-lg font-extrabold tracking-tight text-white">ENLACE</span>
             <span className="block text-[0.62rem] tracking-[0.42em] font-medium text-[#D4AF37]">FINTECH</span>
@@ -41,7 +41,6 @@ export const Footer = () => (
           <li><Link to="/servicios/pagos-internacionales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Pagos internacionales</Link></li>
           <li><Link to="/servicios/consultoria-empresarial" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Consultoría empresarial</Link></li>
           <li><Link to="/servicios/sistemas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sistemas y tecnología</Link></li>
-          <li><Link to="/caja" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Caja & comanda</Link></li>
           <li><Link to="/personas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</Link></li>
           <li><Link to="/aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</Link></li>
           <li><Link to="/sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</Link></li>

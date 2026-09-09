@@ -30,7 +30,7 @@ export const Casinos = () => (
 
       <Reveal delay={0.12} className="relative">
         <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
-        <img
+        <img loading="lazy" decoding="async"
           src={CASINOS.image}
           alt="Soluciones para casinos"
           className="relative rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] w-full h-[440px] object-cover"

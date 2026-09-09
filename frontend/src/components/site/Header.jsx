@@ -25,7 +25,7 @@ export const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
         <Link to="/" data-testid="logo-link" className="flex items-center gap-3">
-          <img
+          <img loading="eager" fetchPriority="high" decoding="async"
             src={BRAND.logo}
             alt="Enlace Fintech"
             className="h-11 w-11 rounded-xl object-cover ring-1 ring-white/10"

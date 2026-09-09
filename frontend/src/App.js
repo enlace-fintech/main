@@ -8,7 +8,6 @@ import ServiciosPage from "@/pages/ServiciosPage";
 import BlogPost from "@/pages/BlogPost";
 import { PrivacidadPage, TerminosPage } from "@/pages/LegalPages";
 import {
-  CajaPage,
   PersonasPage,
   AliadosPage,
   SucursalesPage,
@@ -28,7 +27,7 @@ function App() {
             <Route path="/servicios" element={<ServiciosPage />} />
             <Route path="/servicios/:slug" element={<ServiciosPage />} />
             <Route path="/wallet" element={<Navigate to="/servicios/plataforma-de-pagos" replace />} />
-            <Route path="/caja" element={<CajaPage />} />
+            <Route path="/caja" element={<Navigate to="/servicios/caja-y-comanda" replace />} />
             <Route path="/personas" element={<PersonasPage />} />
             <Route path="/aliados" element={<AliadosPage />} />
             <Route path="/sucursales" element={<SucursalesPage />} />

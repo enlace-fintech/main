@@ -19,7 +19,7 @@ export const Blog = ({ posts = BLOG.posts, title = BLOG.title, overline = BLOG.o
             <Link to={`/blog/${p.slug}`} data-testid={`blog-post-${i}`} className="block h-full">
               <article className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] hover:border-[#D4AF37]/40 transition-colors duration-300">
                 <div className="overflow-hidden">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={p.image}
                     alt={p.title}
                     className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -3,9 +3,9 @@
 export const BRAND = {
   name: "Enlace Fintech",
   domain: "enlacefintech.com",
-  logo: "/img/logo.jpg",
-  heroDashboard: "/img/hero-dashboard.jpg",
-  heroPerson: "/img/hero-person.jpg",
+  logo: "/img/logo.webp",
+  heroDashboard: "/img/hero-dashboard.webp",
+  heroPerson: "/img/hero-person.webp",
   tagline: "Tu broker fintech de confianza",
   phone: "+52 55 0000 0000",
   email: "contacto@enlacefintech.com",
@@ -43,7 +43,6 @@ export const NAV = [
       { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
       { label: "Sistemas y tecnología", href: "/servicios/sistemas" },
-      { label: "Caja & comanda (InfoCaja)", href: "/caja" },
     ],
   },
   { label: "Personas", href: "/personas" },
@@ -70,7 +69,7 @@ export const RESTAURANTES = {
     "Aumenta la lealtad de tus colaboradores con múltiples servicios añadidos.",
   ],
   image:
-    "/img/restaurantes.jpg",
+    "/img/restaurantes.webp",
 };
 
 export const WALLET = {
@@ -115,7 +114,7 @@ export const CASINOS = {
     "Redención y bonificación de premios 24/7/365, apertura de cuenta para persona física y onboarding en 5 minutos.",
   ],
   image:
-    "/img/casinos.jpg",
+    "/img/casinos.webp",
 };
 
 export const BLOG = {
@@ -128,7 +127,7 @@ export const BLOG = {
       title: "Terminal punto de venta sin banco: cómo funciona y qué necesitas en 2026",
       date: "3 junio, 2026",
       readTime: "6 min",
-      image: "/img/tpv.jpg",
+      image: "/img/tpv.webp",
       excerpt: "Cada vez más negocios en México cobran con terminal sin abrir una cuenta en un banco tradicional. Te explicamos cómo funciona el modelo, qué es un contrato de administración de tesorería y qué requisitos reales necesitas.",
       sections: [
         { h: "¿Por qué tantos negocios ya no piden su terminal al banco?", p: ["Obtener una terminal bancaria en México sigue implicando antigüedad de cuenta, estados de cuenta, montos mínimos de facturación y semanas de espera. Para un restaurante, una farmacia o un consultorio que necesita cobrar hoy, ese proceso es un freno.", "Desde la Ley Fintech y la figura de los agregadores de pago, existen alternativas que permiten a cualquier negocio aceptar tarjetas sin depender de un banco tradicional, con requisitos mucho más simples y activación en días."] },
@@ -145,7 +144,7 @@ export const BLOG = {
       title: "REPSE 2026: qué cambia para tu empresa y cómo cumplir sin riesgos",
       date: "20 mayo, 2026",
       readTime: "7 min",
-      image: "/img/consultoria.jpg",
+      image: "/img/consultoria.webp",
       excerpt: "Desde la reforma de 2021, subcontratar personal solo es legal bajo el esquema de servicios especializados registrados en el REPSE. Te explicamos qué debes revisar en 2026, las renovaciones y los reportes que no puedes olvidar.",
       sections: [
         { h: "Qué es el REPSE y por qué te afecta", p: ["El Registro de Prestadoras de Servicios Especializados u Obras Especializadas (REPSE) es el padrón de la Secretaría del Trabajo y Previsión Social (STPS) en el que deben inscribirse las empresas que ponen personal a disposición de otra para servicios que no forman parte de su objeto social ni de su actividad económica preponderante.", "Si contratas limpieza, seguridad, mantenimiento, sistemas o cualquier servicio con personal externo dentro de tu empresa, tu proveedor debe estar en el REPSE. Si no lo está, tú pierdes la deducción del gasto y el acreditamiento del IVA, además de asumir responsabilidad solidaria."] },
@@ -161,7 +160,7 @@ export const BLOG = {
       title: "Cómo cobrar en cripto en México y recibir pesos en tu banco",
       date: "8 mayo, 2026",
       readTime: "6 min",
-      image: "/img/cripto.jpg",
+      image: "/img/cripto.webp",
       excerpt: "Aceptar USDT, BTC o ETH en tu e-commerce no significa quedarte con cripto. Con una pasarela con liquidación en fiat recibes pesos en tu cuenta. Te contamos el marco legal, fiscal y operativo en México.",
       sections: [
         { h: "¿Es legal aceptar cripto en México?", p: ["Sí. Las criptomonedas no son moneda de curso legal, pero nada impide que una empresa acepte activos virtuales como medio de pago en una operación privada. La Ley Fintech (2018) regula a las plataformas que operan con ellos y Banxico limita su uso dentro del sistema financiero, pero el comercio entre particulares es libre.", "Lo que sí debes cuidar es el cumplimiento en prevención de lavado de dinero: el intercambio de activos virtuales es una actividad vulnerable bajo la LFPIORPI, por eso conviene operar con una pasarela que ya cumpla KYC/AML por ti."] },
@@ -178,7 +177,7 @@ export const BLOG = {
       title: "Tarjetas nominativas para colaboradores: controla gastos sin exponer tu cuenta",
       date: "22 abril, 2026",
       readTime: "5 min",
-      image: "/img/tarjetas.jpg",
+      image: "/img/tarjetas.webp",
       excerpt: "Prestar la tarjeta del dueño, repartir efectivo para viáticos o pedir reembolsos con tickets arrugados cuesta tiempo y dinero. Así resuelven las empresas modernas los gastos de su equipo.",
       sections: [
         { h: "El problema del efectivo y la tarjeta compartida", p: ["En muchas pymes mexicanas los gastos operativos se manejan con efectivo o con la tarjeta personal del dueño. El resultado: falta de comprobantes, gastos no deducibles, riesgo de fraude y horas de conciliación cada cierre de mes."] },
@@ -194,7 +193,7 @@ export const BLOG = {
       title: "SPEI 24/7 para empresas: dispersa nómina y paga proveedores en segundos",
       date: "9 abril, 2026",
       readTime: "5 min",
-      image: "/img/nomina.jpg",
+      image: "/img/nomina.webp",
       excerpt: "Pagar la nómina el viernes por la noche o a un proveedor en domingo ya no depende del horario del banco. Así aprovechan las empresas la Plataforma de pagos con SPEI 24/7.",
       sections: [
         { h: "Qué cambió con SPEI 24/7", p: ["Desde que Banxico habilitó la operación continua del SPEI, las transferencias interbancarias se liquidan en segundos cualquier día y hora. Sin embargo, muchas bancas empresariales siguen limitando horarios, montos o número de operaciones por lote."] },
@@ -210,7 +209,7 @@ export const BLOG = {
       title: "Cómo elegir la mejor cuenta fintech para tu empresa en México",
       date: "18 marzo, 2026",
       readTime: "6 min",
-      image: "/img/cuenta-fintech.jpg",
+      image: "/img/cuenta-fintech.webp",
       excerpt: "Comisiones, límites, integraciones, tarjetas y soporte: la lista de cosas a revisar antes de mover la operación de tu empresa a una cuenta fintech, y las preguntas que debes hacer a cualquier proveedor.",
       sections: [
         { h: "Empieza por tus necesidades reales", bullets: ["¿Cuántas transferencias haces al mes y de qué montos?", "¿Pagas a proveedores en el extranjero?", "¿Necesitas tarjetas para tu equipo?", "¿Cobras con terminal, link de pago o en línea?", "¿Tu contador necesita integración con tu sistema contable?"] },
@@ -229,7 +228,7 @@ export const EMPRESAS = {
   description:
     "Diseñamos estrategias financieras para pymes y grandes empresas de múltiples industrias. Estos son algunos de los sectores que impulsamos con Enlace Fintech.",
   image:
-    "/img/empresas.jpg",
+    "/img/empresas.webp",
   sectors: [
     { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
     { icon: "Stethoscope", name: "Médicos", href: "/empresas/medicos" },
@@ -267,7 +266,7 @@ export const MASMESA = {
     "Acepta reservaciones de manera virtual y facilita a tus clientes reservar mesas en línea, priorizando su comodidad y mejorando la gestión del flujo de personas.",
   partner: { name: "Más Mesa", url: "https://masmesa.com.mx" },
   image:
-    "/img/masmesa.jpg",
+    "/img/masmesa.webp",
   points: [
     { title: "Reservaciones en línea", desc: "Facilita a tus clientes reservar mesas de forma virtual, priorizando su comodidad." },
     { title: "Feedback en tiempo real", desc: "Valora la satisfacción de tus clientes para ajustar y mejorar continuamente tu servicio." },
@@ -280,10 +279,10 @@ export const CAJA = {
   overline: "Caja",
   title: "Una solución integral",
   description:
-    "Digitaliza tu punto de venta y automatiza la operación diaria de tu negocio con una caja pensada para la hostelería y el comercio, de la mano de nuestro aliado InfoCaja.",
+    "Digitaliza tu punto de venta y automatiza la operación diaria de tu negocio con una caja pensada para restaurantes y comercios, de la mano de nuestro aliado InfoCaja.",
   partner: { name: "InfoCaja", url: "https://infocaja.mx/" },
   image:
-    "/img/caja.jpg",
+    "/img/caja.webp",
   features: [
     { icon: "ClipboardList", title: "Acceso a comanda en TPV", bullets: ["Toma pedidos rápidamente, incrementando la rapidez del servicio y la satisfacción del cliente.", "Atiende a más clientes en menor tiempo, aumentando tus ventas y la rotación de mesas."] },
     { icon: "Boxes", title: "Módulo de inventario", bullets: ["Supervisa la entrada y salida de tu inventario, evitando pérdidas y desabastecimientos.", "Minimiza los procedimientos de registro automatizando el proceso para ahorrar tiempo."] },
@@ -299,7 +298,7 @@ export const MEDICOS = {
   description:
     "Con soluciones financieras diseñadas específicamente para médicos, llegas a más pacientes y administras mejor tu práctica.",
   image:
-    "/img/medicos.jpg",
+    "/img/medicos.webp",
   tpv: [
     "Recibe pagos con todas las tarjetas de chip y banda.",
     "Recibe tus ventas en tu cuenta FlexPei con SPEI 24/7.",
@@ -319,7 +318,7 @@ export const CRIPTO = {
   description:
     "Acepta pagos en criptomonedas en tu e-commerce y recibe el dinero en pesos directamente en tu cuenta bancaria. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, de forma rápida y segura.",
   image:
-    "/img/cripto.jpg",
+    "/img/cripto.webp",
   partners: [
     {
       name: "FlexPei",
@@ -378,7 +377,7 @@ export const MEMBRESIAS = {
   description:
     "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app.",
   image:
-    "/img/membresias.jpg",
+    "/img/membresias.webp",
   offers: [
     { icon: "ShieldCheck", title: "Seguros", desc: "Protege lo que más importa con seguros personalizados." },
     { icon: "Stethoscope", title: "Asistencias médicas", desc: "Accede a una red de profesionales de la salud para ti y tu familia." },
@@ -437,7 +436,7 @@ export const EVENTOS = {
     },
   ],
   image:
-    "/img/eventos.jpg",
+    "/img/eventos.webp",
   features: [
     { icon: "Ticket", title: "Venta de boletos y accesos", desc: "Cobra entradas en línea y en taquilla con links de pago y terminales." },
     { icon: "Wallet", title: "Recarga cashless", desc: "Brazaletes y monederos digitales para pagos sin efectivo dentro del recinto." },
@@ -455,7 +454,7 @@ export const GENERIC_SECTORS = {
     title: "Cobros y dispersión para tu call center",
     description:
       "Gestiona pagos telefónicos, links de pago y dispersión de comisiones a tus agentes desde una sola plataforma, con control total en tiempo real.",
-    image: "/img/call-center.jpg",
+    image: "/img/call-center.webp",
     partners: [
       {
         name: "Callmarket",
@@ -477,7 +476,7 @@ export const GENERIC_SECTORS = {
     title: "Soluciones de pago para farmacias",
     description:
       "Agiliza el mostrador con terminales, pagos contactless y control de inventario, mejorando la experiencia de tus clientes.",
-    image: "/img/farmacias.jpg",
+    image: "/img/farmacias.webp",
     partners: undefined,
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Acepta tarjetas de crédito, débito, contactless y QR." },
@@ -492,7 +491,7 @@ export const GENERIC_SECTORS = {
     title: "Impulsa las ventas de tu tienda",
     description:
       "Cobra como quieras: presencial, a distancia o en línea. Acelera filas y fideliza a tus clientes con múltiples formas de pago.",
-    image: "/img/tiendas.jpg",
+    image: "/img/tiendas.webp",
     features: [
       { icon: "CreditCard", title: "TPV y contactless", desc: "Acepta todas las tarjetas de chip, banda y sin contacto." },
       { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas para tu equipo con límites y control de gastos." },
@@ -506,7 +505,7 @@ export const GENERIC_SECTORS = {
     title: "Pagos y control para ferreterías",
     description:
       "Cobra con terminal, paga a proveedores con FlexPei y controla los gastos de tu equipo con tarjetas nominativas, todo desde una sola plataforma.",
-    image: "/img/ferreterias.jpg",
+    image: "/img/ferreterias.webp",
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
       { icon: "Landmark", title: "Pagos con FlexPei", desc: "SPEI 24/7 y pagos a proveedores desde una sola plataforma." },
@@ -520,7 +519,7 @@ export const GENERIC_SECTORS = {
     title: "Soluciones financieras para hoteles",
     description:
       "Cobra reservaciones, consumos y servicios con múltiples métodos de pago, y administra los ingresos de todo tu hotel en tiempo real.",
-    image: "/img/hoteles.jpg",
+    image: "/img/hoteles.webp",
     features: [
       { icon: "Link", title: "Cobro de reservaciones", desc: "Recibe anticipos y pagos en línea con links seguros." },
       { icon: "CreditCard", title: "TPV en recepción y consumo", desc: "Cobra habitaciones, restaurante y servicios en un solo sistema." },
@@ -534,7 +533,7 @@ export const GENERIC_SECTORS = {
     title: "Cobros y pagos para agencias de viajes",
     description:
       "Vende paquetes y boletos, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
-    image: "/img/agencias-de-viajes.jpg",
+    image: "/img/agencias-de-viajes.webp",
     partners: [
       {
         name: "Callmarket",
@@ -599,7 +598,7 @@ export const SUCURSALES = {
   description:
     "Atendemos a empresas y personas físicas en todo México. Visítanos o agenda una asesoría en la sucursal más cercana.",
   image:
-    "/img/sucursales.jpg",
+    "/img/sucursales.webp",
   branches: [
     { city: "Ciudad de México", address: "Av. Reforma 000, Col. Centro, CDMX", phone: "+52 55 0000 0000" },
     { city: "Guadalajara", address: "Av. Chapultepec 000, Col. Americana, Jalisco", phone: "+52 33 0000 0000" },
@@ -629,7 +628,7 @@ export const SERVICIOS_HUB = {
   description:
     "Además de conectarte con los mejores productos financieros, en Enlace Fintech resolvemos la operación de tu empresa con herramientas que generan beneficios financieros, reducen costos y mejoran tu control administrativo. Cuéntanos qué necesitas y te decimos todo lo que podemos hacer por las finanzas de tu negocio.",
   image:
-    "/img/servicios-hub.jpg",
+    "/img/servicios-hub.webp",
   pillars: [
     {
       icon: "LayoutDashboard",
@@ -685,11 +684,11 @@ export const SISTEMAS = {
   title: "Los sistemas que hacen funcionar tu negocio, con un solo aliado",
   description:
     "Además de las soluciones financieras, en Enlace Fintech te conectamos con las plataformas tecnológicas de nuestro grupo y aliados: reservaciones, boletos, caja, call center, gestoría de trámites y desarrollo de software a medida. Un solo interlocutor para integrarlo todo con tus cobros y pagos.",
-  image: "/img/hero-dashboard.jpg",
+  image: "/img/hero-dashboard.webp",
   items: [
     { icon: "CalendarCheck", name: "Más Mesa", domain: "masmesa.com.mx", url: "https://masmesa.com.mx", tag: "Reservaciones para restaurantes", desc: "Reservaciones en línea con mapa interactivo de mesas, disponibilidad en tiempo real y feedback de tus clientes.", forWhom: "Restaurantes, bares y cafeterías", internal: "/empresas/restaurantes-y-bares" },
     { icon: "Ticket", name: "Mastiket", domain: "mastiket.com", url: "https://mastiket.com", tag: "Venta de boletos", desc: "Venta y gestión de boletos y accesos en línea, control de aforo y validación en puerta.", forWhom: "Eventos, conciertos, festivales y recintos", internal: "/empresas/eventos" },
-    { icon: "Store", name: "InfoCaja", domain: "infocaja.mx", url: "https://infocaja.mx", tag: "Caja y comanda", desc: "Punto de venta con comanda, inventario, automatización de procesos y facturación con QR.", forWhom: "Restaurantes y comercios", internal: "/caja" },
+    { icon: "Store", name: "InfoCaja", domain: "infocaja.mx", url: "https://infocaja.mx", tag: "Caja y comanda", desc: "Punto de venta con comanda, inventario, automatización de procesos y facturación con QR.", forWhom: "Restaurantes y comercios", internal: "/servicios/caja-y-comanda" },
     { icon: "Headset", name: "Callmarket", domain: "callmarket.cc", url: "https://callmarket.cc", tag: "Sistema de call center", desc: "Campañas automatizadas, IVR, encuestas telefónicas y cobro por teléfono integrado con procesadores de pago.", forWhom: "Call centers, agencias de viajes y ventas telefónicas", internal: "/empresas/call-center" },
     { icon: "FileCheck", name: "MisTrámites", domain: "mistramites.mx", url: "https://mistramites.mx", tag: "Gestoría de trámites", desc: "Más de 60 trámites mexicanos con seguimiento 24/7: constitución de empresas, RFC, e.firma, IMSS y más.", forWhom: "Empresas nuevas y en crecimiento", internal: "/servicios/consultoria-empresarial" },
     { icon: "Code2", name: "Acxor", domain: "acxor.com", url: "https://acxor.com", tag: "Desarrollo de software", desc: "Ingeniería de software a medida: apps web y móviles, integraciones con bancos y procesadores de pago, automatización, seguridad y soporte 24/7.", forWhom: "Empresas que necesitan tecnología propia en producción", internal: "/contacto" },
@@ -702,7 +701,7 @@ export const SERVICIOS_DETALLE = {
     title: "Tarjetas para tu empresa y tus colaboradores",
     description:
       "Tarjetas nominativas físicas y virtuales con aceptación nacional e internacional para pagar nómina, controlar gastos operativos y darle a tus directivos una tarjeta corporativa. Todo administrado desde la Plataforma de pagos de Enlace Fintech.",
-    image: "/img/tarjetas.jpg",
+    image: "/img/tarjetas.webp",
     cta: "Quiero tarjetas para mi empresa",
     features: [
       { icon: "Eye", title: "Control en tiempo real", desc: "Cada cargo se refleja al instante con comercio, monto y responsable." },
@@ -737,7 +736,7 @@ export const SERVICIOS_DETALLE = {
     title: "Paga a tu equipo en segundos, con control total",
     description:
       "Dispersa nómina, comisiones, viáticos y pagos a proveedores desde una sola plataforma, entrega a tus colaboradores una tarjeta de nómina sin costo y, si lo necesitas, delega el cálculo y cumplimiento de nómina a nuestro equipo de capital humano.",
-    image: "/img/nomina.jpg",
+    image: "/img/nomina.webp",
     cta: "Quiero dispersar mi nómina",
     features: [
       { icon: "Zap", title: "Dispersión masiva SPEI 24/7", desc: "Carga tu layout y paga a cualquier banco en segundos, incluso fines de semana." },
@@ -774,7 +773,7 @@ export const SERVICIOS_DETALLE = {
     title: "Cobra y paga en el extranjero sin fricción",
     description:
       "Transferencias Wire y SWIFT, cuentas en dólares y cobros en cripto liquidados en pesos, para que tu empresa compre a proveedores y venda a clientes fuera de México con tipo de cambio competitivo y cumplimiento total.",
-    image: "/img/pagos-internacionales.jpg",
+    image: "/img/pagos-internacionales.webp",
     cta: "Quiero operar internacionalmente",
     features: [
       { icon: "Globe", title: "Wire y SWIFT", desc: "Envía y recibe pagos internacionales con trazabilidad completa." },
@@ -818,7 +817,7 @@ export const CONSULTORIA = {
   operator:
     "Servicio prestado por el despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral y corporativa.",
   image:
-    "/img/consultoria.jpg",
+    "/img/consultoria.webp",
   areas: [
     {
       id: "capital-humano",
@@ -900,7 +899,7 @@ export const TPV = {
   description2:
     "La asignación de las terminales se formaliza con un contrato de administración de tesorería que protege jurídicamente la operación entre tu empresa y la empresa concentradora de cobros, aliada del grupo Enlace Fintech.",
   image:
-    "/img/tpv.jpg",
+    "/img/tpv.webp",
   benefitsTitle: "Beneficios de nuestro servicio integral de terminales",
   benefits: [
     "Reportes de cobros por terminal, en tiempo real, desde una plataforma en línea.",

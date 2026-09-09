@@ -99,7 +99,7 @@ export const Hero = () => (
         className="relative"
       >
         <div className="absolute -inset-4 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
-        <img
+        <img loading="eager" fetchPriority="high" decoding="async"
           src={BRAND.heroPerson}
           alt="Asesoría financiera Enlace Fintech"
           data-testid="hero-dashboard-image"

@@ -87,6 +87,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - seo.js: absUrl() convierte rutas /img/ a https://enlacefintech.com/img/ para og:image, JSON-LD y el endpoint /api/share.
 - REGLA: nuevas imágenes deben guardarse en public/img/, nunca URLs externas.
 
+## WebP + lazy + Caja bajo Sistemas + sin badge (2026-06-09)
+- Imágenes en WebP (public/img/*.webp, 2.2MB total) para <img>; se conservan .jpg para favicon/OG/JSON-LD (absUrl() mapea .webp→.jpg). loading="lazy" decoding="async" en todas las imágenes salvo Hero/Header (eager, fetchPriority high).
+- Caja & comanda movida a /servicios/caja-y-comanda (breadcrumb Servicios > Sistemas y tecnología > Caja & comanda); /caja redirige. Quitada del menú/footer (vive dentro de Sistemas).
+- Eliminado script assets.emergent.sh (badge). index.html sin dependencias externas. Verificado en 35 rutas: 0 imágenes rotas/externas, 0 errores.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

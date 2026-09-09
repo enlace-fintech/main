@@ -1,20 +1,9 @@
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { Caja } from "@/components/site/Caja";
 import { PersonaFisica } from "@/components/site/PersonaFisica";
 import { Aliados } from "@/components/site/Aliados";
 import { Sucursales } from "@/components/site/Sucursales";
 import { Blog } from "@/components/site/Blog";
 import { Contacto } from "@/components/site/Contacto";
-
-export function CajaPage() {
-  return (
-    <>
-      <Breadcrumbs trail={[{ label: "Caja & TPV" }]} />
-      <Caja />
-      <Contacto />
-    </>
-  );
-}
 
 export function PersonasPage() {
   return (
