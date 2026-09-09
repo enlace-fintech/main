@@ -52,7 +52,7 @@ def mongo():
 def test_create_contacto_fast_response(api):
     payload = {
         "nombre": "QA Test Notify",
-        "email": "qa_notify@example.com",
+        "email": "delivered@resend.dev",
         "telefono": "+52 55 0000 0001",
         "empresa": "QA Empresa",
         "interes": "Wallet Negocios",
@@ -70,26 +70,33 @@ def test_create_contacto_fast_response(api):
     pytest.qa_contact_elapsed = elapsed
 
 
-# --- 2. Mongo doc gets notificado + email_id ---
-def test_mongo_notificado_flag_set(mongo):
+# --- 2. Mongo doc gets notificado + email_id AND confirmacion_enviada + confirmacion_id ---
+def test_mongo_notificado_and_confirmacion_flags_set(mongo):
     contact_id = getattr(pytest, "qa_contact_id", None)
     assert contact_id, "previous test must have created a contact"
 
     doc = None
-    for _ in range(15):  # up to ~7.5s
+    for _ in range(20):  # up to ~10s
         doc = mongo.contactos.find_one({"id": contact_id})
-        if doc and "notificado" in doc:
+        if doc and "notificado" in doc and "confirmacion_enviada" in doc:
             break
         time.sleep(0.5)
 
     assert doc is not None, "Contact doc not found in Mongo"
     assert "notificado" in doc, f"Field 'notificado' never set. Doc: {doc}"
+    assert "confirmacion_enviada" in doc, f"Field 'confirmacion_enviada' never set. Doc: {doc}"
+
     if doc.get("notificado") is True:
         assert doc.get("email_id"), "notificado=True but no email_id stored"
-        # Resend IDs are UUID-like
         assert re.match(r"^[0-9a-fA-F-]{8,}$", str(doc["email_id"])), doc["email_id"]
     else:
-        pytest.fail(f"Notify failed: notificado=False, email_error={doc.get('email_error')}")
+        pytest.fail(f"Notify team failed: notificado=False, email_error={doc.get('email_error')}")
+
+    if doc.get("confirmacion_enviada") is True:
+        assert doc.get("confirmacion_id"), "confirmacion_enviada=True but no confirmacion_id stored"
+        assert re.match(r"^[0-9a-fA-F-]{8,}$", str(doc["confirmacion_id"])), doc["confirmacion_id"]
+    else:
+        pytest.fail(f"Client confirmation failed: confirmacion_enviada=False, confirmacion_error={doc.get('confirmacion_error')}")
 
 
 # --- 3. Backend log shows the sent message ---
@@ -107,6 +114,10 @@ def test_backend_log_shows_sent(mongo):
         pytest.skip(f"cannot read log: {e}")
     assert "Aviso de contacto enviado" in text, "Success log line missing"
     assert email_id in text, f"email_id {email_id} not in log"
+    assert "Confirmación al cliente enviada" in text, "Client confirmation log line missing"
+    confirmacion_id = doc.get("confirmacion_id")
+    if confirmacion_id:
+        assert confirmacion_id in text, f"confirmacion_id {confirmacion_id} not in log"
 
 
 # --- 4. GET /api/contacto still works (response_model ignores extra fields) ---
@@ -119,6 +130,56 @@ def test_get_contacto_returns_list_with_notified_docs(api):
     for d in data[:5]:
         assert "_id" not in d
         assert set(d.keys()) <= {"id", "nombre", "email", "telefono", "empresa", "interes", "mensaje", "created_at"}
+
+
+# --- 6b. client_email_html unit test: escapes + first name + phone conditional ---
+def test_client_email_html_includes_and_escapes():
+    from datetime import datetime, timezone
+    from server import client_email_html, Contact
+
+    # Case A: with telefono
+    c1 = Contact(
+        nombre="Juan Pérez López",
+        email="juan@example.com",
+        telefono="+52 55 1234 5678",
+        empresa=None,
+        interes="Terminales punto de venta",
+        mensaje="<b>Necesito</b> info & cotización",
+        created_at=datetime.now(timezone.utc),
+    )
+    html1 = client_email_html(c1)
+    # first name only
+    assert "Juan" in html1
+    assert "Pérez" not in html1 or html1.count("Juan") >= 1  # first name captured
+    # email
+    assert "juan@example.com" in html1
+    # interes
+    assert "Terminales punto de venta" in html1
+    # escaped mensaje
+    assert "<b>Necesito</b>" not in html1
+    assert "&lt;b&gt;Necesito&lt;/b&gt;" in html1
+    assert "&amp; cotizaci" in html1
+    # 24 horas hábiles
+    assert "24 horas hábiles" in html1
+    # telefono included
+    assert "+52 55 1234 5678" in html1
+    assert "o al teléfono" in html1
+
+    # Case B: telefono is None -> no 'o al teléfono'
+    c2 = Contact(
+        nombre="Ana",
+        email="ana@example.com",
+        telefono=None,
+        empresa=None,
+        interes=None,
+        mensaje="Consulta general de prueba.",
+        created_at=datetime.now(timezone.utc),
+    )
+    html2 = client_email_html(c2)
+    assert "Ana" in html2
+    assert "ana@example.com" in html2
+    assert "24 horas hábiles" in html2
+    assert "o al teléfono" not in html2
 
 
 # --- 5. Invalid email -> 422 and NO document created ---

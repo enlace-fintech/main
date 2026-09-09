@@ -1,5 +1,5 @@
 import {
-  BRAND, BLOG, FAQ, WALLET, TPV, CONSULTORIA, SERVICIOS_HUB, SERVICIOS_DETALLE, GENERIC_SECTORS,
+  BRAND, BLOG, FAQ, WALLET, TPV, CONSULTORIA, SERVICIOS_HUB, SERVICIOS_DETALLE, GENERIC_SECTORS, SISTEMAS,
   RESTAURANTES, MEDICOS, CASINOS, CRIPTO, EVENTOS, MEMBRESIAS, CAJA, PERSONA, ALIADOS, SUCURSALES,
 } from "./content";
 
@@ -36,6 +36,7 @@ const SERVICIOS = {
   "plataforma-de-pagos": { title: "Plataforma de pagos para empresas", description: WALLET.description, image: SERVICIOS_HUB.image },
   "terminales-punto-de-venta": { title: "Terminales punto de venta sin trámites bancarios", description: TPV.description, image: TPV.image },
   "consultoria-empresarial": { title: "Consultoría empresarial: capital humano, fiscal y laboral", description: CONSULTORIA.description, image: CONSULTORIA.image },
+  sistemas: { title: "Sistemas y tecnología para tu negocio: reservaciones, boletos, caja, call center y software", description: SISTEMAS.description, image: SISTEMAS.image },
 };
 
 export const getSeo = (pathname) => {
@@ -76,6 +77,7 @@ const SERVICE_NAMES = {
   "plataforma-de-pagos": WALLET.overline,
   "terminales-punto-de-venta": TPV.overline,
   "consultoria-empresarial": CONSULTORIA.overline,
+  sistemas: SISTEMAS.overline,
 };
 
 const breadcrumb = (items) => ({

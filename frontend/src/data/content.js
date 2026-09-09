@@ -42,6 +42,7 @@ export const NAV = [
       { label: "Nómina y dispersión", href: "/servicios/nomina-y-dispersion" },
       { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
+      { label: "Sistemas y tecnología", href: "/servicios/sistemas" },
       { label: "Caja & comanda (InfoCaja)", href: "/caja" },
     ],
   },
@@ -264,7 +265,7 @@ export const MASMESA = {
   title: "Gestión eficiente de reservaciones",
   description:
     "Acepta reservaciones de manera virtual y facilita a tus clientes reservar mesas en línea, priorizando su comodidad y mejorando la gestión del flujo de personas.",
-  partner: { name: "Más Mesa", url: "https://masmesa.com" },
+  partner: { name: "Más Mesa", url: "https://masmesa.com.mx" },
   image:
     "https://images.unsplash.com/photo-1728044849280-10a1a75cff83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcmVzZXJ2YXRpb24lMjBob3N0JTIwdGFibGV0fGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
   points: [
@@ -564,6 +565,7 @@ export const COMMON_SERVICES = {
     { icon: "Building2", title: "Banca · FlexPei", desc: "SPEI 24/7, pagos internacionales y activos digitales.", url: "https://flexpei.com" },
     { icon: "Bitcoin", title: "Procesadores crypto · FluxiPay", desc: "Cobra USDT, BTC y ETH con liquidación en fiat a tu banco.", url: "https://fluxipay.com" },
     { icon: "FileCheck", title: "Gestoría de trámites · MisTrámites", desc: "Constitución de empresas, RFC, firma electrónica, IMSS y más.", url: "https://mistramites.mx" },
+    { icon: "Code2", title: "Desarrollo de software · Acxor", desc: "Apps, integraciones con bancos y procesadores, automatización y soporte 24/7.", url: "https://acxor.com" },
   ],
 };
 
@@ -673,10 +675,24 @@ export const SERVICIOS_HUB = {
     },
   ],
   more: [
-    { title: "Caja & comanda para restaurantes", href: "/caja" },
-    { title: "Gestoría de trámites", href: "/servicios/consultoria-empresarial" },
     { title: "Beneficios para colaboradores", href: "/empresas/membresias" },
     { title: "Cobros en cripto", href: "/empresas/cripto" },
+  ],
+};
+
+export const SISTEMAS = {
+  overline: "Sistemas y tecnología",
+  title: "Los sistemas que hacen funcionar tu negocio, con un solo aliado",
+  description:
+    "Además de las soluciones financieras, en Enlace Fintech te conectamos con las plataformas tecnológicas de nuestro grupo y aliados: reservaciones, boletos, caja, call center, gestoría de trámites y desarrollo de software a medida. Un solo interlocutor para integrarlo todo con tus cobros y pagos.",
+  image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/c0ac1b3c30a83e57504f71798d31da8a22152c935c6a41ab5875736fdea65feb.jpeg",
+  items: [
+    { icon: "CalendarCheck", name: "Más Mesa", domain: "masmesa.com.mx", url: "https://masmesa.com.mx", tag: "Reservaciones para restaurantes", desc: "Reservaciones en línea con mapa interactivo de mesas, disponibilidad en tiempo real y feedback de tus clientes.", forWhom: "Restaurantes, bares y cafeterías", internal: "/empresas/restaurantes-y-bares" },
+    { icon: "Ticket", name: "Mastiket", domain: "mastiket.com", url: "https://mastiket.com", tag: "Venta de boletos", desc: "Venta y gestión de boletos y accesos en línea, control de aforo y validación en puerta.", forWhom: "Eventos, conciertos, festivales y recintos", internal: "/empresas/eventos" },
+    { icon: "Store", name: "InfoCaja", domain: "infocaja.mx", url: "https://infocaja.mx", tag: "Caja y comanda", desc: "Punto de venta con comanda, inventario, automatización de procesos y facturación con QR.", forWhom: "Restaurantes y comercios", internal: "/caja" },
+    { icon: "Headset", name: "Callmarket", domain: "callmarket.cc", url: "https://callmarket.cc", tag: "Sistema de call center", desc: "Campañas automatizadas, IVR, encuestas telefónicas y cobro por teléfono integrado con procesadores de pago.", forWhom: "Call centers, agencias de viajes y ventas telefónicas", internal: "/empresas/call-center" },
+    { icon: "FileCheck", name: "MisTrámites", domain: "mistramites.mx", url: "https://mistramites.mx", tag: "Gestoría de trámites", desc: "Más de 60 trámites mexicanos con seguimiento 24/7: constitución de empresas, RFC, e.firma, IMSS y más.", forWhom: "Empresas nuevas y en crecimiento", internal: "/servicios/consultoria-empresarial" },
+    { icon: "Code2", name: "Acxor", domain: "acxor.com", url: "https://acxor.com", tag: "Desarrollo de software", desc: "Ingeniería de software a medida: apps web y móviles, integraciones con bancos y procesadores de pago, automatización, seguridad y soporte 24/7.", forWhom: "Empresas que necesitan tecnología propia en producción", internal: "/contacto" },
   ],
 };
 

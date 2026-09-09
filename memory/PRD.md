@@ -75,6 +75,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Resend integrado en backend: POST /api/contacto dispara BackgroundTask notify_team → correo HTML al equipo (NOTIFY_EMAILS, remitente SENDER_EMAIL, reply_to cliente). Resultado en Mongo: notificado/email_id o email_error.
 - Env: RESEND_API_KEY, SENDER_EMAIL=notificaciones@enlacefintech.com, NOTIFY_EMAILS=contacto@enlacefintech.com. Requiere dominio enlacefintech.com verificado en Resend para entregar. Testing iteration_8.json.
 
+## Sistemas aliados + confirmación al cliente (2026-06-09)
+- Página /servicios/sistemas (SISTEMAS en content.js, SistemasAliados.jsx): Más Mesa (masmesa.com.mx), Mastiket, InfoCaja, Callmarket, MisTrámites, Acxor (desarrollo de software; empresa de ingeniería del grupo que construyó FlexPei, MasMesa, FluxiPay, CallMarket, MisTrámites). Strip compacto en /servicios. Acxor añadido al Ecosistema.
+- URL de Más Mesa corregida a masmesa.com.mx.
+- notify_client: correo de confirmación al cliente ("Recibimos tu solicitud"), flags confirmacion_enviada/confirmacion_id. Testing iteration_9.json.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

@@ -171,6 +171,41 @@ async def notify_team(contact: "Contact") -> None:
         logger.error("Error enviando aviso de contacto: %s", exc)
 
 
+def client_email_html(c: "Contact") -> str:
+    e = html.escape
+    return f"""<table width="100%" cellpadding="0" cellspacing="0" style="background:#0B132B;padding:32px 0;font-family:Arial,sans-serif">
+<tr><td align="center"><table width="560" cellpadding="0" cellspacing="0" style="background:#0e1836;border:1px solid rgba(255,255,255,0.1);border-radius:16px">
+<tr><td style="padding:28px 32px 8px"><span style="color:#D4AF37;font-size:11px;letter-spacing:3px;text-transform:uppercase">Enlace Fintech</span>
+<h1 style="margin:8px 0 0;color:#fff;font-size:22px">Recibimos tu solicitud, {e(c.nombre.split(' ')[0])}</h1></td></tr>
+<tr><td style="padding:8px 32px"><p style="margin:0;color:#e2e8f0;font-size:15px;line-height:1.6">Gracias por escribirnos. Un asesor de Enlace Fintech revisará tu caso y te contactará en menos de <strong style="color:#fff">24 horas hábiles</strong> al correo <strong style="color:#fff">{e(c.email)}</strong>{(' o al teléfono <strong style="color:#fff">' + e(c.telefono) + '</strong>') if c.telefono else ''}.</p></td></tr>
+<tr><td style="padding:16px 32px"><table width="100%" cellpadding="0" cellspacing="0" style="background:rgba(255,255,255,0.03);border-radius:12px">
+<tr><td style="padding:12px 16px;color:#94a3b8;font-size:13px">Interés</td><td style="padding:12px 16px;color:#fff;font-size:14px">{e(c.interes or 'Contacto general')}</td></tr>
+<tr><td style="padding:12px 16px;color:#94a3b8;font-size:13px;vertical-align:top">Tu mensaje</td><td style="padding:12px 16px;color:#e2e8f0;font-size:14px;line-height:1.6;white-space:pre-wrap">{e(c.mensaje)}</td></tr>
+</table></td></tr>
+<tr><td style="padding:8px 32px"><p style="margin:0;color:#94a3b8;font-size:13px;line-height:1.6">Mientras tanto, puedes conocer nuestros servicios: terminales punto de venta sin trámites bancarios, plataforma de pagos, tarjetas nominativas y consultoría empresarial.</p></td></tr>
+<tr><td style="padding:20px 32px 28px"><a href="https://enlacefintech.com/servicios" style="display:inline-block;background:#D4AF37;color:#0B132B;font-weight:bold;font-size:14px;padding:12px 22px;border-radius:999px;text-decoration:none">Ver servicios</a></td></tr>
+<tr><td style="padding:0 32px 24px"><p style="margin:0;color:#64748b;font-size:11px;line-height:1.5">Enlace Fintech es un intermediario de soluciones financieras y corporativas; no es una institución financiera. Este correo es una confirmación automática, no es necesario responderlo.</p></td></tr>
+</table></td></tr></table>"""
+
+
+async def notify_client(contact: "Contact") -> None:
+    if not (resend.api_key and SENDER_EMAIL):
+        return
+    params = {
+        "from": f"Enlace Fintech <{SENDER_EMAIL}>",
+        "to": [contact.email],
+        "subject": "Recibimos tu solicitud · Enlace Fintech",
+        "html": client_email_html(contact),
+    }
+    try:
+        result = await asyncio.to_thread(resend.Emails.send, params)
+        await db.contactos.update_one({"id": contact.id}, {"$set": {"confirmacion_enviada": True, "confirmacion_id": result.get("id")}})
+        logger.info("Confirmación al cliente enviada (%s)", result.get("id"))
+    except Exception as exc:
+        await db.contactos.update_one({"id": contact.id}, {"$set": {"confirmacion_enviada": False, "confirmacion_error": str(exc)[:300]}})
+        logger.error("Error enviando confirmación al cliente: %s", exc)
+
+
 @api_router.post("/contacto", response_model=Contact)
 async def create_contacto(input: ContactCreate, background: BackgroundTasks):
     contact = Contact(**input.model_dump())
@@ -179,6 +214,7 @@ async def create_contacto(input: ContactCreate, background: BackgroundTasks):
     await db.contactos.insert_one(doc)
     logger.info("Nuevo contacto recibido de %s <%s>", contact.nombre, contact.email)
     background.add_task(notify_team, contact)
+    background.add_task(notify_client, contact)
     return contact
 
 

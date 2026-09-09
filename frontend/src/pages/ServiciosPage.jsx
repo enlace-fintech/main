@@ -9,6 +9,7 @@ import { Tpv } from "@/components/site/Tpv";
 import { TpvPasos } from "@/components/site/TpvPasos";
 import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { ComoEmpezar } from "@/components/site/ComoEmpezar";
+import { SistemasAliados } from "@/components/site/SistemasAliados";
 import { Contacto } from "@/components/site/Contacto";
 import { SERVICIOS_DETALLE } from "@/data/content";
 
@@ -21,6 +22,7 @@ const LABELS = {
   "nomina-y-dispersion": "Nómina y dispersión",
   "pagos-internacionales": "Pagos internacionales",
   "consultoria-empresarial": "Consultoría empresarial",
+  sistemas: "Sistemas y tecnología",
 };
 
 const DEDICATED = {
@@ -43,6 +45,7 @@ const DEDICATED = {
       <EcosistemaEnlace />
     </>
   ),
+  sistemas: () => <SistemasAliados asHero />,
 };
 
 export default function ServiciosPage() {
@@ -53,6 +56,7 @@ export default function ServiciosPage() {
       <>
         <Breadcrumbs trail={[{ label: "Servicios" }]} />
         <ServiciosHub asHero />
+        <SistemasAliados compact />
         <ComoEmpezar />
         <Contacto />
       </>

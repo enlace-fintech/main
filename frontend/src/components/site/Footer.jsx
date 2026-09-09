@@ -40,6 +40,7 @@ export const Footer = () => (
           <li><Link to="/servicios/nomina-y-dispersion" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Nómina y dispersión</Link></li>
           <li><Link to="/servicios/pagos-internacionales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Pagos internacionales</Link></li>
           <li><Link to="/servicios/consultoria-empresarial" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Consultoría empresarial</Link></li>
+          <li><Link to="/servicios/sistemas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sistemas y tecnología</Link></li>
           <li><Link to="/caja" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Caja & comanda</Link></li>
           <li><Link to="/personas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</Link></li>
           <li><Link to="/aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</Link></li>
