@@ -52,7 +52,7 @@ const resolveSeo = (pathname) => {
   if (STATIC[path]) return { ...STATIC[path], path };
 
   if (root === "empresas" && slug) {
-    const s = SECTORES[slug] || (GENERIC_SECTORS[slug] && { title: GENERIC_SECTORS[slug].title, description: GENERIC_SECTORS[slug].description, image: GENERIC_SECTORS[slug].image });
+    const s = SECTORES[slug] || (GENERIC_SECTORS[slug] && { title: GENERIC_SECTORS[slug].title, description: GENERIC_SECTORS[slug].description, image: GENERIC_SECTORS[slug].image, faq: GENERIC_SECTORS[slug].faq });
     if (s) return { ...s, title: s.title + suffix, path };
   }
   if (root === "servicios" && slug) {

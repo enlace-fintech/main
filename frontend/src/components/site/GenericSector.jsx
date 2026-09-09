@@ -2,6 +2,7 @@ import * as Icons from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 export const GenericSector = ({ data }) => (
   <section data-testid="generic-sector" className="relative py-20 lg:py-28">
@@ -78,5 +79,6 @@ export const GenericSector = ({ data }) => (
         })}
       </div>
     </div>
+    <SectorExtras pains={data.pains} faq={data.faq} cta={data.cta} testid="sector" />
   </section>
 );

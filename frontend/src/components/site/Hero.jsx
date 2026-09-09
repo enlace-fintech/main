@@ -48,7 +48,7 @@ export const Hero = () => (
         >
           <span className="font-semibold text-white">Un solo aliado</span> para cobrar, pagar y operar:
           plataforma de pagos, terminales punto de venta sin trámites bancarios, tarjetas nominativas,
-          pagos con FlexPei, seguros y beneficios para tus colaboradores y consultoría empresarial,
+          transferencias SPEI 24/7, seguros y beneficios para tus colaboradores y consultoría empresarial,
           con condiciones negociadas a tu favor.
         </motion.p>
 

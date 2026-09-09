@@ -636,6 +636,94 @@ export const GENERIC_SECTORS = {
   },
 };
 
+export const GENERIC_EXTRAS = {
+  "call-center": {
+    pains: [
+      { icon: "PhoneCall", q: "“Cierro la venta por teléfono y el cliente nunca deposita”", a: "Envías un link de pago por SMS o WhatsApp en la misma llamada y el cobro se confirma al instante." },
+      { icon: "Users", q: "“Pagar comisiones a 80 agentes cada semana es un dolor”", a: "Dispersión masiva SPEI 24/7 desde tu cuenta empresarial y tarjeta de nómina sin costo para cada agente." },
+      { icon: "LineChart", q: "“No sé qué campaña o agente realmente cobra”", a: "Reportes de cobro por campaña, agente y horario en tiempo real." },
+      { icon: "ShieldCheck", q: "“Los contracargos me comen el margen”", a: "Cobro con autenticación y alertas antifraude; evidencia de cada transacción para disputar." },
+    ],
+    faq: [
+      { q: "¿El link de pago se puede enviar durante la llamada?", a: "Sí, por SMS, WhatsApp o correo; el agente ve el pago confirmado en segundos." },
+      { q: "¿Puedo pagar comisiones sin cuenta bancaria del agente?", a: "Sí, con la tarjeta de nómina Enlace: el agente la recibe sin costo y la dispersión llega vía SPEI 24/7." },
+      { q: "¿Se integra con mi sistema de call center?", a: "Sí, mediante API y con Callmarket, el sistema de call center aliado del grupo." },
+    ],
+    cta: { text: "Quiero cobrar por teléfono", href: "/contacto" },
+  },
+  farmacias: {
+    pains: [
+      { icon: "CreditCard", q: "“El cliente compra $80 con tarjeta y la comisión me duele”", a: "Terminales con comisión negociada por giro y sin renta ni mínimos; cobra montos pequeños sin castigo." },
+      { icon: "Boxes", q: "“Se me caducan medicamentos y me faltan otros”", a: "Módulo de inventario con caducidades y alertas de reorden." },
+      { icon: "QrCode", q: "“Facturar a cada cliente me quita tiempo en mostrador”", a: "Factura con QR desde el ticket: el cliente la genera solo." },
+      { icon: "Landmark", q: "“Pago a laboratorios y distribuidores con transferencias del banco que tardan”", a: "SPEI 24/7 desde tu cuenta empresarial y tarjetas nominativas para compras de sucursal." },
+    ],
+    faq: [
+      { q: "¿Puedo tener una terminal por sucursal con corte separado?", a: "Sí, cada terminal reporta por separado y consolidas todo en la plataforma de pagos." },
+      { q: "¿Aceptan vales y tarjetas de beneficios?", a: "Aceptamos todas las tarjetas bancarias; para vales de despensa te conectamos con el emisor aliado." },
+      { q: "¿Cuánto tarda la activación?", a: "Recibes tu KIT TPV en 48 horas tras firmar el contrato." },
+    ],
+    cta: { text: "Quiero terminales para mi farmacia", href: "/contacto" },
+  },
+  tiendas: {
+    pains: [
+      { icon: "CreditCard", q: "“Pierdo ventas porque solo cobro en efectivo”", a: "Terminal contactless y QR sin trámites bancarios; empieza a cobrar con tarjeta en 48 horas." },
+      { icon: "Link", q: "“Vendo por WhatsApp y cobrar es un caos”", a: "Links de pago por WhatsApp y redes; el pago se confirma solo." },
+      { icon: "WalletCards", q: "“Le doy efectivo a mis empleados para compras y no cuadra”", a: "Tarjetas nominativas con límites por empleado y foto del ticket." },
+      { icon: "Boxes", q: "“No sé cuánto vendí ni qué me queda”", a: "Inventario, ventas y arqueo de caja desde la app, en tiempo real." },
+    ],
+    faq: [
+      { q: "¿Hay monto mínimo de ventas para tener terminal?", a: "No. Sin mínimos de operación ni renta mensual." },
+      { q: "¿Cuándo recibo el dinero de las ventas con tarjeta?", a: "En las fechas de corte que elijas, en tu cuenta empresarial." },
+      { q: "¿Puedo pagar la nómina de mi equipo desde la misma cuenta?", a: "Sí, con dispersión SPEI 24/7 y tarjeta de nómina sin costo para cada colaborador." },
+    ],
+    cta: { text: "Quiero cobrar con tarjeta en mi tienda", href: "/contacto" },
+  },
+  ferreterias: {
+    pains: [
+      { icon: "CreditCard", q: "“Cobro tickets grandes y el banco me limita la terminal”", a: "Terminales sin límites por giro ni mínimos, con reportes por sucursal." },
+      { icon: "Landmark", q: "“Pago a proveedores fuera del horario del banco”", a: "SPEI 24/7 desde tu cuenta empresarial, incluso fines de semana." },
+      { icon: "WalletCards", q: "“Mis choferes compran material y gasolina con efectivo”", a: "Tarjetas nominativas con límites por categoría y comprobación con foto." },
+      { icon: "Boxes", q: "“Pierdo material por falta de control de inventario”", a: "Control de existencias y alertas de faltantes desde la plataforma." },
+    ],
+    faq: [
+      { q: "¿Puedo cobrar a crédito a mis clientes de obra?", a: "Enlace no otorga crédito; sí puedes cobrar anticipos y saldos con link de pago o terminal y llevar el control por cliente." },
+      { q: "¿Cuántas tarjetas nominativas puedo emitir?", a: "Las que necesites, físicas o virtuales, con límite individual." },
+      { q: "¿Cómo pago a mi personal?", a: "Dispersión de nómina SPEI 24/7 y tarjeta de nómina sin costo." },
+    ],
+    cta: { text: "Quiero terminales para mi ferretería", href: "/contacto" },
+  },
+  hoteles: {
+    pains: [
+      { icon: "Link", q: "“Los huéspedes reservan y luego no llegan”", a: "Cobro de anticipos con link de pago al reservar; menos no-shows." },
+      { icon: "CreditCard", q: "“Cobro habitación, restaurante y spa en sistemas distintos”", a: "Terminales por punto con reporte consolidado en tu plataforma de pagos." },
+      { icon: "Globe", q: "“Huéspedes extranjeros y tarjetas internacionales rechazadas”", a: "Aceptación internacional y pagos Wire/SWIFT para agencias y OTAs." },
+      { icon: "Users", q: "“Nómina de temporada y propinas en efectivo”", a: "Tarjeta de nómina sin costo y dispersión SPEI 24/7 de sueldos y propinas." },
+    ],
+    faq: [
+      { q: "¿Puedo pre-autorizar la tarjeta del huésped al check-in?", a: "Sí, con la terminal se puede pre-autorizar y ajustar el cargo al check-out." },
+      { q: "¿Cobran comisión distinta por tarjetas extranjeras?", a: "La comisión se negocia por volumen; te informamos las tasas nacional e internacional por escrito." },
+      { q: "¿Se integra con mi PMS?", a: "Sí, a través de API y de nuestros aliados tecnológicos." },
+    ],
+    cta: { text: "Quiero cobrar en mi hotel", href: "/contacto" },
+  },
+  "agencias-de-viajes": {
+    pains: [
+      { icon: "Link", q: "“Vendo paquetes por WhatsApp y el cliente tarda en pagar”", a: "Link de pago con vigencia y recordatorio; el cliente paga desde su celular." },
+      { icon: "Globe", q: "“Pago a operadores en el extranjero con SWIFT caro”", a: "Pagos internacionales Wire/SWIFT y cuenta en USD con tipo de cambio competitivo." },
+      { icon: "WalletCards", q: "“Mis agentes viajan y gastan con su propia tarjeta”", a: "Tarjetas nominativas para viáticos con límites y comprobación." },
+      { icon: "Users", q: "“Pagar comisiones a agentes freelance es lento”", a: "Dispersión SPEI 24/7 y tarjeta de nómina sin costo para cada agente." },
+    ],
+    faq: [
+      { q: "¿Puedo cobrar en dólares a clientes extranjeros?", a: "Sí, con links de pago en USD y liquidación en pesos o dólares." },
+      { q: "¿Cómo manejo anticipos y saldos de un viaje?", a: "Un link por anticipo y otro por saldo, con referencia del cliente y conciliación automática." },
+      { q: "¿Se integra con mi sistema de reservas o call center?", a: "Sí, vía API y con Callmarket para ventas telefónicas." },
+    ],
+    cta: { text: "Quiero cobrar en mi agencia", href: "/contacto" },
+  },
+};
+Object.entries(GENERIC_EXTRAS).forEach(([k, v]) => Object.assign(GENERIC_SECTORS[k], v));
+
 export const COMMON_SERVICES = {
   overline: "Ecosistema Enlace",
   title: "Todo lo que tu negocio necesita, en un solo aliado",

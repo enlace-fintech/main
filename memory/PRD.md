@@ -99,8 +99,12 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Mismo formato SectorExtras (pains, faq, cta, note) + `audience` chips (Cripto) y `timeline` Preventa/Día/Post (Eventos). Énfasis en terminales, banca empresarial (Plataforma de pagos/FlexPei SPEI 24/7) y tarjetas de nómina. FAQPage JSON-LD en los 3.
 - Masaldo URL corregida a https://masaldo.com.mx (app real). mastiket.com sigue siendo placeholder GoDaddy (decisión del usuario mantenerlo).
 
+## Sectores genéricos + hero neutral (2026-06-09)
+- Hero sin mención a FlexPei ("transferencias SPEI 24/7"). Regla: el hero debe ser neutral, sin marcas de aliados.
+- GENERIC_EXTRAS (content.js) fusionado en GENERIC_SECTORS: pains/faq/cta para call-center, farmacias, tiendas, ferreterias, hoteles, agencias-de-viajes; GenericSector renderiza SectorExtras (testid "sector-*"). FAQPage JSON-LD en los 6.
+
 ## Backlog / pendientes
-- P1: Copy pendiente: sectores genéricos (call center, farmacias, tiendas, ferreterías, hoteles, agencias); FAQ global con precio/regulación; página Aliados con descripción por aliado.
+- P1: FAQ global con precio/regulación; página Aliados con descripción por aliado.
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.
