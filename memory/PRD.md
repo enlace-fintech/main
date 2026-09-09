@@ -80,6 +80,13 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - URL de Más Mesa corregida a masmesa.com.mx.
 - notify_client: correo de confirmación al cliente ("Recibimos tu solicitud"), flags confirmacion_enviada/confirmacion_id. Testing iteration_9.json.
 
+## Assets locales (2026-06-09)
+- Todas las imágenes (26) descargadas, optimizadas (≤1600px, JPEG q82, 58MB→4MB) en frontend/public/img/ con nombres semánticos; URLs en content.js/index.html ahora relativas (/img/...). Script: frontend/scripts/localize_images.py.
+- Fuentes auto-hospedadas en public/fonts/ (Manrope OFL, Cabinet Grotesk ITF) vía public/fonts.css (enlazado en index.html; no en src/ porque css-loader intenta resolver /fonts/*).
+- Eliminados: Google Fonts, Fontshare, Inter, snippet PostHog (ap.emergent.sh). Queda solo assets.emergent.sh/emergent-main.js (badge de plataforma) — decisión del usuario.
+- seo.js: absUrl() convierte rutas /img/ a https://enlacefintech.com/img/ para og:image, JSON-LD y el endpoint /api/share.
+- REGLA: nuevas imágenes deben guardarse en public/img/, nunca URLs externas.
+
 ## Backlog / pendientes
 - P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

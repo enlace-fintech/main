@@ -6,6 +6,7 @@ import { Contacto } from "@/components/site/Contacto";
 import { ShareButtons } from "@/components/site/ShareButtons";
 import { Reveal } from "@/components/site/Primitives";
 import { BLOG } from "@/data/content";
+import { absUrl } from "@/data/seo";
 
 const API = process.env.REACT_APP_BACKEND_URL;
 
@@ -15,7 +16,7 @@ export default function BlogPost() {
 
   if (!post) return <Navigate to="/blog" replace />;
   const related = BLOG.posts.filter((p) => p.slug !== slug).slice(0, 3);
-  const q = new URLSearchParams({ title: post.title, desc: post.excerpt, image: post.image }).toString();
+  const q = new URLSearchParams({ title: post.title, desc: post.excerpt, image: absUrl(post.image) }).toString();
   const shareUrl = `${API}/api/share/blog/${post.slug}?${q}`;
 
   return (

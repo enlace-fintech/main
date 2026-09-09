@@ -4,6 +4,7 @@ import {
 } from "./content";
 
 export const SITE_URL = `https://${BRAND.domain}`;
+export const absUrl = (u) => (u && u.startsWith("/") ? `${SITE_URL}${u}` : u);
 const suffix = ` · ${BRAND.name}`;
 
 const STATIC = {
@@ -40,6 +41,11 @@ const SERVICIOS = {
 };
 
 export const getSeo = (pathname) => {
+  const seo = resolveSeo(pathname);
+  return { ...seo, image: absUrl(seo.image) };
+};
+
+const resolveSeo = (pathname) => {
   const path = pathname.replace(/\/+$/, "") || "/";
   const [, root, slug] = path.split("/");
 
@@ -65,7 +71,7 @@ const ORG = {
   "@id": `${SITE_URL}/#organization`,
   name: BRAND.name,
   url: SITE_URL,
-  logo: BRAND.logo,
+  logo: absUrl(BRAND.logo),
   email: BRAND.email,
   telephone: BRAND.phone,
   address: { "@type": "PostalAddress", addressLocality: "Ciudad de México", addressCountry: "MX" },
@@ -114,7 +120,7 @@ export const getJsonLd = (pathname, seo) => {
       "@id": `${url}#article`,
       headline: p.title,
       description: p.excerpt,
-      image: p.image,
+      image: absUrl(p.image),
       url,
       mainEntityOfPage: url,
       articleSection: p.category,

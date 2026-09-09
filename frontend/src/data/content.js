@@ -3,9 +3,9 @@
 export const BRAND = {
   name: "Enlace Fintech",
   domain: "enlacefintech.com",
-  logo: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/1ea1d960844b7f00d1a57231eaa1ae463eb4c7dd2c8a3f1e933228b6d74bbd6c.jpeg",
-  heroDashboard: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/c0ac1b3c30a83e57504f71798d31da8a22152c935c6a41ab5875736fdea65feb.jpeg",
-  heroPerson: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/9c987f5737fe95ef3b10c59483debca893627796096c34548ea35effeba1ee01.jpeg",
+  logo: "/img/logo.jpg",
+  heroDashboard: "/img/hero-dashboard.jpg",
+  heroPerson: "/img/hero-person.jpg",
   tagline: "Tu broker fintech de confianza",
   phone: "+52 55 0000 0000",
   email: "contacto@enlacefintech.com",
@@ -70,7 +70,7 @@ export const RESTAURANTES = {
     "Aumenta la lealtad de tus colaboradores con múltiples servicios añadidos.",
   ],
   image:
-    "https://images.unsplash.com/photo-1556742521-9713bf272865?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcGF5bWVudCUyMHRlcm1pbmFsfGVufDB8fHx8MTc4ODU4MjE5NHww&ixlib=rb-4.1.0&q=85",
+    "/img/restaurantes.jpg",
 };
 
 export const WALLET = {
@@ -115,7 +115,7 @@ export const CASINOS = {
     "Redención y bonificación de premios 24/7/365, apertura de cuenta para persona física y onboarding en 5 minutos.",
   ],
   image:
-    "https://images.pexels.com/photos/7594128/pexels-photo-7594128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "/img/casinos.jpg",
 };
 
 export const BLOG = {
@@ -128,7 +128,7 @@ export const BLOG = {
       title: "Terminal punto de venta sin banco: cómo funciona y qué necesitas en 2026",
       date: "3 junio, 2026",
       readTime: "6 min",
-      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/921cd02d61f74010f9808d4bd8f633a0b1e0712cef43cbc0336c8a8e2f022ebc.jpeg",
+      image: "/img/tpv.jpg",
       excerpt: "Cada vez más negocios en México cobran con terminal sin abrir una cuenta en un banco tradicional. Te explicamos cómo funciona el modelo, qué es un contrato de administración de tesorería y qué requisitos reales necesitas.",
       sections: [
         { h: "¿Por qué tantos negocios ya no piden su terminal al banco?", p: ["Obtener una terminal bancaria en México sigue implicando antigüedad de cuenta, estados de cuenta, montos mínimos de facturación y semanas de espera. Para un restaurante, una farmacia o un consultorio que necesita cobrar hoy, ese proceso es un freno.", "Desde la Ley Fintech y la figura de los agregadores de pago, existen alternativas que permiten a cualquier negocio aceptar tarjetas sin depender de un banco tradicional, con requisitos mucho más simples y activación en días."] },
@@ -145,7 +145,7 @@ export const BLOG = {
       title: "REPSE 2026: qué cambia para tu empresa y cómo cumplir sin riesgos",
       date: "20 mayo, 2026",
       readTime: "7 min",
-      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/fb301f7f8a4e3e9f6ea47e2ecc962ed91c4363919704d77f6457f3106da6cdc2.jpeg",
+      image: "/img/consultoria.jpg",
       excerpt: "Desde la reforma de 2021, subcontratar personal solo es legal bajo el esquema de servicios especializados registrados en el REPSE. Te explicamos qué debes revisar en 2026, las renovaciones y los reportes que no puedes olvidar.",
       sections: [
         { h: "Qué es el REPSE y por qué te afecta", p: ["El Registro de Prestadoras de Servicios Especializados u Obras Especializadas (REPSE) es el padrón de la Secretaría del Trabajo y Previsión Social (STPS) en el que deben inscribirse las empresas que ponen personal a disposición de otra para servicios que no forman parte de su objeto social ni de su actividad económica preponderante.", "Si contratas limpieza, seguridad, mantenimiento, sistemas o cualquier servicio con personal externo dentro de tu empresa, tu proveedor debe estar en el REPSE. Si no lo está, tú pierdes la deducción del gasto y el acreditamiento del IVA, además de asumir responsabilidad solidaria."] },
@@ -161,7 +161,7 @@ export const BLOG = {
       title: "Cómo cobrar en cripto en México y recibir pesos en tu banco",
       date: "8 mayo, 2026",
       readTime: "6 min",
-      image: "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHBheW1lbnQlMjBkaWdpdGFsJTIwZmluYW5jZXxlbnwwfHx8fDE3ODg1ODQ1Nzh8MA&ixlib=rb-4.1.0&q=85",
+      image: "/img/cripto.jpg",
       excerpt: "Aceptar USDT, BTC o ETH en tu e-commerce no significa quedarte con cripto. Con una pasarela con liquidación en fiat recibes pesos en tu cuenta. Te contamos el marco legal, fiscal y operativo en México.",
       sections: [
         { h: "¿Es legal aceptar cripto en México?", p: ["Sí. Las criptomonedas no son moneda de curso legal, pero nada impide que una empresa acepte activos virtuales como medio de pago en una operación privada. La Ley Fintech (2018) regula a las plataformas que operan con ellos y Banxico limita su uso dentro del sistema financiero, pero el comercio entre particulares es libre.", "Lo que sí debes cuidar es el cumplimiento en prevención de lavado de dinero: el intercambio de activos virtuales es una actividad vulnerable bajo la LFPIORPI, por eso conviene operar con una pasarela que ya cumpla KYC/AML por ti."] },
@@ -178,7 +178,7 @@ export const BLOG = {
       title: "Tarjetas nominativas para colaboradores: controla gastos sin exponer tu cuenta",
       date: "22 abril, 2026",
       readTime: "5 min",
-      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/48964a43321b6c2a1dd2487b81b0b27453e33a0aff43c84c549044ff0db8997e.jpeg",
+      image: "/img/tarjetas.jpg",
       excerpt: "Prestar la tarjeta del dueño, repartir efectivo para viáticos o pedir reembolsos con tickets arrugados cuesta tiempo y dinero. Así resuelven las empresas modernas los gastos de su equipo.",
       sections: [
         { h: "El problema del efectivo y la tarjeta compartida", p: ["En muchas pymes mexicanas los gastos operativos se manejan con efectivo o con la tarjeta personal del dueño. El resultado: falta de comprobantes, gastos no deducibles, riesgo de fraude y horas de conciliación cada cierre de mes."] },
@@ -194,7 +194,7 @@ export const BLOG = {
       title: "SPEI 24/7 para empresas: dispersa nómina y paga proveedores en segundos",
       date: "9 abril, 2026",
       readTime: "5 min",
-      image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/666a60391eea9a32868e5111c68cdc10de55abc74affd04b4d703f551d71a0f4.jpeg",
+      image: "/img/nomina.jpg",
       excerpt: "Pagar la nómina el viernes por la noche o a un proveedor en domingo ya no depende del horario del banco. Así aprovechan las empresas la Plataforma de pagos con SPEI 24/7.",
       sections: [
         { h: "Qué cambió con SPEI 24/7", p: ["Desde que Banxico habilitó la operación continua del SPEI, las transferencias interbancarias se liquidan en segundos cualquier día y hora. Sin embargo, muchas bancas empresariales siguen limitando horarios, montos o número de operaciones por lote."] },
@@ -210,7 +210,7 @@ export const BLOG = {
       title: "Cómo elegir la mejor cuenta fintech para tu empresa en México",
       date: "18 marzo, 2026",
       readTime: "6 min",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwZGFzaGJvYXJkJTIwaW50ZXJmYWNlJTIwbW9kZXJufGVufDB8fHx8MTc4ODU4MjIxM3ww&ixlib=rb-4.1.0&q=85",
+      image: "/img/cuenta-fintech.jpg",
       excerpt: "Comisiones, límites, integraciones, tarjetas y soporte: la lista de cosas a revisar antes de mover la operación de tu empresa a una cuenta fintech, y las preguntas que debes hacer a cualquier proveedor.",
       sections: [
         { h: "Empieza por tus necesidades reales", bullets: ["¿Cuántas transferencias haces al mes y de qué montos?", "¿Pagas a proveedores en el extranjero?", "¿Necesitas tarjetas para tu equipo?", "¿Cobras con terminal, link de pago o en línea?", "¿Tu contador necesita integración con tu sistema contable?"] },
@@ -229,7 +229,7 @@ export const EMPRESAS = {
   description:
     "Diseñamos estrategias financieras para pymes y grandes empresas de múltiples industrias. Estos son algunos de los sectores que impulsamos con Enlace Fintech.",
   image:
-    "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwxfHxtZXhpY2FuJTIwYnVzaW5lc3MlMjB0ZWFtJTIwb2ZmaWNlfGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
+    "/img/empresas.jpg",
   sectors: [
     { icon: "UtensilsCrossed", name: "Restaurantes y bares", href: "/empresas/restaurantes-y-bares" },
     { icon: "Stethoscope", name: "Médicos", href: "/empresas/medicos" },
@@ -267,7 +267,7 @@ export const MASMESA = {
     "Acepta reservaciones de manera virtual y facilita a tus clientes reservar mesas en línea, priorizando su comodidad y mejorando la gestión del flujo de personas.",
   partner: { name: "Más Mesa", url: "https://masmesa.com.mx" },
   image:
-    "https://images.unsplash.com/photo-1728044849280-10a1a75cff83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcmVzZXJ2YXRpb24lMjBob3N0JTIwdGFibGV0fGVufDB8fHx8MTc4ODU4MzIxMnww&ixlib=rb-4.1.0&q=85",
+    "/img/masmesa.jpg",
   points: [
     { title: "Reservaciones en línea", desc: "Facilita a tus clientes reservar mesas de forma virtual, priorizando su comodidad." },
     { title: "Feedback en tiempo real", desc: "Valora la satisfacción de tus clientes para ajustar y mejorar continuamente tu servicio." },
@@ -283,7 +283,7 @@ export const CAJA = {
     "Digitaliza tu punto de venta y automatiza la operación diaria de tu negocio con una caja pensada para la hostelería y el comercio, de la mano de nuestro aliado InfoCaja.",
   partner: { name: "InfoCaja", url: "https://infocaja.mx/" },
   image:
-    "https://images.unsplash.com/photo-1778795317873-10b4d6973e05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwcG9pbnQlMjBvZiUyMHNhbGUlMjBjYXNoaWVyJTIwdGVybWluYWx8ZW58MHx8fHwxNzg4NTgzMjEyfDA&ixlib=rb-4.1.0&q=85",
+    "/img/caja.jpg",
   features: [
     { icon: "ClipboardList", title: "Acceso a comanda en TPV", bullets: ["Toma pedidos rápidamente, incrementando la rapidez del servicio y la satisfacción del cliente.", "Atiende a más clientes en menor tiempo, aumentando tus ventas y la rotación de mesas."] },
     { icon: "Boxes", title: "Módulo de inventario", bullets: ["Supervisa la entrada y salida de tu inventario, evitando pérdidas y desabastecimientos.", "Minimiza los procedimientos de registro automatizando el proceso para ahorrar tiempo."] },
@@ -299,7 +299,7 @@ export const MEDICOS = {
   description:
     "Con soluciones financieras diseñadas específicamente para médicos, llegas a más pacientes y administras mejor tu práctica.",
   image:
-    "https://images.unsplash.com/photo-1758691462878-6edc3d3da1be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtZWRpY2FsJTIwb2ZmaWNlJTIwcGF5bWVudCUyMGNhcmR8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+    "/img/medicos.jpg",
   tpv: [
     "Recibe pagos con todas las tarjetas de chip y banda.",
     "Recibe tus ventas en tu cuenta FlexPei con SPEI 24/7.",
@@ -319,7 +319,7 @@ export const CRIPTO = {
   description:
     "Acepta pagos en criptomonedas en tu e-commerce y recibe el dinero en pesos directamente en tu cuenta bancaria. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, de forma rápida y segura.",
   image:
-    "https://images.unsplash.com/photo-1605792657660-596af9009e82?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHBheW1lbnQlMjBkaWdpdGFsJTIwZmluYW5jZXxlbnwwfHx8fDE3ODg1ODQ1Nzh8MA&ixlib=rb-4.1.0&q=85",
+    "/img/cripto.jpg",
   partners: [
     {
       name: "FlexPei",
@@ -378,7 +378,7 @@ export const MEMBRESIAS = {
   description:
     "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app.",
   image:
-    "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHdlbGxuZXNzJTIwYmVuZWZpdHMlMjBtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+    "/img/membresias.jpg",
   offers: [
     { icon: "ShieldCheck", title: "Seguros", desc: "Protege lo que más importa con seguros personalizados." },
     { icon: "Stethoscope", title: "Asistencias médicas", desc: "Accede a una red de profesionales de la salud para ti y tu familia." },
@@ -437,7 +437,7 @@ export const EVENTOS = {
     },
   ],
   image:
-    "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwY3Jvd2QlMjBzdGFnZSUyMGxpZ2h0cyUyMGV2ZW50fGVufDB8fHx8MTc4ODg0NDgzNnww&ixlib=rb-4.1.0&q=85",
+    "/img/eventos.jpg",
   features: [
     { icon: "Ticket", title: "Venta de boletos y accesos", desc: "Cobra entradas en línea y en taquilla con links de pago y terminales." },
     { icon: "Wallet", title: "Recarga cashless", desc: "Brazaletes y monederos digitales para pagos sin efectivo dentro del recinto." },
@@ -455,7 +455,7 @@ export const GENERIC_SECTORS = {
     title: "Cobros y dispersión para tu call center",
     description:
       "Gestiona pagos telefónicos, links de pago y dispersión de comisiones a tus agentes desde una sola plataforma, con control total en tiempo real.",
-    image: "https://images.unsplash.com/photo-1553775282-20af80779df7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxjYWxsJTIwY2VudGVyJTIwY3VzdG9tZXIlMjBzZXJ2aWNlJTIwaGVhZHNldCUyMGFnZW50c3xlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
+    image: "/img/call-center.jpg",
     partners: [
       {
         name: "Callmarket",
@@ -477,7 +477,7 @@ export const GENERIC_SECTORS = {
     title: "Soluciones de pago para farmacias",
     description:
       "Agiliza el mostrador con terminales, pagos contactless y control de inventario, mejorando la experiencia de tus clientes.",
-    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/90162db7c4608eeef7e21df13168f2962965d0e0dd9059bfb2c05f0fb1093cc8.jpeg",
+    image: "/img/farmacias.jpg",
     partners: undefined,
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Acepta tarjetas de crédito, débito, contactless y QR." },
@@ -492,7 +492,7 @@ export const GENERIC_SECTORS = {
     title: "Impulsa las ventas de tu tienda",
     description:
       "Cobra como quieras: presencial, a distancia o en línea. Acelera filas y fideliza a tus clientes con múltiples formas de pago.",
-    image: "https://images.unsplash.com/photo-1556740772-1a741367b93e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBzdG9yZSUyMGNoZWNrb3V0JTIwY291bnRlcnxlbnwwfHx8fDE3ODg4NDU4MjR8MA&ixlib=rb-4.1.0&q=85",
+    image: "/img/tiendas.jpg",
     features: [
       { icon: "CreditCard", title: "TPV y contactless", desc: "Acepta todas las tarjetas de chip, banda y sin contacto." },
       { icon: "WalletCards", title: "Tarjetas nominativas", desc: "Tarjetas para tu equipo con límites y control de gastos." },
@@ -506,7 +506,7 @@ export const GENERIC_SECTORS = {
     title: "Pagos y control para ferreterías",
     description:
       "Cobra con terminal, paga a proveedores con FlexPei y controla los gastos de tu equipo con tarjetas nominativas, todo desde una sola plataforma.",
-    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/d4ebd5bf68f564aab15cd3ac2150c3ab49fcf7c63a53a3f5448928d78f207923.jpeg",
+    image: "/img/ferreterias.jpg",
     features: [
       { icon: "CreditCard", title: "Terminales punto de venta", desc: "Cobra con tarjeta y garantiza tu pago." },
       { icon: "Landmark", title: "Pagos con FlexPei", desc: "SPEI 24/7 y pagos a proveedores desde una sola plataforma." },
@@ -520,7 +520,7 @@ export const GENERIC_SECTORS = {
     title: "Soluciones financieras para hoteles",
     description:
       "Cobra reservaciones, consumos y servicios con múltiples métodos de pago, y administra los ingresos de todo tu hotel en tiempo real.",
-    image: "https://images.unsplash.com/photo-1621293954908-907159247fc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxob3RlbCUyMHJlY2VwdGlvbiUyMGxvYmJ5JTIwbW9kZXJufGVufDB8fHx8MTc4ODg0NTgyNHww&ixlib=rb-4.1.0&q=85",
+    image: "/img/hoteles.jpg",
     features: [
       { icon: "Link", title: "Cobro de reservaciones", desc: "Recibe anticipos y pagos en línea con links seguros." },
       { icon: "CreditCard", title: "TPV en recepción y consumo", desc: "Cobra habitaciones, restaurante y servicios en un solo sistema." },
@@ -534,7 +534,7 @@ export const GENERIC_SECTORS = {
     title: "Cobros y pagos para agencias de viajes",
     description:
       "Vende paquetes y boletos, cobra a distancia y dispersa pagos a proveedores con total seguridad.",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHx0cmF2ZWwlMjBhZ2VuY3klMjBhaXJwbGFuZSUyMGJvb2tpbmd8ZW58MHx8fHwxNzg4ODQ1ODI0fDA&ixlib=rb-4.1.0&q=85",
+    image: "/img/agencias-de-viajes.jpg",
     partners: [
       {
         name: "Callmarket",
@@ -599,7 +599,7 @@ export const SUCURSALES = {
   description:
     "Atendemos a empresas y personas físicas en todo México. Visítanos o agenda una asesoría en la sucursal más cercana.",
   image:
-    "https://images.unsplash.com/photo-1674681512510-e06db64f53fb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZXhpY28lMjBjaXR5JTIwb2ZmaWNlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzg4NTg0NTc4fDA&ixlib=rb-4.1.0&q=85",
+    "/img/sucursales.jpg",
   branches: [
     { city: "Ciudad de México", address: "Av. Reforma 000, Col. Centro, CDMX", phone: "+52 55 0000 0000" },
     { city: "Guadalajara", address: "Av. Chapultepec 000, Col. Americana, Jalisco", phone: "+52 33 0000 0000" },
@@ -629,7 +629,7 @@ export const SERVICIOS_HUB = {
   description:
     "Además de conectarte con los mejores productos financieros, en Enlace Fintech resolvemos la operación de tu empresa con herramientas que generan beneficios financieros, reducen costos y mejoran tu control administrativo. Cuéntanos qué necesitas y te decimos todo lo que podemos hacer por las finanzas de tu negocio.",
   image:
-    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b74f2bcf6984fdc46effb5e99391ab66bd8bc5543c5dd572bc2f00a14c4913cf.jpeg",
+    "/img/servicios-hub.jpg",
   pillars: [
     {
       icon: "LayoutDashboard",
@@ -685,7 +685,7 @@ export const SISTEMAS = {
   title: "Los sistemas que hacen funcionar tu negocio, con un solo aliado",
   description:
     "Además de las soluciones financieras, en Enlace Fintech te conectamos con las plataformas tecnológicas de nuestro grupo y aliados: reservaciones, boletos, caja, call center, gestoría de trámites y desarrollo de software a medida. Un solo interlocutor para integrarlo todo con tus cobros y pagos.",
-  image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/c0ac1b3c30a83e57504f71798d31da8a22152c935c6a41ab5875736fdea65feb.jpeg",
+  image: "/img/hero-dashboard.jpg",
   items: [
     { icon: "CalendarCheck", name: "Más Mesa", domain: "masmesa.com.mx", url: "https://masmesa.com.mx", tag: "Reservaciones para restaurantes", desc: "Reservaciones en línea con mapa interactivo de mesas, disponibilidad en tiempo real y feedback de tus clientes.", forWhom: "Restaurantes, bares y cafeterías", internal: "/empresas/restaurantes-y-bares" },
     { icon: "Ticket", name: "Mastiket", domain: "mastiket.com", url: "https://mastiket.com", tag: "Venta de boletos", desc: "Venta y gestión de boletos y accesos en línea, control de aforo y validación en puerta.", forWhom: "Eventos, conciertos, festivales y recintos", internal: "/empresas/eventos" },
@@ -702,7 +702,7 @@ export const SERVICIOS_DETALLE = {
     title: "Tarjetas para tu empresa y tus colaboradores",
     description:
       "Tarjetas nominativas físicas y virtuales con aceptación nacional e internacional para pagar nómina, controlar gastos operativos y darle a tus directivos una tarjeta corporativa. Todo administrado desde la Plataforma de pagos de Enlace Fintech.",
-    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/48964a43321b6c2a1dd2487b81b0b27453e33a0aff43c84c549044ff0db8997e.jpeg",
+    image: "/img/tarjetas.jpg",
     cta: "Quiero tarjetas para mi empresa",
     features: [
       { icon: "Eye", title: "Control en tiempo real", desc: "Cada cargo se refleja al instante con comercio, monto y responsable." },
@@ -737,7 +737,7 @@ export const SERVICIOS_DETALLE = {
     title: "Paga a tu equipo en segundos, con control total",
     description:
       "Dispersa nómina, comisiones, viáticos y pagos a proveedores desde una sola plataforma, entrega a tus colaboradores una tarjeta de nómina sin costo y, si lo necesitas, delega el cálculo y cumplimiento de nómina a nuestro equipo de capital humano.",
-    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/666a60391eea9a32868e5111c68cdc10de55abc74affd04b4d703f551d71a0f4.jpeg",
+    image: "/img/nomina.jpg",
     cta: "Quiero dispersar mi nómina",
     features: [
       { icon: "Zap", title: "Dispersión masiva SPEI 24/7", desc: "Carga tu layout y paga a cualquier banco en segundos, incluso fines de semana." },
@@ -774,7 +774,7 @@ export const SERVICIOS_DETALLE = {
     title: "Cobra y paga en el extranjero sin fricción",
     description:
       "Transferencias Wire y SWIFT, cuentas en dólares y cobros en cripto liquidados en pesos, para que tu empresa compre a proveedores y venda a clientes fuera de México con tipo de cambio competitivo y cumplimiento total.",
-    image: "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/b39bf14407fb60f04ffd14b3d89d9aa2c86dc64bdaa03fcb138b7cf8607e920c.jpeg",
+    image: "/img/pagos-internacionales.jpg",
     cta: "Quiero operar internacionalmente",
     features: [
       { icon: "Globe", title: "Wire y SWIFT", desc: "Envía y recibe pagos internacionales con trazabilidad completa." },
@@ -818,7 +818,7 @@ export const CONSULTORIA = {
   operator:
     "Servicio prestado por el despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral y corporativa.",
   image:
-    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/fb301f7f8a4e3e9f6ea47e2ecc962ed91c4363919704d77f6457f3106da6cdc2.jpeg",
+    "/img/consultoria.jpg",
   areas: [
     {
       id: "capital-humano",
@@ -900,7 +900,7 @@ export const TPV = {
   description2:
     "La asignación de las terminales se formaliza con un contrato de administración de tesorería que protege jurídicamente la operación entre tu empresa y la empresa concentradora de cobros, aliada del grupo Enlace Fintech.",
   image:
-    "https://static.prod-images.emergentagent.com/jobs/bdaa62fe-1c2e-4ec8-9169-06c51ec1a552/images/921cd02d61f74010f9808d4bd8f633a0b1e0712cef43cbc0336c8a8e2f022ebc.jpeg",
+    "/img/tpv.jpg",
   benefitsTitle: "Beneficios de nuestro servicio integral de terminales",
   benefits: [
     "Reportes de cobros por terminal, en tiempo real, desde una plataforma en línea.",
