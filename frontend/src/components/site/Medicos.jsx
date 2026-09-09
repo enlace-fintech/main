@@ -2,6 +2,7 @@ import * as Icons from "lucide-react";
 import { Check } from "lucide-react";
 import { MEDICOS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 export const Medicos = () => (
   <section id="medicos" data-testid="medicos-section" className="relative py-16 lg:py-24">
@@ -55,5 +56,6 @@ export const Medicos = () => (
         })}
       </div>
     </div>
+    <SectorExtras pains={MEDICOS.pains} faq={MEDICOS.faq} cta={MEDICOS.cta} note={MEDICOS.note} testid="medicos" />
   </section>
 );

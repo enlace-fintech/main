@@ -1,6 +1,7 @@
 import * as Icons from "lucide-react";
 import { MEMBRESIAS } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 export const Membresias = () => (
   <section id="membresias" data-testid="membresias-section" className="relative py-16 lg:py-24">
@@ -12,10 +13,7 @@ export const Membresias = () => (
             {MEMBRESIAS.title}
           </h2>
           <p className="mt-5 text-slate-300 leading-relaxed">{MEMBRESIAS.description}</p>
-          <p className="mt-4 text-slate-400 leading-relaxed">
-            Brinda a tus colaboradores los mejores beneficios del mercado. Aumenta su motivación
-            y productividad con un paquete completo de ventajas, todo en un solo lugar y 100% digital.
-          </p>
+          <p className="mt-4 text-slate-400 leading-relaxed">{MEMBRESIAS.description2}</p>
         </Reveal>
 
         <Reveal delay={0.12} className="relative">
@@ -26,6 +24,24 @@ export const Membresias = () => (
             className="relative rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] w-full h-[440px] object-cover"
           />
         </Reveal>
+      </div>
+
+      <div className="mt-14 grid gap-6 md:grid-cols-3">
+        {MEMBRESIAS.steps.map((s, i) => {
+          const Icon = Icons[s.icon] || Icons.Circle;
+          return (
+            <Reveal key={s.title} delay={i * 0.08}>
+              <div data-testid={`membresia-step-${i}`} className="group relative h-full rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent p-7">
+                <span className="font-display absolute right-6 top-5 text-4xl font-black text-white/5">0{i + 1}</span>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
+                  <Icon size={20} strokeWidth={1.5} />
+                </span>
+                <h3 className="font-display mt-4 text-lg font-bold text-white leading-snug">{s.title}</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{s.desc}</p>
+              </div>
+            </Reveal>
+          );
+        })}
       </div>
 
       <h3 className="font-display mt-16 text-2xl font-bold tracking-tight text-white">¿Qué ofrecemos?</h3>
@@ -59,11 +75,13 @@ export const Membresias = () => (
             >
               <div className="font-display text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-200">{a.name}</div>
               <div className="mt-1 text-xs uppercase tracking-[0.18em] text-[#D4AF37]">{a.cat}</div>
+              <p className="mt-2 text-sm text-slate-400 leading-relaxed">{a.desc}</p>
             </div>
           ))}
         </div>
         <p className="mt-4 text-xs text-slate-500">* Logotipos de aliados sujetos a convenio vigente.</p>
       </div>
     </div>
+    <SectorExtras faq={MEMBRESIAS.faq} cta={MEMBRESIAS.cta} testid="membresias" />
   </section>
 );

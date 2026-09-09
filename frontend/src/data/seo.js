@@ -24,12 +24,12 @@ const STATIC = {
 };
 
 const SECTORES = {
-  "restaurantes-y-bares": { title: "Soluciones financieras para restaurantes y bares", description: RESTAURANTES.description, image: RESTAURANTES.image },
-  medicos: { title: "Soluciones financieras para médicos y consultorios", description: MEDICOS.description, image: MEDICOS.image },
+  "restaurantes-y-bares": { title: "Soluciones financieras para restaurantes y bares", description: RESTAURANTES.description, image: RESTAURANTES.image, faq: RESTAURANTES.faq },
+  medicos: { title: "Soluciones financieras para médicos y consultorios", description: MEDICOS.description, image: MEDICOS.image, faq: MEDICOS.faq },
   casinos: { title: "Medios de pago y cumplimiento para casinos", description: CASINOS.description, image: CASINOS.image },
   cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image },
   eventos: { title: "Pagos sin fricción para eventos y conciertos", description: EVENTOS.description, image: EVENTOS.image },
-  membresias: { title: "Beneficios y membresías para colaboradores", description: MEMBRESIAS.description, image: MEMBRESIAS.image },
+  membresias: { title: "Beneficios y membresías para colaboradores", description: MEMBRESIAS.description, image: MEMBRESIAS.image, faq: MEMBRESIAS.faq },
 };
 
 const SERVICIOS = {
@@ -113,6 +113,7 @@ export const getJsonLd = (pathname, seo) => {
     graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Servicios", path: "/servicios" }, { name: SERVICE_NAMES[slug] || SERVICIOS_DETALLE[slug]?.overline || seo.title, path }]));
   } else if (root === "empresas" && slug) {
     graph.push({ "@type": "Service", name: seo.title.replace(suffix, ""), description: seo.description, url, image: seo.image, provider: { "@id": `${SITE_URL}/#organization` }, areaServed: "MX" });
+    if (seo.faq) graph.push({ "@type": "FAQPage", mainEntity: seo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
     graph.push(breadcrumb([{ name: "Inicio", path: "" }, { name: "Empresas", path: "/empresas/restaurantes-y-bares" }, { name: seo.title.replace(suffix, ""), path }]));
   } else if (root === "blog" && seo.post) {
     const p = seo.post;

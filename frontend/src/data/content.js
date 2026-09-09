@@ -60,14 +60,27 @@ export const HERO_STATS = [
 
 export const RESTAURANTES = {
   overline: "Restaurantes y bares",
-  title: "Simplifica la gestión financiera de tu negocio",
+  title: "Cobra en hora pico, cierra caja en minutos y paga a tu equipo sin efectivo",
   description:
-    "Con Enlace Fintech como tu broker fintech, la operación de tu restaurante o bar se simplifica para que te concentres en lo que realmente importa: hacer crecer tu empresa. En el mundo de la hostelería y el comercio, la gestión financiera es clave.",
+    "Con Enlace Fintech como tu broker fintech, la operación financiera de tu restaurante o bar se simplifica para que te concentres en lo que importa: llenar mesas y hacer crecer tu negocio. Terminales que no se caen con el salón lleno, reservaciones y comanda integradas, y tarjetas para tu personal, con un solo aliado.",
   bullets: [
-    "Gestiona todos los fondos de tu empresa y de tu personal desde un solo lugar.",
-    "Acepta más tarjetas de crédito y débito.",
-    "Aumenta la lealtad de tus colaboradores con múltiples servicios añadidos.",
+    "Gestiona todos los fondos de tu empresa y de tu personal desde una sola plataforma, con SPEI 24/7 vía FlexPei.",
+    "Acepta todas las tarjetas de crédito y débito, chip, banda y contactless, con terminales sin trámites bancarios ni mínimos de operación.",
+    "Aumenta la lealtad de tus colaboradores con tarjeta nominativa de nómina, propinas a tarjeta, seguros y membresías.",
+    "Reservaciones con Más Mesa y caja con comanda InfoCaja, integradas con tus cobros.",
   ],
+  pains: [
+    { icon: "CreditCard", q: "“La terminal del banco se cae los viernes”", a: "Asignamos las terminales que necesites, sin mínimos ni trámites; usa varias como respaldo y nunca pierdas una venta." },
+    { icon: "Receipt", q: "“El corte de caja me toma una hora y nunca cuadra”", a: "Reportes de cobro por terminal en tiempo real y caja con comanda InfoCaja con facturación por QR." },
+    { icon: "HandCoins", q: "“Las propinas en efectivo generan conflictos”", a: "Propinas capturadas en la terminal y dispersadas a la tarjeta nominativa de cada mesero vía SPEI 24/7." },
+    { icon: "CalendarCheck", q: "“Mesas vacías entre semana y no-shows el fin”", a: "Reservaciones con Más Mesa: mapa de mesas, confirmación automática y control de aforo." },
+  ],
+  faq: [
+    { q: "¿Cuánto tarda en llegar la terminal?", a: "Firmas el contrato de administración de tesorería, eliges fechas de corte y recibes tu KIT TPV en 48 horas." },
+    { q: "¿Necesito cambiar de banco?", a: "No. Recibes tus liquidaciones en la cuenta que elijas, bancaria o FlexPei." },
+    { q: "¿Puedo tener varias terminales por sucursal?", a: "Sí, sin costo por terminal adicional ni mínimos de operación; se asignan según tu necesidad." },
+  ],
+  cta: { text: "Quiero terminales para mi restaurante", href: "/contacto" },
   image:
     "/img/restaurantes.webp",
 };
@@ -293,23 +306,37 @@ export const CAJA = {
 
 export const MEDICOS = {
   overline: "Sectores · Médicos",
-  title: "Expande tu consultorio con soluciones financieras inteligentes",
-  subtitle: "Aumenta tus pacientes y optimiza la gestión de tu consultorio",
+  title: "Cobra consultas y procedimientos con la misma discreción con la que atiendes",
+  subtitle: "Atiende a más pacientes y optimiza la gestión de tu consultorio",
   description:
-    "Con soluciones financieras diseñadas específicamente para médicos, llegas a más pacientes y administras mejor tu práctica.",
+    "Soluciones financieras diseñadas para médicos y consultorios: terminal en tu consultorio, link de pago para anticipos y honorarios, y depósito directo a tu cuenta. Sin trámites bancarios ni mínimos de facturación, para que administres mejor tu práctica y llegues a más pacientes.",
   image:
     "/img/medicos.webp",
   tpv: [
-    "Recibe pagos con todas las tarjetas de chip y banda.",
+    "Recibe pagos con todas las tarjetas de chip, banda y contactless, desde una terminal Bluetooth ligada a tu celular.",
     "Recibe tus ventas en tu cuenta FlexPei con SPEI 24/7.",
     "Cuando pagan con tarjeta, tú tienes el pago garantizado.",
+    "Cobra anticipos y honorarios a distancia con link de pago por WhatsApp.",
   ],
   features: [
-    { icon: "MapPin", title: "Cobra desde cualquier lugar", desc: "Acepta efectivo, transferencias, tarjetas de crédito o débito, sin importar dónde estén tus pacientes." },
-    { icon: "TrendingUp", title: "Incrementa tu alcance", desc: "Amplía tu base de pacientes y atiende a más personas desde tu consultorio." },
-    { icon: "ShieldCheck", title: "Control total de tus finanzas", desc: "Gestiona tus recursos con eficiencia y transparencia." },
-    { icon: "QrCode", title: "Pagos con código QR", desc: "Consolida cada transacción mediante procesos 100% digitales." },
+    { icon: "MapPin", title: "Cobra desde cualquier lugar", desc: "Acepta efectivo, transferencias, tarjetas de crédito o débito y links de pago, en consultorio, a domicilio o en telemedicina." },
+    { icon: "TrendingUp", title: "Incrementa tu alcance", desc: "Atiende y cobra a pacientes a distancia; amplía tu base sin depender de que traigan efectivo." },
+    { icon: "ShieldCheck", title: "Control total de tus finanzas", desc: "Reportes por terminal o por médico, listos para tu contador; gestiona tus recursos con eficiencia y transparencia." },
+    { icon: "QrCode", title: "Pagos con código QR", desc: "Cobra y factura con procesos 100% digitales; consolida cada transacción." },
   ],
+  pains: [
+    { icon: "Banknote", q: "“El paciente no trae efectivo y no quiero perder la consulta”", a: "Terminal Bluetooth ligada a tu celular; acepta todas las tarjetas, chip y contactless." },
+    { icon: "MessageSquare", q: "“Cobro anticipos de cirugía por transferencia y luego persigo comprobantes”", a: "Link de pago por WhatsApp con referencia del paciente y conciliación automática." },
+    { icon: "Users", q: "“Comparto consultorio y no sé qué cobro es de quién”", a: "Una terminal o usuario por médico con reporte separado y corte individual." },
+    { icon: "FileText", q: "“Facturar cada consulta me quita tiempo”", a: "Reportes listos para tu contador e integración con facturación a través de aliados." },
+  ],
+  note: "No almacenamos datos clínicos de tus pacientes; únicamente procesamos el cobro con cumplimiento PCI DSS.",
+  faq: [
+    { q: "¿Necesito antigüedad o historial bancario?", a: "No. Solo identificación oficial, comprobante de domicilio y una cuenta donde recibir tus liquidaciones." },
+    { q: "¿Puedo usarla fuera del consultorio?", a: "Sí. La terminal se conecta por Bluetooth a tu smartphone o tableta con datos o WiFi." },
+    { q: "¿Cómo cobro un anticipo si el paciente no está presente?", a: "Le envías un link de pago por WhatsApp o correo; al pagar, el importe se refleja en tu reporte." },
+  ],
+  cta: { text: "Quiero cobrar en mi consultorio", href: "/contacto" },
 };
 
 export const CRIPTO = {
@@ -372,31 +399,44 @@ export const CRIPTO = {
 };
 
 export const MEMBRESIAS = {
-  overline: "Sectores · Membresías",
-  title: "Integrando bienestar, potenciando tu empresa",
+  overline: "Sectores · Membresías y beneficios para colaboradores",
+  title: "Retén a tu equipo con beneficios que valen más de lo que cuestan",
   description:
-    "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app.",
+    "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app: seguros, asistencias médicas, gimnasios, descuentos y una tarjeta nominativa de nómina sin costo.",
+  description2:
+    "Brinda a tus colaboradores los mejores beneficios del mercado. Aumenta su motivación y productividad con un paquete completo de ventajas, todo en un solo lugar y 100% digital. Tú eliges quién paga: la empresa, el colaborador por descuento en nómina, o un esquema mixto.",
   image:
     "/img/membresias.webp",
+  steps: [
+    { icon: "Gift", title: "¿Qué recibe tu colaborador?", desc: "Tarjeta nominativa de nómina sin anualidad, seguro de accidentes personales, asistencia médica, acceso a gimnasios, redes de descuentos y asistencias para mascota, hogar y vial." },
+    { icon: "Scale", title: "¿Quién paga?", desc: "Tres esquemas: la empresa (deducible como previsión social), el colaborador vía descuento en nómina, o mixto. Te cotizamos por colaborador al mes según el paquete." },
+    { icon: "Rocket", title: "¿Cómo se implementa?", desc: "Alta masiva desde tu layout de nómina, tarjetas en pocos días y un solo ejecutivo para todo. Ideal desde 5 colaboradores." },
+  ],
   offers: [
-    { icon: "ShieldCheck", title: "Seguros", desc: "Protege lo que más importa con seguros personalizados." },
-    { icon: "Stethoscope", title: "Asistencias médicas", desc: "Accede a una red de profesionales de la salud para ti y tu familia." },
-    { icon: "Tags", title: "Redes de descuentos", desc: "Ahorra en tus compras con ofertas y descuentos exclusivos." },
-    { icon: "Dumbbell", title: "Gimnasios", desc: "Mantente en forma con acceso a los mejores gimnasios." },
-    { icon: "Home", title: "Asistencias mascota, hogar y vial", desc: "Tranquilidad total para tu mascota, hogar y en carretera." },
-    { icon: "WalletCards", title: "Tarjeta nominativa de beneficios", desc: "Una tarjeta para recibir nómina, beneficios y descuentos, con aceptación nacional." },
-    { icon: "PiggyBank", title: "Caja y fondo de ahorro", desc: "Facilita el ahorro y la gestión financiera de tus empleados." },
+    { icon: "ShieldCheck", title: "Seguros", desc: "Protege lo que más importa con seguros de accidentes personales, vida y gastos médicos, con MAPFRE, CHUBB y SURA." },
+    { icon: "Stethoscope", title: "Asistencias médicas", desc: "Orientación médica telefónica y red de profesionales de la salud para el colaborador y su familia, con AsisMed." },
+    { icon: "Tags", title: "Redes de descuentos", desc: "Ahorra en compras cotidianas con ofertas y descuentos exclusivos en comercios y servicios." },
+    { icon: "Dumbbell", title: "Gimnasios", desc: "Acceso a los mejores gimnasios con TotalPass y Smart Fit, a precio corporativo." },
+    { icon: "Home", title: "Asistencias mascota, hogar y vial", desc: "Tranquilidad total para su mascota, su hogar y en carretera, con Hermes Assist." },
+    { icon: "WalletCards", title: "Tarjeta nominativa de beneficios", desc: "Una tarjeta para recibir nómina, beneficios y descuentos, con aceptación nacional y sin anualidad." },
+    { icon: "PiggyBank", title: "Caja y fondo de ahorro", desc: "Facilita el ahorro y la gestión financiera de tus empleados con aportaciones automáticas desde nómina." },
   ],
   aliados: [
-    { name: "MAPFRE", cat: "Seguros" },
-    { name: "CHUBB", cat: "Seguros" },
-    { name: "SURA", cat: "Seguros" },
-    { name: "AsisMed", cat: "Asistencias médicas" },
-    { name: "Hermes Assist", cat: "Asistencias vial y hogar" },
-    { name: "TotalPass", cat: "Gimnasios" },
-    { name: "Smart Fit", cat: "Gimnasios" },
-    { name: "Gayosso", cat: "Servicios funerarios" },
+    { name: "MAPFRE", cat: "Seguros", desc: "Accidentes personales, vida y gastos médicos." },
+    { name: "CHUBB", cat: "Seguros", desc: "Seguros de accidentes y vida para colaboradores." },
+    { name: "SURA", cat: "Seguros", desc: "Protección de salud y vida a precio corporativo." },
+    { name: "AsisMed", cat: "Asistencias médicas", desc: "Orientación médica 24/7 y red de especialistas." },
+    { name: "Hermes Assist", cat: "Asistencias vial y hogar", desc: "Grúa, cerrajería, plomería y más." },
+    { name: "TotalPass", cat: "Gimnasios", desc: "Miles de gimnasios y estudios en una membresía." },
+    { name: "Smart Fit", cat: "Gimnasios", desc: "La red de gimnasios más grande de Latinoamérica." },
+    { name: "Gayosso", cat: "Servicios funerarios", desc: "Asistencia y previsión funeraria para la familia." },
   ],
+  faq: [
+    { q: "¿Desde cuántos colaboradores puedo contratar?", a: "Desde 5 colaboradores; el precio por persona mejora conforme crece la plantilla." },
+    { q: "¿Es deducible para la empresa?", a: "Cuando la empresa paga el beneficio, puede tratarse como previsión social deducible dentro de los límites de la LISR; lo revisamos con tu contador." },
+    { q: "¿Qué pasa si un colaborador se da de baja?", a: "Lo das de baja desde la plataforma y el cobro se ajusta en el siguiente periodo, sin penalizaciones." },
+  ],
+  cta: { text: "Quiero cotizar beneficios para mi equipo", href: "/contacto" },
 };
 
 export const ALIADOS = {

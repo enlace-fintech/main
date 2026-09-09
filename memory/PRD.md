@@ -92,8 +92,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Caja & comanda movida a /servicios/caja-y-comanda (breadcrumb Servicios > Sistemas y tecnología > Caja & comanda); /caja redirige. Quitada del menú/footer (vive dentro de Sistemas).
 - Eliminado script assets.emergent.sh (badge). index.html sin dependencias externas. Verificado en 35 rutas: 0 imágenes rotas/externas, 0 errores.
 
+## Copy por sector (2026-06-09)
+- Restaurantes, Médicos y Membresías reescritos SIN quitar información: títulos orientados a dolor, bullets/features ampliados, + `pains` (dolor→solución), `faq` (3), `cta`, `note` (médicos), `steps` (membresías: qué recibe / quién paga / cómo se implementa), `desc` por aliado. Componente compartido SectorExtras.jsx. FAQPage JSON-LD en esos sectores.
+
 ## Backlog / pendientes
-- P1: Reescribir copy débil (Restaurantes, Médicos, Casinos sin "créditos a jugadores", Membresías, Personas en 3 tarjetas, FAQ con precio/regulación, Aliados con descripción por aliado).
+- P1: Copy pendiente: Casinos, Cripto, Eventos, sectores genéricos; FAQ global con precio/regulación; página Aliados con descripción por aliado.
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.

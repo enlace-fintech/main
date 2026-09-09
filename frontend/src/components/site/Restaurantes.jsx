@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { RESTAURANTES } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
+import { SectorExtras } from "./SectorExtras";
 
 export const Restaurantes = () => (
   <section
@@ -37,5 +38,6 @@ export const Restaurantes = () => (
         </ul>
       </Reveal>
     </div>
+    <SectorExtras pains={RESTAURANTES.pains} faq={RESTAURANTES.faq} cta={RESTAURANTES.cta} testid="restaurantes" />
   </section>
 );
