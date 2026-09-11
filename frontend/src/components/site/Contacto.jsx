@@ -13,16 +13,22 @@ const initial = { nombre: "", email: "", telefono: "", empresa: "", interes: "",
 
 export const Contacto = () => {
   const { pathname, search } = useLocation();
-  const ref = new URLSearchParams(search).get("ref") || pathname;
-  const [form, setForm] = useState(() => {
+  const params = new URLSearchParams(search);
+  const ref = params.get("ref") || pathname;
+  const msg = params.get("msg");
+  const resolve = () => {
     const ctx = getLeadContext(ref);
+    return msg ? { ...ctx, mensaje: msg } : ctx;
+  };
+  const [form, setForm] = useState(() => {
+    const ctx = resolve();
     return { ...initial, interes: ctx.interes, mensaje: ctx.mensaje };
   });
   const [loading, setLoading] = useState(false);
-  const prevCtx = useRef(getLeadContext(ref));
+  const prevCtx = useRef(resolve());
 
   useEffect(() => {
-    const ctx = getLeadContext(ref);
+    const ctx = resolve();
     const prev = prevCtx.current;
     prevCtx.current = ctx;
     setForm((f) => ({
@@ -30,7 +36,8 @@ export const Contacto = () => {
       interes: !f.interes || f.interes === prev.interes ? ctx.interes : f.interes,
       mensaje: !f.mensaje || f.mensaje === prev.mensaje ? ctx.mensaje : f.mensaje,
     }));
-  }, [ref]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ref, msg]);
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 

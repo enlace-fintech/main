@@ -36,6 +36,7 @@ export const Footer = () => (
         <ul className="mt-5 space-y-3">
           <li><Link to="/servicios/plataforma-de-pagos" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Plataforma de pagos</Link></li>
           <li><Link to="/servicios/terminales-punto-de-venta" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Terminales punto de venta</Link></li>
+          <li><Link to="/calculadora-tpv" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Calculadora de ahorro TPV</Link></li>
           <li><Link to="/servicios/tarjetas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Tarjetas empresariales</Link></li>
           <li><Link to="/servicios/nomina-y-dispersion" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Nómina y dispersión</Link></li>
           <li><Link to="/servicios/pagos-internacionales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Pagos internacionales</Link></li>
@@ -43,6 +44,7 @@ export const Footer = () => (
           <li><Link to="/servicios/seguros-y-beneficios" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Seguros y beneficios</Link></li>
           <li><Link to="/servicios/consultoria-empresarial" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Consultoría empresarial</Link></li>
           <li><Link to="/servicios/sistemas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sistemas y tecnología</Link></li>
+          <li><Link to="/por-que-enlace" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Por qué Enlace</Link></li>
           <li><Link to="/personas" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Personas</Link></li>
           <li><Link to="/aliados" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Aliados</Link></li>
           <li><Link to="/sucursales" className="text-sm text-slate-400 hover:text-[#D4AF37] transition-colors duration-200">Sucursales</Link></li>

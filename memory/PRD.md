@@ -116,9 +116,18 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Membresías movida a /servicios/seguros-y-beneficios (componente Membresias); /empresas/membresias redirige; quitada de Empresas (quedan 10 sectores). Menú/footer/leads/seo/sitemap actualizados.
 - Hero (texto fijado por el usuario): "…terminales punto de venta con trámites online rápidos…".
 
+## Seguros y beneficios estilo Vitae + Por qué Enlace + Calculadora TPV (2026-06-11)
+- /servicios/seguros-y-beneficios rediseñada como producto tipo vitaebeneficios.com (sin crédito/adelanto): hero con highlights (app, Membresía Cero, NOM-035, desde 1 colaborador), 8 categorías (seguros, asistencia médica, banca digital, entretenimiento, asistencias, pago de servicios, deporte, módulo empresarial), 5 planes seleccionables (Básica/Membresía Cero sin costo, Salud $49, Plus $99 destacado, Fitness $449, Black $1,899 — precios de REFERENCIA por colaborador/mes), cotizador rápido por plantilla (1-5 … +500) que lleva a /contacto con mensaje prellenado, banner NOM-035, aliados, FAQ. Componentes: Membresias.jsx + BeneficiosPlanes.jsx. Datos en MEMBRESIAS (content.js).
+- El usuario NO confirmó ramos/aseguradoras para una página aparte de seguros empresariales; redirigió a modelo Vitae. No existe /servicios/seguros-empresariales.
+- "Por qué Enlace": sección en Home (tras Servicios) y página /por-que-enlace (PorQueEnlace.jsx, Testimonios.jsx, data/porque.js): cifras DE MUESTRA (+350 negocios, +1,200 terminales, $0 asesoría, <24 h) con nota, bloque "¿Cómo ganamos dinero?" (comisión del aliado, mismas condiciones, todo por escrito, lo que no hacemos), 4 razones (solo página), 3 testimonios DE MUESTRA con nota. NAV + footer + seo + sitemap.
+- Calculadora TPV (CalculadoraTpv.jsx, data/calculadora.js): en /servicios/terminales-punto-de-venta y página /calculadora-tpv. Tasa Enlace 2.9% (fijada por el usuario), renta $0. Inputs: ventas, ticket, comisión actual, renta actual → ahorro mensual/anual, transacciones; CTA a /contacto con mensaje con cifras. Link en menú Servicios, footer y chip del hub.
+- Contacto.jsx acepta ?msg= para prellenar el mensaje (además de ?ref=). leads.js: contextos para /calculadora-tpv y /por-que-enlace.
+- Testing iteration_11.json: 100% (único hallazgo: palabra "crédito" en porque.js, corregida a "No prestamos dinero").
+
 ## Backlog / pendientes
+- P1: Sustituir cifras y testimonios de muestra en data/porque.js por datos reales (y quitar las notas statsNote/testimonialsNote).
+- P1: Confirmar precios reales de planes de beneficios (MEMBRESIAS.plans) y aseguradoras aliadas.
 - P1: FAQ global con precio/regulación; página Aliados con descripción por aliado.
-- P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.
 - P1: Quitar/corregir aliados Mastiket y Masaldo (dominios rotos).
 - P2: Sucursales → "Cobertura" si no hay sucursales reales.
 - P2: Logo horizontal final (PNG del usuario).

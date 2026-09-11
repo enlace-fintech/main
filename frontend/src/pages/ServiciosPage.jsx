@@ -7,6 +7,7 @@ import { Beneficios } from "@/components/site/Beneficios";
 import { Consultoria } from "@/components/site/Consultoria";
 import { Tpv } from "@/components/site/Tpv";
 import { TpvPasos } from "@/components/site/TpvPasos";
+import { CalculadoraTpv } from "@/components/site/CalculadoraTpv";
 import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { ComoEmpezar } from "@/components/site/ComoEmpezar";
 import { SistemasAliados } from "@/components/site/SistemasAliados";
@@ -44,6 +45,7 @@ const DEDICATED = {
   "terminales-punto-de-venta": () => (
     <>
       <Tpv />
+      <CalculadoraTpv />
       <TpvPasos />
     </>
   ),

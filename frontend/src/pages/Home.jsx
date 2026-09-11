@@ -2,6 +2,7 @@ import { Hero } from "@/components/site/Hero";
 import { AliadosMarquee } from "@/components/site/AliadosMarquee";
 import { Empresas } from "@/components/site/Empresas";
 import { ServiciosHub } from "@/components/site/ServiciosHub";
+import { PorQueEnlace } from "@/components/site/PorQueEnlace";
 import { WalletNegocios } from "@/components/site/WalletNegocios";
 import { PersonaFisica } from "@/components/site/PersonaFisica";
 import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
@@ -16,6 +17,7 @@ export default function Home() {
       <AliadosMarquee />
       <Empresas />
       <ServiciosHub />
+      <PorQueEnlace />
       <WalletNegocios />
       <PersonaFisica />
       <EcosistemaEnlace />

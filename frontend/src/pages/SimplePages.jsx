@@ -4,6 +4,28 @@ import { Aliados } from "@/components/site/Aliados";
 import { Sucursales } from "@/components/site/Sucursales";
 import { Blog } from "@/components/site/Blog";
 import { Contacto } from "@/components/site/Contacto";
+import { PorQueEnlace } from "@/components/site/PorQueEnlace";
+import { CalculadoraTpv } from "@/components/site/CalculadoraTpv";
+
+export function PorQuePage() {
+  return (
+    <>
+      <Breadcrumbs trail={[{ label: "Por qué Enlace" }]} />
+      <PorQueEnlace asHero />
+      <Contacto />
+    </>
+  );
+}
+
+export function CalculadoraPage() {
+  return (
+    <>
+      <Breadcrumbs trail={[{ label: "Servicios", href: "/servicios" }, { label: "Terminales punto de venta", href: "/servicios/terminales-punto-de-venta" }, { label: "Calculadora de ahorro" }]} />
+      <CalculadoraTpv asHero />
+      <Contacto />
+    </>
+  );
+}
 
 export function PersonasPage() {
   return (

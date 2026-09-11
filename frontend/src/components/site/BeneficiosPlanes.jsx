@@ -1,0 +1,83 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ArrowRight, Check, Star } from "lucide-react";
+import { MEMBRESIAS } from "../../data/content";
+import { contactHref } from "../../data/leads";
+import { Reveal, Overline } from "./Primitives";
+
+const mxn = new Intl.NumberFormat("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
+
+export const BeneficiosPlanes = () => {
+  const { pathname } = useLocation();
+  const [plan, setPlan] = useState("plus");
+  const [size, setSize] = useState(2);
+  const p = MEMBRESIAS.plans.find((x) => x.key === plan);
+  const s = MEMBRESIAS.sizes[size];
+  const msg = `Quiero cotizar el plan ${p.name} de seguros y beneficios para ${s.label} colaboradores. ¿Me pueden enviar una propuesta?`;
+  const href = `${contactHref(pathname)}&msg=${encodeURIComponent(msg)}`;
+
+  return (
+    <div className="mt-20">
+      <Reveal className="max-w-3xl">
+        <Overline>Membresías</Overline>
+        <h2 className="font-display mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-white">Un plan para cada colaborador, desde la Membresía Cero</h2>
+        <p className="mt-3 text-slate-400 leading-relaxed">{MEMBRESIAS.plansNote}</p>
+      </Reveal>
+
+      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+        {MEMBRESIAS.plans.map((pl, i) => {
+          const active = pl.key === plan;
+          return (
+            <Reveal key={pl.key} delay={i * 0.05}>
+              <button type="button" onClick={() => setPlan(pl.key)} data-testid={`plan-${pl.key}`} aria-pressed={active}
+                className={`relative flex h-full w-full flex-col rounded-2xl border p-6 text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 ${active ? "border-[#D4AF37] bg-[#D4AF37]/10" : "border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40"}`}>
+                {pl.featured && (
+                  <span className="absolute -top-3 left-5 inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#0B132B]"><Star size={11} /> Más elegido</span>
+                )}
+                {pl.tag && <span className="text-[0.62rem] uppercase tracking-[0.24em] text-[#D4AF37]">{pl.tag}</span>}
+                <h3 className="font-display text-xl font-bold text-white">{pl.name}</h3>
+                <div className="mt-3 flex flex-wrap items-baseline gap-x-1.5">
+                  <span className={`font-display font-black text-white ${pl.price ? "text-3xl" : "text-2xl"}`}>{pl.price ? mxn.format(pl.price) : pl.priceLabel}</span>
+                  <span className="text-xs text-slate-400">{pl.price ? "/ mes" : pl.period}</span>
+                </div>
+                {pl.yearly && <div className="mt-1 text-xs text-slate-500">{mxn.format(pl.yearly)} al año</div>}
+                <p className="mt-3 text-sm text-slate-400 leading-relaxed">{pl.desc}</p>
+                <ul className="mt-4 flex-1 space-y-2">
+                  {pl.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm text-slate-200"><Check size={14} className="mt-1 shrink-0 text-[#D4AF37]" />{f}</li>
+                  ))}
+                </ul>
+              </button>
+            </Reveal>
+          );
+        })}
+      </div>
+
+      <Reveal className="mt-8 rounded-3xl border border-[#D4AF37]/30 bg-gradient-to-br from-[#D4AF37]/10 to-transparent p-7 lg:p-9">
+        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end" data-testid="beneficios-cotizador">
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#D4AF37]">Cotización rápida</p>
+            <h3 className="font-display mt-2 text-xl font-bold text-white">¿Cuántos colaboradores tiene tu empresa?</h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {MEMBRESIAS.sizes.map((sz, i) => (
+                <button key={sz.label} type="button" onClick={() => setSize(i)} data-testid={`plantilla-${sz.label}`} aria-pressed={i === size}
+                  className={`rounded-full border px-4 py-2 text-sm transition-colors duration-200 ${i === size ? "border-[#D4AF37] bg-[#D4AF37] text-[#0B132B] font-bold" : "border-white/15 text-slate-200 hover:border-[#D4AF37]/60"}`}>
+                  {sz.label}
+                </button>
+              ))}
+            </div>
+            <p className="mt-5 text-sm text-slate-300" data-testid="cotizador-resumen">
+              Plan <span className="font-bold text-white">{p.name}</span> para <span className="font-bold text-white">{s.label}</span> colaboradores
+              {p.price > 0 && <> · desde <span className="font-bold text-[#D4AF37]">{mxn.format(p.price * s.min)}</span> al mes</>}
+              {p.price === 0 && <> · <span className="font-bold text-[#D4AF37]">sin costo para la empresa</span></>}
+            </p>
+          </div>
+          <Link to={href} data-testid="cotizador-cta" className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] transition-colors duration-200">
+            Solicitar cotización
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+          </Link>
+        </div>
+      </Reveal>
+    </div>
+  );
+};

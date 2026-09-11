@@ -1,0 +1,35 @@
+{
+  "summary": "Frontend-only verification of 3 new features (Seguros y Beneficios rediseño, Por qué Enlace, Calculadora TPV) + regression. 100% of functional test scenarios PASSED except one content-rule violation: page /por-que-enlace contains the word 'crédito' (in a disclaimer 'No otorgamos crédito, no custodiamos tu dinero...' in data/porque.js line 22). Everything else (all testids, plan/plantilla combinations, cotizador resumen strings, calc default+dynamic values, calc-sin-ahorro branch, CTA prefills with contact msg, nav links, footer links, ServiciosHub chip, section ordering on /servicios/terminales-punto-de-venta [tpv-section < calculadora-section < tpv-steps-section], distinct meta titles for /por-que-enlace and /calculadora-tpv, POST /api/contacto smoke, regression /contacto?ref=/empresas/restaurantes-y-bares) works as specified. No console errors on any tested page.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "/por-que-enlace (also embedded PorQueEnlace 'Cómo ganamos dinero' block)",
+        "issues": [
+          "Content-rule violation: contains the word 'crédito' in point 'Lo que no hacemos' -> 'No otorgamos crédito, no custodiamos tu dinero...'. Spec requires no page to mention 'crédito', 'préstamo' o 'adelanto de nómina'. Fix in /app/frontend/src/data/porque.js line 22 - reword, e.g., 'No otorgamos financiamiento, no custodiamos tu dinero y no cobramos por asesorar...' or 'No prestamos servicios financieros directos...'."
+        ]
+      }
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [
+    "Reword porque.js item 'Lo que no hacemos' to remove the word 'crédito' (spec forbids créditos/préstamos/adelantos on any new page). Verify with grep -riE 'cr[eé]dito|pr[eé]stamo|adelanto' /app/frontend/src/data /app/frontend/src/components/site"
+  ],
+  "critical_code_review_comments": [
+    "porque.js copy explicitly uses the forbidden term 'crédito' as disclaimer; even negations violate the strict content rule and can be replaced with 'financiamiento' or 'productos crediticios' → not allowed either; safer: 'No prestamos servicios financieros directamente'.",
+    "CalculadoraTpv fórmula verified: actual=ventas*tasa/100+renta, enlace=ventas*2.9/100+0, ahorro clamped to 0 with calc-sin-ahorro message. All numeric assertions match spec (150k/450/3.6/350 → $1,400 mes / $16,800 año / $5,750 hoy / $4,350 Enlace / 333 txns; 300k → $2,450 / $29,400 / 667; +tasa 2.5 with 300k → $0 & sin-ahorro visible).",
+    "BeneficiosPlanes resumen strings and href prefills verified: black+100-500 → 'desde $189,900 al mes'; basica → 'sin costo para la empresa'; cotizador-cta prefills input-interes='Beneficios para colaboradores' + input-mensaje 'Quiero cotizar el plan Básica ... 100-500 colaboradores'.",
+    "Home order: servicios-section (y=1928) precedes porque-section (y=3440); porque-razon-* is absent on Home and porque-link is present as expected.",
+    "TPV service page: order tpv-section (157) < calculadora-section (1752) < tpv-steps-section (2840). Calculadora rendered as h2 (asHero=false) on service page and h1 on /calculadora-tpv (asHero=true)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (1/1 smoke)", "frontend": "~97% (1 content-rule violation)"},
+  "test_credentials": "N/A",
+  "seed_data_creation": "Posted 1 doc to /api/contacto (nombre='TEST QA', email=delivered@resend.dev, id=6484df4a-5d65-43ac-a755-1c6507aa7940). Consider cleanup from Mongo collection 'contactos'.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "All 3 new features work end-to-end. Only pending fix: remove word 'crédito' from data/porque.js 'Lo que no hacemos' point. Direct page titles are distinct ('Por qué Enlace · Cómo trabajamos y cómo ganamos dinero · Enlace Fintech' and 'Calculadora de ahorro en comisiones TPV · Enlace Fintech'), however after client-side SPA navigation the title may not update immediately (e.g., after clicking servicio-more-calculadora-tpv chip the title remained 'Servicios para empresas · Enlace Fintech' — likely Seo component only updates on mount). Not required by spec (title only needs to differ from home on the pages themselves) but worth noting.",
+  "rca of the issue": "porque.js line 22 hardcodes the copy 'No otorgamos crédito, no custodiamos tu dinero y no cobramos por asesorar. Los fondos siempre están en entidades reguladas.' This is rendered in porque-modelo-3. To comply with content rule replace 'No otorgamos crédito' with 'No prestamos servicios financieros directos' (or similar) — no code changes elsewhere required."
+}

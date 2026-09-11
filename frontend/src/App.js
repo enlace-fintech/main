@@ -13,6 +13,8 @@ import {
   SucursalesPage,
   BlogPage,
   ContactoPage,
+  PorQuePage,
+  CalculadoraPage,
 } from "@/pages/SimplePages";
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
             <Route path="/wallet" element={<Navigate to="/servicios/plataforma-de-pagos" replace />} />
             <Route path="/caja" element={<Navigate to="/servicios/caja-y-comanda" replace />} />
             <Route path="/personas" element={<PersonasPage />} />
+            <Route path="/por-que-enlace" element={<PorQuePage />} />
+            <Route path="/calculadora-tpv" element={<CalculadoraPage />} />
             <Route path="/aliados" element={<AliadosPage />} />
             <Route path="/sucursales" element={<SucursalesPage />} />
             <Route path="/blog" element={<BlogPage />} />

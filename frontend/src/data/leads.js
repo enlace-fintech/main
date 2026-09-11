@@ -45,6 +45,11 @@ export const getLeadContext = (path = "/") => {
     return { interes, mensaje: `Me interesa ${tema}. ¿Me pueden dar más información?`, whatsapp: `Hola, me interesa ${tema}.` };
   }
   if (root === "servicios") return { interes: "", mensaje: "Me interesan sus servicios para empresas. ¿Me pueden asesorar?", whatsapp: "Hola, me interesan sus servicios para empresas." };
+  if (root === "calculadora-tpv") {
+    const [interes, tema] = SERVICIO["terminales-punto-de-venta"];
+    return { interes, mensaje: `Usé la calculadora de ahorro y me interesan ${tema}. ¿Me pueden cotizar?`, whatsapp: `Hola, usé la calculadora de ahorro y me interesan ${tema}.` };
+  }
+  if (root === "por-que-enlace") return { interes: "", mensaje: "Quiero un diagnóstico gratuito para mi empresa. ¿Me pueden asesorar?", whatsapp: "Hola, quiero un diagnóstico gratuito para mi empresa." };
   if (root === "personas") return { interes: "Tarjeta para personas", mensaje: "Quiero una tarjeta nominativa y cuenta para recibir mi nómina.", whatsapp: "Hola, quiero una tarjeta nominativa para personas." };
   return DEFAULT;
 };

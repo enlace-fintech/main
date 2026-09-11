@@ -15,6 +15,8 @@ const STATIC = {
   },
   "/servicios": { title: `Servicios para empresas${suffix}`, description: SERVICIOS_HUB.description, image: SERVICIOS_HUB.image },
   "/personas": { title: `Tarjeta nominativa y pagos para personas${suffix}`, description: PERSONA.description, image: BRAND.heroPerson },
+  "/por-que-enlace": { title: `Por qué Enlace · Cómo trabajamos y cómo ganamos dinero${suffix}`, description: "Un broker que solo gana cuando tu negocio gana: asesoría sin costo, comisión pagada por el aliado, condiciones iguales o mejores y todo por escrito. Conoce nuestras cifras y casos.", image: BRAND.heroDashboard },
+  "/calculadora-tpv": { title: `Calculadora de ahorro en comisiones TPV${suffix}`, description: "Ingresa tus ventas mensuales con tarjeta y tu comisión actual; descubre cuánto ahorras al mes y al año con una terminal Enlace sin renta ni mínimos, con tasa de referencia de 2.9%.", image: TPV.image },
   "/aliados": { title: `Aliados estratégicos${suffix}`, description: ALIADOS.description, image: BRAND.logo },
   "/sucursales": { title: `Sucursales y cobertura${suffix}`, description: SUCURSALES.description, image: SUCURSALES.image },
   "/blog": { title: `Blog · Finanzas y operación para empresas en México${suffix}`, description: "Guías prácticas sobre terminales sin banco, REPSE, pagos cripto, tarjetas nominativas y SPEI 24/7 para empresas mexicanas.", image: BLOG.posts[0].image },
