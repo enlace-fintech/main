@@ -1,5 +1,4 @@
 import * as Icons from "lucide-react";
-import { CreditCard } from "lucide-react";
 import { PERSONA } from "../../data/content";
 import { Reveal, Overline } from "./Primitives";
 
@@ -29,20 +28,6 @@ export const PersonaFisica = () => (
               alt="Persona con su tarjeta nominativa Enlace Fintech"
               className="relative h-[440px] w-full rounded-2xl border border-white/10 object-cover shadow-[0_24px_70px_rgba(0,0,0,0.6)]"
             />
-            <div
-              data-testid="persona-card"
-              className="absolute -bottom-6 -left-6 w-56 rounded-xl bg-gradient-to-br from-[#1a2547] to-[#0B132B] border border-[#D4AF37]/30 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
-            >
-              <div className="flex items-center justify-between">
-                <CreditCard className="text-[#D4AF37]" size={20} strokeWidth={1.5} />
-                <div className="h-6 w-8 rounded bg-[#D4AF37]/80" />
-              </div>
-              <div className="mt-5 font-display text-sm tracking-[0.18em] text-white">5241 •••• 8830</div>
-              <div className="mt-3 flex items-end justify-between">
-                <div className="text-[0.6rem] uppercase tracking-widest text-slate-400">Nominativa</div>
-                <div className="font-display text-sm font-black italic text-white/90">VISA</div>
-              </div>
-            </div>
           </div>
         </Reveal>
       </div>
