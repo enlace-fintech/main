@@ -440,8 +440,8 @@ export const MEMBRESIAS = {
     { icon: "Users", text: "Desde 1 colaborador, sin plantilla mínima" },
   ],
   categories: [
-    { icon: "ShieldCheck", image: "/img/cat-seguros.webp", title: "Seguros", items: ["Gastos médicos mayores", "Vida", "Accidentes personales", "Funerario"] },
-    { icon: "Stethoscope", image: "/img/cat-medica.webp", title: "Asistencia médica", items: ["Orientación médica 24/7", "Nutricional", "Psicológica y emocional"] },
+    { icon: "ShieldCheck", image: "/img/cat-seguros.webp", title: "Seguros", items: ["Accidentes personales", "Vida", "Gastos médicos mayores", "Protección funeraria"] },
+    { icon: "Stethoscope", image: "/img/cat-medica.webp", title: "Asistencia médica", items: ["Orientación médica 24/7", "Nutricional y emocional", "Médico a domicilio", "Ambulancia de urgencia"] },
     { icon: "WalletCards", image: "/img/cat-banca.webp", title: "Banca digital", items: ["Tarjeta nominativa de nómina", "Caja y fondo de ahorro", "Monederos electrónicos"] },
     { icon: "Clapperboard", image: "/img/cat-entretenimiento.webp", title: "Entretenimiento", items: ["Cine", "Música y video en streaming", "Red de descuentos"] },
     { icon: "LifeBuoy", image: "/img/cat-asistencias.webp", title: "Servicios de asistencia", items: ["Asistencia vial", "Asistencia para mascotas", "Asistencia en el hogar"] },
@@ -451,7 +451,7 @@ export const MEMBRESIAS = {
   ],
   plansNote: "Precios de referencia por colaborador al mes, IVA incluido. La cotización final depende del tamaño de la plantilla y las coberturas elegidas.",
   plans: [
-    { key: "salud", image: "/img/plan-salud.webp", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos y pago de servicios", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales", "Asistencia funeraria"] },
+    { key: "salud", image: "/img/plan-salud.webp", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos y pago de servicios", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales ($100,000 MXN)", "Ambulancia de urgencia (1 evento al año)", "Protección funeraria"] },
     { key: "plus", image: "/img/plan-plus.webp", name: "Plus", price: 99, yearly: 1089, featured: true, desc: "El equilibrio ideal entre protección, asistencias y entretenimiento.", features: ["Todo lo de Salud", "Asistencia vial, hogar y mascotas", "Seguro de vida", "Descuentos en cine y streaming"] },
     { key: "fitness", image: "/img/plan-fitness.webp", name: "Fitness", price: 449, yearly: 5298, desc: "Bienestar físico con acceso a gimnasios y estudios en todo el país.", features: ["Todo lo de Plus", "Acceso a red de gimnasios", "Clases en línea y acondicionamiento", "Programa de bienestar integral"] },
     { key: "black", image: "/img/plan-black.webp", name: "Black", price: 1899, yearly: 22408, desc: "Cobertura premium para directivos y puestos clave.", features: ["Todo lo de Fitness", "Gastos médicos mayores colectivo", "Coberturas ampliadas de vida y accidentes", "Ejecutivo dedicado para la empresa"] },
@@ -491,14 +491,52 @@ export const MEMBRESIAS = {
     { cat: "Descuentos y entretenimiento", icon: "Tags", desc: "Red de descuentos en comercios, cine, streaming y telefonía.", items: ["MAS Beneficios", "Bwigo", "Alquimia Digital"] },
     { cat: "Gimnasios y deporte", icon: "Dumbbell", desc: "Cadenas y estudios en todo México con una sola membresía.", items: ["Smart Fit", "Sports World", "Sport City", "Snap Fitness", "9Round", "TotalPass", "Fitpass", "Club Deportivo", "AMIS Fitness Center", "Club Canadá", "Dexfit", "Fededome", "Fitness Club", "Green 21", "Maitan Fitness", "Rolo", "Triiibu"] },
   ],
-  faq: [
-    { q: "¿Desde cuántos colaboradores puedo contratar?", a: "Desde 1 colaborador; el precio por persona mejora conforme crece la plantilla (rangos 1-5, 5-10, 10-50, 50-100 y 100-500)." },
-    { q: "¿Cómo me ayuda con la NOM-035?", a: "El módulo empresarial permite aplicar las encuestas de factores de riesgo psicosocial, dar seguimiento y ofrecer orientación psicológica, con evidencia lista para la STPS." },
-    { q: "¿Es deducible para la empresa?", a: "Cuando la empresa paga el beneficio, puede tratarse como previsión social deducible dentro de los límites de la LISR; lo revisamos con tu contador." },
-    { q: "¿Qué pasa si un colaborador se da de baja?", a: "Lo das de baja desde la plataforma y el cobro se ajusta en el siguiente periodo, sin penalizaciones." },
+  faqGroups: [
+    {
+      title: "Sobre el programa",
+      items: [
+        { q: "¿Qué es el programa de seguros y beneficios de Enlace?", a: "Es una membresía para tus colaboradores que integra protección (seguro de accidentes personales y protección funeraria), prevención (orientación médica, nutricional y emocional), red de descuentos, gimnasios y una tarjeta nominativa de nómina, todo administrado por Enlace con un solo ejecutivo." },
+        { q: "¿Quién puede ser beneficiario?", a: "Cualquier colaborador mayor de edad dado de alta por la empresa. La empresa elige el plan y quién lo paga: la empresa, el colaborador vía descuento en nómina o un esquema mixto." },
+        { q: "¿Desde cuántos colaboradores puedo contratar?", a: "Desde 1 colaborador; el precio por persona mejora conforme crece la plantilla (rangos 1-5, 5-10, 10-50, 50-100 y 100-500)." },
+        { q: "¿Cómo se contrata y en cuánto tiempo se activa?", a: "Nos envías tu layout de nómina, firmamos el convenio y damos de alta a la plantilla. Cada colaborador recibe su carta de bienvenida por correo con sus números de asistencia, y a partir de ese momento puede usar los servicios." },
+        { q: "¿Es deducible para la empresa?", a: "Cuando la empresa paga el beneficio puede tratarse como previsión social deducible dentro de los límites de la LISR; lo revisamos con tu contador." },
+        { q: "¿Cómo doy de baja a un colaborador o cancelo el servicio?", a: "Las bajas individuales se hacen desde el módulo empresarial y el cobro se ajusta al siguiente periodo. Para cancelar el convenio basta un aviso por escrito con 30 días de anticipación a tu siguiente pago." },
+        { q: "¿Necesita el colaborador un smartphone?", a: "No. Los servicios de asistencia se solicitan por teléfono con los números de su carta de bienvenida y los descuentos pueden usarse con la tarjeta física del programa." },
+      ],
+    },
+    {
+      title: "Seguro y asistencias médicas",
+      items: [
+        { q: "¿Qué cubre el seguro de accidentes personales?", a: "Protege al titular ante un accidente (acción súbita, fortuita y violenta de una fuerza externa): $100,000 MXN por fallecimiento accidental, $100,000 MXN por invalidez total y permanente, $100,000 MXN por pérdidas orgánicas (escala B) y hasta $15,000 MXN de reembolso de gastos médicos por accidente. Las sumas dependen de la póliza del plan contratado." },
+        { q: "¿Qué hago en caso de accidente?", a: "El colaborador llama al centro de atención, recibe la lista de documentos y las indicaciones de llenado, y coordinamos con la aseguradora el envío de documentos en digital y original para el reembolso o la indemnización." },
+        { q: "¿Cómo funciona la orientación médica telefónica?", a: "Un equipo formado únicamente por médicos atiende 24 horas los 365 días del año dudas sobre síntomas, molestias que no requieran urgencia y uso de medicamentos; también concierta citas con médicos cercanos a precio preferencial." },
+        { q: "¿Incluye orientación nutricional y emocional?", a: "Sí. Orientación emocional 24/7 (duelo, apoyo familiar y personal, referencia a especialistas) y orientación nutricional de lunes a viernes de 9 a 19 h (dietas, rutinas, cálculo de masa corporal, desórdenes alimenticios no críticos)." },
+        { q: "¿Cuándo puede ir un médico a domicilio?", a: "Cuando el colaborador necesite atención o receta médica y no pueda acudir a su médico por estar imposibilitado física o psíquicamente; se coordina desde el centro de atención." },
+        { q: "¿A cuántas ambulancias tiene derecho?", a: "Incluye 1 evento de traslado de urgencia sin costo al año, sujeto a valoración del equipo médico. Los traslados programados (hospital–domicilio, laboratorio, etc.) se coordinan con costo preferencial a cargo del afiliado." },
+      ],
+    },
+    {
+      title: "Protección funeraria",
+      items: [
+        { q: "¿Qué incluye la protección funeraria?", a: "Atención y asesoría personalizada 24/7; primer traslado del lugar del fallecimiento a la funeraria o domicilio; segundo traslado al panteón o crematorio; asesoría ante el MP; trámites gubernamentales (acta de defunción); arreglo estético; facilidades para servicios religiosos; ataúd metálico básico; sala básica o equipo de velación a domicilio; inhumación o cremación con entrega en urna básica." },
+        { q: "¿Hay periodo de espera o límites?", a: "Aplica un periodo de espera de 90 días naturales desde el alta del titular. Los traslados cubren hasta 30 km dentro de la misma localidad o área conurbada; el kilómetro excedente tiene precio preferencial." },
+        { q: "¿Qué hacer en caso de fallecimiento de un afiliado?", a: "La familia llama al centro de atención para notificar el fallecimiento; se le informan los documentos y pasos a seguir y, a partir de ese momento, se le acompaña en la organización de todo el servicio." },
+      ],
+    },
+    {
+      title: "Descuentos y tarjeta",
+      items: [
+        { q: "¿Dónde aceptan la red de descuentos?", a: "En más de 8,500 establecimientos en más de 250 ciudades del país, identificados con el logotipo del programa MÁS Beneficios. El colaborador ubica los comercios cercanos, selecciona el cupón y lo presenta en el establecimiento." },
+        { q: "¿Qué pasa si un comercio no aplica el descuento?", a: "Conserva el ticket y llama al centro de atención para activar la Garantía de satisfacción: se le regala una cortesía de igual o mayor valor al descuento no aplicado. Aplican restricciones." },
+        { q: "¿Cómo funciona la tarjeta nominativa de nómina?", a: "Es una tarjeta de débito a nombre del colaborador donde recibe su nómina y beneficios por SPEI. Permite compras en comercios y en línea, retiros en cajeros (con la comisión de la red) y bloqueo/desbloqueo inmediato en caso de robo o extravío, con reposición sin trámites en sucursal." },
+        { q: "¿Tiene límites o vigencia la tarjeta?", a: "Los límites de abono, compra en línea y retiro dependen del emisor y del nivel de cuenta; la vigencia del plástico es de 2 años y se avisa por correo o SMS antes del vencimiento para la reposición y traspaso de saldo." },
+      ],
+    },
   ],
   cta: { text: "Quiero cotizar beneficios para mi equipo", href: "/contacto" },
 };
+
+MEMBRESIAS.faq = MEMBRESIAS.faqGroups.flatMap((g) => g.items);
 
 export const ALIADOS = {
   overline: "Aliados",

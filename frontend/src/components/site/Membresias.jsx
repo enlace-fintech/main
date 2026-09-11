@@ -4,6 +4,7 @@ import { MEMBRESIAS } from "../../data/content";
 import { Reveal, Overline, ContactLink } from "./Primitives";
 import { SectorExtras } from "./SectorExtras";
 import { BeneficiosPlanes } from "./BeneficiosPlanes";
+import { BeneficiosFaq } from "./BeneficiosFaq";
 
 export const Membresias = () => (
   <section id="membresias" data-testid="membresias-section" className="relative py-16 lg:py-24">
@@ -142,7 +143,8 @@ export const Membresias = () => (
         </div>
         <p className="mt-4 text-xs text-slate-500">* Marcas propiedad de sus titulares; disponibilidad sujeta a convenio vigente y a la cobertura de cada plan.</p>
       </div>
+      <BeneficiosFaq />
     </div>
-    <SectorExtras faq={MEMBRESIAS.faq} cta={MEMBRESIAS.cta} testid="membresias" />
+    <SectorExtras cta={MEMBRESIAS.cta} testid="membresias" />
   </section>
 );
