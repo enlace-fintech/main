@@ -40,7 +40,7 @@ export const NAV = [
       { label: "Tarjetas empresariales", href: "/servicios/tarjetas" },
       { label: "Nómina y dispersión", href: "/servicios/nomina-y-dispersion" },
       { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
-      { label: "Cobros en cripto", href: "/servicios/cripto" },
+      { label: "Cobros y pagos cripto", href: "/servicios/cripto" },
       { label: "Seguros y beneficios", href: "/servicios/seguros-y-beneficios" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
       { label: "Sistemas y tecnología", href: "/servicios/sistemas" },
@@ -354,7 +354,7 @@ export const MEDICOS = {
 };
 
 export const CRIPTO = {
-  overline: "Servicios · Cripto",
+  overline: "Servicios · Cobros y pagos cripto",
   title: "Cobra en cripto y recibe pesos en tu banco, sin custodiar ni especular",
   description:
     "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos integración de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
@@ -378,6 +378,7 @@ export const CRIPTO = {
     {
       name: "FlexPei",
       url: "https://flexpei.com",
+      image: "/img/cripto-flexpei.webp",
       tag: "Integrador de activos digitales",
       desc: "Gestiona todos tus pagos empresariales desde una sola plataforma: integración de activos digitales, transferencias SPEI 24/7 y pagos internacionales.",
       bullets: [
@@ -390,6 +391,7 @@ export const CRIPTO = {
     {
       name: "FluxiPay",
       url: "https://fluxipay.com",
+      image: "/img/cripto-fluxipay.webp",
       tag: "Integrador para cobros cripto en e-commerce",
       desc: "Pasarela para aceptar USDT, BTC y ETH en tu e-commerce y recibir el pago en tu moneda local, con liquidación a tu banco.",
       bullets: [
@@ -400,6 +402,8 @@ export const CRIPTO = {
       ],
     },
   ],
+  flowImage: "/img/cripto-flujo.webp",
+  whyImage: "/img/cripto-internacional.webp",
   flowReceive: {
     title: "Recibe cripto",
     steps: [
@@ -935,7 +939,7 @@ export const SERVICIOS_HUB = {
   ],
   more: [
     { title: "Calculadora de ahorro TPV", href: "/calculadora-tpv" },
-    { title: "Cobros en cripto", href: "/servicios/cripto" },
+    { title: "Cobros y pagos cripto", href: "/servicios/cripto" },
     { title: "Caja & comanda (InfoCaja)", href: "/servicios/caja-y-comanda" },
   ],
 };

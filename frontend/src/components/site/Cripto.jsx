@@ -53,7 +53,12 @@ export const Cripto = () => (
       <div className="mt-16 grid gap-6 md:grid-cols-2">
         {CRIPTO.partners.map((p, i) => (
           <Reveal key={p.name} delay={i * 0.08}>
-            <div data-testid={`cripto-partner-${i}`} className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-8 hover:border-[#D4AF37]/40 transition-colors duration-300">
+            <div data-testid={`cripto-partner-${i}`} className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40 transition-colors duration-300">
+              <div className="relative h-48 overflow-hidden">
+                <img loading="lazy" decoding="async" src={p.image} alt={p.name} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0e1836] via-transparent to-transparent" />
+              </div>
+              <div className="p-8 pt-5">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
@@ -79,6 +84,7 @@ export const Cripto = () => (
                   </li>
                 ))}
               </ul>
+              </div>
             </div>
           </Reveal>
         ))}
@@ -87,6 +93,14 @@ export const Cripto = () => (
       {/* Cómo funciona */}
       <Reveal delay={0.05}>
         <h3 className="font-display mt-16 text-2xl font-bold tracking-tight text-white">¿Cómo funciona?</h3>
+        <div className="relative mt-6 h-56 lg:h-72 overflow-hidden rounded-2xl border border-white/10">
+          <img loading="lazy" decoding="async" src={CRIPTO.flowImage} alt="Recibe cripto y liquida en pesos" className="h-full w-full object-cover" />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#0e1836] via-[#0e1836]/40 to-transparent" />
+          <div className="absolute inset-y-0 left-0 flex max-w-md flex-col justify-center p-8">
+            <span className="text-xs uppercase tracking-[0.24em] text-[#D4AF37]">Cripto → pesos</span>
+            <p className="font-display mt-2 text-xl lg:text-2xl font-bold text-white leading-snug">Tu cliente paga en USDT, BTC o ETH; tú recibes pesos en tu cuenta en 24–48 h.</p>
+          </div>
+        </div>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <FlowColumn icon={Wallet} flow={CRIPTO.flowReceive} testid="cripto-flow-receive" />
           <FlowColumn icon={ArrowDownToLine} flow={CRIPTO.flowSettle} testid="cripto-flow-settle" />
@@ -96,14 +110,17 @@ export const Cripto = () => (
       {/* ¿Por qué elegirnos? */}
       <Reveal delay={0.1}>
         <h3 className="font-display mt-16 text-2xl font-bold tracking-tight text-white">¿Por qué elegirnos?</h3>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {CRIPTO.why.map((w, i) => (
-            <div key={w.title} data-testid={`cripto-why-${i}`} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-              <Check size={18} className="text-[#D4AF37]" strokeWidth={2} />
-              <h4 className="font-display mt-3 text-base font-bold text-white">{w.title}</h4>
-              <p className="mt-2 text-sm text-slate-400 leading-relaxed">{w.desc}</p>
-            </div>
-          ))}
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_1.4fr] items-stretch">
+          <img loading="lazy" decoding="async" src={CRIPTO.whyImage} alt="Cobra a clientes internacionales" className="h-full min-h-[260px] w-full rounded-2xl border border-white/10 object-cover" />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {CRIPTO.why.map((w, i) => (
+              <div key={w.title} data-testid={`cripto-why-${i}`} className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                <Check size={18} className="text-[#D4AF37]" strokeWidth={2} />
+                <h4 className="font-display mt-3 text-base font-bold text-white">{w.title}</h4>
+                <p className="mt-2 text-sm text-slate-400 leading-relaxed">{w.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Reveal>
     </div>

@@ -28,7 +28,7 @@ const LABELS = {
   "consultoria-empresarial": "Consultoría empresarial",
   sistemas: "Sistemas y tecnología",
   "caja-y-comanda": "Caja & comanda",
-  cripto: "Cobros en cripto",
+  cripto: "Cobros y pagos cripto",
   "seguros-y-beneficios": "Seguros y beneficios para colaboradores",
 };
 
