@@ -449,15 +449,15 @@ export const MEMBRESIAS = {
     { icon: "LifeBuoy", title: "Servicios de asistencia", items: ["Asistencia vial", "Asistencia para mascotas", "Asistencia en el hogar"] },
     { icon: "Receipt", title: "Pago de servicios", items: ["Luz, agua y gas", "Internet y cable", "Telefonía y otros"] },
     { icon: "Dumbbell", title: "Deporte", items: ["Red de gimnasios", "Acondicionamiento físico", "Clases en línea"] },
-    { icon: "Building2", title: "Módulo empresarial", items: ["Recibos de nómina", "Comunicados internos", "Encuestas NOM-035"] },
+    { icon: "Building2", title: "Módulo empresarial", items: ["Recibos de nómina", "Comunicados internos", "Encuestas NOM-035", "Reloj checador biométrico"] },
   ],
   plansNote: "Precios de referencia por colaborador al mes, IVA incluido. La cotización final depende del tamaño de la plantilla y las coberturas elegidas.",
   plans: [
-    { key: "basica", name: "Básica", tag: "Membresía Cero", price: 0, priceLabel: "Sin costo", period: "para la empresa", desc: "El colaborador la activa por descuento en nómina; tú solo das de alta tu plantilla.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos en comercios", "Pago de servicios desde la app", "Recibos de nómina y comunicados"] },
-    { key: "salud", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Todo lo de Básica", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales", "Asistencia funeraria"] },
-    { key: "plus", name: "Plus", price: 99, yearly: 1089, featured: true, desc: "El equilibrio ideal entre protección, asistencias y entretenimiento.", features: ["Todo lo de Salud", "Asistencia vial, hogar y mascotas", "Seguro de vida", "Descuentos en cine y streaming"] },
-    { key: "fitness", name: "Fitness", price: 449, yearly: 5298, desc: "Bienestar físico con acceso a gimnasios y estudios en todo el país.", features: ["Todo lo de Plus", "Acceso a red de gimnasios", "Clases en línea y acondicionamiento", "Programa de bienestar integral"] },
-    { key: "black", name: "Black", price: 1899, yearly: 22408, desc: "Cobertura premium para directivos y puestos clave.", features: ["Todo lo de Fitness", "Gastos médicos mayores colectivo", "Coberturas ampliadas de vida y accidentes", "Ejecutivo dedicado para la empresa"] },
+    { key: "basica", image: "/img/plan-basica.webp", name: "Básica", tag: "Membresía Cero", price: 0, priceLabel: "Sin costo", period: "para la empresa", desc: "El colaborador la activa por descuento en nómina; tú solo das de alta tu plantilla.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos en comercios", "Pago de servicios desde la app", "Recibos de nómina y comunicados"] },
+    { key: "salud", image: "/img/plan-salud.webp", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Todo lo de Básica", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales", "Asistencia funeraria"] },
+    { key: "plus", image: "/img/plan-plus.webp", name: "Plus", price: 99, yearly: 1089, featured: true, desc: "El equilibrio ideal entre protección, asistencias y entretenimiento.", features: ["Todo lo de Salud", "Asistencia vial, hogar y mascotas", "Seguro de vida", "Descuentos en cine y streaming"] },
+    { key: "fitness", image: "/img/plan-fitness.webp", name: "Fitness", price: 449, yearly: 5298, desc: "Bienestar físico con acceso a gimnasios y estudios en todo el país.", features: ["Todo lo de Plus", "Acceso a red de gimnasios", "Clases en línea y acondicionamiento", "Programa de bienestar integral"] },
+    { key: "black", image: "/img/plan-black.webp", name: "Black", price: 1899, yearly: 22408, desc: "Cobertura premium para directivos y puestos clave.", features: ["Todo lo de Fitness", "Gastos médicos mayores colectivo", "Coberturas ampliadas de vida y accidentes", "Ejecutivo dedicado para la empresa"] },
   ],
   sizes: [
     { label: "1-5", min: 1 },
@@ -472,7 +472,15 @@ export const MEMBRESIAS = {
     { icon: "Scale", title: "¿Quién paga?", desc: "Tres esquemas: la empresa (deducible como previsión social), el colaborador vía descuento en nómina con la Membresía Cero, o mixto. Te cotizamos por colaborador al mes según el plan." },
     { icon: "Rocket", title: "¿Cómo se implementa?", desc: "Alta masiva desde tu layout de nómina, tarjetas en pocos días, módulo empresarial para recibos y comunicados y un solo ejecutivo para todo." },
   ],
+  reloj: {
+    image: "/img/reloj-checador.webp",
+    overline: "Módulo empresarial",
+    title: "Reloj checador biométrico integrado con tu nómina",
+    desc: "Registro de asistencia por huella o reconocimiento facial, sincronizado con la app de beneficios y con tu layout de nómina: incidencias, retardos y horas extra listas para dispersar, sin capturas manuales.",
+    bullets: ["Huella y reconocimiento facial", "Reportes de asistencia e incidencias en tiempo real", "Integración con nómina y dispersión SPEI", "Apoya el cumplimiento de la NOM-035 y la LFT"],
+  },
   nom035: {
+    image: "/img/nom035.webp",
     kicker: "Adiós estrés laboral",
     title: "Tu programa integral que te apoya en el cumplimiento de la NOM-035",
     desc: "La NOM-035-STPS obliga a identificar y prevenir factores de riesgo psicosocial en el trabajo. Con el módulo empresarial aplicas las encuestas, das seguimiento a resultados y ofreces orientación psicológica a tu equipo, con evidencia lista para una inspección.",
@@ -886,7 +894,7 @@ export const SERVICIOS_HUB = {
     {
       icon: "Boxes",
       title: "Sistemas y tecnología",
-      desc: "Reservaciones, boletos, caja, cashless, call center, gestoría de trámites y desarrollo de software a medida, integrados con tus cobros.",
+      desc: "Reservaciones, boletos, caja, cashless, call center, reloj checador biométrico, gestoría de trámites y software a medida, integrados con tus cobros.",
       href: "/servicios/sistemas",
       cta: "Ver sistemas",
     },
@@ -902,7 +910,7 @@ export const SISTEMAS = {
   overline: "Sistemas y tecnología",
   title: "Los sistemas que hacen funcionar tu negocio, con un solo aliado",
   description:
-    "Además de las soluciones financieras, en Enlace Fintech te conectamos con las plataformas tecnológicas de nuestro grupo y aliados: reservaciones, boletos, caja, call center, gestoría de trámites y desarrollo de software a medida. Un solo interlocutor para integrarlo todo con tus cobros y pagos.",
+    "Además de las soluciones financieras, en Enlace Fintech te conectamos con las plataformas tecnológicas de nuestro grupo y aliados: reservaciones, boletos, caja, call center, reloj checador biométrico, gestoría de trámites y desarrollo de software a medida. Un solo interlocutor para integrarlo todo con tus cobros y pagos.",
   image: "/img/hero-dashboard.webp",
   items: [
     { icon: "CalendarCheck", name: "Más Mesa", domain: "masmesa.com.mx", url: "https://masmesa.com.mx", tag: "Reservaciones para restaurantes", desc: "Reservaciones en línea con mapa interactivo de mesas, disponibilidad en tiempo real y feedback de tus clientes.", forWhom: "Restaurantes, bares y cafeterías", internal: "/empresas/restaurantes-y-bares" },
@@ -911,6 +919,7 @@ export const SISTEMAS = {
     { icon: "Headset", name: "Callmarket", domain: "callmarket.cc", url: "https://callmarket.cc", tag: "Sistema de call center", desc: "Campañas automatizadas, IVR, encuestas telefónicas y cobro por teléfono integrado con procesadores de pago.", forWhom: "Call centers, agencias de viajes y ventas telefónicas", internal: "/empresas/call-center" },
     { icon: "FileCheck", name: "MisTrámites", domain: "mistramites.mx", url: "https://mistramites.mx", tag: "Gestoría de trámites", desc: "Más de 60 trámites mexicanos con seguimiento 24/7: constitución de empresas, RFC, e.firma, IMSS y más.", forWhom: "Empresas nuevas y en crecimiento", internal: "/servicios/consultoria-empresarial" },
     { icon: "Nfc", name: "Masaldo", domain: "masaldo.com.mx", url: "https://masaldo.com.mx", tag: "Cashless RFID", desc: "Recarga de saldo en brazaletes y monederos digitales para pagos sin efectivo dentro de recintos, eventos y clubes.", forWhom: "Eventos, festivales, clubes y parques", internal: "/empresas/eventos" },
+    { icon: "Fingerprint", name: "Reloj checador biométrico", tag: "Control de asistencia", image: "/img/reloj-checador.webp", desc: "Checador por huella o reconocimiento facial con reportes de asistencia, retardos y horas extra, integrado con la nómina y el módulo empresarial de beneficios.", forWhom: "Empresas con plantilla en sitio, sucursales y turnos", internal: "/servicios/seguros-y-beneficios" },
     { icon: "Code2", name: "Acxor", domain: "acxor.com", url: "https://acxor.com", tag: "Desarrollo de software", desc: "Ingeniería de software a medida: apps web y móviles, integraciones con bancos y procesadores de pago, automatización, seguridad y soporte 24/7.", forWhom: "Empresas que necesitan tecnología propia en producción", internal: "/contacto" },
   ],
 };

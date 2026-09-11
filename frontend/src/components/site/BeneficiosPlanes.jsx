@@ -30,9 +30,11 @@ export const BeneficiosPlanes = () => {
           return (
             <Reveal key={pl.key} delay={i * 0.05}>
               <button type="button" onClick={() => setPlan(pl.key)} data-testid={`plan-${pl.key}`} aria-pressed={active}
-                className={`relative flex h-full w-full flex-col rounded-2xl border p-6 text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 ${active ? "border-[#D4AF37] bg-[#D4AF37]/10" : "border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40"}`}>
+                className={`relative flex h-full w-full flex-col overflow-hidden rounded-2xl border text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 ${active ? "border-[#D4AF37] bg-[#D4AF37]/10" : "border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40"}`}>
+                <img loading="lazy" decoding="async" src={pl.image} alt={`Plan ${pl.name}`} className="h-36 w-full object-cover" />
+                <div className="flex flex-1 flex-col p-6">
                 {pl.featured && (
-                  <span className="absolute -top-3 left-5 inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#0B132B]"><Star size={11} /> Más elegido</span>
+                  <span className="absolute left-5 top-4 inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#0B132B]"><Star size={11} /> Más elegido</span>
                 )}
                 {pl.tag && <span className="text-[0.62rem] uppercase tracking-[0.24em] text-[#D4AF37]">{pl.tag}</span>}
                 <h3 className="font-display text-xl font-bold text-white">{pl.name}</h3>
@@ -47,6 +49,7 @@ export const BeneficiosPlanes = () => {
                     <li key={f} className="flex items-start gap-2 text-sm text-slate-200"><Check size={14} className="mt-1 shrink-0 text-[#D4AF37]" />{f}</li>
                   ))}
                 </ul>
+                </div>
               </button>
             </Reveal>
           );

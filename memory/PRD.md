@@ -122,7 +122,7 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - "Por qué Enlace": sección en Home (tras Servicios) y página /por-que-enlace (PorQueEnlace.jsx, Testimonios.jsx, data/porque.js): cifras DE MUESTRA (+350 negocios, +1,200 terminales, $0 asesoría, <24 h) con nota, bloque "¿Cómo ganamos dinero?" (comisión del aliado, mismas condiciones, todo por escrito, lo que no hacemos), 4 razones (solo página), 3 testimonios DE MUESTRA con nota. NAV + footer + seo + sitemap.
 - Calculadora TPV (CalculadoraTpv.jsx, data/calculadora.js): en /servicios/terminales-punto-de-venta y página /calculadora-tpv. Tasa Enlace 2.9% (fijada por el usuario), renta $0. Inputs: ventas, ticket, comisión actual, renta actual → ahorro mensual/anual, transacciones; CTA a /contacto con mensaje con cifras. Link en menú Servicios, footer y chip del hub.
 - Contacto.jsx acepta ?msg= para prellenar el mensaje (además de ?ref=). leads.js: contextos para /calculadora-tpv y /por-que-enlace.
-- Testing iteration_11.json: 100% (único hallazgo: palabra "crédito" en porque.js, corregida a "No prestamos dinero").
+- Reloj checador biométrico (2026-06-11): añadido como servicio en SISTEMAS.items (sin URL externa → badge "Enlace"), en Módulo empresarial y bloque propio MEMBRESIAS.reloj en /servicios/seguros-y-beneficios. Imágenes generadas (IA) y localizadas en public/img: plan-basica/salud/plus/fitness/black.webp (tarjetas de planes), nom035.webp (banner), reloj-checador.webp.
 
 ## Backlog / pendientes
 - P1: Sustituir cifras y testimonios de muestra en data/porque.js por datos reales (y quitar las notas statsNote/testimonialsNote).

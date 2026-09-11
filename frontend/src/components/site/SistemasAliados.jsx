@@ -12,9 +12,13 @@ const Card = ({ s, i, compact }) => {
         <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B132B] transition-colors duration-300">
           <Icon size={20} strokeWidth={1.5} />
         </span>
-        <a href={s.url} target="_blank" rel="noopener noreferrer" data-testid={`sistema-link-${i}`} aria-label={`Visitar ${s.name}`} className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-[#D4AF37] transition-colors duration-200">
-          {s.domain} <ArrowUpRight size={13} />
-        </a>
+        {s.url ? (
+          <a href={s.url} target="_blank" rel="noopener noreferrer" data-testid={`sistema-link-${i}`} aria-label={`Visitar ${s.name}`} className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-[#D4AF37] transition-colors duration-200">
+            {s.domain} <ArrowUpRight size={13} />
+          </a>
+        ) : (
+          <span data-testid={`sistema-badge-${i}`} className="rounded-full border border-[#D4AF37]/30 px-2.5 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-[#D4AF37]">Enlace</span>
+        )}
       </div>
       <h3 className="font-display mt-4 text-lg font-bold text-white">{s.name}</h3>
       <span className="text-xs uppercase tracking-[0.16em] text-[#D4AF37]">{s.tag}</span>

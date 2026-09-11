@@ -81,14 +81,34 @@ export const Membresias = () => (
         })}
       </div>
 
-      <Reveal className="mt-14 relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e1836] p-8 lg:p-12 noise-overlay">
-        <div aria-hidden className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-[#D4AF37]/15 blur-[90px]" />
-        <div className="relative max-w-2xl" data-testid="membresia-nom035">
+      <Reveal className="mt-14 relative overflow-hidden rounded-3xl border border-white/10 bg-[#0e1836]">
+        <img loading="lazy" decoding="async" src={MEMBRESIAS.nom035.image} alt="Equipo celebrando sin estrés laboral" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#0B132B] via-[#0B132B]/85 to-transparent" />
+        <div className="relative max-w-2xl p-8 lg:p-12" data-testid="membresia-nom035">
           <Overline>{MEMBRESIAS.nom035.kicker}</Overline>
           <h3 className="font-display mt-3 text-2xl sm:text-3xl font-bold text-white leading-snug">{MEMBRESIAS.nom035.title}</h3>
           <p className="mt-4 text-slate-300 leading-relaxed">{MEMBRESIAS.nom035.desc}</p>
         </div>
       </Reveal>
+
+      <div className="mt-14 grid lg:grid-cols-2 gap-10 items-center">
+        <Reveal className="relative order-2 lg:order-1">
+          <div className="absolute -inset-3 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
+          <img loading="lazy" decoding="async" src={MEMBRESIAS.reloj.image} alt={MEMBRESIAS.reloj.title} className="relative rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] w-full h-[360px] object-cover" />
+        </Reveal>
+        <Reveal delay={0.1} className="order-1 lg:order-2">
+          <div data-testid="membresia-reloj">
+            <Overline>{MEMBRESIAS.reloj.overline}</Overline>
+            <h3 className="font-display mt-3 text-2xl sm:text-3xl font-bold text-white leading-snug">{MEMBRESIAS.reloj.title}</h3>
+            <p className="mt-4 text-slate-300 leading-relaxed">{MEMBRESIAS.reloj.desc}</p>
+            <ul className="mt-5 space-y-2">
+              {MEMBRESIAS.reloj.bullets.map((b) => (
+                <li key={b} className="flex items-start gap-2 text-sm text-slate-200"><Check size={14} className="mt-1 shrink-0 text-[#D4AF37]" />{b}</li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </div>
 
       <div className="mt-16">
         <h3 className="font-display text-2xl font-bold tracking-tight text-white">Nuestros aliados</h3>
