@@ -35,7 +35,7 @@ const SECTORES = {
 const SERVICIOS = {
   "plataforma-de-pagos": { title: "Plataforma de pagos para empresas", description: WALLET.description, image: SERVICIOS_HUB.image },
   "terminales-punto-de-venta": { title: "Terminales punto de venta sin trámites bancarios", description: TPV.description, image: TPV.image },
-  "consultoria-empresarial": { title: "Consultoría empresarial: capital humano, fiscal y laboral", description: CONSULTORIA.description, image: CONSULTORIA.image },
+  "consultoria-empresarial": { title: "Consultoría empresarial: capital humano, fiscal y laboral", description: CONSULTORIA.description, image: CONSULTORIA.image, faq: CONSULTORIA.faq },
   sistemas: { title: "Sistemas y tecnología para tu negocio: reservaciones, boletos, caja, call center y software", description: SISTEMAS.description, image: SISTEMAS.image },
   "caja-y-comanda": { title: "Caja y comanda para restaurantes con InfoCaja", description: CAJA.description, image: CAJA.image },
   cripto: { title: "Cobros en cripto con liquidación en pesos", description: CRIPTO.description, image: CRIPTO.image, faq: CRIPTO.faq },

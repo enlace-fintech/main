@@ -1086,9 +1086,32 @@ export const CONSULTORIA = {
   ],
   image:
     "/img/consultoria.webp",
+  audience: ["Pymes en crecimiento que ya no alcanzan con un contador externo", "Empresas con 20+ colaboradores o varias sucursales", "Grupos con varias sociedades, socios o franquicias", "Negocios con requerimientos del SAT, IMSS o STPS"],
+  situaciones: [
+    { icon: "UserPlus", q: "“Voy a contratar 20 personas y no quiero problemas con el IMSS”", area: "capital-humano", a: "Contratación de planta o temporal, altas ante el IMSS, contratos y nómina dispersada con tarjeta, todo desde un solo equipo." },
+    { icon: "MailWarning", q: "“Me llegó una carta invitación del SAT”", area: "fiscal", a: "Revisamos la discrepancia, preparamos la respuesta y, si procede, la defensa administrativa; después ordenamos tu planeación fiscal." },
+    { icon: "Gavel", q: "“Un ex colaborador me demandó”", area: "laboral", a: "Representación ante el Centro de Conciliación y en juicio, y auditoría laboral para que no vuelva a pasar." },
+    { icon: "Building2", q: "“Quiero abrir una segunda sociedad o traer un socio”", area: "corporativa", a: "Constitución, modelo corporativo, acuerdos entre socios y precios de transferencia entre tus empresas." },
+    { icon: "BarChart3", q: "“No sé si mi negocio realmente gana dinero”", area: "contable", a: "Cierre mensual, estados financieros, flujo de efectivo y un reporte ejecutivo para socios cada mes." },
+    { icon: "FileSignature", q: "“Voy a comprar (o vender) un negocio o un activo importante”", area: "mercantil", a: "Due diligence, revisión y negociación de contratos mercantiles con certeza jurídica." },
+  ],
+  proceso: [
+    { icon: "Search", title: "Diagnóstico", desc: "Sesión sin costo con tu equipo para entender operación, plantilla, sociedades y obligaciones vigentes." },
+    { icon: "FileText", title: "Propuesta y alcance", desc: "Documento con áreas a atender, entregables, calendario y honorarios fijos; sin sorpresas." },
+    { icon: "Wrench", title: "Implementación", desc: "Especialistas titulados ejecutan: nómina, contratos, registros, defensa o contabilidad, con un líder de proyecto." },
+    { icon: "Repeat", title: "Acompañamiento mensual", desc: "Reporte ejecutivo, calendario de obligaciones y acceso directo a tu consultor; el mismo ejecutivo que lleva tus terminales y pagos." },
+  ],
+  faq: [
+    { q: "¿Quién presta el servicio?", a: "El despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral, contable y corporativa. Enlace coordina el proyecto y es tu único interlocutor." },
+    { q: "¿Cómo cobran la consultoría?", a: "Con honorarios fijos por proyecto o iguala mensual según el alcance acordado en la propuesta. El diagnóstico inicial no tiene costo." },
+    { q: "¿Pueden llevar la nómina y también pagarla?", a: "Sí. Calculamos la nómina, generamos los CFDI y la dispersamos vía SPEI 24/7 a la tarjeta de nómina de cada colaborador desde la Plataforma de pagos." },
+    { q: "¿Atienden fuera de la Ciudad de México?", a: "Sí, en todo México de forma remota y con visitas presenciales cuando el proyecto lo requiere (auditorías, negociaciones, juicios)." },
+  ],
+  cta: { text: "Agenda un diagnóstico gratuito", href: "/contacto" },
   areas: [
     {
       id: "capital-humano",
+      image: "/img/cons-capital-humano.webp",
       icon: "Users",
       title: "Administración de capital humano",
       desc: "Nómina, personal y recursos humanos operados con control, cumplimiento y ahorro.",
@@ -1109,6 +1132,7 @@ export const CONSULTORIA = {
     },
     {
       id: "corporativa",
+      image: "/img/cons-corporativa.webp",
       icon: "Building2",
       title: "Asesoría corporativa",
       desc: "Estructura societaria y decisiones financieras con respaldo legal.",
@@ -1124,6 +1148,7 @@ export const CONSULTORIA = {
     },
     {
       id: "fiscal",
+      image: "/img/cons-fiscal.webp",
       icon: "Receipt",
       title: "Asesoría fiscal",
       desc: "Cumplimiento y defensa frente a las obligaciones fiscales de su empresa.",
@@ -1135,6 +1160,7 @@ export const CONSULTORIA = {
     },
     {
       id: "laboral",
+      image: "/img/cons-laboral.webp",
       icon: "Scale",
       title: "Asesoría laboral",
       desc: "Relaciones laborales sanas y protegidas ante cualquier contingencia.",
@@ -1153,6 +1179,7 @@ export const CONSULTORIA = {
     },
     {
       id: "contable",
+      image: "/img/cons-contable.webp",
       icon: "Calculator",
       title: "Asesoría contable y administrativa",
       desc: "Expertos contables y administrativos que analizan tus cuentas y evalúan el rendimiento de tu negocio.",
@@ -1166,6 +1193,7 @@ export const CONSULTORIA = {
     },
     {
       id: "mercantil",
+      image: "/img/cons-mercantil.webp",
       icon: "Handshake",
       title: "Asesoría mercantil",
       desc: "Acompañamiento en operaciones de compra y venta con certeza jurídica.",
