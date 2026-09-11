@@ -29,7 +29,7 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 ## Implementado (2026-09-05)
 - Logo generado (marca dorada de enlace) + dashboard hero generado.
 - Header con nav + menú móvil; Hero con stats; Restaurantes; Wallet Negocios (bento:
-  AQPay, SPEI, tiendas de autoservicio, TPV y links de pago, transmisión internacional);
+  transferencias, SPEI, tiendas de autoservicio, TPV y links de pago, transmisión internacional);
   Persona física con tarjeta VISA; Casinos; Blog (3 artículos); Contacto; Footer.
 - Backend: POST/GET /api/contacto con validación (422) y persistencia en MongoDB.
 - Testing E2E: backend 6/6, frontend 100%.
@@ -124,7 +124,8 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - Contacto.jsx acepta ?msg= para prellenar el mensaje (además de ?ref=). leads.js: contextos para /calculadora-tpv y /por-que-enlace.
 - Ajuste (2026-06-11): sin app ni "Membresía Cero" (no existen). Quitados highlights "Todo desde una app" y "Membresía Cero", plan Básica eliminado (quedan Salud, Plus, Fitness, Black en grid de 4). Cada una de las 8 categorías tiene ilustración propia (public/img/cat-*.webp).
 - FAQ de beneficios (2026-06-11): MEMBRESIAS.faqGroups (4 grupos, 20 preguntas) adaptado de vitaebeneficios.com/preguntas-frecuentes (coberturas AP $100,000/$15,000, orientación médica 24/7, nutricional L-V 9-19, ambulancia 1 evento/año, funeraria 30 km / espera 90 días, red +8,500 comercios, garantía de satisfacción, tarjeta vigencia 2 años, cancelación 30 días). EXCLUIDO todo lo de préstamos/adelanto de nómina y app. Componente BeneficiosFaq.jsx (acordeón por grupo); MEMBRESIAS.faq = flatten para JSON-LD.
-- Aliados de beneficios (2026-06-11): MEMBRESIAS.aliados ahora agrupado por categoría con los proveedores de vitaebeneficios.com/aliados-y-proveedores (MAPFRE, Chubb, SURA, AsisMed, VRIM, Gayosso, J. García López, Visa, Toka, Billpocket, GBM, Nomilinea, MAS Beneficios, Bwigo, Alquimia Digital, 17 gimnasios). EXCLUIDOS por regla de negocio: CREA, DSF Credit, Findo, Affipay (crédito/adelanto de nómina).
+- Aliados de beneficios (2026-06-11): MEMBRESIAS.aliados ahora agrupado por categoría con los proveedores de vitaebeneficios.com/aliados-y-proveedores (MAPFRE, Chubb, SURA, AsisMed, VRIM, Gayosso, J. García López, Visa, Mastercard, Agregadores de pago, Billpocket, GBM, Nomilinea, Bwigo, Koltin, Sofía, 17 gimnasios). EXCLUIDOS por regla de negocio: CREA, DSF Credit, Findo, Affipay (crédito/adelanto de nómina).
+- REGLA (usuario, 2026-06-11): NUNCA mencionar Grupo Tecnocen/Tecnozen, Alquimia, Alquimia Digital, AQPay/Alquimia Pay, MAS Beneficios ni Toka en ningún lugar del sitio.
 - Reloj checador biométrico (2026-06-11): añadido como servicio en SISTEMAS.items (sin URL externa → badge "Enlace"), en Módulo empresarial y bloque propio MEMBRESIAS.reloj en /servicios/seguros-y-beneficios. Imágenes generadas (IA) y localizadas en public/img: plan-basica/salud/plus/fitness/black.webp (tarjetas de planes), nom035.webp (banner), reloj-checador.webp.
 
 ## Backlog / pendientes

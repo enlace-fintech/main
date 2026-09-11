@@ -484,11 +484,11 @@ export const MEMBRESIAS = {
   },
   aliados: [
     { cat: "Seguros", icon: "ShieldCheck", desc: "Vida, accidentes personales y gastos médicos mayores.", items: ["MAPFRE", "Chubb", "SURA"] },
-    { cat: "Asistencia médica", icon: "Stethoscope", desc: "Orientación médica 24/7, red de especialistas y membresías de salud.", items: ["AsisMed", "VRIM"] },
+    { cat: "Asistencia médica", icon: "Stethoscope", desc: "Orientación médica 24/7, red de especialistas, membresías de salud y seguros de salud digitales.", items: ["AsisMed", "VRIM", "Koltin", "Sofía"] },
     { cat: "Servicios funerarios", icon: "Flower2", desc: "Asistencia y previsión funeraria para la familia.", items: ["Gayosso", "J. García López"] },
-    { cat: "Tarjetas, monederos y pagos", icon: "WalletCards", desc: "Tarjeta nominativa, monederos electrónicos y cobro con terminal.", items: ["Visa", "Toka", "Billpocket"] },
+    { cat: "Tarjetas, monederos y pagos", icon: "WalletCards", desc: "Tarjeta nominativa Visa y Mastercard, agregadores de pago y cobro con terminal.", items: ["Visa", "Mastercard", "Agregadores de pago", "Billpocket"] },
     { cat: "Ahorro y nómina", icon: "PiggyBank", desc: "Caja y fondo de ahorro, recibos y administración de nómina.", items: ["GBM", "Nomilinea"] },
-    { cat: "Descuentos y entretenimiento", icon: "Tags", desc: "Red de descuentos en comercios, cine, streaming y telefonía.", items: ["MAS Beneficios", "Bwigo", "Alquimia Digital"] },
+    { cat: "Descuentos y entretenimiento", icon: "Tags", desc: "Red de descuentos en comercios, cine, streaming y telefonía.", items: ["Bwigo"] },
     { cat: "Gimnasios y deporte", icon: "Dumbbell", desc: "Cadenas y estudios en todo México con una sola membresía.", items: ["Smart Fit", "Sports World", "Sport City", "Snap Fitness", "9Round", "TotalPass", "Fitpass", "Club Deportivo", "AMIS Fitness Center", "Club Canadá", "Dexfit", "Fededome", "Fitness Club", "Green 21", "Maitan Fitness", "Rolo", "Triiibu"] },
   ],
   faqGroups: [
@@ -526,7 +526,7 @@ export const MEMBRESIAS = {
     {
       title: "Descuentos y tarjeta",
       items: [
-        { q: "¿Dónde aceptan la red de descuentos?", a: "En más de 8,500 establecimientos en más de 250 ciudades del país, identificados con el logotipo del programa MÁS Beneficios. El colaborador ubica los comercios cercanos, selecciona el cupón y lo presenta en el establecimiento." },
+        { q: "¿Dónde aceptan la red de descuentos?", a: "En más de 8,500 establecimientos en más de 250 ciudades del país, identificados con el logotipo del programa de descuentos. El colaborador ubica los comercios cercanos, selecciona el cupón y lo presenta en el establecimiento." },
         { q: "¿Qué pasa si un comercio no aplica el descuento?", a: "Conserva el ticket y llama al centro de atención para activar la Garantía de satisfacción: se le regala una cortesía de igual o mayor valor al descuento no aplicado. Aplican restricciones." },
         { q: "¿Cómo funciona la tarjeta nominativa de nómina?", a: "Es una tarjeta de débito a nombre del colaborador donde recibe su nómina y beneficios por SPEI. Permite compras en comercios y en línea, retiros en cajeros (con la comisión de la red) y bloqueo/desbloqueo inmediato en caso de robo o extravío, con reposición sin trámites en sucursal." },
         { q: "¿Tiene límites o vigencia la tarjeta?", a: "Los límites de abono, compra en línea y retiro dependen del emisor y del nivel de cuenta; la vigencia del plástico es de 2 años y se avisa por correo o SMS antes del vencimiento para la reposición y traspaso de saldo." },
