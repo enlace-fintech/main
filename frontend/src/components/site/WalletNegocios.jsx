@@ -29,13 +29,17 @@ export const WalletNegocios = () => (
             >
               <div
                 data-testid={`wallet-feature-${i}`}
-                className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-8 backdrop-blur-md hover:border-[#D4AF37]/40 hover:bg-white/[0.05] transition-colors duration-300"
+                className="group relative h-full min-h-[300px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40 transition-colors duration-300"
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B132B] transition-colors duration-300">
-                  <Icon size={22} strokeWidth={1.5} />
-                </span>
-                <h3 className="font-display mt-5 text-xl font-bold text-white">{f.title}</h3>
-                <p className="mt-2 text-slate-400 leading-relaxed">{f.desc}</p>
+                <img loading="lazy" decoding="async" src={f.image} alt={f.title} className="absolute inset-0 h-full w-full object-cover opacity-60 group-hover:opacity-75 group-hover:scale-105 transition-[opacity,transform] duration-500" />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-[#0B132B]/70 to-[#0B132B]/10" />
+                <div className="relative flex h-full flex-col justify-end p-8">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
+                    <Icon size={22} strokeWidth={1.5} />
+                  </span>
+                  <h3 className="font-display mt-5 text-xl font-bold text-white">{f.title}</h3>
+                  <p className="mt-2 text-slate-300 leading-relaxed">{f.desc}</p>
+                </div>
               </div>
             </Reveal>
           );

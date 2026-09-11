@@ -43,12 +43,25 @@ export const SectorExtras = ({ pains, faq, cta, note, audience, timeline, testid
           const Icon = Icons[p.icon] || Icons.Sparkles;
           return (
             <Reveal key={i} delay={i * 0.06}>
-              <div data-testid={`${testid}-pain-${i}`} className="group h-full rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent p-6">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
-                  <Icon size={18} strokeWidth={1.5} />
-                </span>
-                <p className="font-display mt-4 text-base font-bold text-white leading-snug">{p.q}</p>
-                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{p.a}</p>
+              <div data-testid={`${testid}-pain-${i}`} className="group h-full overflow-hidden rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent">
+                {p.image && (
+                  <div className="relative h-40 overflow-hidden">
+                    <img loading="lazy" decoding="async" src={p.image} alt={p.q} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent" />
+                    <span className="absolute bottom-3 left-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
+                      <Icon size={18} strokeWidth={1.5} />
+                    </span>
+                  </div>
+                )}
+                <div className="p-6 pt-5">
+                  {!p.image && (
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
+                      <Icon size={18} strokeWidth={1.5} />
+                    </span>
+                  )}
+                  <p className="font-display text-base font-bold text-white leading-snug">{p.q}</p>
+                  <p className="mt-2 text-sm text-slate-300 leading-relaxed">{p.a}</p>
+                </div>
               </div>
             </Reveal>
           );

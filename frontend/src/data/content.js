@@ -81,10 +81,10 @@ export const RESTAURANTES = {
     "Reservaciones con Más Mesa y caja con comanda InfoCaja, integradas con tus cobros.",
   ],
   pains: [
-    { icon: "CreditCard", q: "“La terminal del banco se cae los viernes”", a: "Asignamos las terminales que necesites, sin mínimos ni trámites; usa varias como respaldo y nunca pierdas una venta." },
-    { icon: "Receipt", q: "“El corte de caja me toma una hora y nunca cuadra”", a: "Reportes de cobro por terminal en tiempo real y caja con comanda InfoCaja con facturación por QR." },
-    { icon: "HandCoins", q: "“Las propinas en efectivo generan conflictos”", a: "Propinas capturadas en la terminal y dispersadas a la tarjeta nominativa de cada mesero vía SPEI 24/7." },
-    { icon: "CalendarCheck", q: "“Mesas vacías entre semana y no-shows el fin”", a: "Reservaciones con Más Mesa: mapa de mesas, confirmación automática y control de aforo." },
+    { image: "/img/pain-restaurantes-0.webp", icon: "CreditCard", q: "“La terminal del banco se cae los viernes”", a: "Asignamos las terminales que necesites, sin mínimos ni trámites; usa varias como respaldo y nunca pierdas una venta." },
+    { image: "/img/pain-restaurantes-1.webp", icon: "Receipt", q: "“El corte de caja me toma una hora y nunca cuadra”", a: "Reportes de cobro por terminal en tiempo real y caja con comanda InfoCaja con facturación por QR." },
+    { image: "/img/pain-restaurantes-2.webp", icon: "HandCoins", q: "“Las propinas en efectivo generan conflictos”", a: "Propinas capturadas en la terminal y dispersadas a la tarjeta nominativa de cada mesero vía SPEI 24/7." },
+    { image: "/img/pain-restaurantes-3.webp", icon: "CalendarCheck", q: "“Mesas vacías entre semana y no-shows el fin”", a: "Reservaciones con Más Mesa: mapa de mesas, confirmación automática y control de aforo." },
   ],
   faq: [
     { q: "¿Cuánto tarda en llegar la terminal?", a: "Firmas el contrato de administración de tesorería, eliges fechas de corte y recibes tu KIT TPV en 48 horas." },
@@ -102,12 +102,12 @@ export const WALLET = {
   description:
     "La Plataforma de pagos de Enlace Fintech concentra cuentas, transferencias, cobros y tarjetas de tu negocio en un solo lugar, con visibilidad en tiempo real y control por usuario.",
   features: [
-    { icon: "ArrowLeftRight", title: "Transferencias FlexPei", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
-    { icon: "Landmark", title: "Transferencias SPEI", desc: "Dispersa y recibe pagos interbancarios en segundos, 24/7." },
-    { icon: "Store", title: "Pagos en tiendas de autoservicio", desc: "Deposita y paga en miles de puntos a nivel nacional." },
-    { icon: "CreditCard", title: "Terminales punto de venta y Links de Pago", desc: "Cobra presencial o a distancia con TPV y links de pago." },
-    { icon: "WalletCards", title: "Tarjetas empresariales", desc: "Tarjetas nominativas físicas y virtuales para tu equipo, con límites y control de gastos." },
-    { icon: "Globe", title: "Pagos internacionales", desc: "Mueve capital más allá de las fronteras con seguridad y trazabilidad." },
+    { image: "/img/wallet-0.webp", icon: "ArrowLeftRight", title: "Transferencias FlexPei", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
+    { image: "/img/wallet-1.webp", icon: "Landmark", title: "Transferencias SPEI", desc: "Dispersa y recibe pagos interbancarios en segundos, 24/7." },
+    { image: "/img/wallet-2.webp", icon: "Store", title: "Pagos en tiendas de autoservicio", desc: "Deposita y paga en miles de puntos a nivel nacional." },
+    { image: "/img/wallet-3.webp", icon: "CreditCard", title: "Terminales punto de venta y Links de Pago", desc: "Cobra presencial o a distancia con TPV y links de pago." },
+    { image: "/img/wallet-4.webp", icon: "WalletCards", title: "Tarjetas empresariales", desc: "Tarjetas nominativas físicas y virtuales para tu equipo, con límites y control de gastos." },
+    { image: "/img/wallet-5.webp", icon: "Globe", title: "Pagos internacionales", desc: "Mueve capital más allá de las fronteras con seguridad y trazabilidad." },
   ],
 };
 
@@ -139,10 +139,10 @@ export const CASINOS = {
     "Tarjeta de nómina sin costo para tu personal y dispersión de nómina y proveedores vía SPEI 24/7.",
   ],
   pains: [
-    { icon: "Banknote", q: "“El efectivo en piso es un riesgo de seguridad y de PLD”", a: "Tarjetas nominativas para jugadores y redención de premios directo a tarjeta: menos efectivo y cada movimiento trazable." },
-    { icon: "FileCheck", q: "“Cada reporte a la UIF me consume días”", a: "Onboarding de persona física en 5 minutos con KYC y contrato de origen de recursos; expediente listo para tus avisos." },
-    { icon: "CreditCard", q: "“El banco me rechaza o me cobra de más por el giro”", a: "Terminales sin trámites bancarios ni mínimos y cuenta empresarial con SPEI 24/7, con condiciones negociadas para el sector." },
-    { icon: "LayoutDashboard", q: "“Tengo varias salas y no veo la caja consolidada”", a: "Plataforma de pagos: fondos de todas las salas en un solo lugar, cortes por sala, nómina y proveedores desde la misma cuenta." },
+    { image: "/img/pain-casinos-0.webp", icon: "Banknote", q: "“El efectivo en piso es un riesgo de seguridad y de PLD”", a: "Tarjetas nominativas para jugadores y redención de premios directo a tarjeta: menos efectivo y cada movimiento trazable." },
+    { image: "/img/pain-casinos-1.webp", icon: "FileCheck", q: "“Cada reporte a la UIF me consume días”", a: "Onboarding de persona física en 5 minutos con KYC y contrato de origen de recursos; expediente listo para tus avisos." },
+    { image: "/img/pain-casinos-2.webp", icon: "CreditCard", q: "“El banco me rechaza o me cobra de más por el giro”", a: "Terminales sin trámites bancarios ni mínimos y cuenta empresarial con SPEI 24/7, con condiciones negociadas para el sector." },
+    { image: "/img/pain-casinos-3.webp", icon: "LayoutDashboard", q: "“Tengo varias salas y no veo la caja consolidada”", a: "Plataforma de pagos: fondos de todas las salas en un solo lugar, cortes por sala, nómina y proveedores desde la misma cuenta." },
   ],
   note: "Enlace Fintech no otorga crédito a jugadores ni participa en la operación del juego; provee medios de pago, banca empresarial y herramientas de cumplimiento.",
   faq: [
@@ -348,10 +348,10 @@ export const MEDICOS = {
     { icon: "QrCode", title: "Pagos con código QR", desc: "Cobra y factura con procesos 100% digitales; consolida cada transacción." },
   ],
   pains: [
-    { icon: "Banknote", q: "“El paciente no trae efectivo y no quiero perder la consulta”", a: "Terminal Bluetooth ligada a tu celular; acepta todas las tarjetas, chip y contactless." },
-    { icon: "MessageSquare", q: "“Cobro anticipos de cirugía por transferencia y luego persigo comprobantes”", a: "Link de pago por WhatsApp con referencia del paciente y conciliación automática." },
-    { icon: "Users", q: "“Comparto consultorio y no sé qué cobro es de quién”", a: "Una terminal o usuario por médico con reporte separado y corte individual." },
-    { icon: "FileText", q: "“Facturar cada consulta me quita tiempo”", a: "Reportes listos para tu contador e integración con facturación a través de aliados." },
+    { image: "/img/pain-medicos-0.webp", icon: "Banknote", q: "“El paciente no trae efectivo y no quiero perder la consulta”", a: "Terminal Bluetooth ligada a tu celular; acepta todas las tarjetas, chip y contactless." },
+    { image: "/img/pain-medicos-1.webp", icon: "MessageSquare", q: "“Cobro anticipos de cirugía por transferencia y luego persigo comprobantes”", a: "Link de pago por WhatsApp con referencia del paciente y conciliación automática." },
+    { image: "/img/pain-medicos-2.webp", icon: "Users", q: "“Comparto consultorio y no sé qué cobro es de quién”", a: "Una terminal o usuario por médico con reporte separado y corte individual." },
+    { image: "/img/pain-medicos-3.webp", icon: "FileText", q: "“Facturar cada consulta me quita tiempo”", a: "Reportes listos para tu contador e integración con facturación a través de aliados." },
   ],
   note: "No almacenamos datos clínicos de tus pacientes; únicamente procesamos el cobro con cumplimiento PCI DSS.",
   faq: [
@@ -369,10 +369,10 @@ export const CRIPTO = {
     "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos integración de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
   audience: ["E-commerce con clientes fuera de México", "Freelancers y agencias que cobran en el extranjero", "Empresas que pagan proveedores internacionales", "Negocios que quieren más medios de pago"],
   pains: [
-    { icon: "Globe", q: "“Clientes en EE. UU. o Europa quieren pagarme y SWIFT tarda y cuesta”", a: "Cobro en USDT con liquidación en pesos a tu cuenta FlexPei o bancaria, sin intermediarios bancarios." },
-    { icon: "TrendingDown", q: "“No quiero quedarme con cripto ni asumir volatilidad”", a: "Conversión al momento del pago y depósito en fiat; nunca custodias activos." },
-    { icon: "ShieldCheck", q: "“Me preocupa el tema fiscal y de lavado de dinero”", a: "KYC/AML automatizado por el aliado; tú facturas en pesos como cualquier venta con CFDI normal." },
-    { icon: "Code2", q: "“Mi desarrollador no quiere integrar otra pasarela”", a: "API + webhooks, wallet temporal por pago y sin custodia; integración en días. También puedes cobrar cripto y tarjeta en la misma terminal." },
+    { image: "/img/pain-cripto-0.webp", icon: "Globe", q: "“Clientes en EE. UU. o Europa quieren pagarme y SWIFT tarda y cuesta”", a: "Cobro en USDT con liquidación en pesos a tu cuenta FlexPei o bancaria, sin intermediarios bancarios." },
+    { image: "/img/pain-cripto-1.webp", icon: "TrendingDown", q: "“No quiero quedarme con cripto ni asumir volatilidad”", a: "Conversión al momento del pago y depósito en fiat; nunca custodias activos." },
+    { image: "/img/pain-cripto-2.webp", icon: "ShieldCheck", q: "“Me preocupa el tema fiscal y de lavado de dinero”", a: "KYC/AML automatizado por el aliado; tú facturas en pesos como cualquier venta con CFDI normal." },
+    { image: "/img/pain-cripto-3.webp", icon: "Code2", q: "“Mi desarrollador no quiere integrar otra pasarela”", a: "API + webhooks, wallet temporal por pago y sin custodia; integración en días. También puedes cobrar cripto y tarjeta en la misma terminal." },
   ],
   note: "Los activos virtuales no son moneda de curso legal ni están garantizados. Enlace Fintech no ofrece rendimientos ni asesoría de inversión; provee medios de cobro con liquidación en pesos.",
   faq: [
@@ -592,10 +592,10 @@ export const EVENTOS = {
     { icon: "Landmark", title: "Post-evento", desc: "Liquidación con tus fechas de corte y dispersión SPEI 24/7 a staff, concesionarios y proveedores, con conciliación automática." },
   ],
   pains: [
-    { icon: "Timer", q: "“Las filas en barra me matan las ventas en el momento pico”", a: "Terminales contactless/QR por barra y brazaletes cashless: cobro en segundos y sin cambio." },
-    { icon: "Calculator", q: "“Cuadrar el efectivo de 30 puntos de venta al final es un caos”", a: "Ventas por punto, artículo y hora en tiempo real; corte por stand y conciliación automática en tu plataforma de pagos." },
-    { icon: "Users", q: "“Mis concesionarios y staff quieren su pago al día siguiente”", a: "Liquidación con fechas de corte que tú eliges y dispersión SPEI 24/7 a proveedores y personal; tarjeta de nómina sin costo para tu staff." },
-    { icon: "ScanLine", q: "“Necesito controlar el aforo y evitar boletos falsos”", a: "Boletera Mastiket con validación en puerta y control de aforo en vivo." },
+    { image: "/img/pain-eventos-0.webp", icon: "Timer", q: "“Las filas en barra me matan las ventas en el momento pico”", a: "Terminales contactless/QR por barra y brazaletes cashless: cobro en segundos y sin cambio." },
+    { image: "/img/pain-eventos-1.webp", icon: "Calculator", q: "“Cuadrar el efectivo de 30 puntos de venta al final es un caos”", a: "Ventas por punto, artículo y hora en tiempo real; corte por stand y conciliación automática en tu plataforma de pagos." },
+    { image: "/img/pain-eventos-2.webp", icon: "Users", q: "“Mis concesionarios y staff quieren su pago al día siguiente”", a: "Liquidación con fechas de corte que tú eliges y dispersión SPEI 24/7 a proveedores y personal; tarjeta de nómina sin costo para tu staff." },
+    { image: "/img/pain-eventos-3.webp", icon: "ScanLine", q: "“Necesito controlar el aforo y evitar boletos falsos”", a: "Boletera Mastiket con validación en puerta y control de aforo en vivo." },
   ],
   faq: [
     { q: "¿Cuántas terminales pueden asignar para un evento de un día?", a: "Las que necesites, sin mínimos ni renta por terminal; las asignamos según tus puntos de venta y las recoges al terminar." },
@@ -736,10 +736,10 @@ export const GENERIC_SECTORS = {
 export const GENERIC_EXTRAS = {
   "call-center": {
     pains: [
-      { icon: "PhoneCall", q: "“Cierro la venta por teléfono y el cliente nunca deposita”", a: "Envías un link de pago por SMS o WhatsApp en la misma llamada y el cobro se confirma al instante." },
-      { icon: "Users", q: "“Pagar comisiones a 80 agentes cada semana es un dolor”", a: "Dispersión masiva SPEI 24/7 desde tu cuenta empresarial y tarjeta de nómina sin costo para cada agente." },
-      { icon: "LineChart", q: "“No sé qué campaña o agente realmente cobra”", a: "Reportes de cobro por campaña, agente y horario en tiempo real." },
-      { icon: "ShieldCheck", q: "“Los contracargos me comen el margen”", a: "Cobro con autenticación y alertas antifraude; evidencia de cada transacción para disputar." },
+      { image: "/img/pain-call-center-0.webp", icon: "PhoneCall", q: "“Cierro la venta por teléfono y el cliente nunca deposita”", a: "Envías un link de pago por SMS o WhatsApp en la misma llamada y el cobro se confirma al instante." },
+      { image: "/img/pain-call-center-1.webp", icon: "Users", q: "“Pagar comisiones a 80 agentes cada semana es un dolor”", a: "Dispersión masiva SPEI 24/7 desde tu cuenta empresarial y tarjeta de nómina sin costo para cada agente." },
+      { image: "/img/pain-call-center-2.webp", icon: "LineChart", q: "“No sé qué campaña o agente realmente cobra”", a: "Reportes de cobro por campaña, agente y horario en tiempo real." },
+      { image: "/img/pain-call-center-3.webp", icon: "ShieldCheck", q: "“Los contracargos me comen el margen”", a: "Cobro con autenticación y alertas antifraude; evidencia de cada transacción para disputar." },
     ],
     faq: [
       { q: "¿El link de pago se puede enviar durante la llamada?", a: "Sí, por SMS, WhatsApp o correo; el agente ve el pago confirmado en segundos." },
@@ -750,10 +750,10 @@ export const GENERIC_EXTRAS = {
   },
   farmacias: {
     pains: [
-      { icon: "CreditCard", q: "“El cliente compra $80 con tarjeta y la comisión me duele”", a: "Terminales con comisión negociada por giro y sin renta ni mínimos; cobra montos pequeños sin castigo." },
-      { icon: "Boxes", q: "“Se me caducan medicamentos y me faltan otros”", a: "Módulo de inventario con caducidades y alertas de reorden." },
-      { icon: "QrCode", q: "“Facturar a cada cliente me quita tiempo en mostrador”", a: "Factura con QR desde el ticket: el cliente la genera solo." },
-      { icon: "Landmark", q: "“Pago a laboratorios y distribuidores con transferencias del banco que tardan”", a: "SPEI 24/7 desde tu cuenta empresarial y tarjetas nominativas para compras de sucursal." },
+      { image: "/img/pain-farmacias-0.webp", icon: "CreditCard", q: "“El cliente compra $80 con tarjeta y la comisión me duele”", a: "Terminales con comisión negociada por giro y sin renta ni mínimos; cobra montos pequeños sin castigo." },
+      { image: "/img/pain-farmacias-1.webp", icon: "Boxes", q: "“Se me caducan medicamentos y me faltan otros”", a: "Módulo de inventario con caducidades y alertas de reorden." },
+      { image: "/img/pain-farmacias-2.webp", icon: "QrCode", q: "“Facturar a cada cliente me quita tiempo en mostrador”", a: "Factura con QR desde el ticket: el cliente la genera solo." },
+      { image: "/img/pain-farmacias-3.webp", icon: "Landmark", q: "“Pago a laboratorios y distribuidores con transferencias del banco que tardan”", a: "SPEI 24/7 desde tu cuenta empresarial y tarjetas nominativas para compras de sucursal." },
     ],
     faq: [
       { q: "¿Puedo tener una terminal por sucursal con corte separado?", a: "Sí, cada terminal reporta por separado y consolidas todo en la plataforma de pagos." },
@@ -764,10 +764,10 @@ export const GENERIC_EXTRAS = {
   },
   tiendas: {
     pains: [
-      { icon: "CreditCard", q: "“Pierdo ventas porque solo cobro en efectivo”", a: "Terminal contactless y QR sin trámites bancarios; empieza a cobrar con tarjeta en 48 horas." },
-      { icon: "Link", q: "“Vendo por WhatsApp y cobrar es un caos”", a: "Links de pago por WhatsApp y redes; el pago se confirma solo." },
-      { icon: "WalletCards", q: "“Le doy efectivo a mis empleados para compras y no cuadra”", a: "Tarjetas nominativas con límites por empleado y foto del ticket." },
-      { icon: "Boxes", q: "“No sé cuánto vendí ni qué me queda”", a: "Inventario, ventas y arqueo de caja desde la app, en tiempo real." },
+      { image: "/img/pain-tiendas-0.webp", icon: "CreditCard", q: "“Pierdo ventas porque solo cobro en efectivo”", a: "Terminal contactless y QR sin trámites bancarios; empieza a cobrar con tarjeta en 48 horas." },
+      { image: "/img/pain-tiendas-1.webp", icon: "Link", q: "“Vendo por WhatsApp y cobrar es un caos”", a: "Links de pago por WhatsApp y redes; el pago se confirma solo." },
+      { image: "/img/pain-tiendas-2.webp", icon: "WalletCards", q: "“Le doy efectivo a mis empleados para compras y no cuadra”", a: "Tarjetas nominativas con límites por empleado y foto del ticket." },
+      { image: "/img/pain-tiendas-3.webp", icon: "Boxes", q: "“No sé cuánto vendí ni qué me queda”", a: "Inventario, ventas y arqueo de caja desde la app, en tiempo real." },
     ],
     faq: [
       { q: "¿Hay monto mínimo de ventas para tener terminal?", a: "No. Sin mínimos de operación ni renta mensual." },
@@ -778,10 +778,10 @@ export const GENERIC_EXTRAS = {
   },
   ferreterias: {
     pains: [
-      { icon: "CreditCard", q: "“Cobro tickets grandes y el banco me limita la terminal”", a: "Terminales sin límites por giro ni mínimos, con reportes por sucursal." },
-      { icon: "Landmark", q: "“Pago a proveedores fuera del horario del banco”", a: "SPEI 24/7 desde tu cuenta empresarial, incluso fines de semana." },
-      { icon: "WalletCards", q: "“Mis choferes compran material y gasolina con efectivo”", a: "Tarjetas nominativas con límites por categoría y comprobación con foto." },
-      { icon: "Boxes", q: "“Pierdo material por falta de control de inventario”", a: "Control de existencias y alertas de faltantes desde la plataforma." },
+      { image: "/img/pain-ferreterias-0.webp", icon: "CreditCard", q: "“Cobro tickets grandes y el banco me limita la terminal”", a: "Terminales sin límites por giro ni mínimos, con reportes por sucursal." },
+      { image: "/img/pain-ferreterias-1.webp", icon: "Landmark", q: "“Pago a proveedores fuera del horario del banco”", a: "SPEI 24/7 desde tu cuenta empresarial, incluso fines de semana." },
+      { image: "/img/pain-ferreterias-2.webp", icon: "WalletCards", q: "“Mis choferes compran material y gasolina con efectivo”", a: "Tarjetas nominativas con límites por categoría y comprobación con foto." },
+      { image: "/img/pain-ferreterias-3.webp", icon: "Boxes", q: "“Pierdo material por falta de control de inventario”", a: "Control de existencias y alertas de faltantes desde la plataforma." },
     ],
     faq: [
       { q: "¿Puedo cobrar a crédito a mis clientes de obra?", a: "Enlace no otorga crédito; sí puedes cobrar anticipos y saldos con link de pago o terminal y llevar el control por cliente." },
@@ -792,10 +792,10 @@ export const GENERIC_EXTRAS = {
   },
   hoteles: {
     pains: [
-      { icon: "Link", q: "“Los huéspedes reservan y luego no llegan”", a: "Cobro de anticipos con link de pago al reservar; menos no-shows." },
-      { icon: "CreditCard", q: "“Cobro habitación, restaurante y spa en sistemas distintos”", a: "Terminales por punto con reporte consolidado en tu plataforma de pagos." },
-      { icon: "Globe", q: "“Huéspedes extranjeros y tarjetas internacionales rechazadas”", a: "Aceptación internacional y pagos Wire/SWIFT para agencias y OTAs." },
-      { icon: "Users", q: "“Nómina de temporada y propinas en efectivo”", a: "Tarjeta de nómina sin costo y dispersión SPEI 24/7 de sueldos y propinas." },
+      { image: "/img/pain-hoteles-0.webp", icon: "Link", q: "“Los huéspedes reservan y luego no llegan”", a: "Cobro de anticipos con link de pago al reservar; menos no-shows." },
+      { image: "/img/pain-hoteles-1.webp", icon: "CreditCard", q: "“Cobro habitación, restaurante y spa en sistemas distintos”", a: "Terminales por punto con reporte consolidado en tu plataforma de pagos." },
+      { image: "/img/pain-hoteles-2.webp", icon: "Globe", q: "“Huéspedes extranjeros y tarjetas internacionales rechazadas”", a: "Aceptación internacional y pagos Wire/SWIFT para agencias y OTAs." },
+      { image: "/img/pain-hoteles-3.webp", icon: "Users", q: "“Nómina de temporada y propinas en efectivo”", a: "Tarjeta de nómina sin costo y dispersión SPEI 24/7 de sueldos y propinas." },
     ],
     faq: [
       { q: "¿Puedo pre-autorizar la tarjeta del huésped al check-in?", a: "Sí, con la terminal se puede pre-autorizar y ajustar el cargo al check-out." },
@@ -806,10 +806,10 @@ export const GENERIC_EXTRAS = {
   },
   "agencias-de-viajes": {
     pains: [
-      { icon: "Link", q: "“Vendo paquetes por WhatsApp y el cliente tarda en pagar”", a: "Link de pago con vigencia y recordatorio; el cliente paga desde su celular." },
-      { icon: "Globe", q: "“Pago a operadores en el extranjero con SWIFT caro”", a: "Pagos internacionales Wire/SWIFT y cuenta en USD con tipo de cambio competitivo." },
-      { icon: "WalletCards", q: "“Mis agentes viajan y gastan con su propia tarjeta”", a: "Tarjetas nominativas para viáticos con límites y comprobación." },
-      { icon: "Users", q: "“Pagar comisiones a agentes freelance es lento”", a: "Dispersión SPEI 24/7 y tarjeta de nómina sin costo para cada agente." },
+      { image: "/img/pain-agencias-de-viajes-0.webp", icon: "Link", q: "“Vendo paquetes por WhatsApp y el cliente tarda en pagar”", a: "Link de pago con vigencia y recordatorio; el cliente paga desde su celular." },
+      { image: "/img/pain-agencias-de-viajes-1.webp", icon: "Globe", q: "“Pago a operadores en el extranjero con SWIFT caro”", a: "Pagos internacionales Wire/SWIFT y cuenta en USD con tipo de cambio competitivo." },
+      { image: "/img/pain-agencias-de-viajes-2.webp", icon: "WalletCards", q: "“Mis agentes viajan y gastan con su propia tarjeta”", a: "Tarjetas nominativas para viáticos con límites y comprobación." },
+      { image: "/img/pain-agencias-de-viajes-3.webp", icon: "Users", q: "“Pagar comisiones a agentes freelance es lento”", a: "Dispersión SPEI 24/7 y tarjeta de nómina sin costo para cada agente." },
     ],
     faq: [
       { q: "¿Puedo cobrar en dólares a clientes extranjeros?", a: "Sí, con links de pago en USD y liquidación en pesos o dólares." },

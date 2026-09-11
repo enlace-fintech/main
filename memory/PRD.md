@@ -138,6 +138,11 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - ALIADOS.grupos (8 categorías con todas las marcas del sitio) → página /aliados por grupos y AliadosMarquee derivado de ALIADOS.marcas (una sola fuente). Incluye Clip y Mercado Pago (heredados; confirmar con usuario).
 - Testing iteration_12.json: 100% (9 grupos), 0 imágenes rotas, sin términos prohibidos.
 
+## Plataforma de pagos ilustrada + fotos por bloque dolor→solución (2026-06-11)
+- WALLET.features[i].image (/img/wallet-0..5.webp) → tarjetas con foto de fondo en WalletNegocios.jsx.
+- 44 fotos pain-{sector}-{0..3}.webp para los 11 sectores con bloques de dolor (restaurantes, casinos, medicos, cripto, eventos, call-center, farmacias, tiendas, ferreterias, hoteles, agencias-de-viajes); SectorExtras renderiza p.image si existe.
+- Script auxiliar /app/scripts/save_images.py (descarga JSON de URLs → jpg+webp en public/img). Testing iteration_13.json: 50/50.
+
 ## Backlog / pendientes
 - P1: Sustituir cifras y testimonios de muestra en data/porque.js por datos reales (y quitar las notas statsNote/testimonialsNote).
 - P1: Confirmar precios reales de planes de beneficios (MEMBRESIAS.plans) y aseguradoras aliadas.
