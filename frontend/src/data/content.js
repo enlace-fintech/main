@@ -102,8 +102,7 @@ export const WALLET = {
   description:
     "La Plataforma de pagos de Enlace Fintech concentra cuentas, transferencias, cobros y tarjetas de tu negocio en un solo lugar, con visibilidad en tiempo real y control por usuario.",
   features: [
-    { image: "/img/wallet-0.webp", icon: "ArrowLeftRight", title: "Transferencias FlexPei", desc: "Envía y recibe fondos al instante dentro del ecosistema fintech." },
-    { image: "/img/wallet-1.webp", icon: "Landmark", title: "Transferencias SPEI", desc: "Dispersa y recibe pagos interbancarios en segundos, 24/7." },
+    { image: "/img/wallet-1.webp", icon: "Landmark", title: "Transferencias SPEI con FlexPei", desc: "Envía y recibe dinero al instante, a cualquier banco y dentro del ecosistema fintech: dispersa nómina y paga proveedores por SPEI en segundos, 24/7, sin depender del horario de tu banco." },
     { image: "/img/wallet-2.webp", icon: "Store", title: "Pagos en tiendas de autoservicio", desc: "Deposita y paga en miles de puntos a nivel nacional." },
     { image: "/img/wallet-3.webp", icon: "CreditCard", title: "Terminales punto de venta y Links de Pago", desc: "Cobra presencial o a distancia con TPV y links de pago." },
     { image: "/img/wallet-4.webp", icon: "WalletCards", title: "Tarjetas empresariales", desc: "Tarjetas nominativas físicas y virtuales para tu equipo, con límites y control de gastos." },

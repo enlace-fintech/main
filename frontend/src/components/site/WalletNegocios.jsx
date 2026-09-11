@@ -20,12 +20,12 @@ export const WalletNegocios = () => (
       <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
         {WALLET.features.map((f, i) => {
           const Icon = Icons[f.icon] || Icons.Wallet;
-          const wide = i === 0 || i === 3;
+          const span = i === 0 ? "md:col-span-2" : "";
           return (
             <Reveal
               key={f.title}
               delay={i * 0.06}
-              className={wide ? "lg:col-span-2" : ""}
+              className={span}
             >
               <div
                 data-testid={`wallet-feature-${i}`}
