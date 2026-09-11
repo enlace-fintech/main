@@ -132,6 +132,12 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 - REGLA (usuario, 2026-06-11): NUNCA mencionar Grupo Tecnocen/Tecnozen, Alquimia, Alquimia Digital, AQPay/Alquimia Pay, MAS Beneficios ni Toka en ningún lugar del sitio.
 - Reloj checador biométrico (2026-06-11): añadido como servicio en SISTEMAS.items (sin URL externa → badge "Enlace"), en Módulo empresarial y bloque propio MEMBRESIAS.reloj en /servicios/seguros-y-beneficios. Imágenes generadas (IA) y localizadas en public/img: plan-basica/salud/plus/fitness/black.webp (tarjetas de planes), nom035.webp (banner), reloj-checador.webp.
 
+## Slider Hero + ilustraciones servicios + aliados (2026-06-11)
+- Hero de Home: HeroSlider.jsx (HERO_SLIDES en content.js, 6 slides con imagen/kicker/título/CTA, autoplay 6 s, pausa en hover, flechas y dots). Reemplaza la foto fija.
+- ServicioDetalle: bloques (blocks[].image) con foto en /servicios/tarjetas, nomina-y-dispersion, pagos-internacionales (9 imágenes tarj-*, nom-*, int-*.webp).
+- ALIADOS.grupos (8 categorías con todas las marcas del sitio) → página /aliados por grupos y AliadosMarquee derivado de ALIADOS.marcas (una sola fuente). Incluye Clip y Mercado Pago (heredados; confirmar con usuario).
+- Testing iteration_12.json: 100% (9 grupos), 0 imágenes rotas, sin términos prohibidos.
+
 ## Backlog / pendientes
 - P1: Sustituir cifras y testimonios de muestra en data/porque.js por datos reales (y quitar las notas statsNote/testimonialsNote).
 - P1: Confirmar precios reales de planes de beneficios (MEMBRESIAS.plans) y aseguradoras aliadas.

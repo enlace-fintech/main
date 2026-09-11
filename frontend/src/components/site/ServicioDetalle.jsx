@@ -48,7 +48,14 @@ export const ServicioDetalle = ({ data }) => (
           const Icon = Icons[b.icon] || Icons.Layers;
           return (
             <Reveal key={b.title} delay={i * 0.08}>
-              <div data-testid={`servicio-block-${i}`} className="flex h-full flex-col rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent p-8">
+              <div data-testid={`servicio-block-${i}`} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent">
+                {b.image && (
+                  <div className="relative h-44 overflow-hidden">
+                    <img loading="lazy" decoding="async" src={b.image} alt={b.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent" />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-8 pt-6">
                 <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
                   <Icon size={22} strokeWidth={1.5} />
                 </span>
@@ -67,6 +74,7 @@ export const ServicioDetalle = ({ data }) => (
                     {b.linkLabel} <ArrowRight size={15} />
                   </Link>
                 )}
+                </div>
               </div>
             </Reveal>
           );

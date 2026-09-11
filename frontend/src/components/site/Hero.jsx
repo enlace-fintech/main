@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 import { BRAND, HERO_STATS } from "../../data/content";
+import { HeroSlider } from "./HeroSlider";
 
 export const Hero = () => (
   <section
@@ -97,14 +98,9 @@ export const Hero = () => (
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative"
+        data-testid="hero-dashboard-image"
       >
-        <div className="absolute -inset-4 rounded-3xl bg-[#D4AF37]/10 blur-2xl" aria-hidden />
-        <img loading="eager" fetchPriority="high" decoding="async"
-          src={BRAND.heroPerson}
-          alt="Asesoría financiera Enlace Fintech"
-          data-testid="hero-dashboard-image"
-          className="relative rounded-2xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.55)] w-full object-cover"
-        />
+        <HeroSlider />
       </motion.div>
     </div>
   </section>

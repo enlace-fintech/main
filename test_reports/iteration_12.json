@@ -1,0 +1,34 @@
+{
+  "summary": "Frontend regression for enlacefintech.com covering HeroSlider, /aliados, /servicios/seguros-y-beneficios, /servicios/consultoria-empresarial, /servicios/cripto, servicio-block pages (/tarjetas, /nomina-y-dispersion, /pagos-internacionales), /servicios/sistemas, /contacto and global forbidden-terms/broken-images sweep. All 9 requested test groups PASS. Autoplay confirmed after fresh page load (title changed at 7.5s and again at 14.5s). No console errors, 0 broken images across all inspected routes.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "verified_checks": {
+    "home_hero_slider": "hero-slider visible; initial kicker='Asesoría sin costo'; next click -> kicker='Terminales punto de venta', title='Cobra con tarjeta sin trámites bancarios ni mínimos', cta href=/servicios/terminales-punto-de-venta; dot-3 -> kicker='Seguros y beneficios', title='Beneficios para tu equipo con apoyo a la NOM-035'; autoplay advances every ~7s on fresh load; marquee includes FlexPei, Acxor, Koltin, Smart Fit; no console errors",
+    "aliados_page": "8 aliado-0..aliado-7 present; gym group includes Smart Fit and TotalPass; h1 present ('El broker fintech con los mejores aliados estratégicos')",
+    "seguros_y_beneficios": "membresia-highlight count=2; membresia-categoria count=8 (all with img); plan-basica NOT present; plan-platinum present with 'A cotizar'; clicking plan-platinum -> cotizador-cta='Contactar para plan Platinum'; navigates to /contacto and input-mensaje starts with 'Me interesa el plan Platinum'; membresia-reloj visible; membresia-aliado-1 contains Koltin+Sofía; membresia-aliado-3 contains Mastercard+'Agregadores de pago' and NO 'Toka'; beneficios-faq has 4 grupos and 20 items; opening beneficios-faq-1-0 shows '$100,000'; page does NOT contain MAS Beneficios/Alquimia/Toka/Membresía Cero/una app",
+    "consultoria_empresarial": "6 consultoria-situacion-*; click situacion-1 -> tab-fiscal aria-selected=true and consultoria-area-image src=/img/cons-fiscal.webp; click tab-laboral -> src=/img/cons-laboral.webp; 4 proceso, 4 faq, cta present",
+    "cripto": "'Cobros y pagos cripto' in breadcrumb/menu; cripto-partner-0 has 'Integrador de activos digitales' and <img>; cripto-partner-1 has 'Integrador para cobros cripto en e-commerce'; no 'Exchange' in page; banner 'Cripto → pesos' contains 'tú recibes pesos en tu cuenta.' and does NOT contain '24–48 h' (the '24–48 h' string appears only in process step 4 and FAQ, which is expected per prior spec and outside the target banner); header dropdown includes 'Cobros y pagos cripto'",
+    "servicio_blocks": "/servicios/tarjetas, /servicios/nomina-y-dispersion, /servicios/pagos-internacionales: servicio-block-0..2 all present with <img> naturalWidth=900; 0 broken images",
+    "sistemas": "Card 'Reloj checador biométrico' present with sistema-badge with text 'Enlace'",
+    "contacto_and_wa": "contact-phone text='+52 56 7125 8244', href='tel:+525671258244'; whatsapp-fab href contains wa.me/525671258244; footer contains +52 56 7125 8244",
+    "global_regression": "All 8 routes: 0 broken images, 0 console errors. Forbidden-term regex matched 'prestamo' as substring of the verb 'prestamos' in the phrase 'No prestamos dinero...' on / and /por-que-enlace — this is the Spanish verb (we lend), NOT the noun 'préstamo/crédito'. Confirmed with context extraction. No real occurrences of crédito/préstamo/Tecnocen/Tecnozen/Alquimia/AQPay/Toka/MAS Beneficios/exchange found on any tested route."
+  },
+  "notes_for_main_agent": [
+    "False-positive alert: The verb 'prestamos' (from 'No prestamos dinero, no custodiamos tus fondos...') matches naive substring searches for 'prestamo'. Not a violation. Consider tightening this copy only if you want zero substring collisions in automated scanners (e.g., change to 'No ofrecemos préstamos… wait, that would violate the rule'; current wording is fine).",
+    "Autoplay: initial synthetic test showed slide not advancing after 7.5s when the previous action was a keyboard/mouse click on a slider button (focus may pause autoplay). A fresh navigation confirms autoplay advances at ~6-7s intervals. No fix required."
+  ],
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped per request)", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "iteration_12 covered HeroSlider, Aliados, Seguros y Beneficios (Platinum flow + FAQ + membresia-aliado groups), Consultoria (situación->tab->image), Cripto (partners + banner + header), servicio-block image integrity for 3 routes, Sistemas reloj checador badge, Contacto phone/WA, and global forbidden-term/broken-image regression. All PASS. The forbidden-term scanner should ignore the verb form 'prestamos' (verb) when checking the noun 'préstamo'.",
+  "rca of the issue": "N/A - no bugs found"
+}

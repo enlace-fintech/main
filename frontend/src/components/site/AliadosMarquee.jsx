@@ -1,22 +1,6 @@
-const ALIADOS_MARCA = [
-  "FlexPei",
-  "FluxiPay",
-  "Callmarket",
-  "Más Mesa",
-  "InfoCaja",
-  "Mastiket",
-  "MisTrámites",
-  "Mercado Libre",
-  "Clip",
-  "MAPFRE",
-  "CHUBB",
-  "SURA",
-  "GBM",
-  "TotalPass",
-  "VISA",
-  "Mastercard",
-  "SPEI",
-];
+import { ALIADOS } from "../../data/content";
+
+const ALIADOS_MARCA = ALIADOS.marcas;
 
 export const AliadosMarquee = () => {
   const loop = [...ALIADOS_MARCA, ...ALIADOS_MARCA];

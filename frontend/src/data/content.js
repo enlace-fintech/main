@@ -54,6 +54,15 @@ export const NAV = [
   { label: "Contacto", href: "/contacto" },
 ];
 
+export const HERO_SLIDES = [
+  { image: "/img/hero-person.webp", kicker: "Asesoría sin costo", title: "Un solo aliado para cobrar, pagar y operar", href: "/servicios", cta: "Ver servicios" },
+  { image: "/img/tpv.webp", kicker: "Terminales punto de venta", title: "Cobra con tarjeta sin trámites bancarios ni mínimos", href: "/servicios/terminales-punto-de-venta", cta: "Ver terminales" },
+  { image: "/img/nom-dispersion.webp", kicker: "Plataforma de pagos", title: "SPEI 24/7, nómina y proveedores desde una sola cuenta", href: "/servicios/plataforma-de-pagos", cta: "Ver plataforma" },
+  { image: "/img/nom035.webp", kicker: "Seguros y beneficios", title: "Beneficios para tu equipo con apoyo a la NOM-035", href: "/servicios/seguros-y-beneficios", cta: "Ver beneficios" },
+  { image: "/img/cons-fiscal.webp", kicker: "Consultoría empresarial", title: "Fiscal, laboral, contable y capital humano con un solo interlocutor", href: "/servicios/consultoria-empresarial", cta: "Ver consultoría" },
+  { image: "/img/cripto-flujo.webp", kicker: "Cobros y pagos cripto", title: "Acepta USDT, BTC o ETH y recibe pesos en tu cuenta", href: "/servicios/cripto", cta: "Ver cripto" },
+];
+
 export const HERO_STATS = [
   { value: "24/7/365", label: "Operación continua" },
   { value: "5 min", label: "Onboarding" },
@@ -548,6 +557,16 @@ export const ALIADOS = {
   title: "El broker fintech con los mejores aliados estratégicos",
   description:
     "Trabajamos con un ecosistema de aliados para empresarios y personas físicas que buscan una gestión financiera moderna y eficiente. Nuestra experiencia nos permite ofrecer orientación personalizada y herramientas adaptadas a cada cliente.",
+  grupos: [
+    { cat: "Banca y plataforma de pagos", icon: "Landmark", items: ["FlexPei", "SPEI", "Visa", "Mastercard"] },
+    { cat: "Terminales y agregadores de pago", icon: "CreditCard", items: ["Billpocket", "Clip", "Mercado Pago", "Agregadores de pago"] },
+    { cat: "Cobros y pagos cripto", icon: "Bitcoin", items: ["FluxiPay", "FlexPei"] },
+    { cat: "Sistemas y tecnología", icon: "Boxes", items: ["Acxor", "Más Mesa", "InfoCaja", "Mastiket", "Masaldo", "Callmarket", "MisTrámites", "Nomilinea"] },
+    { cat: "Seguros", icon: "ShieldCheck", items: ["MAPFRE", "Chubb", "SURA"] },
+    { cat: "Asistencia médica y funeraria", icon: "Stethoscope", items: ["AsisMed", "VRIM", "Koltin", "Sofía", "Gayosso", "J. García López"] },
+    { cat: "Ahorro y beneficios", icon: "PiggyBank", items: ["GBM", "Bwigo"] },
+    { cat: "Gimnasios y deporte", icon: "Dumbbell", items: ["Smart Fit", "Sports World", "Sport City", "Snap Fitness", "9Round", "TotalPass", "Fitpass", "Club Deportivo", "AMIS Fitness Center", "Club Canadá", "Dexfit", "Fededome", "Fitness Club", "Green 21", "Maitan Fitness", "Rolo", "Triiibu"] },
+  ],
   categories: [
     "Banca & plataforma de pagos",
     "Tarjetas nominativas",
@@ -559,6 +578,8 @@ export const ALIADOS = {
     "Seguros",
   ],
 };
+
+ALIADOS.marcas = [...new Set(ALIADOS.grupos.flatMap((g) => g.items))].filter((m) => m !== "Agregadores de pago");
 
 export const EVENTOS = {
   overline: "Sectores · Eventos & Conciertos",
@@ -980,18 +1001,21 @@ export const SERVICIOS_DETALLE = {
       {
         icon: "Users",
         title: "Tarjetas nominativas para colaboradores",
+        image: "/img/tarj-colaboradores.webp",
         desc: "Para viáticos, gasolina, compras operativas y gastos de campo.",
         bullets: ["Límites por tarjeta, comercio o categoría", "Comprobación de gastos con foto del ticket", "Sin exponer la cuenta principal de la empresa", "Reportes por área o centro de costo"],
       },
       {
         icon: "Landmark",
         title: "Tarjeta de nómina y dispersión",
+        image: "/img/tarj-nomina.webp",
         desc: "Paga a tu equipo en segundos y dales una tarjeta sin costo.",
         bullets: ["Dispersión masiva de nómina 24/7", "Tarjeta nominativa sin costo para el colaborador", "Retiros en cajeros y compras en comercios", "Acceso a beneficios y membresías"],
       },
       {
         icon: "Crown",
         title: "Tarjeta corporativa para dueños y directivos",
+        image: "/img/tarj-corporativa.webp",
         desc: "Una tarjeta con límites altos para la operación estratégica.",
         bullets: ["Pagos a proveedores nacionales e internacionales", "Suscripciones, software y publicidad digital", "Estados de cuenta por centro de costo", "Seguros y asistencias en viajes"],
       },
@@ -1015,18 +1039,21 @@ export const SERVICIOS_DETALLE = {
       {
         icon: "Landmark",
         title: "Dispersión de nómina",
+        image: "/img/nom-dispersion.webp",
         desc: "Olvídate de capturar cuenta por cuenta en el banco.",
         bullets: ["Carga de layout desde Excel o tu sistema de nómina", "Pagos a cualquier banco o a la tarjeta de nómina Enlace", "Programación de pagos y aprobaciones por niveles", "Comprobantes de pago automáticos para cada colaborador"],
       },
       {
         icon: "WalletCards",
         title: "Tarjeta de nómina Enlace",
+        image: "/img/nom-tarjeta.webp",
         desc: "Un beneficio que retiene talento sin costo para la empresa.",
         bullets: ["Tarjeta nominativa sin costo de apertura ni anualidad", "Retiros en cajeros y compras en comercios", "Acceso a descuentos, seguros y membresías", "Control de saldos y movimientos desde la app"],
       },
       {
         icon: "ClipboardList",
         title: "Administración integral de nómina",
+        image: "/img/nom-admin.webp",
         desc: "Con nuestro equipo de capital humano.",
         bullets: ["Cálculo de IMSS, ISR e incidencias", "Timbrado de CFDI de nómina", "Altas, bajas y modificaciones ante el IMSS", "Finiquitos y liquidaciones"],
         href: "/servicios/consultoria-empresarial",
@@ -1052,18 +1079,21 @@ export const SERVICIOS_DETALLE = {
       {
         icon: "Truck",
         title: "Paga a proveedores internacionales",
+        image: "/img/int-proveedores.webp",
         desc: "Importa insumos, software o servicios sin trabas.",
         bullets: ["Transferencias Wire y SWIFT a más de 100 países", "Cuenta en USD para concentrar pagos", "Aprobaciones por niveles y comprobantes", "Conversión al momento del pago"],
       },
       {
         icon: "Store",
         title: "Cobra a clientes en el extranjero",
+        image: "/img/int-clientes.webp",
         desc: "Vende fuera de México y recibe en pesos.",
         bullets: ["Links de pago en USD para tus clientes", "Cobros en cripto con liquidación en MXN", "Liquidación a tu cuenta bancaria en 24-48 h", "Sin custodia de fondos ni riesgo de contraparte"],
       },
       {
         icon: "Coins",
         title: "Tesorería multimoneda",
+        image: "/img/int-tesoreria.webp",
         desc: "Administra pesos, dólares y activos digitales en un lugar.",
         bullets: ["Saldos en MXN y USD", "Integración de activos digitales", "Reportes consolidados para contabilidad", "Alertas de movimientos inusuales"],
       },
