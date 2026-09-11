@@ -146,6 +146,10 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 ## SPEI + FlexPei fusionados (2026-06-12)
 - WALLET.features: "Transferencias SPEI con FlexPei" es un solo bloque (5 features). WalletNegocios.jsx: solo el índice 0 ocupa 2 columnas (md:col-span-2) → sin huecos en lg (2+1 / 1+1+1) ni en md (1 ancho / 2 / 2). Verificado con screenshots.
 
+## Fotos Terminales + Personas (2026-06-12)
+- TPV.benefits ahora objetos {image, title, text} (10 fotos tpv-b-0..9.webp); tarjetas con imagen 4:3 + número dorado en Tpv.jsx.
+- PERSONA.image (persona-hero.webp, retrato vertical con mini-tarjeta flotante) y PERSONA.points como objetos {image, icon, title, text} (persona-p-0..5.webp) renderizados como tarjetas con foto de fondo (grid 3 cols) en PersonaFisica.jsx (Home y /personas). 17 imágenes locales, 772 KB total.
+
 ## Backlog / pendientes
 - P1: Sustituir cifras y testimonios de muestra en data/porque.js por datos reales (y quitar las notas statsNote/testimonialsNote).
 - P1: Confirmar precios reales de planes de beneficios (MEMBRESIAS.plans) y aseguradoras aliadas.

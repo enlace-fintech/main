@@ -39,11 +39,18 @@ export const Tpv = () => (
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {TPV.benefits.map((b, i) => (
           <Reveal key={i} delay={i * 0.04}>
-            <div data-testid={`tpv-benefit-${i}`} className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-5 hover:border-[#D4AF37]/40 transition-colors duration-300">
-              <span className="font-display text-3xl font-black text-[#D4AF37]/40 group-hover:text-[#D4AF37] transition-colors duration-300">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="mt-3 text-sm text-slate-300 leading-relaxed">{b}</p>
+            <div data-testid={`tpv-benefit-${i}`} className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40 transition-colors duration-300">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img loading="lazy" decoding="async" src={b.image} alt={b.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B132B] to-transparent" />
+                <span className="absolute left-4 bottom-3 font-display text-2xl font-black text-[#D4AF37]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-display text-base font-bold text-white">{b.title}</h3>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{b.text}</p>
+              </div>
             </div>
           </Reveal>
         ))}
