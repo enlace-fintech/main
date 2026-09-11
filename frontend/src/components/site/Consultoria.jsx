@@ -39,6 +39,21 @@ export const Consultoria = () => {
           </Reveal>
         </div>
 
+        <Reveal className="mt-16 grid gap-6 md:grid-cols-3">
+          {CONSULTORIA.frentes.map((f, i) => {
+            const Icon = Icons[f.icon] || Icons.Circle;
+            return (
+              <div key={f.title} data-testid={`consultoria-frente-${i}`} className="rounded-2xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/[0.07] to-transparent p-7">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]">
+                  <Icon size={20} strokeWidth={1.5} />
+                </span>
+                <h2 className="font-display mt-4 text-lg font-bold text-white">{f.title}</h2>
+                <p className="mt-2 text-sm text-slate-300 leading-relaxed">{f.desc}</p>
+              </div>
+            );
+          })}
+        </Reveal>
+
         <Reveal className="mt-16 grid gap-6 lg:grid-cols-[300px_1fr]">
           <div className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0" role="tablist">
             {CONSULTORIA.areas.map((a) => {

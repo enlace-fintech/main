@@ -35,7 +35,7 @@ export const ServiciosHub = ({ asHero = false }) => {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {(SERVICIOS_HUB.pillars ?? []).map((p, i) => {
             const Icon = Icons[p.icon] || Icons.Briefcase;
             return (

@@ -3,7 +3,6 @@ const SECTOR = {
   medicos: ["Terminales punto de venta", "un consultorio médico", "una terminal Bluetooth, links de pago para anticipos y depósito directo a mi cuenta"],
   casinos: ["Casinos", "un casino", "medios de pago, tarjetas nominativas para jugadores y cumplimiento PLD"],
   eventos: ["Terminales punto de venta", "eventos y conciertos", "terminales para barras, cashless y liquidación rápida a proveedores"],
-  membresias: ["Beneficios para colaboradores", "una empresa con colaboradores", "beneficios, seguros y tarjeta de nómina para mi equipo"],
   "call-center": ["Terminales punto de venta", "un call center", "links de pago para cobrar por teléfono y dispersión de comisiones a agentes"],
   farmacias: ["Terminales punto de venta", "una farmacia", "terminales con comisión negociada, inventario y facturación QR"],
   tiendas: ["Terminales punto de venta", "una tienda", "cobrar con tarjeta, links de pago por WhatsApp y tarjetas para mi equipo"],
@@ -19,7 +18,8 @@ const SERVICIO = {
   "nomina-y-dispersion": ["Nómina y dispersión", "dispersión de nómina y tarjeta de nómina para mi equipo"],
   "pagos-internacionales": ["Pagos internacionales", "pagos y cobros internacionales"],
   cripto: ["Pagos internacionales", "cobrar en cripto con liquidación en pesos"],
-  "consultoria-empresarial": ["Consultoría empresarial", "consultoría en capital humano, fiscal y laboral"],
+  "consultoria-empresarial": ["Consultoría empresarial", "consultoría en capital humano, fiscal, laboral y contable"],
+  "seguros-y-beneficios": ["Beneficios para colaboradores", "seguros y beneficios para mis colaboradores (tarjeta de nómina, gimnasio, asistencias)"],
   sistemas: ["Otro", "integrar un sistema (reservaciones, boletos, caja, call center o software a medida)"],
   "caja-y-comanda": ["Otro", "caja y comanda para mi restaurante con InfoCaja"],
 };

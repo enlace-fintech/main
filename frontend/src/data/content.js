@@ -21,7 +21,6 @@ export const NAV = [
       { label: "Médicos", href: "/empresas/medicos" },
       { label: "Casinos", href: "/empresas/casinos" },
       { label: "Eventos & Conciertos", href: "/empresas/eventos" },
-      { label: "Membresías", href: "/empresas/membresias" },
       { label: "Call center", href: "/empresas/call-center" },
       { label: "Farmacias", href: "/empresas/farmacias" },
       { label: "Tiendas", href: "/empresas/tiendas" },
@@ -41,6 +40,7 @@ export const NAV = [
       { label: "Nómina y dispersión", href: "/servicios/nomina-y-dispersion" },
       { label: "Pagos internacionales", href: "/servicios/pagos-internacionales" },
       { label: "Cobros en cripto", href: "/servicios/cripto" },
+      { label: "Seguros y beneficios", href: "/servicios/seguros-y-beneficios" },
       { label: "Consultoría empresarial", href: "/servicios/consultoria-empresarial" },
       { label: "Sistemas y tecnología", href: "/servicios/sistemas" },
     ],
@@ -261,7 +261,6 @@ export const EMPRESAS = {
     { icon: "Stethoscope", name: "Médicos", href: "/empresas/medicos" },
     { icon: "Dice5", name: "Casinos", href: "/empresas/casinos" },
     { icon: "Ticket", name: "Eventos & Conciertos", href: "/empresas/eventos" },
-    { icon: "BadgeCheck", name: "Membresías", href: "/empresas/membresias" },
     { icon: "Headset", name: "Call center", href: "/empresas/call-center" },
     { icon: "Pill", name: "Farmacias", href: "/empresas/farmacias" },
     { icon: "ShoppingBag", name: "Tiendas", href: "/empresas/tiendas" },
@@ -426,7 +425,7 @@ export const CRIPTO = {
 };
 
 export const MEMBRESIAS = {
-  overline: "Sectores · Membresías y beneficios para colaboradores",
+  overline: "Servicios · Seguros y beneficios para colaboradores",
   title: "Retén a tu equipo con beneficios que valen más de lo que cuestan",
   description:
     "Mejoramos la calidad de vida de las personas y potenciamos el crecimiento de las empresas con una amplia gama de servicios integrados en una sola app: seguros, asistencias médicas, gimnasios, descuentos y una tarjeta nominativa de nómina sin costo.",
@@ -839,16 +838,30 @@ export const SERVICIOS_HUB = {
       cta: "Ver pagos internacionales",
     },
     {
+      icon: "HeartHandshake",
+      title: "Seguros y beneficios para colaboradores",
+      desc: "Seguros de accidentes, vida y gastos médicos, asistencias, gimnasios, descuentos y tarjeta de nómina para tu equipo, en un solo paquete.",
+      href: "/servicios/seguros-y-beneficios",
+      cta: "Ver seguros y beneficios",
+    },
+    {
       icon: "Scale",
       title: "Consultoría empresarial",
       desc: "Capital humano, asesoría corporativa, fiscal, laboral y mercantil con especialistas que analizan y optimizan tu operación.",
       href: "/servicios/consultoria-empresarial",
       cta: "Ver consultoría",
     },
+    {
+      icon: "Boxes",
+      title: "Sistemas y tecnología",
+      desc: "Reservaciones, boletos, caja, cashless, call center, gestoría de trámites y desarrollo de software a medida, integrados con tus cobros.",
+      href: "/servicios/sistemas",
+      cta: "Ver sistemas",
+    },
   ],
   more: [
-    { title: "Beneficios para colaboradores", href: "/empresas/membresias" },
     { title: "Cobros en cripto", href: "/servicios/cripto" },
+    { title: "Caja & comanda (InfoCaja)", href: "/servicios/caja-y-comanda" },
   ],
 };
 
@@ -864,6 +877,7 @@ export const SISTEMAS = {
     { icon: "Store", name: "InfoCaja", domain: "infocaja.mx", url: "https://infocaja.mx", tag: "Caja y comanda", desc: "Punto de venta con comanda, inventario, automatización de procesos y facturación con QR.", forWhom: "Restaurantes y comercios", internal: "/servicios/caja-y-comanda" },
     { icon: "Headset", name: "Callmarket", domain: "callmarket.cc", url: "https://callmarket.cc", tag: "Sistema de call center", desc: "Campañas automatizadas, IVR, encuestas telefónicas y cobro por teléfono integrado con procesadores de pago.", forWhom: "Call centers, agencias de viajes y ventas telefónicas", internal: "/empresas/call-center" },
     { icon: "FileCheck", name: "MisTrámites", domain: "mistramites.mx", url: "https://mistramites.mx", tag: "Gestoría de trámites", desc: "Más de 60 trámites mexicanos con seguimiento 24/7: constitución de empresas, RFC, e.firma, IMSS y más.", forWhom: "Empresas nuevas y en crecimiento", internal: "/servicios/consultoria-empresarial" },
+    { icon: "Nfc", name: "Masaldo", domain: "masaldo.com.mx", url: "https://masaldo.com.mx", tag: "Cashless RFID", desc: "Recarga de saldo en brazaletes y monederos digitales para pagos sin efectivo dentro de recintos, eventos y clubes.", forWhom: "Eventos, festivales, clubes y parques", internal: "/empresas/eventos" },
     { icon: "Code2", name: "Acxor", domain: "acxor.com", url: "https://acxor.com", tag: "Desarrollo de software", desc: "Ingeniería de software a medida: apps web y móviles, integraciones con bancos y procesadores de pago, automatización, seguridad y soporte 24/7.", forWhom: "Empresas que necesitan tecnología propia en producción", internal: "/contacto" },
   ],
 };
@@ -988,7 +1002,12 @@ export const CONSULTORIA = {
   description:
     "Cada empresa tiene necesidades distintas. Por eso, antes de presentarte una propuesta, analizamos tu operación para tener una visión completa y clara de lo que necesitas, y diseñamos una estrategia integral que optimice tus recursos: nómina, personal, fiscal, laboral y corporativo, con un solo interlocutor.",
   operator:
-    "Servicio prestado por el despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral y corporativa.",
+    "Servicio prestado por el despacho de consultoría aliado del grupo Enlace Fintech, con especialistas titulados en materia fiscal, laboral, contable y corporativa.",
+  frentes: [
+    { icon: "TrendingUp", title: "Soluciones financieras", desc: "Por medio de herramientas innovadoras generamos beneficios financieros, reducción de costos y optimización del control administrativo." },
+    { icon: "Users", title: "Administración de capital humano", desc: "Desde la contratación temporal o de planta, altas y bajas ante el IMSS, cálculo de incidencias y dispersión de pagos, hasta negociación con sindicatos, finiquitos y liquidaciones." },
+    { icon: "Scale", title: "Asesoría y consultoría", desc: "Expertos en temas legales, administrativos, fiscales y contables que acompañan a tu empresa para analizar sus cuentas, evaluar el rendimiento del negocio y definir pautas que resuelvan cada necesidad." },
+  ],
   image:
     "/img/consultoria.webp",
   areas: [
@@ -999,7 +1018,9 @@ export const CONSULTORIA = {
       desc: "Nómina, personal y recursos humanos operados con control, cumplimiento y ahorro.",
       items: [
         "Administración de nómina",
-        "Servicios especializados de personal (REPSE)",
+        "Contratación temporal o de planta",
+        "Servicios especializados de personal / outsourcing (REPSE)",
+        "Negociación con sindicatos",
         "Soluciones en recursos humanos",
         "Manejo de contratos laborales",
         "Auditorías en nómina",
@@ -1052,6 +1073,19 @@ export const CONSULTORIA = {
         "Asesoría y elaboración de convenios de confidencialidad",
         "Asesoría en finiquitos y liquidaciones",
         "Asesoría en seguridad e higiene en el trabajo (NOM-STPS)",
+      ],
+    },
+    {
+      id: "contable",
+      icon: "Calculator",
+      title: "Asesoría contable y administrativa",
+      desc: "Expertos contables y administrativos que analizan tus cuentas y evalúan el rendimiento de tu negocio.",
+      items: [
+        "Análisis de cuentas y evaluación del rendimiento del negocio",
+        "Contabilidad, cierre mensual y estados financieros",
+        "Presupuestos, flujo de efectivo y control de gastos",
+        "Reportes para socios, accionistas y consejo",
+        "Definición de pautas y planes de acción para cada necesidad",
       ],
     },
     {

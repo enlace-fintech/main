@@ -12,6 +12,7 @@ import { ComoEmpezar } from "@/components/site/ComoEmpezar";
 import { SistemasAliados } from "@/components/site/SistemasAliados";
 import { Caja } from "@/components/site/Caja";
 import { Cripto } from "@/components/site/Cripto";
+import { Membresias } from "@/components/site/Membresias";
 import { Contacto } from "@/components/site/Contacto";
 import { SERVICIOS_DETALLE } from "@/data/content";
 
@@ -27,6 +28,7 @@ const LABELS = {
   sistemas: "Sistemas y tecnología",
   "caja-y-comanda": "Caja & comanda",
   cripto: "Cobros en cripto",
+  "seguros-y-beneficios": "Seguros y beneficios para colaboradores",
 };
 
 const PARENTS = { "caja-y-comanda": { label: "Sistemas y tecnología", href: "/servicios/sistemas" } };
@@ -54,6 +56,7 @@ const DEDICATED = {
   sistemas: () => <SistemasAliados asHero />,
   "caja-y-comanda": () => <Caja />,
   cripto: () => <Cripto />,
+  "seguros-y-beneficios": () => <Membresias />,
 };
 
 export default function ServiciosPage() {

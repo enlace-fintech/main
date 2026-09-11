@@ -110,6 +110,12 @@ Propuesta gráfica + sitio + contenido completo, en español (mercado México).
 ## Cripto movido a Servicios (2026-06-09)
 - /servicios/cripto (componente Cripto, overline "Servicios · Cripto"); /empresas/cripto redirige. Quitado del grid/menú Empresas; añadido a menú/footer Servicios, chip "Cobros en cripto" del hub, CTA del blog, sitemap, leads (interés "Pagos internacionales"), seo (Service + FAQPage). Empresas ahora tiene 11 sectores.
 
+## Servicios faltantes + Seguros y beneficios a Servicios (2026-06-11)
+- Consultoría: capital humano + "Contratación temporal o de planta", "Negociación con sindicatos", outsourcing (REPSE); nueva área "Asesoría contable y administrativa" (6 tabs); bloque "3 frentes" (Soluciones financieras / Capital humano / Asesoría y consultoría) restaurado.
+- Sistemas: + Masaldo (cashless RFID). Hub: 8 pilares (grid 4 cols) incl. "Seguros y beneficios para colaboradores" y "Sistemas y tecnología".
+- Membresías movida a /servicios/seguros-y-beneficios (componente Membresias); /empresas/membresias redirige; quitada de Empresas (quedan 10 sectores). Menú/footer/leads/seo/sitemap actualizados.
+- Hero (texto fijado por el usuario): "…terminales punto de venta con trámites online rápidos…".
+
 ## Backlog / pendientes
 - P1: FAQ global con precio/regulación; página Aliados con descripción por aliado.
 - P1: Sección "Por qué Enlace" + espacio para testimonios/cifras reales.

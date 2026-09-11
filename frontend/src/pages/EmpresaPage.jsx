@@ -6,7 +6,6 @@ import { MasMesa } from "@/components/site/MasMesa";
 import { Caja } from "@/components/site/Caja";
 import { Medicos } from "@/components/site/Medicos";
 import { Eventos } from "@/components/site/Eventos";
-import { Membresias } from "@/components/site/Membresias";
 import { Casinos } from "@/components/site/Casinos";
 import { EcosistemaEnlace } from "@/components/site/EcosistemaEnlace";
 import { Contacto } from "@/components/site/Contacto";
@@ -17,7 +16,6 @@ const LABELS = {
   medicos: "Médicos",
   casinos: "Casinos",
   eventos: "Eventos & Conciertos",
-  membresias: "Membresías",
   "call-center": "Call center",
   farmacias: "Farmacias",
   tiendas: "Tiendas",
@@ -37,7 +35,6 @@ const DEDICATED = {
   medicos: () => <Medicos />,
   casinos: () => <Casinos />,
   eventos: () => <Eventos />,
-  membresias: () => <Membresias />,
 };
 
 export default function EmpresaPage() {

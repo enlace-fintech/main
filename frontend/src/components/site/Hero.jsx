@@ -47,7 +47,7 @@ export const Hero = () => (
           className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl"
         >
           <span className="font-semibold text-white">Un solo aliado</span> para cobrar, pagar y operar:
-          plataforma de pagos, terminales punto de venta sin trámites bancarios, tarjetas nominativas,
+          plataforma de pagos, terminales punto de venta con trámites online rápidos, tarjetas nominativas,
           transferencias SPEI 24/7, seguros y beneficios para tus colaboradores y consultoría empresarial,
           con condiciones negociadas a tu favor.
         </motion.p>

@@ -24,6 +24,7 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/empresas/cripto" element={<Navigate to="/servicios/cripto" replace />} />
+            <Route path="/empresas/membresias" element={<Navigate to="/servicios/seguros-y-beneficios" replace />} />
             <Route path="/empresas/:slug" element={<EmpresaPage />} />
             <Route path="/servicios" element={<ServiciosPage />} />
             <Route path="/servicios/:slug" element={<ServiciosPage />} />
