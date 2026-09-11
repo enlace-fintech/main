@@ -72,7 +72,7 @@ export const Contacto = () => {
           </p>
 
           <div className="mt-10 space-y-5">
-            <a href={`tel:${BRAND.phone}`} data-testid="contact-phone" className="flex items-center gap-4 text-slate-200 hover:text-[#D4AF37] transition-colors duration-200">
+            <a href={`tel:${BRAND.phone.replace(/\s/g, "")}`} data-testid="contact-phone" className="flex items-center gap-4 text-slate-200 hover:text-[#D4AF37] transition-colors duration-200">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37]"><Phone size={18} strokeWidth={1.5} /></span>
               {BRAND.phone}
             </a>

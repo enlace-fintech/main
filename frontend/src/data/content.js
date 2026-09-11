@@ -7,9 +7,9 @@ export const BRAND = {
   heroDashboard: "/img/hero-dashboard.webp",
   heroPerson: "/img/hero-person.webp",
   tagline: "Tu broker fintech de confianza",
-  phone: "+52 55 0000 0000",
+  phone: "+52 56 7125 8244",
   email: "contacto@enlacefintech.com",
-  whatsapp: "+52 55 0000 0000",
+  whatsapp: "+52 56 7125 8244",
   address: "Ciudad de México, México",
 };
 
@@ -849,7 +849,7 @@ export const SUCURSALES = {
   image:
     "/img/sucursales.webp",
   branches: [
-    { city: "Ciudad de México", address: "Av. Reforma 000, Col. Centro, CDMX", phone: "+52 55 0000 0000" },
+    { city: "Ciudad de México", address: "Av. Reforma 000, Col. Centro, CDMX", phone: "+52 56 7125 8244" },
     { city: "Guadalajara", address: "Av. Chapultepec 000, Col. Americana, Jalisco", phone: "+52 33 0000 0000" },
     { city: "Monterrey", address: "Av. Constitución 000, Centro, Nuevo León", phone: "+52 81 0000 0000" },
   ],

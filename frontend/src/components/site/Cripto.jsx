@@ -98,7 +98,7 @@ export const Cripto = () => (
           <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-[#0e1836] via-[#0e1836]/40 to-transparent" />
           <div className="absolute inset-y-0 left-0 flex max-w-md flex-col justify-center p-8">
             <span className="text-xs uppercase tracking-[0.24em] text-[#D4AF37]">Cripto → pesos</span>
-            <p className="font-display mt-2 text-xl lg:text-2xl font-bold text-white leading-snug">Tu cliente paga en USDT, BTC o ETH; tú recibes pesos en tu cuenta en 24–48 h.</p>
+            <p className="font-display mt-2 text-xl lg:text-2xl font-bold text-white leading-snug">Tu cliente paga en USDT, BTC o ETH; tú recibes pesos en tu cuenta.</p>
           </div>
         </div>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
