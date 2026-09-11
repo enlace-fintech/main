@@ -196,7 +196,7 @@ export const BLOG = {
         { h: "Cómo funciona la liquidación en pesos", bullets: ["Tu sistema genera una orden de cobro con monto en MXN o USD", "El cliente paga con USDT, BTC o ETH desde cualquier wallet", "La pasarela detecta el pago en la blockchain en segundos", "Se convierte a pesos al tipo de cambio del momento y se deposita en tu cuenta en 24–48 horas"], p: ["Tú nunca custodias cripto ni asumes el riesgo de volatilidad: cobras en tu moneda y recibes pesos."] },
         { h: "Aspectos fiscales que debes considerar", p: ["Para efectos fiscales, la venta de un bien o servicio pagado con cripto se factura igual que cualquier venta: emites CFDI por el importe en pesos. Si conservas activos virtuales y los vendes después, la utilidad se considera ingreso acumulable. Recomendamos siempre revisar con tu contador el tratamiento específico de tu régimen."] },
         { h: "¿Para quién tiene sentido?", bullets: ["E-commerce con clientes en Estados Unidos, Latinoamérica o Europa", "Freelancers y agencias que cobran a clientes extranjeros", "Empresas que pagan a proveedores fuera de México y quieren evitar comisiones de SWIFT", "Negocios que quieren diferenciarse ofreciendo más medios de pago"] },
-        { h: "Con quién lo hacemos", p: ["En Enlace Fintech integramos FluxiPay para cobros cripto con liquidación en fiat y FlexPei para intercambio de activos digitales, cuentas en USD y pagos internacionales, con cumplimiento regulatorio en cada paso."] },
+        { h: "Con quién lo hacemos", p: ["En Enlace Fintech integramos FluxiPay para cobros cripto con liquidación en fiat y FlexPei para integración de activos digitales, cuentas en USD y pagos internacionales, con cumplimiento regulatorio en cada paso."] },
       ],
       cta: { text: "Quiero aceptar cripto en mi negocio", href: "/servicios/cripto" },
     },
@@ -357,7 +357,7 @@ export const CRIPTO = {
   overline: "Servicios · Cripto",
   title: "Cobra en cripto y recibe pesos en tu banco, sin custodiar ni especular",
   description:
-    "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos intercambio de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
+    "Acepta pagos en criptomonedas en tu e-commerce o de clientes en el extranjero y recibe el dinero en pesos directamente en tu cuenta bancaria o FlexPei en 24–48 horas. Junto a nuestros aliados FlexPei y FluxiPay ofrecemos integración de activos digitales y cobros cripto con liquidación en fiat, con KYC/AML resuelto, y lo integramos con tus terminales, tu banca empresarial y las tarjetas de tu equipo.",
   audience: ["E-commerce con clientes fuera de México", "Freelancers y agencias que cobran en el extranjero", "Empresas que pagan proveedores internacionales", "Negocios que quieren más medios de pago"],
   pains: [
     { icon: "Globe", q: "“Clientes en EE. UU. o Europa quieren pagarme y SWIFT tarda y cuesta”", a: "Cobro en USDT con liquidación en pesos a tu cuenta FlexPei o bancaria, sin intermediarios bancarios." },
@@ -378,10 +378,10 @@ export const CRIPTO = {
     {
       name: "FlexPei",
       url: "https://flexpei.com",
-      tag: "Exchange & activos digitales",
-      desc: "Gestiona todos tus pagos empresariales desde una sola plataforma: intercambio de activos digitales, transferencias SPEI 24/7 y pagos internacionales.",
+      tag: "Integrador de activos digitales",
+      desc: "Gestiona todos tus pagos empresariales desde una sola plataforma: integración de activos digitales, transferencias SPEI 24/7 y pagos internacionales.",
       bullets: [
-        "Intercambio de activos digitales",
+        "Integración de activos digitales",
         "Transferencias SPEI instantáneas 24/7",
         "Pagos internacionales Wire y SWIFT",
         "Tarjetas corporativas y cumplimiento KYC/AML",
@@ -390,7 +390,7 @@ export const CRIPTO = {
     {
       name: "FluxiPay",
       url: "https://fluxipay.com",
-      tag: "Cobros cripto para e-commerce",
+      tag: "Integrador para cobros cripto en e-commerce",
       desc: "Pasarela para aceptar USDT, BTC y ETH en tu e-commerce y recibir el pago en tu moneda local, con liquidación a tu banco.",
       bullets: [
         "Acepta USDT, BTC y ETH en tu tienda en línea",
@@ -1061,7 +1061,7 @@ export const SERVICIOS_DETALLE = {
         icon: "Coins",
         title: "Tesorería multimoneda",
         desc: "Administra pesos, dólares y activos digitales en un lugar.",
-        bullets: ["Saldos en MXN y USD", "Intercambio de activos digitales", "Reportes consolidados para contabilidad", "Alertas de movimientos inusuales"],
+        bullets: ["Saldos en MXN y USD", "Integración de activos digitales", "Reportes consolidados para contabilidad", "Alertas de movimientos inusuales"],
       },
     ],
     partners: [
