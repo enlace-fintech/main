@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight, Check, Star, Sparkles } from "lucide-react";
 import { MEMBRESIAS } from "../../data/content";
 import { contactHref } from "../../data/leads";
 import { Reveal, Overline } from "./Primitives";
@@ -13,7 +13,9 @@ export const BeneficiosPlanes = () => {
   const [size, setSize] = useState(2);
   const p = MEMBRESIAS.plans.find((x) => x.key === plan);
   const s = MEMBRESIAS.sizes[size];
-  const msg = `Quiero cotizar el plan ${p.name} de seguros y beneficios para ${s.label} colaboradores. ¿Me pueden enviar una propuesta?`;
+  const msg = p.contact
+    ? `Me interesa el plan Platinum (servicios premium personalizados) con coberturas de seguros ampliadas para ${s.label} colaboradores. ¿Podemos agendar una llamada para diseñar el paquete?`
+    : `Quiero cotizar el plan ${p.name} de seguros y beneficios para ${s.label} colaboradores. ¿Me pueden enviar una propuesta?`;
   const href = `${contactHref(pathname)}&msg=${encodeURIComponent(msg)}`;
 
   return (
@@ -24,17 +26,20 @@ export const BeneficiosPlanes = () => {
         <p className="mt-3 text-slate-400 leading-relaxed">{MEMBRESIAS.plansNote}</p>
       </Reveal>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
         {MEMBRESIAS.plans.map((pl, i) => {
           const active = pl.key === plan;
           return (
             <Reveal key={pl.key} delay={i * 0.05}>
               <button type="button" onClick={() => setPlan(pl.key)} data-testid={`plan-${pl.key}`} aria-pressed={active}
-                className={`relative flex h-full w-full flex-col overflow-hidden rounded-2xl border text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 ${active ? "border-[#D4AF37] bg-[#D4AF37]/10" : "border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40"}`}>
+                className={`relative flex h-full w-full flex-col overflow-hidden rounded-2xl border text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 ${active ? "border-[#D4AF37] bg-[#D4AF37]/10" : pl.contact ? "border-slate-300/30 bg-gradient-to-b from-slate-200/[0.08] to-transparent hover:border-[#D4AF37]/60" : "border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40"}`}>
                 <img loading="lazy" decoding="async" src={pl.image} alt={`Plan ${pl.name}`} className="h-36 w-full object-cover" />
                 <div className="flex flex-1 flex-col p-6">
                 {pl.featured && (
                   <span className="absolute left-5 top-4 inline-flex items-center gap-1 rounded-full bg-[#D4AF37] px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#0B132B]"><Star size={11} /> Más elegido</span>
+                )}
+                {pl.contact && (
+                  <span className="absolute left-5 top-4 inline-flex items-center gap-1 rounded-full bg-slate-200 px-3 py-1 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#0B132B]"><Sparkles size={11} /> Premium</span>
                 )}
                 {pl.tag && <span className="text-[0.62rem] uppercase tracking-[0.24em] text-[#D4AF37]">{pl.tag}</span>}
                 <h3 className="font-display text-xl font-bold text-white">{pl.name}</h3>
@@ -43,6 +48,7 @@ export const BeneficiosPlanes = () => {
                   <span className="text-xs text-slate-400">{pl.price ? "/ mes" : pl.period}</span>
                 </div>
                 {pl.yearly && <div className="mt-1 text-xs text-slate-500">{mxn.format(pl.yearly)} al año</div>}
+                {pl.contact && <div className="mt-1 text-xs text-[#D4AF37]">Contáctanos para diseñarlo</div>}
                 <p className="mt-3 text-sm text-slate-400 leading-relaxed">{pl.desc}</p>
                 <ul className="mt-4 flex-1 space-y-2">
                   {pl.features.map((f) => (
@@ -72,11 +78,11 @@ export const BeneficiosPlanes = () => {
             <p className="mt-5 text-sm text-slate-300" data-testid="cotizador-resumen">
               Plan <span className="font-bold text-white">{p.name}</span> para <span className="font-bold text-white">{s.label}</span> colaboradores
               {p.price > 0 && <> · desde <span className="font-bold text-[#D4AF37]">{mxn.format(p.price * s.min)}</span> al mes</>}
-              {p.price === 0 && <> · <span className="font-bold text-[#D4AF37]">sin costo para la empresa</span></>}
+              {p.contact && <> · <span className="font-bold text-[#D4AF37]">precio a la medida, te contactamos</span></>}
             </p>
           </div>
           <Link to={href} data-testid="cotizador-cta" className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-3.5 text-sm font-bold text-[#0B132B] hover:bg-[#F3C94F] transition-colors duration-200">
-            Solicitar cotización
+            {p.contact ? "Contactar para plan Platinum" : "Solicitar cotización"}
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>
