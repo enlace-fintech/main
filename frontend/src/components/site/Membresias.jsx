@@ -117,17 +117,30 @@ export const Membresias = () => (
       </div>
 
       <div className="mt-16">
-        <h3 className="font-display text-2xl font-bold tracking-tight text-white">Nuestros aliados</h3>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {MEMBRESIAS.aliados.map((a, i) => (
-            <div key={a.name} data-testid={`membresia-aliado-${i}`} className="group rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-6 hover:border-[#D4AF37]/40 transition-colors duration-300">
-              <div className="font-display text-lg font-bold text-white group-hover:text-[#D4AF37] transition-colors duration-200">{a.name}</div>
-              <div className="mt-1 text-xs uppercase tracking-[0.18em] text-[#D4AF37]">{a.cat}</div>
-              <p className="mt-2 text-sm text-slate-400 leading-relaxed">{a.desc}</p>
-            </div>
-          ))}
+        <h3 className="font-display text-2xl font-bold tracking-tight text-white">Aliados y proveedores</h3>
+        <p className="mt-2 max-w-2xl text-slate-400 leading-relaxed">Cada beneficio lo opera un proveedor especializado; Enlace integra, negocia y administra el paquete completo por ti.</p>
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {MEMBRESIAS.aliados.map((g, i) => {
+            const Icon = Icons[g.icon] || Icons.Handshake;
+            return (
+              <div key={g.cat} data-testid={`membresia-aliado-${i}`} className={`group rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-[#D4AF37]/40 transition-colors duration-300 ${g.items.length > 6 ? "md:col-span-2 lg:col-span-3" : ""}`}>
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B132B] transition-colors duration-300"><Icon size={18} strokeWidth={1.5} /></span>
+                  <div>
+                    <div className="font-display text-base font-bold text-white">{g.cat}</div>
+                    <p className="text-xs text-slate-500">{g.desc}</p>
+                  </div>
+                </div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {g.items.map((n) => (
+                    <span key={n} className="rounded-full border border-white/10 bg-[#0B132B]/60 px-3 py-1.5 text-sm text-slate-200">{n}</span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <p className="mt-4 text-xs text-slate-500">* Logotipos de aliados sujetos a convenio vigente.</p>
+        <p className="mt-4 text-xs text-slate-500">* Marcas propiedad de sus titulares; disponibilidad sujeta a convenio vigente y a la cobertura de cada plan.</p>
       </div>
     </div>
     <SectorExtras faq={MEMBRESIAS.faq} cta={MEMBRESIAS.cta} testid="membresias" />
