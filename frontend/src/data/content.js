@@ -428,33 +428,30 @@ export const CRIPTO = {
 
 export const MEMBRESIAS = {
   overline: "Servicios · Seguros y beneficios para colaboradores",
-  title: "Asistencias, seguros y descuentos para tu equipo, en un solo lugar y 100% digital",
+  title: "Asistencias, seguros y descuentos para tu equipo, con un solo aliado",
   description:
-    "Potencializa tu empresa brindando los mejores beneficios a tus colaboradores. Integramos seguros, asistencias médicas, redes de descuentos, acceso a gimnasios, asistencias para mascota, hogar y vial, orientación médica, emocional y nutricional y programas de bienestar integral, todo desde una app y con una tarjeta nominativa de nómina sin costo.",
+    "Potencializa tu empresa brindando los mejores beneficios a tus colaboradores. Integramos seguros, asistencias médicas, redes de descuentos, acceso a gimnasios, asistencias para mascota, hogar y vial, orientación médica, emocional y nutricional y programas de bienestar integral, junto con una tarjeta nominativa de nómina sin costo.",
   description2:
-    "Tú eliges quién paga: la empresa (deducible como previsión social), el colaborador por descuento vía nómina con la Membresía Cero, o un esquema mixto. Alta masiva desde tu layout de nómina y un solo ejecutivo para todo.",
+    "Tú eliges quién paga: la empresa (deducible como previsión social), el colaborador por descuento vía nómina, o un esquema mixto. Alta masiva desde tu layout de nómina y un solo ejecutivo para todo.",
   image:
     "/img/membresias.webp",
   highlights: [
-    { icon: "Smartphone", text: "Todo desde una app" },
-    { icon: "BadgeDollarSign", text: "Membresía Cero: sin costo para la empresa" },
     { icon: "ClipboardCheck", text: "Apoyo al cumplimiento de la NOM-035" },
     { icon: "Users", text: "Desde 1 colaborador, sin plantilla mínima" },
   ],
   categories: [
-    { icon: "ShieldCheck", title: "Seguros", items: ["Gastos médicos mayores", "Vida", "Accidentes personales", "Funerario"] },
-    { icon: "Stethoscope", title: "Asistencia médica", items: ["Orientación médica 24/7", "Nutricional", "Psicológica y emocional"] },
-    { icon: "WalletCards", title: "Banca digital", items: ["Tarjeta nominativa de nómina", "Caja y fondo de ahorro", "Monederos electrónicos"] },
-    { icon: "Clapperboard", title: "Entretenimiento", items: ["Cine", "Música y video en streaming", "Red de descuentos"] },
-    { icon: "LifeBuoy", title: "Servicios de asistencia", items: ["Asistencia vial", "Asistencia para mascotas", "Asistencia en el hogar"] },
-    { icon: "Receipt", title: "Pago de servicios", items: ["Luz, agua y gas", "Internet y cable", "Telefonía y otros"] },
-    { icon: "Dumbbell", title: "Deporte", items: ["Red de gimnasios", "Acondicionamiento físico", "Clases en línea"] },
-    { icon: "Building2", title: "Módulo empresarial", items: ["Recibos de nómina", "Comunicados internos", "Encuestas NOM-035", "Reloj checador biométrico"] },
+    { icon: "ShieldCheck", image: "/img/cat-seguros.webp", title: "Seguros", items: ["Gastos médicos mayores", "Vida", "Accidentes personales", "Funerario"] },
+    { icon: "Stethoscope", image: "/img/cat-medica.webp", title: "Asistencia médica", items: ["Orientación médica 24/7", "Nutricional", "Psicológica y emocional"] },
+    { icon: "WalletCards", image: "/img/cat-banca.webp", title: "Banca digital", items: ["Tarjeta nominativa de nómina", "Caja y fondo de ahorro", "Monederos electrónicos"] },
+    { icon: "Clapperboard", image: "/img/cat-entretenimiento.webp", title: "Entretenimiento", items: ["Cine", "Música y video en streaming", "Red de descuentos"] },
+    { icon: "LifeBuoy", image: "/img/cat-asistencias.webp", title: "Servicios de asistencia", items: ["Asistencia vial", "Asistencia para mascotas", "Asistencia en el hogar"] },
+    { icon: "Receipt", image: "/img/cat-servicios.webp", title: "Pago de servicios", items: ["Luz, agua y gas", "Internet y cable", "Telefonía y otros"] },
+    { icon: "Dumbbell", image: "/img/cat-deporte.webp", title: "Deporte", items: ["Red de gimnasios", "Acondicionamiento físico", "Clases en línea"] },
+    { icon: "Building2", image: "/img/cat-empresarial.webp", title: "Módulo empresarial", items: ["Recibos de nómina", "Comunicados internos", "Encuestas NOM-035", "Reloj checador biométrico"] },
   ],
   plansNote: "Precios de referencia por colaborador al mes, IVA incluido. La cotización final depende del tamaño de la plantilla y las coberturas elegidas.",
   plans: [
-    { key: "basica", image: "/img/plan-basica.webp", name: "Básica", tag: "Membresía Cero", price: 0, priceLabel: "Sin costo", period: "para la empresa", desc: "El colaborador la activa por descuento en nómina; tú solo das de alta tu plantilla.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos en comercios", "Pago de servicios desde la app", "Recibos de nómina y comunicados"] },
-    { key: "salud", image: "/img/plan-salud.webp", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Todo lo de Básica", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales", "Asistencia funeraria"] },
+    { key: "salud", image: "/img/plan-salud.webp", name: "Salud", price: 49, yearly: 539, desc: "Protección básica y orientación en salud para cada colaborador.", features: ["Tarjeta nominativa de nómina sin anualidad", "Red de descuentos y pago de servicios", "Orientación médica, nutricional y psicológica 24/7", "Seguro de accidentes personales", "Asistencia funeraria"] },
     { key: "plus", image: "/img/plan-plus.webp", name: "Plus", price: 99, yearly: 1089, featured: true, desc: "El equilibrio ideal entre protección, asistencias y entretenimiento.", features: ["Todo lo de Salud", "Asistencia vial, hogar y mascotas", "Seguro de vida", "Descuentos en cine y streaming"] },
     { key: "fitness", image: "/img/plan-fitness.webp", name: "Fitness", price: 449, yearly: 5298, desc: "Bienestar físico con acceso a gimnasios y estudios en todo el país.", features: ["Todo lo de Plus", "Acceso a red de gimnasios", "Clases en línea y acondicionamiento", "Programa de bienestar integral"] },
     { key: "black", image: "/img/plan-black.webp", name: "Black", price: 1899, yearly: 22408, desc: "Cobertura premium para directivos y puestos clave.", features: ["Todo lo de Fitness", "Gastos médicos mayores colectivo", "Coberturas ampliadas de vida y accidentes", "Ejecutivo dedicado para la empresa"] },
@@ -468,15 +465,15 @@ export const MEMBRESIAS = {
     { label: "+500", min: 500 },
   ],
   steps: [
-    { icon: "Gift", title: "¿Qué recibe tu colaborador?", desc: "Tarjeta nominativa de nómina sin anualidad, seguros, asistencia médica y emocional, acceso a gimnasios, red de descuentos y asistencias para mascota, hogar y vial, todo en una app." },
-    { icon: "Scale", title: "¿Quién paga?", desc: "Tres esquemas: la empresa (deducible como previsión social), el colaborador vía descuento en nómina con la Membresía Cero, o mixto. Te cotizamos por colaborador al mes según el plan." },
+    { icon: "Gift", title: "¿Qué recibe tu colaborador?", desc: "Tarjeta nominativa de nómina sin anualidad, seguros, asistencia médica y emocional, acceso a gimnasios, red de descuentos y asistencias para mascota, hogar y vial." },
+    { icon: "Scale", title: "¿Quién paga?", desc: "Tres esquemas: la empresa (deducible como previsión social), el colaborador vía descuento en nómina, o mixto. Te cotizamos por colaborador al mes según el plan." },
     { icon: "Rocket", title: "¿Cómo se implementa?", desc: "Alta masiva desde tu layout de nómina, tarjetas en pocos días, módulo empresarial para recibos y comunicados y un solo ejecutivo para todo." },
   ],
   reloj: {
     image: "/img/reloj-checador.webp",
     overline: "Módulo empresarial",
     title: "Reloj checador biométrico integrado con tu nómina",
-    desc: "Registro de asistencia por huella o reconocimiento facial, sincronizado con la app de beneficios y con tu layout de nómina: incidencias, retardos y horas extra listas para dispersar, sin capturas manuales.",
+    desc: "Registro de asistencia por huella o reconocimiento facial, sincronizado con el módulo empresarial y con tu layout de nómina: incidencias, retardos y horas extra listas para dispersar, sin capturas manuales.",
     bullets: ["Huella y reconocimiento facial", "Reportes de asistencia e incidencias en tiempo real", "Integración con nómina y dispersión SPEI", "Apoya el cumplimiento de la NOM-035 y la LFT"],
   },
   nom035: {
@@ -497,7 +494,6 @@ export const MEMBRESIAS = {
   ],
   faq: [
     { q: "¿Desde cuántos colaboradores puedo contratar?", a: "Desde 1 colaborador; el precio por persona mejora conforme crece la plantilla (rangos 1-5, 5-10, 10-50, 50-100 y 100-500)." },
-    { q: "¿Qué es la Membresía Cero?", a: "Es el plan Básico sin costo para la empresa: tú das de alta a tu plantilla y cada colaborador decide si activa beneficios adicionales con descuento vía nómina." },
     { q: "¿Cómo me ayuda con la NOM-035?", a: "El módulo empresarial permite aplicar las encuestas de factores de riesgo psicosocial, dar seguimiento y ofrecer orientación psicológica, con evidencia lista para la STPS." },
     { q: "¿Es deducible para la empresa?", a: "Cuando la empresa paga el beneficio, puede tratarse como previsión social deducible dentro de los límites de la LISR; lo revisamos con tu contador." },
     { q: "¿Qué pasa si un colaborador se da de baja?", a: "Lo das de baja desde la plataforma y el cobro se ajusta en el siguiente periodo, sin penalizaciones." },

@@ -49,14 +49,20 @@ export const Membresias = () => (
           const Icon = Icons[c.icon] || Icons.Gift;
           return (
             <Reveal key={c.title} delay={i * 0.05}>
-              <div data-testid={`membresia-categoria-${i}`} className="group h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6 hover:border-[#D4AF37]/40 transition-colors duration-300">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#D4AF37]/12 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#0B132B] transition-colors duration-300"><Icon size={20} strokeWidth={1.5} /></span>
-                <h3 className="font-display mt-4 text-base font-bold text-white">{c.title}</h3>
-                <ul className="mt-3 space-y-1.5">
-                  {c.items.map((it) => (
-                    <li key={it} className="flex items-start gap-2 text-sm text-slate-400"><Check size={14} className="mt-1 shrink-0 text-[#D4AF37]" />{it}</li>
-                  ))}
-                </ul>
+              <div data-testid={`membresia-categoria-${i}`} className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-[#D4AF37]/40 transition-colors duration-300">
+                <div className="relative h-40 overflow-hidden">
+                  <img loading="lazy" decoding="async" src={c.image} alt={c.title} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#0B132B] via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#D4AF37] text-[#0B132B]"><Icon size={18} strokeWidth={1.5} /></span>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-base font-bold text-white">{c.title}</h3>
+                  <ul className="mt-3 space-y-1.5">
+                    {c.items.map((it) => (
+                      <li key={it} className="flex items-start gap-2 text-sm text-slate-400"><Check size={14} className="mt-1 shrink-0 text-[#D4AF37]" />{it}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Reveal>
           );

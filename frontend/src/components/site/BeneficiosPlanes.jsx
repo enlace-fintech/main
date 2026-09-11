@@ -20,11 +20,11 @@ export const BeneficiosPlanes = () => {
     <div className="mt-20">
       <Reveal className="max-w-3xl">
         <Overline>Membresías</Overline>
-        <h2 className="font-display mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-white">Un plan para cada colaborador, desde la Membresía Cero</h2>
+        <h2 className="font-display mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-white">Un plan para cada colaborador</h2>
         <p className="mt-3 text-slate-400 leading-relaxed">{MEMBRESIAS.plansNote}</p>
       </Reveal>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {MEMBRESIAS.plans.map((pl, i) => {
           const active = pl.key === plan;
           return (
